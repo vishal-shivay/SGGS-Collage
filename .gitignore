@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Build folders
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Cache
+.cache/
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+=======
+.vscode/
+node_modules/
+.env
+dist/   
+>>>>>>> ade925ee0bf20982758d092fbf78986237eb818b

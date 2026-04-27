@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ................Gallary ....................  -->
+  <meta name="description" content="Explore the gallery of S.G.G.S. Khalsa College Mahilpur showcasing campus life, events, infrastructure, classrooms, and student activities.">
+  <meta name="keywords" content="S.G.G.S. Khalsa College Mahilpur gallery,college gallery Mahilpur,campus images S.G.G.S. Khalsa College, S.G.G.S. Khalsa College Mahilpur campus photos,college gallery Mahilpur Punjab
+">
+  <meta name="author" content="S.G.G.S. Khalsa College">
+  <meta property="og:title" content="S.G.G.S. Khalsa College | Best College in Punjab">
+  <meta property="og:description" content="Browse the S.G.G.S.Khalsa College Mahilpur gallery to see campus infrastructure, academic activities, events, and student experiences.">
+  <title>S.G.G.S. Facilities - With AOS Animations & Campus Gallery</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ===========================
+       HERO SECTION
+    ============================ */
+    .hero {
+      position: relative;
+      padding: 120px 24px 100px;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .college-badge {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+      color: white;
+      animation: float 3s ease-in-out infinite;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: 0 auto 48px;
+      font-weight: 500;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      padding: 28px 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Animations */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* ================================
+       SECTION BANNER HEADING (Full width)
+    ================================= */
+    .section-banner {
+      width: 100%;
+      padding: 55px 0;
+      margin: 65px 0 35px;
+      position: relative;
+      overflow: hidden;
+      background-color: #9a1108;
+      color: #fff;
+    }
+
+    .section-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.12), transparent 45%);
+      pointer-events: none;
+    }
+
+    .section-banner .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1100px;
+    }
+
+    .section-banner h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .section-banner p {
+      font-size: 1.05rem;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .section-banner h2::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 4px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 14px auto 0;
+    }
+
+    @media (max-width: 768px) {
+      .section-banner {
+        padding: 40px 0;
+      }
+
+      .section-banner h2 {
+        font-size: 1.6rem;
+      }
+
+      .section-banner p {
+        font-size: 0.95rem;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+
+    /* ===========================
+       GALLERY STYLING
+    ============================ */
+    .photos img,
+    .photo img,
+    .twophoto img,
+    .facilities img {
+      width: 100%;
+      border-radius: 16px;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .photos img:hover,
+    .photo img:hover,
+    .twophoto img:hover,
+    .facilities img:hover {
+      transform: scale(1.03);
+    }
+
+    .photo,
+    .twophoto {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .twophoto {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+
+      .photo,
+      .twophoto {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===========================
+       FACILITIES SECTION
+    ============================ */
+    .facilities .row {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+      margin-bottom: 35px;
+      align-items: center;
+    }
+
+    .facilities .text {
+      padding: 30px;
+    }
+
+    .facilities .text h4 {
+      font-weight: 800;
+      color: #8c1007;
+      margin-bottom: 12px;
+    }
+
+    .facilities .text p {
+      color: #444;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .crouse .carousel-inner,
+    .crouse .carousel-item,
+    .crouse .carousel-item img {
+      height: 70vh;
+    }
+
+    .crouse .carousel-item img {
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+
+      .crouse .carousel-inner,
+      .crouse .carousel-item,
+      .crouse .carousel-item img {
+        height: 35vh;
+      }
+    }
+
+    /* ==============================================
+       NEW CAMPUS GALLERY SECTION - UNIQUE DESIGN
+    ================================================ */
+    .campus-gallery {
+      background: linear-gradient(145deg, #fef9f8 0%, #fff5f3 100%);
+      padding: 70px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .campus-gallery::before {
+      content: "📸";
+      font-size: 320px;
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      opacity: 0.05;
+      pointer-events: none;
+      transform: rotate(-15deg);
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .gallery-header h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #8c1007;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .gallery-header h2 i {
+      font-size: 2.2rem;
+      margin-right: 12px;
+      color: #b51610;
+    }
+
+    .gallery-header .gallery-sub {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Masonry-style grid */
+    .gallery-masonry {
+      column-count: 4;
+      column-gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+      border-radius: 20px;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px rgba(140, 16, 7, 0.25);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(140, 16, 7, 0.85), transparent);
+      padding: 20px 15px 12px;
+      transform: translateY(100%);
+      transition: transform 0.35s ease;
+      text-align: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    .gallery-overlay span {
+      color: white;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 12px;
+      border-radius: 30px;
+      display: inline-block;
+    }
+
+    /* Lightbox Modal */
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 9999;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .gallery-modal.active {
+      display: flex;
+      animation: fadeInModal 0.3s ease;
+    }
+
+    @keyframes fadeInModal {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal-img {
+      max-width: 85%;
+      max-height: 85%;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      background: #8c1007;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 1200px) {
+      .gallery-masonry {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-masonry {
+        column-count: 2;
+      }
+      .gallery-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-masonry {
+        column-count: 1;
+      }
+    }
+
+    /* Gallery Badge */
+    .gallery-stats-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(140, 16, 7, 0.1);
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="college-badge" data-aos="fade-up" data-aos-duration="600">
+        <i class="fa fa-graduation-cap"></i>
+      </div>
+
+      <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Moments That Make Us </h1>
+      <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">S.G.G.S. Khalsa College</h1>
+
+      <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        Excellence in Education Since 1991 • Empowering Minds, Building Futures
+      </p>
+
+      <div class="stats-bar" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <div class="stat-item">
+          <div class="stat-number">90+</div>
+          <div class="stat-label">Classrooms</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">45,000+</div>
+          <div class="stat-label">Books</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Labs</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">World-Class</div>
+          <div class="stat-label">Infrastructure</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL -->
+  <div class="container mt-5 crouse" data-aos="fade-up" data-aos-duration="700">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+        <div class="carousel-item active">
+          <img src="./images/ann2.jpg" class="d-block w-100" alt="Convocation">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>S.G.G.S. Convocation — A Proud Moment for Every Scholar</h5>
+            <p>A day crafted with pride, elegance, and heartfelt memories...</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/annu1.jpg" class="d-block w-100" alt="Convocation">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>S.G.G.S. Convocation</h5>
+            <p>Honoring graduates who turned challenges into achievements.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./images/annu5.jpg" class="d-block w-100" alt="Convocation">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>S.G.G.S. Convocation</h5>
+            <p>Pride, elegance, and heartfelt memories.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Banner: Farewell -->
+  <section class="section-banner" data-aos="zoom-in-up" data-aos-duration="500">
+    <div class="container">
+      <h2>Farewell Ceremony</h2>
+      <p>Farewell of M.Sc. final students of Department of Physics and Chemistry.</p>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <div class="photos container">
+    <div class="photo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+      <img src="./images/fareimg.jpg" alt="Farewell">
+      <img src="./images/fareimg1.jpg" alt="Farewell">
+      <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg" alt="Farewell">
+    </div>
+
+    <div class="photo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+      <img src="./images/image2.jpg" alt="">
+      <img src="./images/image3.jpg" alt="">
+      <img src="./images/image4.jpg" alt="">
+    </div>
+
+    <div class="photo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+      <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg" alt="">
+      <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-2-600x400.jpeg" alt="">
+      <img src="./images/image5.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- Banner: Technical -->
+  <section class="section-banner" data-aos="zoom-in-up" data-aos-duration="500">
+    <div class="container">
+      <h2>Technical Event</h2>
+      <p>GigaGrid-2024 organized by Department of Computer Science & IT.</p>
+    </div>
+  </section>
+
+  <div class="container photo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+    <img src="./images/tech.jpg" alt="">
+    <img src="./images/tech1.jpg" alt="">
+    <img src="./images/tech2.jpg" alt="">
+  </div>
+
+  <!-- Banner: Scholarship -->
+  <section class="section-banner" data-aos="zoom-in-up" data-aos-duration="500">
+    <div class="container">
+      <h2>Scholarship & Stipend</h2>
+      <p>Stipend awarded to bright and needy students by Principal Harbhajan Singh Memorial Trust.</p>
+    </div>
+  </section>
+
+  <div class="image container">
+    <div class="twophoto container" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100">
+      <img src="./images/music.jpg" alt="">
+      <img src="./images/music-1.jpg" alt="">
+    </div>
+
+    <div class="twophoto container" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+      <img src="./images/girl.jpg" alt="">
+      <img src="./images/girl1.jpg" alt="">
+    </div>
+
+    <div class="twophoto container" data-aos="fade-left" data-aos-duration="500" data-aos-delay="300">
+      <img src="./images/girl3.jpg" alt="">
+      <img src="./images/girls2.jpg" alt="">
+    </div>
+
+    <div class="twophoto container" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
+      <img src="./images/girl5.jpg" alt="">
+      <img src="./images/girl6.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- Banner: Facilities -->
+  <section class="section-banner" data-aos="zoom-in-up" data-aos-duration="500">
+    <div class="container">
+      <h2>Facilities</h2>
+      <p>World-class infrastructure for learning, growth, and student support.</p>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <div class="container facilities">
+    <div class="row" data-aos="fade-right" data-aos-duration="550" data-aos-delay="100">
+      <div class="col-md-6 img">
+        <img src="./images/lady.jpg" alt="Convention Hall">
+      </div>
+      <div class="col-md-6 text">
+        <h4>GADHRI BABA HARJAP SINGH JI CONVENTION HALL</h4>
+        <p>The college has a modern ICT-enabled Convention Hall used for seminars, workshops, guest lectures, annual functions, orientation programs, and college celebrations. It is equipped with a projector, sound system, and comfortable seating arrangement. The hall can accommodate a large audience for academic and cultural events. It provides an ideal environment for interactive learning and professional gatherings. Regular maintenance ensures a clean, technologically advanced, and welcoming space.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-aos="fade-left" data-aos-duration="550" data-aos-delay="200">
+      <div class="col-md-6 img">
+        <img src="./images/library1-300x200-1.jpg" alt="Library">
+      </div>
+      <div class="col-md-6 text">
+        <h4>SANT HARI SINGH KAHARPURI MEMORIAL LIBRARY</h4>
+        <p>The library is one of the strongest academic resources of the college, containing thousands of books, reference materials, newspapers, magazines, and journals. A spacious reading hall is available for students and faculty to study and conduct research. Digital resources and e-books are accessible to support modern learning methods. It also provides quiet spaces for group discussions and project work. The library is regularly updated to include new academic and research publications.</p>
+      </div>
+    </div>
+
+    <div class="row" data-aos="fade-right" data-aos-duration="550" data-aos-delay="300">
+      <div class="col-md-6 img">
+        <img src="./images/bus.jpg" alt="Bus Facility">
+      </div>
+      <div class="col-md-6 text">
+        <h4>BUS FACILITY FOR GIRL STUDENTS</h4>
+        <p>The college provides its own transport facility for girl students to ensure safe and comfortable travel from nearby areas. The bus service helps students maintain regular attendance and reach the campus on time. Drivers and staff are trained to ensure punctuality and safety. Multiple routes are planned to cover important areas around the college. This facility supports students' convenience and encourages participation in campus activities.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-aos="fade-left" data-aos-duration="550" data-aos-delay="400">
+      <div class="col-md-6 img">
+        <img src="./images/girls_Canteen.jpg" alt="Canteen">
+      </div>
+      <div class="col-md-6 text">
+        <h4>CO-OPERATIVE MESS / CANTEEN</h4>
+        <p>The college has a well-maintained mess and canteen providing hygienic and affordable food. It offers tea, snacks, and meals for students and staff throughout the day. The seating area provides a comfortable space to relax and socialize. Healthy menu options are available to promote overall wellness among students. The facility is supervised regularly to maintain cleanliness and quality service.</p>
+      </div>
+    </div>
+
+    <div class="row" data-aos="fade-right" data-aos-duration="550" data-aos-delay="500">
+      <div class="col-md-6 img">
+        <img src="./images/doc.jpg" alt="Study Centre">
+      </div>
+      <div class="col-md-6 text">
+        <h4>STUDIES CENTRES IN COLLEGE</h4>
+        <p>The college encourages research and academic learning through study centres and academic clubs. Students participate in discussions, presentations, and departmental activities that support skill development. Centers provide access to resources for project work, research, and competitions. Faculty mentors guide students to enhance their learning and practical knowledge. The environment fosters intellectual curiosity, collaboration, and academic excellence.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-aos="fade-left" data-aos-duration="550" data-aos-delay="600">
+      <div class="col-md-6 img">
+        <img src="./images/faculty-house.jpg" alt="Teachers Flats">
+      </div>
+      <div class="col-md-6 text">
+        <h4>TEACHERS' FLATS</h4>
+        <p>The college provides accommodation facilities for teachers to support faculty convenience and smooth academic functioning. This helps in the availability of faculty for student guidance and campus activities. Flats are well-furnished and maintained to provide a comfortable living space. Proximity to classrooms allows teachers to participate actively in events and mentoring. It strengthens the bond between students and faculty, enhancing the learning environment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- NEW CAMPUS GALLERY SECTION - 30+ IMAGES       -->
+  <!-- ============================================== -->
+  <section class="campus-gallery" data-aos="fade-up" data-aos-duration="600">
+    <div class="container">
+      <div class="gallery-header">
+        <h2 data-aos="zoom-in-up" data-aos-duration="500"><i class="fas fa-camera-retro"></i> Campus Gallery</h2>
+        <p class="gallery-sub" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Explore the vibrant life, beautiful infrastructure, and unforgettable moments at S.G.G.S. Khalsa College — over 30 stunning snapshots from our campus.</p>
+        <div class="gallery-stats-badge" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+          <i class="fas fa-images" style="color:#8c1007;"></i>
+          <span>35+ Captured Moments</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-masonry" id="campusGalleryGrid">
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="50"><img src="./images/a1.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="80"><img src="./images/a2.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="110"><img src="./images/a3.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="140"><img src="./images/a5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="170"><img src="./images/a6.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="200"><img src="./images/a7.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="230"><img src="./images/a8.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="260"><img src="./images/a9.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="290"><img src="./images/b1.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="320"><img src="./images/b2.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="350"><img src="./images/b3.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="380"><img src="./images/b4.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="410"><img src="./images/b5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="440"><img src="./images/b6.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="470"><img src="./images/b7.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="500"><img src="./images/b8.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="530"><img src="./images/b9.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="560"><img src="./images/c1.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="590"><img src="./images/c2.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="620"><img src="./images/c3.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="650"><img src="./images/c4.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="680"><img src="./images/c5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="710"><img src="./images/c6.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="740"><img src="./images/c7.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="770"><img src="./images/d3.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="800"><img src="./images/c9.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="830"><img src="./images/d1.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="860"><img src="./images/d2.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="890"><img src="./images/d3.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="920"><img src="./images/d4.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="950"><img src="./images/b5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="980"><img src="./images/a5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="1010"><img src="./images/c5.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="650"><img src="./images/c4.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="740"><img src="./images/c7.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="80"><img src="./images/a2.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="380"><img src="./images/b4.JPG" alt="Campus Life"><div class="gallery-overlay"><span>📸</span></div></div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="galleryModal" class="gallery-modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-img" id="modalImage" src="" alt="Enlarged view">
+  </div>
+
+  <!-- AOS JS - IMPROVED ANIMATION SETTINGS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      offset: 80,
+      once: false,
+      easing: 'ease-out-cubic',
+      delay: 0
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <div id="footer"></div>
+
+  <script>
+    fetch('./component/navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+    fetch('./component/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+      
+    // Lightbox functionality for gallery
+    const modal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.modal-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const img = item.querySelector('img');
+        if(img) {
+          modal.classList.add('active');
+          modalImg.src = img.src;
+        }
+      });
+    });
+    
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+    
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

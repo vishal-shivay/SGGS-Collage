@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Empowering minds at S.G.G.S. Khalsa College, Mahilpur-our Library & Information Services deliver resources, research support, and digital access to fuel learning and innovation.">
+    <meta name="keywords" content="S.G.G.S. Khalsa College library facilities,college library with digital access,best college library in Mahilpur,research support in college library">
+    <meta name="author" content="S.G.G.S. Khalsa College">
+    <meta property="og:title" content="S.G.G.S. Khalsa College | Best College in Punjab">
+    <meta property="og:description" content="Explore library and information services at S.G.G.S. Khalsa College Mahilpur with books, digital resources, and research support for quality learning."/>
+    <title>Library & Information Services - S.G.G.S. Mahilpur</title>
+    
+    <!-- AOS CSS (Added) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    
+    <style>
+        /* ================================================== */
+        /* NAVBAR STYLES - SAME AS PAGE ONE */
+        /* ================================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================================== */
+        /* REST OF YOUR ORIGINAL CSS */
+        /* ================================================== */
+        
+        :root {
+            --brand: #8c1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #222;
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .eyebrow {
+            background: rgba(255, 255, 255, 0.15);
+            padding: .4rem .9rem;
+            border-radius: 50px;
+            font-size: .9rem;
+            display: inline-block;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 65ch;
+        }
+
+        .btn {
+            padding: .8rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--brand);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0e6e6;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.12);
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .icon-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            color: white;
+            transition: .4s;
+        }
+
+        .icon-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .icon-card h4 {
+            font-size: 1.4rem;
+            margin: 1rem 0 .6rem;
+            font-weight: 700;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .career-card {
+            background: var(--white);
+            border: 3px solid var(--brand);
+            color: var(--brand);
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+
+        .career-card i {
+            color: var(--brand);
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--brand);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .faculty-card {
+            text-align: center;
+        }
+
+        .faculty-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 5px solid var(--light);
+        }
+
+        th {
+            background: var(--brand);
+            color: white;
+            padding: 1rem;
+        }
+
+        td, th {
+            border: 1px solid #eee;
+            padding: .9rem;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background: #fdf9f8;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-q {
+            background: var(--brand);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-a {
+            padding: 1.5rem;
+            background: var(--light);
+            display: none;
+        }
+
+        .faq-a.show {
+            display: block;
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-right {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            font-size: clamp(28px, 6vw, 80px);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: clamp(24px, 8vw, 60px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: clamp(20px, 10vw, 45px);
+            }
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 1200px) {
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                padding: 100px 24px 80px;
+                min-height: 500px;
+            }
+            .hero p {
+                font-size: 1.25rem;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 16px 60px;
+                min-height: 450px;
+            }
+            .college-badge {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
+            .stats-bar {
+                padding: 24px 20px;
+                gap: 20px;
+            }
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-bar {
+                flex-direction: column;
+                align-items: stretch;
+                border-radius: 12px;
+                padding: 20px 15px;
+                margin: 0 10px;
+            }
+            .stat-item {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+            .stat-divider {
+                display: none;
+            }
+        }
+
+        #footer {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+      <div id="navbar"></div>
+    <!-- HERO SECTION with AOS animations -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="college-badge" data-aos="fade-up" data-aos-duration="600">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="container hero1">
+                <div>
+                    <span class="eyebrow" style="color: white;" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Department • Library Services</span>
+                    <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Library & Information Services</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Providing students and faculty with access to information, digital resources, and research support for academic excellence.</p>
+                </div>
+            </div>
+            <div class="stats-bar fade-in-delay-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Courses & <br>Programs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Undergraduate <br>Programs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Postgraduate <br> Programs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Diploma & <br> Add-On Courses</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- WHY CHOOSE section with AOS -->
+        <section style="background:var(--light);padding:5rem 0; border-radius: 20px; margin: 2rem 0;" data-aos="fade-up" data-aos-duration="600">
+            <h2 data-aos="zoom-in" data-aos-duration="500">Why Choose Our Library?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Comprehensive information services for research and learning</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">
+                    <i class="fas fa-book"></i>
+                    <h4>Extensive Collection</h4>
+                    <p>Thousands of books, journals, and e-resources across disciplines.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250">
+                    <i class="fas fa-laptop"></i>
+                    <h4>Digital Library</h4>
+                    <p>Access to e-books, e-journals, and online databases.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350">
+                    <i class="fas fa-users"></i>
+                    <h4>Research Support</h4>
+                    <p>Assistance in reference, citation, and literature review.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
+                    <i class="fas fa-award"></i>
+                    <h4>Learning Environment</h4>
+                    <p>Quiet study areas, discussion zones, and reading halls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES section with AOS -->
+        <section id="resources" data-aos="fade-up" data-aos-duration="600">
+            <h2 data-aos="zoom-in" data-aos-duration="500">Library Resources</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Supporting students and faculty with comprehensive materials</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">
+                    <i class="fas fa-book-open"></i>
+                    <h4>Books & Journals</h4>
+                    <p>Extensive collection of print and digital books and journals.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250">
+                    <i class="fas fa-database"></i>
+                    <h4>Online Databases</h4>
+                    <p>Access to academic databases like JSTOR, Springer, and IEEE.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>e-Resources</h4>
+                    <p>e-Books, e-Journals, theses, and dissertations for research.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
+                    <i class="fas fa-users"></i>
+                    <h4>Study & Discussion Zones</h4>
+                    <p>Designated spaces for group study and collaborative learning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREERS section with AOS -->
+        <section id="careers" style="background:var(--light); border-radius: 20px; margin: 2rem 0;" data-aos="fade-up" data-aos-duration="600">
+            <h2 data-aos="zoom-in" data-aos-duration="500">Career Opportunities</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Prepare for a professional career in library and information services</p>
+            <div class="icon-grid">
+                <div class="career-card card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Academic Librarian</h4>
+                    <p>Work in universities, colleges, and research libraries.</p>
+                </div>
+                <div class="career-card card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="250">
+                    <i class="fas fa-book"></i>
+                    <h4>Information Specialist</h4>
+                    <p>Manage databases and digital resources in organizations.</p>
+                </div>
+                <div class="career-card card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="350">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Archival & Documentation Jobs</h4>
+                    <p>Work with historical records, documents, and archives.</p>
+                </div>
+                <div class="career-card card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="450">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Digital Librarian</h4>
+                    <p>Handle e-resources, digital cataloging, and online systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ section with AOS -->
+        <section id="faq" data-aos="fade-up" data-aos-duration="600">
+            <h2 data-aos="zoom-in" data-aos-duration="500">Frequently Asked Questions</h2>
+            <div class="faq" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <div class="faq-item">
+                    <div class="faq-q">Who can access the library? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">All enrolled students, faculty members, and staff of S.G.G.S. Mahilpur have access.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can I borrow e-books? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes — registered users can borrow e-books and access online journals through the digital library portal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Are there study zones available? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes — quiet study zones and discussion areas are provided for students.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do you provide research assistance? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes — library staff help with literature searches, citation management, and reference guidance.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script>
+        // Load Navbar
+        fetch('./component/navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+
+        // Load Footer
+        fetch('./component/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            offset: 80,
+            once: false,
+            easing: 'ease-out-cubic',
+            delay: 0
+        });
+
+        // Mobile menu toggle
+        const toggler = document.getElementById('navbarToggler');
+        const collapse = document.getElementById('navbarNav');
+        
+        if (toggler && collapse) {
+            toggler.addEventListener('click', function() {
+                collapse.classList.toggle('show');
+            });
+        }
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const a = q.nextElementSibling;
+                const i = q.querySelector('i');
+                a.classList.toggle('show');
+                i.classList.toggle('fa-chevron-down');
+                i.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Load Footer
+        fetch('./component/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data)
+            .catch(error => console.log('Footer not found:', error));
+    </script>
+</body>
+
+</html>
