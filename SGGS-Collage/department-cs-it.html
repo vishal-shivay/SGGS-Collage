@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore the Department of Computer Science & IT at S.G.G.S. Khalsa College, Mahilpur — offering BCA, M.Sc. Computer & IT, M.Sc. CS and PGDCA programs with hands-on training and career-focused education." />
+    <meta name="keywords" content="BCA College Mahilpur, MSc IT Mahilpur, MSc Computer Science Mahilpur, PGDCA Mahilpur, Computer Science IT Punjab, S.G.G.S. College CS IT, Best IT College Punjab">
+    <meta name="author" content="S.G.G.S. Khalsa College">
+    <meta property="og:title" content="S.G.G.S. Khalsa College | Department of Computer Science & IT">
+    <meta property="og:description" content="S.G.G.S. Khalsa College Mahilpur offers BCA, M.Sc. IT, M.Sc. CS and PGDCA programs with modern labs, expert faculty and strong career prospects.">
+    <title>Department of Computer Science & IT | S.G.G.S. Mahilpur College</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        :root {
+            --brand: #8c1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0 }
+        body { font-family: 'Inter', sans-serif; color: #222; background: var(--white); line-height: 1.6; overflow-x: hidden; }
+        a { color: var(--brand); text-decoration: none }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 100px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%);
+        }
+        .hero-particles {
+            position: absolute; inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+        .hero-content { position: relative; z-index: 10; text-align: center; max-width: 1200px; margin: 0 auto; }
+        .college-badge {
+            width: 80px; height: 80px;
+            background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+            border-radius: 20px; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 24px; font-size: 2.5rem; color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .hero1 { display: flex; gap: 3rem; align-items: center; }
+        .eyebrow { background: rgba(255,255,255,0.15); padding: .4rem .9rem; border-radius: 50px; font-size: .9rem; display: inline-block; color: white; }
+        .hero h1 {
+            font-weight: 800; color: white; margin-bottom: 20px;
+            letter-spacing: -0.03em; line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+            font-size: clamp(28px, 6vw, 72px); margin-top: 20px;
+        }
+        .hero p.lead { font-size: 1.15rem; opacity: 0.95; max-width: 65ch; }
+        .stats-bar {
+            display: flex; align-items: center; justify-content: center;
+            gap: 32px; flex-wrap: wrap;
+            background: rgba(255,255,255,0.15); backdrop-filter: blur(12px);
+            padding: 32px 48px; border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 900px; margin: 2rem auto 0;
+        }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 800; color: white; margin-bottom: 4px; }
+        .stat-label { font-size: .875rem; color: rgba(255,255,255,0.9); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+        .stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.3); }
+
+        /* ── PROGRAM TABS (4 tabs) ── */
+        .prog-tabs-wrap {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(140,16,7,0.10);
+        }
+        .prog-tabs {
+            display: flex; justify-content: center;
+            max-width: 960px; margin: 0 auto;
+        }
+        .prog-tab {
+            flex: 1; padding: 1rem .8rem;
+            font-weight: 700; font-size: .9rem;
+            cursor: pointer; border: none;
+            background: var(--white); color: var(--muted);
+            border-bottom: 4px solid transparent;
+            transition: .3s; display: flex; align-items: center; justify-content: center; gap: .4rem;
+            white-space: nowrap;
+        }
+        .prog-tab.active { color: var(--brand); border-bottom: 4px solid var(--brand); background: var(--light); }
+        .prog-tab:hover:not(.active) { background: #fdf9f8; color: var(--brand-light); }
+
+        /* ── SECTION TOGGLE ── */
+        .prog-section { display: none; }
+        .prog-section.active { display: block; }
+
+        section { padding: 4rem 0 }
+        h2 { font-size: 2.4rem; text-align: center; margin-bottom: 1rem; color: var(--brand) }
+        .section-subtitle { text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--muted); font-size: 1.1rem; }
+
+        /* ── DIVIDER ── */
+        .prog-divider {
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand), var(--brand-light), var(--brand));
+            border-radius: 4px; max-width: 120px; margin: 0 auto 1rem;
+        }
+
+        /* ── CARDS ── */
+        .card {
+            background: var(--white); border-radius: var(--radius);
+            padding: 1.8rem; box-shadow: var(--shadow);
+            border: 1px solid #f0e6e6; transition: .3s;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(140,16,7,0.12) }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem; margin: 2rem 0;
+        }
+        .icon-card { text-align: center; padding: 2rem; border-radius: var(--radius); color: white; transition: .4s; }
+        .icon-card i { font-size: 3.5rem; margin-bottom: 1rem; opacity: .9 }
+        .icon-card h4 { font-size: 1.4rem; margin: 1rem 0 .6rem; font-weight: 700 }
+        .icon-card:hover { transform: translateY(-10px) }
+        .career-card {
+            background: var(--white); border: 3px solid var(--brand);
+            color: var(--brand); text-align: center; padding: 2rem; border-radius: var(--radius);
+        }
+        .career-card i { color: var(--brand); font-size: 2.2rem; margin-bottom: .8rem; display: block; }
+        .career-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: .4rem; }
+
+        /* ── TABLE ── */
+        table { min-width: 100%; border-collapse: collapse; }
+        th { background: var(--brand); color: white; padding: 1rem }
+        td, th { border: 1px solid #eee; padding: .9rem; text-align: left }
+        tr:nth-child(even) { background: #fdf9f8 }
+        @media(max-width:400px){ table{font-size:10px} .card{padding:10px} }
+
+        /* ── FAQ ── */
+        .faq-item { background: var(--white); border-radius: var(--radius); margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow) }
+        .faq-q { background: var(--brand); color: white; padding: 1.2rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+        .faq-a { padding: 1.5rem; background: var(--light); display: none }
+        .faq-a.show { display: block }
+
+        /* ── GALLERY ── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem; margin: 2rem 0;
+        }
+        .gallery-item {
+            position: relative; border-radius: var(--radius);
+            overflow: hidden; aspect-ratio: 4/3;
+            cursor: pointer; box-shadow: var(--shadow);
+            border: 2px solid #f0e6e6; background: #fdf9f8; transition: .35s;
+        }
+        .gallery-item:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(140,16,7,0.18); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(140,16,7,0.75) 0%, transparent 55%);
+            opacity: 0; transition: .35s;
+            display: flex; align-items: flex-end; padding: 1.2rem;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay span { color: white; font-weight: 700; font-size: .95rem; text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
+        .gallery-placeholder {
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: .8rem; color: #c9a09e;
+            border: 2.5px dashed #e8d0ce;
+            border-radius: calc(var(--radius) - 2px);
+            background: #fdf9f8; font-size: .88rem; font-weight: 600;
+            min-height: 180px; padding: 1rem; text-align: center;
+        }
+        .gallery-placeholder i { font-size: 2.5rem; color: var(--brand); opacity: .35; }
+        .gallery-placeholder small { font-size: .75rem; color: #bbb; font-weight: 400; }
+
+        /* ── LIGHTBOX ── */
+        .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.88); backdrop-filter: blur(6px); align-items: center; justify-content: center; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+        .lightbox-close { position: absolute; top: 1.5rem; right: 1.8rem; color: white; font-size: 2.2rem; cursor: pointer; line-height: 1; opacity: .85; transition: .2s; }
+        .lightbox-close:hover { opacity: 1; transform: scale(1.1); }
+        .lightbox-caption { position: absolute; bottom: 1.8rem; left: 50%; transform: translateX(-50%); color: white; font-weight: 600; font-size: 1rem; background: rgba(140,16,7,0.7); padding: .5rem 1.2rem; border-radius: 50px; white-space: nowrap; }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+        .fade-in { animation: fadeIn .8s ease-out; }
+        .fade-in-delay { animation: fadeIn .8s ease-out .2s both; }
+        .fade-in-delay-2 { animation: fadeIn .8s ease-out .4s both; }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:900px){ .hero{grid-template-columns:1fr} }
+        @media(max-width:768px){
+            .gallery-grid { grid-template-columns: repeat(2,1fr); }
+            .stats-bar { padding: 24px 20px; gap: 20px; }
+            .stat-number { font-size: 1.8rem; }
+            .stat-label { font-size: .8rem; }
+            .prog-tab { font-size: .78rem; padding: .85rem .4rem; }
+        }
+        @media(max-width:576px){
+            .gallery-grid { grid-template-columns: 1fr; }
+            .stats-bar { flex-direction: column; align-items: stretch; padding: 20px 15px; margin: 1rem 10px 0; }
+            .stat-divider { display: none; }
+            .stat-item { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .stat-item:last-child { border-bottom: none; }
+            .prog-tab { font-size: .72rem; padding: .8rem .3rem; }
+            .prog-tab i { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge" data-aos="fade-up" data-aos-duration="600">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+        <div class="container hero1">
+            <div>
+                <span class="eyebrow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Undergraduate • Postgraduate • Diploma • Full-Time</span>
+                <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Department of Computer Science &amp; IT</h1>
+                <!-- <p class="lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="320">Building the next generation of IT professionals — from a BCA foundation and PGDCA diploma to advanced M.Sc. programs in Computer Science and IT.</p> -->
+            </div>
+        </div>
+        <div class="stats-bar fade-in-delay-2" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Courses &<br>Programs</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Undergraduate<br>Programs</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Postgraduate<br>Programs</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Diploma &<br>Add-On Courses</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ 4-TAB BAR ══════════ -->
+<div class="prog-tabs-wrap">
+    <div class="prog-tabs">
+        <button class="prog-tab active" onclick="switchTab('bca', this)">
+            <i class="fas fa-university"></i> BCA
+        </button>
+        <button class="prog-tab" onclick="switchTab('mscit', this)">
+            <i class="fas fa-network-wired"></i> M.Sc. IT
+        </button>
+        <button class="prog-tab" onclick="switchTab('msccs', this)">
+            <i class="fas fa-laptop-code"></i> M.Sc. CS
+        </button>
+        <button class="prog-tab" onclick="switchTab('pgdca', this)">
+            <i class="fas fa-certificate"></i> PGDCA
+        </button>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════ -->
+<!--              BCA TAB              -->
+<!-- ══════════════════════════════════ -->
+<div id="tab-bca" class="prog-section active">
+<main class="container">
+
+    <!-- WHY BCA -->
+    <section style="background:var(--light);padding:5rem 0">
+        <h2 data-aos="fade-up">Why Choose BCA at S.G.G.S. Mahilpur?</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Strong foundation in IT and software development</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-laptop-code"></i><h4>Programming Skills</h4><p>Master programming languages like C, Java, Python, etc.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-network-wired"></i><h4>Networking & Security</h4><p>Understanding of networks, security, and cloud technologies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-database"></i><h4>Database Management</h4><p>Learn SQL, MySQL, and database design principles.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-project-diagram"></i><h4>Project-Based Learning</h4><p>Hands-on projects, lab work, and real-time software applications.</p></div>
+        </div>
+    </section>
+
+    <!-- BCA COURSE STRUCTURE -->
+    <section>
+        <h2 data-aos="fade-up">Course Structure</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Comprehensive subjects for IT and computer science</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0"><i class="fas fa-code"></i><h4>Programming Languages</h4><p>C, Java, Python and modern development frameworks.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-database"></i><h4>Database Management</h4><p>SQL, MySQL and database design principles.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-network-wired"></i><h4>Networking & Security</h4><p>Network architecture, cybersecurity basics and cloud fundamentals.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-laptop-code"></i><h4>Web Development</h4><p>HTML, CSS, JavaScript and modern web frameworks.</p></div>
+        </div>
+    </section>
+
+    <!-- BCA PROGRAM STRUCTURE TABLE -->
+    <section style="background:var(--light);padding:4rem 0">
+        <h2 data-aos="fade-up">Program Structure</h2>
+        <div class="prog-divider"></div>
+        <div class="card" style="overflow:hidden" data-aos="fade-up" data-aos-delay="150">
+            <table>
+                <thead>
+                    <tr><th>Semester</th><th>Core Subjects</th><th>Labs / Projects</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sem 1</td><td>Computer Fundamentals, C Programming</td><td>Lab I</td></tr>
+                    <tr><td>Sem 2</td><td>Data Structures, Database Basics</td><td>Lab II</td></tr>
+                    <tr><td>Sem 3</td><td>OOP with Java, Networking Fundamentals</td><td>Lab III</td></tr>
+                    <tr><td>Sem 4</td><td>Web Development, Operating Systems</td><td>Lab IV</td></tr>
+                    <tr><td>Sem 5</td><td>Software Engineering, Python</td><td>Project I</td></tr>
+                    <tr><td>Sem 6</td><td>Cloud Computing, Mobile App Development</td><td>Project II + Viva</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- BCA CAREERS -->
+    <section>
+        <h2 data-aos="fade-up">Career Opportunities</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">IT & software industry opportunities</p>
+        <div class="icon-grid">
+            <div class="career-card card" data-aos="fade-right" data-aos-delay="0"><i class="fas fa-laptop-code fa-2x"></i><h4>Software Developer</h4></div>
+            <div class="career-card card" data-aos="fade-right" data-aos-delay="150"><i class="fas fa-network-wired fa-2x"></i><h4>Network Engineer</h4></div>
+            <div class="career-card card" data-aos="fade-left" data-aos-delay="150"><i class="fas fa-database fa-2x"></i><h4>Database Administrator</h4></div>
+            <div class="career-card card" data-aos="fade-left" data-aos-delay="0"><i class="fas fa-globe fa-2x"></i><h4>Web Developer</h4></div>
+        </div>
+    </section>
+
+    <!-- ★ BCA GALLERY ★ -->
+    <section style="background:var(--light);padding:4rem 0">
+        <h2 data-aos="fade-up">Department Gallery</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Computer labs, coding sessions and BCA campus life</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-1.jpg" alt="Computer Lab"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/bca-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Computer Lab</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-2.jpg" alt="Coding Session"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/bca-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Coding Session</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-3.jpg" alt="Project Presentation"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/bca-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Project Presentation</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-4.jpg" alt="Tech Seminar"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/bca-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Tech Seminar</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-5.jpg" alt="Hackathon"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/bca-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Hackathon</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                <img src="./images/gallery/bca-6.jpg" alt="Annual Function"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/bca-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Annual Function</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BCA FAQ -->
+    <section>
+        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="faq-q">Eligibility for BCA? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">10+2 from any recognized board with Mathematics as a subject.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-q">Duration of program? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">3 years (6 semesters) full-time. AICTE approved.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-q">Are practical projects included? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — labs, software development projects, and internships are included.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div><!-- /tab-bca -->
+
+<!-- ══════════════════════════════════ -->
+<!--           M.Sc. IT TAB            -->
+<!-- ══════════════════════════════════ -->
+<div id="tab-mscit" class="prog-section">
+<main class="container">
+
+    <!-- WHY M.SC. IT -->
+    <section style="background:var(--light);padding:5rem 0">
+        <h2 data-aos="fade-up" data-aos-duration="600">Why Choose M.Sc. Computer &amp; IT at S.G.G.S. Mahilpur?</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Enhance your IT expertise with advanced technology skills</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-laptop-code"></i><h4>Advanced Programming</h4><p>Deep knowledge of Java, Python, C++, and modern frameworks.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired"></i><h4>Networking & Security</h4><p>Focus on network design, cybersecurity, and cloud solutions.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database"></i><h4>Database & Cloud</h4><p>Master advanced databases, cloud computing, and big data.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-robot"></i><h4>AI & ML</h4><p>Explore artificial intelligence and machine learning in depth.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><i class="fas fa-award"></i><h4>Career Guidance</h4><p>Support for IT certifications and advanced placements.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"><i class="fas fa-users"></i><h4>Collaborative Learning</h4><p>Team projects, seminars, and tech club activities.</p></div>
+        </div>
+    </section>
+
+    <!-- M.SC. IT SPECIALIZATIONS -->
+    <section>
+        <h2 data-aos="fade-right" data-aos-duration="600">Specializations</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">Advanced fields in IT & Computer Science</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-code"></i><h4>Software Development</h4><p>Web, desktop, and mobile applications.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired"></i><h4>Networking & Security</h4><p>Network architecture, security, cloud fundamentals.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database"></i><h4>Database & Cloud</h4><p>Database optimization and cloud solutions.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-robot"></i><h4>AI & ML</h4><p>Artificial intelligence, data analysis, and ML algorithms.</p></div>
+        </div>
+    </section>
+
+    <!-- M.SC. IT CAREERS -->
+    <section style="background:var(--light);padding:4rem 0">
+        <h2 data-aos="fade-down" data-aos-duration="600">Career Opportunities</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">Opportunities after M.Sc. Computer &amp; IT</p>
+        <div class="icon-grid">
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-laptop-code fa-2x"></i><h4>Software Developer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired fa-2x"></i><h4>Network Engineer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database fa-2x"></i><h4>Database Administrator</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-robot fa-2x"></i><h4>AI / ML Specialist</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><i class="fas fa-briefcase fa-2x"></i><h4>IT Consultant</h4></div>
+        </div>
+    </section>
+
+    <!-- ★ M.SC. IT GALLERY ★ -->
+    <section>
+        <h2 data-aos="fade-up">Department Gallery</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Advanced labs, IT workshops and M.Sc. IT campus life</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-1.jpg" alt="IT Lab"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/mscit-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span>IT Lab</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-2.jpg" alt="Networking Workshop"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/mscit-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Networking Workshop</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-3.jpg" alt="Research Seminar"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/mscit-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Research Seminar</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-4.jpg" alt="Project Showcase"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/mscit-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Project Showcase</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-5.jpg" alt="Guest Lecture"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/mscit-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Guest Lecture</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                <img src="./images/gallery/mscit-6.jpg" alt="Convocation"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/mscit-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Convocation</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- M.SC. IT FAQ -->
+    <section>
+        <h2 data-aos="zoom-in" data-aos-duration="600">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" data-aos="fade-right" data-aos-duration="500" data-aos-delay="0">
+                <div class="faq-q">Eligibility for M.Sc. Computer &amp; IT? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">B.Sc. Computer & IT or equivalent degree from a recognized university.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100">
+                <div class="faq-q">Is research project mandatory? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — dissertation and viva are compulsory for all students.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                <div class="faq-q">Can I pursue certifications along with degree? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — AWS, Cisco, Microsoft, AI/ML certifications are encouraged.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div><!-- /tab-mscit -->
+
+<!-- ══════════════════════════════════ -->
+<!--           M.Sc. CS TAB            -->
+<!-- ══════════════════════════════════ -->
+<div id="tab-msccs" class="prog-section">
+<main class="container">
+
+    <!-- WHY M.SC. CS -->
+    <section style="background:var(--light);padding:5rem 0">
+        <h2 data-aos="fade-up">Why Choose M.Sc. Computer Science at S.G.G.S. Mahilpur?</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Advanced programming, data science, AI and software development with real-world project exposure</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-code"></i><h4>Advanced Programming</h4><p>In-depth training in algorithms, data structures and software development.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-brain"></i><h4>AI & Machine Learning</h4><p>Exposure to AI, ML, Big Data and Cloud Computing technologies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-chalkboard-teacher"></i><h4>Expert Faculty</h4><p>Experienced professors supporting research and industry-relevant learning.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-project-diagram"></i><h4>Research Projects</h4><p>Live projects, internships and dissertation opportunities.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-briefcase"></i><h4>Career Support</h4><p>Guidance for placements, competitive exams and higher studies like Ph.D.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-university"></i><h4>Modern Infrastructure</h4><p>Smart labs, high-speed internet and access to software tools.</p></div>
+        </div>
+    </section>
+
+    <!-- M.SC. CS SPECIALIZATIONS -->
+    <section>
+        <h2 data-aos="fade-up">Specializations Offered</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">NEP-2020 based curriculum — 2 Years | 4 Semesters</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0"><i class="fas fa-laptop-code"></i><h4>Advanced Programming</h4><p>Data Structures, Algorithms, DBMS and Software Engineering.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-brain"></i><h4>AI & Machine Learning</h4><p>Artificial Intelligence, ML, Cloud Computing and Data Mining.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-cloud"></i><h4>Cloud & Big Data</h4><p>Big Data Analytics, Cloud Platforms and IoT systems.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-shield-alt"></i><h4>Security & Networks</h4><p>Cybersecurity, network infrastructure and web technologies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-code-branch"></i><h4>Software Engineering</h4><p>Project management, software lifecycle and quality assurance.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-graduation-cap"></i><h4>Research & Dissertation</h4><p>Final year dissertation, viva and elective specializations.</p></div>
+        </div>
+    </section>
+
+    <!-- M.SC. CS CAREERS -->
+    <section style="background:var(--light);padding:4rem 0">
+        <h2 data-aos="fade-up">Career Opportunities</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Graduates excel in diverse technology and research roles</p>
+        <div class="icon-grid">
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-laptop-code fa-2x"></i><h4>Software Developer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-chart-bar fa-2x"></i><h4>Data Analyst</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-brain fa-2x"></i><h4>AI / ML Engineer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-cloud fa-2x"></i><h4>Cloud Specialist</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-shield-alt fa-2x"></i><h4>System Analyst</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-graduation-cap fa-2x"></i><h4>Higher Studies / Ph.D.</h4></div>
+        </div>
+    </section>
+
+    <!-- ★ M.SC. CS GALLERY ★ -->
+    <section>
+        <h2 data-aos="fade-up">Department Gallery</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Computer labs, project showcases and M.Sc. CS activities</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-1.jpg" alt="Computer Lab"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/msccs-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Computer Lab</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-2.jpg" alt="Project Presentation"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/msccs-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Project Presentation</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-3.jpg" alt="Tech Workshop"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/msccs-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Tech Workshop</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-4.jpg" alt="Guest Lecture"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/msccs-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Guest Lecture</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-5.jpg" alt="Coding Contest"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/msccs-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Coding Contest</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                <img src="./images/gallery/msccs-6.jpg" alt="Convocation"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/msccs-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Convocation</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- M.SC. CS FAQ -->
+    <section>
+        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="faq-q">Eligibility for M.Sc. CS? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">B.Sc. Computer Science / IT / Maths with minimum 45% marks (or as per college policy).</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-q">Can I do M.Sc. CS after B.Sc. non-CS? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Students from B.Sc. Mathematics or related streams with CS background may be eligible. Check admissions for details.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-q">Are scholarships available? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — merit and need-based scholarships are offered. See admissions office for current schemes.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div><!-- /tab-msccs -->
+
+<!-- ══════════════════════════════════ -->
+<!--            PGDCA TAB              -->
+<!-- ══════════════════════════════════ -->
+<div id="tab-pgdca" class="prog-section">
+<main class="container">
+
+    <!-- WHY PGDCA -->
+    <section style="background:var(--light);padding:5rem 0">
+        <h2 data-aos="fade-up" data-aos-duration="600">Why Choose PGDCA at S.G.G.S. Mahilpur?</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Professional skills and IT expertise for modern careers in just 1 year</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-laptop-code"></i><h4>Programming Skills</h4><p>Learn languages like C, C++, Java, Python, and more.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired"></i><h4>Networking & Security</h4><p>Basics of computer networks, cybersecurity, and cloud tech.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database"></i><h4>Database Knowledge</h4><p>Learn SQL, MySQL, and database management systems.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-robot"></i><h4>Practical Training</h4><p>Hands-on projects, lab work, and real-world exposure.</p></div>
+        </div>
+    </section>
+
+    <!-- PGDCA COURSE STRUCTURE -->
+    <section>
+        <h2 data-aos="fade-right" data-aos-duration="600">Course Structure</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">Comprehensive computer application topics covered in 2 semesters</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-code"></i><h4>Programming Fundamentals</h4><p>Core languages and logic building for software development.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired"></i><h4>Networking Basics</h4><p>Computer networks, protocols, and internet technologies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database"></i><h4>Database Management</h4><p>Relational databases, SQL queries and data handling.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-laptop-code"></i><h4>Web Development</h4><p>HTML, CSS, JavaScript basics for modern web applications.</p></div>
+        </div>
+    </section>
+
+    <!-- PGDCA CAREERS -->
+    <section style="background:var(--light);padding:4rem 0">
+        <h2 data-aos="fade-down" data-aos-duration="600">Career Opportunities</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">Job prospects after PGDCA</p>
+        <div class="icon-grid">
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><i class="fas fa-laptop-code fa-2x"></i><h4>Software Developer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><i class="fas fa-network-wired fa-2x"></i><h4>Network Engineer</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><i class="fas fa-database fa-2x"></i><h4>Database Administrator</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><i class="fas fa-tools fa-2x"></i><h4>IT Support</h4></div>
+        </div>
+    </section>
+
+    <!-- ★ PGDCA GALLERY ★ -->
+    <section>
+        <h2 data-aos="fade-up">Department Gallery</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Lab sessions, practical training and PGDCA campus activities</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-1.jpg" alt="Lab Session"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/pgdca-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Lab Session</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-2.jpg" alt="Practical Training"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/pgdca-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Practical Training</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-3.jpg" alt="Workshop"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/pgdca-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Workshop</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-4.jpg" alt="Mini Project"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/pgdca-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Mini Project</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-5.jpg" alt="Guest Lecture"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/pgdca-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Guest Lecture</span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                <img src="./images/gallery/pgdca-6.jpg" alt="Certification Day"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/pgdca-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span>Certification Day</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PGDCA FAQ -->
+    <section>
+        <h2 data-aos="zoom-in" data-aos-duration="600">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" data-aos="fade-right" data-aos-duration="500" data-aos-delay="0">
+                <div class="faq-q">Eligibility for PGDCA? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">10+2 / Graduation from any recognized university.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100">
+                <div class="faq-q">Duration of program? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">1 year (2 semesters) full-time.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                <div class="faq-q">Is practical training included? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — labs, mini-projects, and practical sessions are part of the course.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div><!-- /tab-pgdca -->
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<div id="footer"></div>
+
+<!-- LOADERS -->
+<script>
+    fetch('./component/navbar.html').then(r=>r.text()).then(d=>document.getElementById('navbar').innerHTML=d);
+    fetch('./component/footer.html').then(r=>r.text()).then(d=>document.getElementById('footer').innerHTML=d);
+</script>
+
+<!-- TAB SWITCHER -->
+<script>
+    function switchTab(tab, btn) {
+        document.querySelectorAll('.prog-section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.prog-tab').forEach(b => b.classList.remove('active'));
+        document.getElementById('tab-' + tab).classList.add('active');
+        btn.classList.add('active');
+        document.querySelector('.prog-tabs-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => AOS.refresh(), 150);
+    }
+</script>
+
+<!-- FAQ TOGGLE -->
+<script>
+    document.addEventListener('click', function(e) {
+        const q = e.target.closest('.faq-q');
+        if (!q) return;
+        const a = q.nextElementSibling;
+        const i = q.querySelector('i');
+        a.classList.toggle('show');
+        i.classList.toggle('fa-chevron-down');
+        i.classList.toggle('fa-chevron-up');
+    });
+</script>
+
+<!-- LIGHTBOX -->
+<script>
+    function openLightbox(item) {
+        const img = item.querySelector('img');
+        if (!img) return;
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-img').alt = img.alt;
+        document.getElementById('lightbox-caption').textContent = img.alt;
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function closeLightboxOutside(e) {
+        if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init({ duration: 700, easing: 'ease-out-cubic', offset: 80, once: false });</script>
+
+</body>
+</html>
