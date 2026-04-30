@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Gems – S.G.G.S. Khalsa College</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/shared-styles.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+ 
+
+  <!-- AOS Library -->
+    <style>
+        /* Reserve space so layout doesn't jump while navbar/footer load */
+      
+
+        .year-heading {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin: 48px 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .year-heading i {
+            color: #8c1007;
+        }
+
+        .gems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gem-card {
+            background: #fff;
+            border: 2px solid #f0f0f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .gem-card:hover {
+            border-color: rgba(140, 16, 7, 0.3);
+            box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .gem-img-wrap {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fef9f8, #f0e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gem-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gem-card:hover .gem-img-wrap img {
+            transform: scale(1.1);
+        }
+
+     .gem-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #8c1007;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fef9f8, #fde4e2);
+    text-align: center;
+    padding: 10px;
+}
+
+.gem-placeholder i {
+    font-size: 3rem;
+    color: rgba(140, 16, 7, 0.4);
+}
+
+.gem-placeholder span {
+    color: #8c1007;
+}
+
+        .gem-info {
+            padding: 14px 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .gem-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .gem-detail {
+            font-size: 0.78rem;
+            color: #888;
+        }
+
+        .gem-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="college-badge"><i class="fas fa-star"></i></div>
+            <h1 class="fade-in">Academic Gems</h1>
+            <p class="hero-sub fade-in-delay">Celebrating Our Brightest Stars — University Toppers & Merit Students</p>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Achievers Recognized</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">All</div>
+                    <div class="stat-label">Departments</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">UG & PG</div>
+                    <div class="stat-label">Level Toppers</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">Every</div>
+                    <div class="stat-label">Semester Honoured</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="facility-section">
+            <div class="section-tag" data-aos="fade-up">Hall of Excellence</div>
+            <div class="facility-header" data-aos="fade-right">
+                <div class="icon-box"><i class="fas fa-trophy"></i></div>
+                <div>
+                    <h2>Our Academic Gems</h2>
+                    <p class="facility-subtitle">Students who have brought laurels to S.G.G.S. Khalsa College, Mahilpur</p>
+                </div>
+            </div>
+            <p class="facility-description" data-aos="fade-up">S.G.G.S. Khalsa College, Mahilpur takes immense pride in its meritorious students who have achieved distinction in university examinations. These Academic Gems are a testimony to the college's commitment to academic excellence and quality education.</p>
+
+            <div class="year-heading" data-aos="fade-up"><i class="fas fa-calendar-alt"></i> 2023–2024 Batch</div>
+            <div class="gems-grid">
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/ravijot.jpg' alt='Ravijot' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Ravijot</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Ravijot</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/navjot.jpg' alt='Navjot' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Navjot</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Navjot</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/tania.jpg' alt='Tania' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Tania</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Tania</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/sameer.jpg' alt='Sameer' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sameer</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sameer</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/shivani.jpg' alt='Shivani' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Shivani</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Shivani</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/parwinder-kaur.jpg' alt='Parwinder Kaur' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Parwinder Kaur</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Parwinder Kaur</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/babita.jpg' alt='Babita' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Babita</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Babita</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/simran--fd-.jpg' alt='Simran (FD)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Simran (FD)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Simran (FD)</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/jasleen.jpg' alt='Jasleen' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Jasleen</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Jasleen</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/rashmi.jpg' alt='Rashmi' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Rashmi</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Rashmi</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/ekamjot.jpg' alt='Ekamjot' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Ekamjot</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Ekamjot</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/ekam--3rd-sem-.jpg' alt='Ekam (3rd Sem)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Ekam (3rd Sem)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Ekam (3rd Sem)</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/simran--3rd-sem-.jpg' alt='Simran (3rd Sem)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Simran (3rd Sem)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Simran (3rd Sem)</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/sanjana--maths-.jpg' alt='Sanjana (Maths)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sanjana (Maths)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sanjana (Maths)</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/mansi.jpg' alt='Mansi' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Mansi</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Mansi</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/nikita.jpg' alt='Nikita' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Nikita</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Nikita</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/avleen-kaur.jpg' alt='Avleen Kaur' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Avleen Kaur</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Avleen Kaur</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/kritika-soni.jpg' alt='Kritika Soni' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Kritika Soni</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Kritika Soni</div>
+                        <div class='gem-detail'>Academic Merit — 2023-24</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-heading" data-aos="fade-up"><i class="fas fa-calendar-alt"></i> 2020–2021 Batch</div>
+            <div class="gems-grid">
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/simran--political-science-.jpg' alt='Simran (Political Science)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Simran (Political Science)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Simran (Political Science)</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/sunita.jpg' alt='Sunita' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sunita</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sunita</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/manisha.jpg' alt='Manisha' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Manisha</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Manisha</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/bhupinder--pgdca-.jpg' alt='Bhupinder (PGDCA)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Bhupinder (PGDCA)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Bhupinder (PGDCA)</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/bhavana.jpg' alt='Bhavana' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Bhavana</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Bhavana</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/bhupinderjit.jpg' alt='Bhupinderjit' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Bhupinderjit</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Bhupinderjit</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/bhupinder.jpg' alt='Bhupinder' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Bhupinder</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Bhupinder</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/diksha.jpg' alt='Diksha' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Diksha</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Diksha</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/karanpreet.jpg' alt='Karanpreet' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Karanpreet</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Karanpreet</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/gurjot.jpg' alt='Gurjot' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Gurjot</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Gurjot</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/parampreet.jpg' alt='Parampreet' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Parampreet</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Parampreet</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/amanpreet.jpg' alt='Amanpreet' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Amanpreet</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Amanpreet</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/sugandha.jpg' alt='Sugandha' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sugandha</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sugandha</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/amandeep-singh.jpg' alt='Amandeep Singh' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Amandeep Singh</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Amandeep Singh</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/aman--3rd-sem-.jpg' alt='Aman (3rd Sem)' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Aman (3rd Sem)</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Aman (3rd Sem)</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/jasmeen.jpg' alt='Jasmeen' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Jasmeen</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Jasmeen</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/mahima.jpg' alt='Mahima' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Mahima</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Mahima</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Topper</div>
+                    <div class='gem-img-wrap'><img src='images/sameer-sharma.jpg' alt='Sameer Sharma' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sameer Sharma</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sameer Sharma</div>
+                        <div class='gem-detail'>Academic Merit — 2020-21</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-heading" data-aos="fade-up"><i class="fas fa-calendar-alt"></i> Earlier Batches</div>
+            <div class="gems-grid">
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_neetu.jpg' alt='Neetu' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Neetu</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Neetu</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_poonam.jpg' alt='Poonam' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Poonam</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Poonam</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_anuradha.jpg' alt='Anuradha' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Anuradha</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Anuradha</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_priya.jpg' alt='Priya' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Priya</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Priya</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_sugandha.jpg' alt='Sugandha' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sugandha</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sugandha</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_aman.jpg' alt='Aman' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Aman</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Aman</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_shally.jpg' alt='Shally' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Shally</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Shally</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_jasdeep.jpg' alt='Jasdeep' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Jasdeep</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Jasdeep</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_anit.jpg' alt='Anit' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Anit</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Anit</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_sukhwinder.jpg' alt='Sukhwinder' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sukhwinder</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sukhwinder</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+                <div class='gem-card' data-aos='zoom-in'>
+                    <div class='gem-badge'>Merit</div>
+                    <div class='gem-img-wrap'><img src='images/sggs_sukhwinder-laur.jpg' alt='Sukhwinder Laur' onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class='gem-placeholder' style='display:none'><i class='fas fa-user-graduate'></i><span>Sukhwinder Laur</span></div>
+                    </div>
+                    <div class='gem-info'>
+                        <div class='gem-name'>Sukhwinder Laur</div>
+                        <div class='gem-detail'>Academic Merit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Helper: load HTML component and re-execute its scripts
+        function loadComponent(url, elementId) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Failed to load ${url} (${response.status})`);
+                    return response.text();
+                })
+                .then(html => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = html;
+
+                    // Re-execute any <script> tags inside the loaded HTML
+                    container.querySelectorAll('script').forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        Array.from(oldScript.attributes).forEach(attr => {
+                            newScript.setAttribute(attr.name, attr.value);
+                        });
+                        newScript.textContent = oldScript.textContent;
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(err => console.error(err));
+        }
+
+        // Load navbar + footer, then init AOS
+        Promise.all([
+            loadComponent('./component/navbar.html', 'navbar'),
+            loadComponent('./component/footer.html', 'footer')
+        ]).then(() => {
+            AOS.init({ duration: 800, easing: 'ease-in-out', offset: 100 });
+            AOS.refresh();
+        });
+    </script>
+</body>
+
+</html>

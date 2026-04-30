@@ -2,445 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="S.G.G.S. Khalsa College Mahilpur offers multiple scholarship schemes including government, trust, and merit-based financial assistance for deserving students."/>
-  <meta name="keywords" content="scholarships S.G.G.S. Khalsa College Mahilpur,financial assistance college Mahilpur,college scholarships Punjab,SGGS Khalsa College scholarship details, college scholarships in Mahilpur">
-  <meta name="author" content="S.G.G.S. Khalsa College">
-  <meta property="og:title" content="S.G.G.S. Khalsa College | Best College in Punjab">
-  <meta property="og:description" content="S.G.G.S. Khalsa College Mahilpur provides financial assistance through scholarships, helping deserving students continue their education without financial burden."/>
-  <title>Scholarships - S.G.G.S. Khalsa College Mahilpur</title>
-
-  <!-- AOS CSS (Animate on Scroll) - ADDED WITHOUT CHANGING ANYTHING ELSE -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarships – S.G.G.S. Khalsa College Mahilpur</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/shared-styles.css">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="./css/navbar.css">
-  <link rel="stylesheet" href="./css/footer.css">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      overflow-x: hidden !important;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      position: relative;
-      padding: 120px 24px 100px;
-      overflow: hidden;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
-      opacity: 1;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.10), transparent 40%);
-    }
-
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.10) 1px, transparent 1px),
-        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.10) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: 100px 100px, 150px 150px, 200px 200px;
-      opacity: 0.5;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .college-badge {
-      width: 80px;
-      height: 80px;
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 2.5rem;
-      color: white;
-      animation: float 3s ease-in-out infinite;
-      border: 2px solid rgba(255,255,255,0.3);
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 20px;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
-    }
-
-    .hero p {
-      font-size: 1.375rem;
-      color: rgba(255,255,255,0.95);
-      max-width: 800px;
-      margin: 0 auto 48px;
-      font-weight: 500;
-    }
-
-    /* Stats Bar */
-    .stats-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(12px);
-      padding: 32px 48px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.2);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .stat-item { text-align: center; }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 4px;
-    }
-
-    .stat-label {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.9);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .stat-divider {
-      width: 1px;
-      height: 40px;
-      background: rgba(255,255,255,0.3);
-    }
-
-    /* Section Tag */
-    .section-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── Main section ── */
-    .scholarship-section {
-      padding: 80px 0;
-      background: #f8f9fb;
-    }
-
-    /* ── Scholarship cards ── */
-    .scholarship-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 36px 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-      border-top: 4px solid #b51610;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .scholarship-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #8c1007, #b51610);
-    }
-
-    .scholarship-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 40px rgba(140,16,7,0.15);
-    }
-
-    .card-icon {
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(135deg, #8c1007, #b51610);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: white;
-      margin-bottom: 20px;
-      flex-shrink: 0;
-    }
-
-    .scholarship-card h3 {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .scholarship-card p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    /* ── Sunny Oberoi full-width card ── */
-    .scholarship-card-full {
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px 36px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-      border-top: 4px solid #b51610;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .scholarship-card-full::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #8c1007, #b51610);
-    }
-
-    .scholarship-card-full h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 16px;
-    }
-
-    .scholarship-card-full h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #8c1007;
-      margin: 24px 0 10px;
-    }
-
-    .scholarship-card-full p,
-    .scholarship-card-full li {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.75;
-    }
-
-    .scholarship-card-full ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .scholarship-card-full li {
-      margin-bottom: 6px;
-    }
-
-    /* ── Marks Table ── */
-    .marks-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      margin: 16px 0 20px;
-    }
-
-    .marks-table thead tr {
-      background: linear-gradient(135deg, #8c1007, #b51610);
-      color: white;
-    }
-
-    .marks-table thead th {
-      padding: 14px 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .marks-table tbody tr:nth-child(even) {
-      background: #fdf3f3;
-    }
-
-    .marks-table tbody tr:nth-child(odd) {
-      background: #fff;
-    }
-
-    .marks-table tbody td {
-      padding: 13px 20px;
-      font-size: 0.92rem;
-      color: #444;
-      border-bottom: 1px solid #f0e0e0;
-    }
-
-    .marks-table tbody tr:last-child td {
-      border-bottom: none;
-      color: #8c1007;
-      font-weight: 600;
-    }
-
-    /* ── Note box ── */
-    .note-box {
-      background: linear-gradient(135deg, #fff5f5, #fff0f0);
-      border: 1px solid #f5c6c6;
-      border-left: 4px solid #b51610;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-top: 20px;
-    }
-
-    .note-box p {
-      margin-bottom: 8px;
-      font-size: 0.93rem;
-      color: #555;
-    }
-
-    .note-box p:last-child { margin-bottom: 0; }
-
-    .note-box strong { color: #8c1007; }
-
-    /* ── PU links list ── */
-    .pu-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .pu-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0e0e0;
-      font-size: 0.94rem;
-      color: #444;
-    }
-
-    .pu-list li:last-child { border-bottom: none; }
-
-    .pu-list li i {
-      color: #b51610;
-      font-size: 0.85rem;
-      flex-shrink: 0;
-    }
-
-    /* ── Section heading ── */
-    .section-heading {
-      font-size: 2.25rem;
-      font-weight: 800;
-      color: #1a1a1a;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-subheading {
-      font-size: 1.05rem;
-      color: #666;
-      max-width: 700px;
-      margin-bottom: 48px;
-    }
-
-    /* ── Animations ── */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-10px); }
-    }
-
-    .fade-in          { animation: fadeIn 0.8s ease-out; }
-    .fade-in-delay    { animation: fadeIn 0.8s ease-out 0.2s both; }
-    .fade-in-delay-2  { animation: fadeIn 0.8s ease-out 0.4s both; }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-      .hero p  { font-size: 1.1rem; }
-      .stats-bar { padding: 24px 20px; gap: 20px; }
-      .stat-divider { display: none; }
-      .scholarship-section { padding: 48px 0; }
-    }
-  </style>
+<link rel="stylesheet" href="./css/footer.css">
 </head>
-
-<body>
-
   <div id="navbar"></div>
 
-  <!-- ── Hero ── -->
+
+<body>
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-particles"></div>
     <div class="hero-content">
-      <div class="college-badge">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-      <h1 class="fade-in">Scholarships</h1>
-      <p class="fade-in-delay">S.G.G.S. Khalsa College, Mahilpur – Hoshiarpur, Punjab</p>
+      <div class="college-badge"><i class="fas fa-hand-holding-usd"></i></div>
+      <h1 class="fade-in">Scholarships & Financial Aid</h1>
+      <p class="hero-sub fade-in-delay">Supporting Every Deserving Student • Multiple Schemes Available</p>
       <div class="stats-bar fade-in-delay-2">
         <div class="stat-item">
           <div class="stat-number">7+</div>
@@ -448,252 +34,378 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-number">SC/OBC</div>
-          <div class="stat-label">Post-Matric Aid</div>
+          <div class="stat-number">15</div>
+          <div class="stat-label">Trust Scholarships/Year</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
           <div class="stat-number">₹4,000</div>
-          <div class="stat-label">Per Awardee (Trust)</div>
+          <div class="stat-label">Per Trust Scholarship</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Fee Waiver Available</div>
+          <div class="stat-label">Max Tuition (Sunny Oberoi)</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Scholarships Main Section ── -->
-  <section class="scholarship-section">
-    <div class="container">
+  <main class="container">
 
-      <!-- Heading -->
-      <div class="text-center">
-        <span class="section-tag" data-aos="fade-up">Financial Assistance</span>
-        <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">Available Scholarship Schemes</h2>
-        <p class="section-subheading mx-auto" data-aos="fade-up" data-aos-delay="150">
-          The college facilitates multiple government and trust-funded scholarship programmes to ensure no deserving student is deprived of higher education due to financial constraints.
-        </p>
-      </div>
-
-      <!-- Row 1 — 3 cards -->
-      <div class="row g-4 mb-4">
-
-        <!-- Card 1 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-award"></i></div>
-            <h3>Principal Harbhajan Singh Memorial Trust</h3>
-            <p>
-              Every year <strong>15 needy / meritorious students</strong> are awarded scholarships of
-              <strong>Rs. 4,000/- each</strong> by the Principal Harbhajan Singh Memorial Trust,
-              instituted by his family in the memory of the founder Principal of the college.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
-            <h3>Post-Matric Scholarship – Scheduled Castes</h3>
-            <p>
-              Provides financial assistance to <strong>Scheduled Caste students</strong> at post-matric
-              or post-secondary stage to enable them to complete their education. Applicable where
-              parents'/guardians' annual income does not exceed <strong>Rs. 2,50,000/-</strong>.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-people-carry"></i></div>
-            <h3>Post-Matric Scholarship – Other Backward Classes (OBCs)</h3>
-            <p>
-              Assists <strong>OBC students</strong> at post-matric or post-secondary stage. Eligible
-              for both employed students (family income ≤ Rs. 1 lac) and unemployed students whose
-              parents'/guardians' income does not exceed <strong>Rs. 1 lac per annum</strong>.
-            </p>
-          </div>
+    <!-- PRINCIPAL TRUST -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">College Scholarship</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-medal"></i></div>
+        <div>
+          <h2>Principal Harbhajan Singh Memorial Trust</h2>
+          <p class="facility-subtitle">In memory of the Founder Principal of the College</p>
         </div>
       </div>
-
-      <!-- Row 2 — 3 cards -->
-      <div class="row g-4 mb-5">
-
-        <!-- Card 4 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-mosque"></i></div>
-            <h3>Post-Matric Scholarship – Minority Communities</h3>
-            <p>
-              Awards scholarships to meritorious students from economically weaker sections of
-              <strong>Muslim, Christian, Sikh, Buddhist, and Parsi</strong> communities (Class XI to Ph.D.)
-              who secured ≥ 50% marks and have family income ≤ <strong>Rs. 2 lac</strong>.
-            </p>
-          </div>
+      <p class="facility-description" data-aos="fade-up">
+        Every year <strong>15 needy/meritorious students</strong> are awarded scholarships of <strong>Rs. 4,000/-
+          each</strong> by the Principal Harbhajan Singh Memorial Trust — instituted by his family in the memory of the
+        Founder Principal of the college.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+          <h3>Target Students</h3>
+          <p>Needy and meritorious students selected by the college each year.</p>
         </div>
-
-        <!-- Card 5 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-female"></i></div>
-            <h3>Special Grant for Girl Students – Scheduled Castes</h3>
-            <p>
-              Girl students belonging to <strong>Scheduled Castes</strong> whose parents'/guardians' annual
-              income does not exceed <strong>Rs. 60,965/-</strong> are entitled to a special grant of
-              <strong>Rs. 50/-</strong> (Post-Matric) and <strong>Rs. 60/- per month</strong> (Post-Graduate).
-            </p>
-          </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+          <h3>Amount</h3>
+          <p>Rs. 4,000/- per student per year.</p>
+          <div class="feature-badge">Per Student</div>
         </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
+          <h3>15 Students</h3>
+          <p>Awarded every academic year without fail.</p>
+          <div class="feature-badge">Every Year</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
 
-        <!-- Card 6 — Panjab University -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="scholarship-card">
-            <div class="card-icon"><i class="fas fa-university"></i></div>
-            <h3>Panjab University Scholarships</h3>
-            <p class="mb-3">
-              Awarded to students of affiliated colleges through the office of the Dean, College Development
-              Council, Panjab University. Details available at
-              <a href="http://dcdc.puchd.ac.in/" target="_blank" class="text-danger fw-semibold">dcdc.puchd.ac.in</a>.
-            </p>
-            <ul class="pu-list">
-              <li><i class="fas fa-circle"></i> Means cum Merit</li>
-              <li><i class="fas fa-circle"></i> Sports</li>
-              <li><i class="fas fa-circle"></i> Single Girl Child</li>
-              <li><i class="fas fa-circle"></i> Physically Disabled</li>
-              <li><i class="fas fa-circle"></i> Aids / Cancer Patient</li>
-            </ul>
-          </div>
+    <!-- SC SCHOLARSHIP -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Government Scholarship</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-scroll"></i></div>
+        <div>
+          <h2>Post-Matric Scholarship Scheme for Scheduled Castes</h2>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        The objective of the scheme is to provide <strong>financial assistance to the Scheduled Caste students</strong>
+        studying at Post-Matric or Post-Secondary stage to enable them to complete their education. These scholarships
+        are paid to students whose parents'/guardians' income from all sources does <strong>not exceed Rs. 2,50,000/-
+          per annum</strong>.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Eligibility</h3>
+          <p>Students belonging to Scheduled Caste category studying at Post-Matric/Post-Secondary stage.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-coins"></i></div>
+          <h3>Income Limit</h3>
+          <p>Parents'/guardians' income from all sources must not exceed <strong>Rs. 2,50,000/- per annum</strong>.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-globe"></i></div>
+          <h3>Online Application</h3>
+          <p>Students must apply online before the due date notified by the college.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- OBC SCHOLARSHIP -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Government Scholarship</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-scroll"></i></div>
+        <div>
+          <h2>Post-Matric Scholarship Scheme for OBCs</h2>
+          <p class="facility-subtitle">Other Backward Classes</p>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        The objective of the scheme is to provide financial assistance to the <strong>OBC students</strong> studying at
+        Post-Matric or Post-Secondary stage to enable them to complete their education.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Employed Students</h3>
+          <p>Whose income combined with income of their parents/guardians does <strong>not exceed Rs. 1 lac per
+              annum</strong>.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-user-clock"></i></div>
+          <h3>Unemployed Students</h3>
+          <p>Whose parents'/guardians' income does <strong>not exceed Rs. 1 lac per annum</strong>.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-globe"></i></div>
+          <h3>Online Application</h3>
+          <p>Students must apply online before the due date notified by the college.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- MINORITY -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Government Scholarship</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-hands-praying"></i></div>
+        <div>
+          <h2>Post-Matric Scholarship for Minority Communities</h2>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        The objective is to award scholarships to meritorious students belonging to <strong>economically weaker sections
+          of minority communities</strong> from Class XI to Ph.D. so as to provide better opportunities for higher
+        education, increase their rate of attainment in higher education, and enhance their employability.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-star-and-crescent"></i></div>
+          <h3>Eligible Communities</h3>
+          <p>Muslim / Christian / Sikh / Buddhist / Parsi communities.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-percent"></i></div>
+          <h3>Marks Required</h3>
+          <p>Not less than <strong>50% marks</strong> in the previous final examination.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-coins"></i></div>
+          <h3>Income Limit</h3>
+          <p>Annual income of parents/guardians from all sources does <strong>not exceed Rs. 2 lac</strong>.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Level of Study</h3>
+          <p>Class XI to Ph.D. — covering the full spectrum of higher education.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- SPECIAL GRANT GIRL SC -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Girl Students</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-female"></i></div>
+        <div>
+          <h2>Special Grant for Girl Students Belonging to Scheduled Castes</h2>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        The <strong>girl students belonging to Scheduled Castes</strong> whose parents'/guardians' annual income does
+        not exceed <strong>Rs. 60,965/-</strong> are entitled to a special grant.
+      </p>
+      <div class="marks-grid" data-aos="fade-up">
+        <div class="marks-card">
+          <div class="marks-pct">₹50</div>
+          <div class="marks-label">Per Month — Post-Matric Studies</div>
+        </div>
+        <div class="marks-card">
+          <div class="marks-pct">₹60</div>
+          <div class="marks-label">Per Month — Post-Graduate Studies</div>
+        </div>
+        <div class="marks-card">
+          <div class="marks-pct">₹60,965</div>
+          <div class="marks-label">Maximum Annual Family Income</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- PU SCHOLARSHIPS -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">University Scholarships</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-university"></i></div>
+        <div>
+          <h2>Panjab University Scholarships</h2>
+          <p class="facility-subtitle">Awarded through Dean, College Development Council, Panjab University</p>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        The list of scholarships awarded to students of affiliated colleges by the office of Dean, College Development
+        Council is available on the website: <strong>http://dcdc.puchd.ac.in/</strong>
+      </p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Means cum Merit</h3>
+          <p>For students with financial need combined with academic merit.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Sports</h3>
+          <p>For students excelling in sports at state, national, or university level.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-child"></i></div>
+          <h3>Single Girl Child</h3>
+          <p>Special scholarship for single girl child families.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i class="fas fa-wheelchair"></i></div>
+          <h3>Physically Disabled</h3>
+          <p>Support for students with physical disabilities pursuing higher education.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>AIDS/Cancer Patient</h3>
+          <p>Financial assistance for students suffering from AIDS or Cancer.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- SUNNY OBEROI -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Sarbat Da Bhala Charitable Trust (SDBCT)</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-star"></i></div>
+        <div>
+          <h2>Sunny Oberoi Scholarships Scheme</h2>
+          <p class="facility-subtitle">For intelligent and hard working students from underprivileged sections</p>
+        </div>
+      </div>
+      <p class="facility-description" data-aos="fade-up">
+        <strong>SARBAT DA BHALA CHARITABLE TRUST (SDBCT)</strong> is a philanthropic body dedicated to the cause of
+        extending economic benefits to the underprivileged and hitherto neglected sections of society. The Trust grants
+        financial assistance under the <strong>Sunny Oberoi Scholarships Scheme</strong> where intelligent and
+        hard-working students are helped to pursue their higher education.
+      </p>
+
+      <h3 style="font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:20px;" data-aos="fade-up"><i
+          class="fas fa-list-check" style="color:#8c1007;margin-right:10px;"></i>Eligibility Categories</h3>
+      <div class="features-grid" data-aos="fade-up">
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Economically Weaker</h3>
+          <p>Students belonging to economically weaker sections of society.</p>
+        </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-user-slash"></i></div>
+          <h3>Lost Father (Earning Member)</h3>
+          <p>A student who has lost his/her father — the earning member of the family.</p>
+        </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-female"></i></div>
+          <h3>Divorced Mother</h3>
+          <p>Students whose mother is a divorcee and not getting any supporting allowance from the husband.</p>
+        </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+          <h3>Natural Disaster</h3>
+          <p>Students whose families are affected by natural disaster.</p>
+        </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon"><i class="fas fa-wheelchair"></i></div>
+          <h3>Differently Abled</h3>
+          <p>Students who are differently abled.</p>
+        </div>
+        <div class="feature-card highlight" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Trust Recommended</h3>
+          <p>Students recommended by the Managing Trustee of Sarbat Da Bhala Charitable Trust (Regd.).</p>
         </div>
       </div>
 
-      <!-- ── Sunny Oberoi Full-Width Card ── -->
-      <div class="scholarship-card-full mb-5" data-aos="zoom-in-up">
-        <div class="d-flex align-items-start gap-3 mb-3">
-          <div class="card-icon" style="width:56px;height:56px;background:linear-gradient(135deg,#8c1007,#b51610);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;flex-shrink:0;">
-            <i class="fas fa-star"></i>
-          </div>
-          <div>
-            <h3 class="mb-1">Sunny Oberoi Scholarships Scheme</h3>
-            <p class="mb-0 text-muted" style="font-size:0.9rem;">
-              Granted by <strong>Sarbat Da Bhala Charitable Trust (SDBCT)</strong> — a philanthropic body dedicated to extending
-              economic benefits to underprivileged sections of society.
-            </p>
-          </div>
+      <h3 style="font-size:1.5rem;font-weight:700;color:#1a1a1a;margin:32px 0 20px;" data-aos="fade-up"><i
+          class="fas fa-gavel" style="color:#8c1007;margin-right:10px;"></i>Selection Rules</h3>
+      <ul class="styled-list" data-aos="fade-up" style="margin-bottom:40px;">
+        <li><span class="li-num">1</span><span>Students whose parents' annual income is <strong>less than one lakh
+              rupees</strong>.</span></li>
+        <li><span class="li-num">2</span><span>Student must fulfil the mandatory <strong>class attendance
+              conditions</strong>.</span></li>
+        <li><span class="li-num">3</span><span>Student must <strong>not be getting scholarship/stipend</strong> on the
+            basis of SC/BC category or Sikh Minority community Scholarship Scheme. They must first approach concerned
+            authorities before applying to the Trust.</span></li>
+        <li><span class="li-num">4</span><span>Students must have <strong>more than 65% marks</strong> in the qualifying
+            examination.</span></li>
+      </ul>
+
+      <h3 style="font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:20px;" data-aos="fade-up"><i
+          class="fas fa-rupee-sign" style="color:#8c1007;margin-right:10px;"></i>Scholarship Amount — Based on
+        Performance in Immediately Previous Examination/Semester</h3>
+      <div class="marks-grid" data-aos="fade-up">
+        <div class="marks-card">
+          <div class="marks-pct">95%+</div>
+          <div class="marks-label">100% of Tuition Fee Only*</div>
         </div>
-
-        <div class="row g-4">
-          <!-- Eligibility -->
-          <div class="col-md-6">
-            <h4><i class="fas fa-check-circle me-2"></i>Eligibility</h4>
-            <ul>
-              <li>Students belonging to economically weaker sections</li>
-              <li>A student who has lost his/her father (earning member of the family)</li>
-              <li>Students whose mother is a divorcee not receiving any supporting allowance</li>
-              <li>Student whose family is affected by a natural disaster</li>
-              <li>Students who are differently abled</li>
-              <li>Students recommended by Managing Trustee of SDBCT (Regd.)</li>
-            </ul>
-          </div>
-
-          <!-- Rules -->
-          <div class="col-md-6">
-            <h4><i class="fas fa-gavel me-2"></i>Rules</h4>
-            <ul>
-              <li>Parents' annual income must be less than <strong>Rs. 1 lac</strong></li>
-              <li>Student must fulfill mandatory class attendance conditions</li>
-              <li>Student must not be availing SC/BC or Sikh Minority community scholarship</li>
-              <li>Student must have more than <strong>65% marks</strong> in qualifying examination</li>
-            </ul>
-          </div>
+        <div class="marks-card">
+          <div class="marks-pct">81–94%</div>
+          <div class="marks-label">75% of Tuition Fee Only*</div>
         </div>
-
-        <!-- Marks table -->
-        <h4 class="mt-4"><i class="fas fa-table me-2"></i>Scholarship Amount (Based on Marks)</h4>
-        <table class="marks-table">
-          <thead>
-            <tr>
-              <th>Marks Obtained</th>
-              <th>Scholarship Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>95% and Above</td>
-              <td>100% of Tuition Fee Only*</td>
-            </tr>
-            <tr>
-              <td>81% – 94%</td>
-              <td>75% of Tuition Fee Only*</td>
-            </tr>
-            <tr>
-              <td>65% – 80%</td>
-              <td>50% of Tuition Fee Only*</td>
-            </tr>
-            <tr>
-              <td>65% &amp; Below</td>
-              <td>No Concession Granted</td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size:0.85rem;color:#888;">*All other charges, fees &amp; funds will be borne by the applicant.</p>
-
-        <!-- Note -->
-        <div class="note-box">
-          <p><strong>📝 Important Note:</strong></p>
-          <p>Scholarship/Stipend forms can be collected at the time of admission. Students eligible for scholarship/stipend must submit these forms along with their admission form, duly completed in all respects and attested by the appropriate authorities.</p>
-          <p>Forms not submitted by the due date notified by the college will <strong>not</strong> be entertained.</p>
-          <p>Students belonging to <strong>SC / OBC / Minority Communities</strong> must apply <strong>online</strong> for the scholarship before the due date.</p>
+        <div class="marks-card">
+          <div class="marks-pct">65–80%</div>
+          <div class="marks-label">50% of Tuition Fee Only*</div>
+        </div>
+        <div class="marks-card">
+          <div class="marks-pct">≤65%</div>
+          <div class="marks-label">No Concession to be Granted</div>
         </div>
       </div>
-
-      <!-- Bottom CTA -->
-      <div class="text-center pt-2" data-aos="zoom-in">
-        <p class="text-muted mb-3" style="font-size:0.95rem;">Need more information about admissions or scholarships?</p>
-        <a href="./contactus copy.html" class="btn btn-danger px-5 py-2 me-2 rounded-pill fw-semibold">
-          <i class="fas fa-envelope me-2"></i>Contact Us
-        </a>
-        <a href="./Addimision-page.html" target="_blank"
-           class="btn btn-outline-danger px-5 py-2 rounded-pill fw-semibold">
-          <i class="fas fa-file-alt me-2"></i>Apply for Admission 2025-26
-        </a>
+      <div class="notice-box" data-aos="fade-up">
+        <span class="n-icon"><i class="fas fa-exclamation-triangle"></i></span>
+        <span><strong>*Note:</strong> All other charges, fee & funds etc. will be borne by the applicant
+          themselves.</span>
       </div>
+      <div class="divider"></div>
+    </section>
 
-    </div>
-  </section>
+    <!-- HOW TO APPLY -->
+    <section class="facility-section">
+      <div class="section-tag" data-aos="fade-up">Important Notice</div>
+      <div class="facility-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-info-circle"></i></div>
+        <div>
+          <h2>How to Apply — General Note</h2>
+        </div>
+      </div>
+      <ul class="styled-list" data-aos="fade-up">
+        <li><span class="li-dot">✦</span><span>The Scholarship/Stipend forms can be collected <strong>at the time of
+              admission</strong>.</span></li>
+        <li><span class="li-dot">✦</span><span>Students eligible for scholarship/stipend must submit these forms along
+            with their admission form, <strong>duly completed in all respects</strong> and attested by the appropriate
+            authorities.</span></li>
+        <li><span class="li-dot">✦</span><span>Scholarship/stipend forms <strong>not submitted by the due date</strong>
+            notified by the college will not be entertained.</span></li>
+        <li><span class="li-dot">✦</span><span>Students belonging to <strong>SC/OBC/Minority Communities must apply
+              online</strong> for the scholarship before the due date.</span></li>
+      </ul>
+    </section>
 
-  <div id="footer"></div>
+  </main>
+   <div id="footer"></div>
 
-  <!-- AOS JS (Animate on Scroll) - ADDED WITHOUT CHANGING ANYTHING ELSE -->
-  <!-- 'once: false' is the default, so animations repeat on every scroll. No 'once: true' used. -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS with default settings (once: false by default, no 'once' property set)
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      offset: 100,
-      delay: 0,
-      mirror: false,
-      anchorPlacement: 'top-bottom',
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+  <script>AOS.init({ duration: 800, easing: 'ease-in-out', offset: 100 });</script>
+    <script>
     // Load Navbar
     fetch('./component/navbar.html')
-      .then(r => r.text())
-      .then(d => document.getElementById('navbar').innerHTML = d);
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
 
     // Load Footer
     fetch('./component/footer.html')
-      .then(r => r.text())
-      .then(d => document.getElementById('footer').innerHTML = d);
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
   </script>
 </body>
+
 </html>
