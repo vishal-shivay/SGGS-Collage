@@ -310,3 +310,121 @@
         font-size: 0.78rem;
     }
 }
+
+
+/* ===============================
+   DROPDOWN MENU STYLES
+================================ */
+
+.footer-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+    margin-left: 5px;
+}
+
+.footer-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Submenu styling */
+.footer-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 8px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-dropdown.active .footer-submenu {
+    max-height: 300px;
+    opacity: 1;
+    padding: 8px 0;
+    margin-bottom: 12px;
+}
+
+.footer-submenu li {
+    margin-bottom: 0 !important;
+}
+
+.footer-submenu li a {
+    padding: 8px 16px 8px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-submenu li a i {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.footer-submenu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.footer-submenu li a::after {
+    display: none;
+}
+
+/* Mobile optimization for dropdowns */
+@media (max-width: 768px) {
+    .footer-submenu {
+        background: rgba(0, 0, 0, 0.3);
+        margin-left: 20px;
+    }
+    
+    .footer-submenu li a {
+        padding: 8px 16px 8px 28px;
+    }
+}
+
+/* Desktop hover alternative (optional) */
+@media (min-width: 769px) {
+    .footer-dropdown:hover .footer-submenu {
+        max-height: 300px;
+        opacity: 1;
+        padding: 8px 0;
+        margin-bottom: 12px;
+    }
+    
+    .footer-dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+    
+    /* Optional - show submenu as floating dropdown on desktop */
+    .footer-submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        min-width: 240px;
+        z-index: 100;
+        background: rgba(74, 0, 0, 0.95);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+    }
+}
