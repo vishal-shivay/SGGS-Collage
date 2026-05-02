@@ -892,6 +892,24 @@
         font-size: 1.2rem;
     }
 
+/* Force carousel to fixed height */
+#myCustomCarousel,
+#myCustomCarousel .carousel-inner,
+#myCustomCarousel .carousel-item {
+    height: 600px;        /* Change to your preferred height */
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+#myCustomCarousel .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
     .close-btn {
         position: absolute;
         top: 20px;
@@ -2036,92 +2054,76 @@
 
     <!-- Bootstrap Carousel -->
     <div id="myCustomCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-        <div class="carousel-inner custom-carousel-inner">
+    <div class="carousel-inner custom-carousel-inner">
 
-
-            <div class="carousel-item custom-carousel-item active">
-                <img src="./images/new-banner-1.jpeg" alt="...">
-
-                <div class="carousel-caption custom-carousel-caption">
-                    <!-- <h5>S.G.G.S. KHALSA COLLEGE MAHILPUR</h5> -->
-                </div>
-            </div>
-
-
-
-
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/new-banner-2.jpeg" alt="...">
-            </div>
-
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/new-banner-3.jpeg" alt="...">
-            </div>
-
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/new-banner-4.jpeg" alt="...">
-            </div>
-
-
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/khalsa.jpg" alt="...">
-            </div>
-
-
-
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/banner2.jpg" alt="...">
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add1.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>College Events</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add2.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>College Events</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add3.jpeg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>College Hall</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add4.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>College Annual Convocation</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add5.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>Graduation Ceremony</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add6.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5>Graduation Day</h5>
-                </div>
-            </div>
-            <div class="carousel-item custom-carousel-item">
-                <img src="./images/add7.jpg" alt="...">
-                <div class="carousel-caption custom-carousel-caption">
-                    <h5></h5>
-                </div>
-            </div>
+        <div class="carousel-item custom-carousel-item active">
+            <img src="./images/new-banner-1.jpeg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"></div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
+
+        <div class="carousel-item custom-carousel-item">
+            <img src="./images/new-banner-2.jpeg" class="carousel-img" alt="...">
+        </div>
+
+        <div class="carousel-item custom-carousel-item">
+            <img src="./images/new-banner-3.jpeg" class="carousel-img" alt="...">
+        </div>
+
+        <div class="carousel-item custom-carousel-item">
+            <img src="./images/new-banner-4.jpeg" class="carousel-img" alt="...">
+        </div>
+
+        <div class="carousel-item custom-carousel-item">
+            <img src="./images/khalsa.jpg" class="carousel-img" alt="...">
+        </div>
+
+        <div class="carousel-item custom-carousel-item">
+            <img src="./images/banner2.jpg" class="carousel-img" alt="...">
+        </div>
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add1.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>College Events</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add2.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>College Events</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add3.jpeg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>College Hall</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add4.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>College Annual Convocation</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add5.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>Graduation Ceremony</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add6.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5>Graduation Day</h5></div>
+        </div> -->
+
+        <!-- <div class="carousel-item custom-carousel-item">
+            <img src="./images/add7.jpg" class="carousel-img" alt="...">
+            <div class="carousel-caption custom-carousel-caption"><h5></h5></div>
+        </div> -->
+
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
 
 
     <!-- Hero -->
