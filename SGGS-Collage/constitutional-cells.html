@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Constitutional Cells of S.G.G.S. Khalsa College Mahilpur — Women Cell, Grievance Redressal Cell, and Minority Cell for student and staff welfare.">
+  <meta name="keywords" content="Constitutional Cells, Women Cell, Grievance Cell, Minority Cell, S.G.G.S. Khalsa College, Mahilpur">
+  <meta name="author" content="S.G.G.S. Khalsa College">
+  <title>Constitutional Cells | S.G.G.S. College</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    :root {
+      --wine-red: #8C1007;
+      --dark-wine: #6b0d05;
+      --light-bg: #f8f9fa;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+    }
+
+    p, h1, h2, h3, h4, .text-muted { word-wrap: break-word; hyphens: auto; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 120px 0 90px;
+      overflow: hidden;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--wine-red) 0%, #b51610 30%, var(--wine-red) 60%, var(--dark-wine) 100%);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%);
+    }
+    .hero-particles {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 100px 100px, 150px 150px, 200px 200px;
+      opacity: 0.5;
+    }
+    .hero-content { position: relative; z-index: 10; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .college-badge {
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem; color: white;
+      animation: float 3s ease-in-out infinite;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800; color: white;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em; line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.92);
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+    }
+    .hero-pills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    }
+    .hero-pill {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      border-radius: 30px;
+      padding: 8px 22px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider { height: 4px; background: linear-gradient(90deg, var(--wine-red), #f8cd41, var(--wine-red)); }
+
+    /* ── SECTION TAG ── */
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+      color: white; padding: 8px 20px;
+      border-radius: 50px; font-size: 0.875rem;
+      font-weight: 600; margin-bottom: 24px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    /* ── CELL INTRO CARD ── */
+    .cell-intro {
+      background: #fff;
+      border-radius: 20px;
+      border: 2px solid #f0f0f0;
+      border-top: 5px solid var(--wine-red);
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      height: 100%;
+    }
+    .cell-intro:hover {
+      box-shadow: 0 12px 40px rgba(140,16,7,0.12);
+      transform: translateY(-4px);
+    }
+    .cell-icon-box {
+      width: 68px; height: 68px;
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.8rem;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(140,16,7,0.3);
+    }
+    .cell-intro h2 {
+      font-size: 1.6rem; font-weight: 800;
+      color: var(--wine-red); margin-bottom: 14px;
+    }
+    .cell-intro p {
+      font-size: 0.95rem; color: #555;
+      line-height: 1.8; margin-bottom: 0;
+    }
+
+    /* ── ACT BADGE ── */
+    .act-badge {
+      display: inline-block;
+      background: #fef2f2;
+      border: 1px solid rgba(140,16,7,0.2);
+      color: var(--wine-red);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* ── COMMITTEE TABLE ── */
+    .committee-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border: 1px solid #f0e0e0;
+    }
+    .committee-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; background: #fff; }
+    .committee-table thead tr { background: linear-gradient(135deg, #8c1007, #b51610); }
+    .committee-table th {
+      color: #f8cd41; font-weight: 700;
+      padding: 14px 20px; text-align: left;
+      font-size: 0.78rem; text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .committee-table td { padding: 13px 20px; border-bottom: 1px solid #faf0f0; color: #2a0a0a; vertical-align: middle; }
+    .committee-table tbody tr:nth-child(even) { background: #fef9f8; }
+    .committee-table tbody tr:hover { background: #fdf0f0; transition: background 0.15s; }
+    .committee-table td:first-child { font-weight: 700; color: var(--wine-red); text-align: center; width: 60px; }
+    .committee-table td:nth-child(2) { font-weight: 600; }
+    .committee-table td:nth-child(3) { color: #555; font-style: italic; font-size: 0.88rem; }
+    .committee-table td:last-child { font-family: monospace; font-size: 0.9rem; color: #333; }
+
+    @media (max-width: 576px) {
+      .committee-table th, .committee-table td { padding: 10px 12px; font-size: 0.8rem; }
+      .cell-intro { padding: 28px 22px; }
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: linear-gradient(135deg, #fef2f2 0%, #fff8f8 100%);
+      border-left: 5px solid var(--wine-red);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+    }
+    .highlight-box h5 { color: var(--wine-red); font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+    .highlight-box p { font-size: 0.92rem; color: #444; line-height: 1.75; margin: 0; }
+
+    /* ── INFO CARDS ── */
+    .info-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 2px solid #f0f0f0;
+      padding: 28px;
+      display: flex; gap: 16px; align-items: flex-start;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .info-card:hover { box-shadow: 0 8px 28px rgba(140,16,7,0.1); border-color: rgba(140,16,7,0.2); }
+    .info-card-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: rgba(140,16,7,0.08);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--wine-red); font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+    .info-card:hover .info-card-icon { background: var(--wine-red); color: #fff; }
+    .info-card h5 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    .info-card p { font-size: 0.87rem; color: #666; line-height: 1.65; margin: 0; }
+
+    /* ── CONTACT BAND ── */
+    .contact-band {
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 40%, #8c1007 100%);
+      padding: 60px 24px;
+    }
+    .contact-band h2 { color: #f8cd41; font-weight: 800; margin-bottom: 8px; }
+    .contact-band p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 6px; }
+    .contact-band a { color: #f8cd41; text-decoration: none; font-weight: 600; }
+    .contact-band a:hover { text-decoration: underline; }
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px; padding: 20px 24px;
+      text-align: center; height: 100%;
+    }
+    .contact-item i { font-size: 1.6rem; color: #f8cd41; margin-bottom: 10px; display: block; }
+    .contact-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+    .contact-item .value { font-size: 0.92rem; color: #fff; font-weight: 600; }
+    .contact-item .value a { color: #f8cd41; }
+
+    /* main content container */
+    .page-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <div class="college-badge" data-aos="zoom-in" data-aos-duration="700">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Constitutional Cells</h1>
+      <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        Empowering Every Student &amp; Staff Member Through Inclusive, Safe &amp; Just Campus Governance
+      </p>
+      <div class="hero-pills" data-aos="fade-up" data-aos-duration="900" data-aos-delay="350">
+        <span class="hero-pill"><i class="fas fa-venus me-2"></i>Women Cell</span>
+        <span class="hero-pill"><i class="fas fa-balance-scale me-2"></i>Grievance Redressal Cell</span>
+        <span class="hero-pill"><i class="fas fa-hands-helping me-2"></i>Minority Cell</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ INTRO ══════════════ -->
+  <section class="py-5" style="background:#f8f9fa;">
+    <div class="page-container">
+      <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="700">
+        <span class="section-tag">Our Commitment</span>
+        <h2 class="fw-bold mt-2" style="font-size:2.4rem;color:#1a1a1a;">Cells for a Safe &amp; Inclusive Campus</h2>
+        <p class="text-muted mx-auto mt-3" style="max-width:760px;font-size:1rem;line-height:1.8;">
+          S.G.G.S. Khalsa College, Mahilpur has constituted statutory cells as mandated by the Government of India and the UGC to ensure the welfare, safety, and rights of all students and staff — regardless of gender, background, or community.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-venus"></i></div>
+            <div>
+              <h5>Women Cell</h5>
+              <p>Protection against sexual harassment under the POSH Act, 2013. Ensures gender equality and safe workplaces for women.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-balance-scale"></i></div>
+            <div>
+              <h5>Grievance Redressal Cell</h5>
+              <p>Transparent and timely resolution of staff and student grievances under UGC guidelines for a harmonious campus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-hands-helping"></i></div>
+            <div>
+              <h5>Minority Cell</h5>
+              <p>Empowers minority communities — Sikh, Christian, Muslim, Jain and others — through scholarships, guidance and holistic support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ WOMEN CELL ══════════════ -->
+  <section class="py-5" style="background:#fff;" id="women-cell">
+    <div class="page-container">
+      <div class="row g-5 align-items-start">
+
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="900">
+          <span class="section-tag"><i class="fas fa-venus me-2"></i>Women Cell</span>
+          <div class="cell-intro">
+            <div class="cell-icon-box"><i class="fas fa-venus"></i></div>
+            <h2>Women Cell</h2>
+            <div class="act-badge">
+              <i class="fas fa-gavel me-2"></i>
+              Sexual Harassment of Women at Workplace<br>
+              (Prevention, Prohibition &amp; Redressal) Act, 2013<br>
+              <span style="font-weight:400;color:#666;">Enforced: December 9, 2013</span>
+            </div>
+            <p>
+              This Act provides protection against sexual harassment of women at the workplace, ensuring the prevention and redressal of complaints and all matters connected therewith. It contributes to the realisation of women's rights to gender equality, life, liberty, and equality in working conditions everywhere.
+            </p>
+            <p class="mt-3">
+              A sense of security at the workplace improves women's participation in work, resulting in their economic empowerment and inclusive growth. The Act covers students in schools and colleges as well as patients in hospitals. Employers and local authorities must set up grievance committees to investigate all complaints.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left" data-aos-duration="900">
+          <div class="highlight-box mb-4">
+            <h5><i class="fas fa-info-circle me-2"></i>About this Committee</h5>
+            <p>The following committee has been constituted for the welfare of students of all categories and female staff, in compliance with the Sexual Harassment of Women at Workplace Act, 2013.</p>
+          </div>
+          <h4 class="fw-bold mb-3" style="color:var(--wine-red);">Committee Members</h4>
+          <div class="committee-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <table class="committee-table">
+              <thead>
+                <tr>
+                  <th>Sr.</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Contact No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Dr. Parvinder Singh <small class="d-block text-muted fw-normal">(Principal)</small></td>
+                  <td>Chairperson</td>
+                  <td>9463675767</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Prof. Aradhna Duggal <small class="d-block text-muted fw-normal">(Vice-Principal)</small></td>
+                  <td>Member</td>
+                  <td>8872521794</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dr. Balvir Kaur</td>
+                  <td>Convener</td>
+                  <td>9464330803</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Dr. Aarti Sharma</td>
+                  <td>Member</td>
+                  <td>9417505950</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Dr. Parminder Kaur</td>
+                  <td>Member</td>
+                  <td>9478678645</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ GRIEVANCE CELL ══════════════ -->
+  <section class="py-5" style="background:#f8f9fa;" id="grievance-cell">
+    <div class="page-container">
+      <div class="row g-5 align-items-start flex-lg-row-reverse">
+
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="900">
+          <span class="section-tag"><i class="fas fa-balance-scale me-2"></i>Grievance Cell</span>
+          <div class="cell-intro">
+            <div class="cell-icon-box"><i class="fas fa-balance-scale"></i></div>
+            <h2>College Grievance Redressal Cell</h2>
+            <p>
+              Grievance Redressal System is a vital part of any administration. It is the responsibility of the College Administration to provide a secure and contented environment to all its Staff and Students.
+            </p>
+            <p class="mt-3">
+              The Grievance Redressal Committee has been formed in the College as per the UGC guidelines to redress the grievances of both the staff and the students. Since the inception of the college, the Committee has been under the direct purview of the Principal.
+            </p>
+            <p class="mt-3">
+              The grievances received by the Principal are forwarded to the concerned Committee members who look into the problems depending upon the seriousness of the issue. The Committee has been continuously striving to take the best efforts possible to create a harmonious and conducive atmosphere for everyone in question.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-right" data-aos-duration="900">
+          <div class="highlight-box mb-4">
+            <h5><i class="fas fa-info-circle me-2"></i>About this Committee</h5>
+            <p>The following Grievance Cell has been constituted for the welfare of students of all categories and female staff, as per UGC guidelines for Grievance Redressal in Higher Educational Institutions.</p>
+          </div>
+          <h4 class="fw-bold mb-3" style="color:var(--wine-red);">Committee Members</h4>
+          <div class="committee-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <table class="committee-table">
+              <thead>
+                <tr>
+                  <th>Sr.</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Contact No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Dr. Aarti Sharma</td>
+                  <td>Convener</td>
+                  <td>9417505950</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Dr. Pratibha Chauhan</td>
+                  <td>Member</td>
+                  <td>9417803865</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dr. Jatinder Kumar</td>
+                  <td>Member</td>
+                  <td>9779935498</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ MINORITY CELL ══════════════ -->
+  <section class="py-5" style="background:#fff;" id="minority-cell">
+    <div class="page-container">
+      <div class="row g-5 align-items-start">
+
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="900">
+          <span class="section-tag"><i class="fas fa-hands-helping me-2"></i>Minority Cell</span>
+          <div class="cell-intro">
+            <div class="cell-icon-box"><i class="fas fa-hands-helping"></i></div>
+            <h2>Minority Cell</h2>
+            <p>
+              The aim of the Minority Cell is to empower the minority communities in the College and assist them in their curricular, co-curricular and extra-curricular activities. The Cell has been set up to help minority students from the Sikh, Christian, Muslim, Jain and other communities achieve holistic development.
+            </p>
+            <p class="mt-3">
+              The smooth working of the Minority Cell has been achieved through time-to-time meetings and follow-ups by the management and committee chairman. The Cell has helped students obtain financial support from minority communities and government agencies.
+            </p>
+            <p class="mt-3">
+              Every year the Minority Cell organises a <strong>Scholarship Guidance Program</strong>, through which government scholarship information and guidance is provided to minority students. Meetings are conducted throughout the year with committee members and the chairman for the successful implementation of schemes and activities.
+            </p>
+            <p class="mt-3">
+              The Minority Cell of the college strives to create an inclusive and empowering environment for minority students, fostering their overall development and success in both academic and personal spheres.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left" data-aos-duration="900">
+          <div class="highlight-box mb-4">
+            <h5><i class="fas fa-info-circle me-2"></i>About this Committee</h5>
+            <p>The Minority Cell committee works towards the inclusive growth of students belonging to Sikh, Christian, Muslim, Jain and other minority communities by providing guidance, financial support and a platform for holistic development.</p>
+          </div>
+
+          <!-- Communities Supported -->
+          <div class="row g-3 mb-4">
+           
+            <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="60">
+              <div class="text-center p-3 rounded-3" style="background:#fef9f8;border:1px solid #f0ddd5;">
+                <div style="font-size:1.8rem;margin-bottom:6px;"></div>
+                <div style="font-size:0.82rem;font-weight:700;color:var(--wine-red);">Christian</div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="120">
+              <div class="text-center p-3 rounded-3" style="background:#fef9f8;border:1px solid #f0ddd5;">
+                <div style="font-size:1.8rem;margin-bottom:6px;"></div>
+                <div style="font-size:0.82rem;font-weight:700;color:var(--wine-red);">Muslim</div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="180">
+              <div class="text-center p-3 rounded-3" style="background:#fef9f8;border:1px solid #f0ddd5;">
+                <div style="font-size:1.8rem;margin-bottom:6px;"></div>
+                <div style="font-size:0.82rem;font-weight:700;color:var(--wine-red);">Jain</div>
+              </div>
+            </div>
+             <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="0">
+              <div class="text-center p-3 rounded-3" style="background:#fef9f8;border:1px solid #f0ddd5;">
+                <div style="font-size:1.8rem;margin-bottom:6px;">🪯</div>
+                <div style="font-size:0.82rem;font-weight:700;color:var(--wine-red);">Sikh</div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="240">
+              <div class="text-center p-3 rounded-3" style="background:#fef9f8;border:1px solid #f0ddd5;">
+                <div style="font-size:1.8rem;margin-bottom:6px;">🤝</div>
+                <div style="font-size:0.82rem;font-weight:700;color:var(--wine-red);">Others</div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+              <div class="text-center p-3 rounded-3" style="background:var(--wine-red);border:1px solid var(--dark-wine);">
+                <div style="font-size:1.8rem;margin-bottom:6px;">🎓</div>
+                <div style="font-size:0.82rem;font-weight:700;color:#f8cd41;">Scholarships</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="fw-bold mb-3" style="color:var(--wine-red);">Committee Members</h4>
+          <div class="committee-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <table class="committee-table">
+              <thead>
+                <tr>
+                  <th>Sr.</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Contact No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Dr. Jatinder Kumar</td>
+                  <td>Convener</td>
+                  <td>9779935498</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Prof. Manpreet Kaur</td>
+                  <td>Member</td>
+                  <td>9041100147</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Prof. Rajwinder Kaur</td>
+                  <td>Member</td>
+                  <td>7901854155</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Registration CTA -->
+          <div class="mt-4 p-4 rounded-4 d-flex align-items-center gap-3 flex-wrap" style="background:#fef2f2;border:1px solid rgba(140,16,7,0.15);" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div>
+              <h6 class="fw-bold mb-1" style="color:var(--wine-red);">Online Registration Form 2023-24</h6>
+              <p class="mb-0 text-muted" style="font-size:0.85rem;">Minority students can register online for scholarship guidance and support programs.</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1-daG8tT_RBHJif4wcx-lnSfufk6KD3bny5-H-JFtAPl0Vw/viewform?usp=send_form" target="_blank" rel="noopener noreferrer"
+              class="btn fw-semibold rounded-pill flex-shrink-0"
+              style="background:var(--wine-red);color:#fff;padding:10px 24px;">
+              <i class="fas fa-external-link-alt me-2"></i>Register Now
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ CONTACT BAND ══════════════ -->
+  <section class="contact-band">
+    <div class="page-container">
+      <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="700">
+        <h2 class="fw-bold">S.G.G.S. Khalsa College Mahilpur</h2>
+        <p>Distt. Hoshiarpur, Punjab – 146105, India</p>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="label">Postal Address</div>
+            <div class="value">Mahilpur, Distt. Hoshiarpur, Punjab 146105</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="80">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="label">Admission Enquiry</div>
+            <div class="value"><a href="tel:01884292142">01884-292142</a></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="160">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div class="label">Administrative Office</div>
+            <div class="value"><a href="tel:01884245236">01884-245236</a> / <a href="tel:01884292036">01884-292036</a></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="240">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="label">Email</div>
+            <div class="value">
+              <a href="mailto:info@sggskcm.org">info@sggskcm.org</a><br>
+              <a href="mailto:sggskcm@live.com">sggskcm@live.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SCRIPTS ══════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 80, easing: 'ease-out-cubic' });
+  </script>
+
+  <div id="footer"></div>
+  <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    fetch('./component/footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer').innerHTML = d);
+  </script>
+</body>
+</html>
