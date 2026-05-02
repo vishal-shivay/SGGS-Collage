@@ -262,6 +262,38 @@
 
     /* ── SECTION DIVIDER ── */
     .section-divider { height: 4px; background: linear-gradient(90deg, var(--wine-red), #f8cd41, var(--wine-red)); }
+    .inspiration-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.inspiration-text {
+  flex: 1;
+}
+
+.inspiration-image {
+  flex-shrink: 0;
+  width: 260px;
+}
+
+.inspiration-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .inspiration-card {
+    flex-direction: column;
+  }
+
+  .inspiration-image {
+    width: 100%;
+  }
+}
   </style>
 </head>
 
@@ -476,33 +508,62 @@
 
   <!-- ══════════════ OUR INSPIRATION ══════════════ -->
   <div class="principal-container">
-    <div class="principal">
-      <div data-aos="fade-right" data-aos-duration="900">
-        <h1>Our Inspiration<br>
-          <p>PRINCIPAL HARBHAJAN SINGH</p>
-        </h1>
-      </div>
-      <div data-aos="fade-left" data-aos-duration="900">
-        <img src="./images/principal.jpg" alt="Principal Harbhajan Singh" style="height:90%;">
-      </div>
-    </div>
-    <div class="container">
-      <section class="principal-legacy">
-        <div class="legacy-content" data-aos="fade-up" data-aos-duration="800">
-          <h2>PRINCIPAL HARBHAJAN SINGH<span class="decor-line"></span></h2>
-          <p>
-            Principal Harbhajan Singh, the founding leader of Sri Guru Gobind Singh Khalsa College Mahilpur, was a great visionary, educationist, philanthropist and thinker, who contributed his whole life and lifelong earnings to the college. Long before independence, he dreamt of a prestigious co-educational institution — and achieved it. Under his leadership, the institution gained national fame in football, earning the title <b>"FOOTBALL NURSERY OF ASIA."</b>
-          </p>
-          <p>
-            His unparalleled legacy and magnanimous efforts unlocked the doors of great opportunities for generations of students in the fields of army, bureaucracy, sports and various other departments of India. His unsurpassed and tremendous efforts still direct the modern youth of the area towards the path of truth, hard work and consistent effort.
-          </p>
-          <p>
-            Sant Baba Hari Singh Memorial Khalsa College of Education, Mahilpur, stands today as a flourishing branch of the noble tree he planted 68 years ago, proudly following in the footsteps of this legendary personality.
-          </p>
-        </div>
-      </section>
+  <div class="principal">
+    <div data-aos="fade-right" data-aos-duration="900">
+      <h1>Our Inspirations</h1>
     </div>
   </div>
+
+  <!-- Section 1: Principal Harbhajan Singh -->
+  <div class="container">
+    <section class="principal-legacy">
+      <div class="legacy-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="inspiration-card">
+          <div class="inspiration-text">
+            <h2>PRINCIPAL HARBHAJAN SINGH<span class="decor-line"></span></h2>
+            <p>
+              Principal Harbhajan Singh, the founding leader of Sri Guru Gobind Singh Khalsa College Mahilpur, was a great visionary, educationist, philanthropist and thinker, who contributed his whole life and lifelong earnings to the college. Long before independence, he dreamt of a prestigious co-educational institution — and achieved it. Under his leadership, the institution gained national fame in football, earning the title <b>"FOOTBALL NURSERY OF ASIA."</b>
+            </p>
+            <p>
+              His unparalleled legacy and magnanimous efforts unlocked the doors of great opportunities for generations of students in the fields of army, bureaucracy, sports and various other departments of India. His unsurpassed and tremendous efforts still direct the modern youth of the area towards the path of truth, hard work and consistent effort.
+            </p>
+            <p>
+              Sant Baba Hari Singh Memorial Khalsa College of Education, Mahilpur, stands today as a flourishing branch of the noble tree he planted 68 years ago, proudly following in the footsteps of this legendary personality.
+            </p>
+          </div>
+          <div class="inspiration-image">
+            <img src="./images/principal.jpg" alt="Principal Harbhajan Singh">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Section 2: Sant Baba Hari Singh Ji Kaharpuri -->
+  <div class="container">
+    <section class="principal-legacy">
+      <div class="legacy-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="inspiration-card">
+          <div class="inspiration-text">
+            <h2>SANT BABA HARI SINGH JI KAHARPURI<span class="decor-line"></span></h2>
+            <p>
+              Sant Baba Hari Singh Ji Kaharpuri was a great visionary who envisioned higher education for the people of Mahilpur and its neighboring areas almost eighty years ago. His dream began materializing in the late thirties of the last century, and in 1946, Sri Guru Gobind Singh Khalsa College was established under the Sikh Educational Council, Mahilpur — of which Sant Baba Hari Singh Ji became the first Founder President.
+            </p>
+            <p>
+              With a missionary zeal of imparting quality education to the socially, economically and educationally deprived people of this rural, backward and kandi area, the college soon touched great heights of success and development in the fields of education and sports. The institution was founded with a deep commitment to following the exhortation of the 10th Sikh Master, Sri Guru Gobind Singh Ji — <b>"to pursue the good of humanity."</b>
+            </p>
+            <p>
+              With a mission to establish an exclusive teacher training institute, the Sikh Educational Council started a new venture in the form of Sant Baba Hari Singh Memorial Khalsa College of Education from the session 2006–07. Under his enduring vision and the joint efforts of the Sikh Educational Society, the college has achieved a sublime position across Punjab and stands as an eternal tribute to this legendary soul.
+            </p>
+          </div>
+          <div class="inspiration-image">
+            <img src="./images/founder.png" alt="Sant Baba Hari Singh Ji Kaharpuri">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
   <div class="section-divider"></div>
 
