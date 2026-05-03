@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Activities | S.G.G.S. Khalsa College Mahilpur</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#8C1007;--wine2:#7b1e3a;--wine3:#b51610;--gold:#f4c430;--wine100:#f8e9ef;--white:#fff;--bg:#fdf8f9;--text:#1a1a1a;--muted:#666;--border:#f0f0f0;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+::-webkit-scrollbar{width:12px;}::-webkit-scrollbar-track{background:#f5f5f5;}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8c1007,#a81510);border-radius:6px;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.fade-in{animation:fadeIn 0.8s ease-out;}
+.fade-in-delay{animation:fadeIn 0.8s ease-out 0.2s both;}
+.fade-in-delay-2{animation:fadeIn 0.8s ease-out 0.4s both;}
+ 
+/* ── NAV ── */
+.top-nav{background:var(--wine);display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.nav-brand{color:var(--gold);font-weight:800;font-size:1rem;text-decoration:none;padding:16px 0;white-space:nowrap;display:flex;align-items:center;gap:10px;}
+.nav-links{display:flex;overflow-x:auto;gap:0;}
+.nav-links a{color:rgba(255,248,251,0.8);text-decoration:none;font-size:0.8rem;font-weight:500;padding:20px 13px;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.25s;}
+.nav-links a:hover{color:#fff;background:rgba(244,196,48,0.12);}
+.nav-links a.active{color:var(--gold);border-bottom:3px solid var(--gold);}
+ 
+/* ── HERO ── */
+.hero{position:relative;padding:110px 24px 90px;overflow:hidden;min-height:540px;display:flex;align-items:center;justify-content:center;}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#8c1007 0%,#b51610 30%,#8c1007 60%,#6b0d05 100%);}
+.hero-ov{position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,0.15),transparent 40%),radial-gradient(circle at 80% 70%,rgba(255,255,255,0.1),transparent 40%);pointer-events:none;}
+.hero-pt{position:absolute;inset:0;background-image:radial-gradient(circle at 10% 20%,rgba(255,255,255,0.1) 1px,transparent 1px),radial-gradient(circle at 90% 80%,rgba(255,255,255,0.1) 1px,transparent 1px);background-size:100px 100px,150px 150px;opacity:0.5;pointer-events:none;}
+.hero-content{position:relative;z-index:10;text-align:center;max-width:1200px;margin:0 auto;}
+.badge{width:80px;height:80px;background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2.5rem;color:#fff;animation:float 3s ease-in-out infinite;border:2px solid rgba(255,255,255,0.3);}
+.hero h1{font-size:3.6rem;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,0.2);}
+.hero h1 span{color:var(--gold);}
+.hero p{font-size:1.2rem;color:rgba(255,255,255,0.92);max-width:800px;margin:0 auto 44px;font-weight:500;}
+.stats-bar{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);padding:28px 44px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);max-width:960px;margin:0 auto;}
+.si{text-align:center;}
+.sn{font-size:1.9rem;font-weight:800;color:#fff;margin-bottom:4px;}
+.sl{font-size:0.82rem;color:rgba(255,255,255,0.88);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.sdiv{width:1px;height:40px;background:rgba(255,255,255,0.3);}
+ 
+/* ── LAYOUT ── */
+.container{max-width:1240px;margin:0 auto;padding:72px 24px;}
+.sec-tag{display:inline-block;background:linear-gradient(135deg,#8c1007,#b51610);color:#fff;padding:7px 18px;border-radius:50px;font-size:0.85rem;font-weight:600;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.5px;}
+.fac-section{margin-bottom:90px;}
+.fac-header{display:flex;align-items:center;gap:20px;margin-bottom:14px;}
+.icon-box{width:68px;height:68px;background:linear-gradient(135deg,#8c1007,#b51610);border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;flex-shrink:0;box-shadow:0 4px 20px rgba(140,16,7,0.3);}
+.fac-header h2{font-size:2.4rem;font-weight:800;color:var(--text);line-height:1.2;}
+.fac-sub{font-size:0.97rem;color:var(--muted);font-weight:500;margin-top:4px;}
+.fac-desc{font-size:1.05rem;color:#555;line-height:1.8;max-width:1000px;margin-bottom:40px;}
+.fac-desc strong{color:var(--wine);}
+.divider{margin-top:90px;border-bottom:2px solid var(--border);}
+ 
+/* ── HIGHLIGHT BOX ── */
+.highlight-box{background:linear-gradient(135deg,#fff8e7,#fff3d0);border:2px solid var(--gold);border-radius:16px;padding:28px 32px;margin-bottom:36px;border-left:6px solid var(--wine);}
+.highlight-box p{font-size:1rem;color:#5a3000;line-height:1.8;}
+.highlight-box strong{color:var(--wine);}
+ 
+/* ── FEATURE CARDS ── */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-bottom:48px;}
+.feat-card{background:#fff;border:2px solid var(--border);border-radius:16px;padding:28px;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden;}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#8c1007,#b51610);transform:scaleX(0);transition:transform 0.35s;}
+.feat-card:hover::before{transform:scaleX(1);}
+.feat-card:hover{border-color:rgba(140,16,7,0.28);box-shadow:0 10px 36px rgba(140,16,7,0.13);transform:translateY(-4px);}
+.feat-icon{width:54px;height:54px;background:rgba(140,16,7,0.09);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--wine);font-size:1.6rem;transition:all 0.3s;}
+.feat-card:hover .feat-icon{background:linear-gradient(135deg,#8c1007,#b51610);color:#fff;transform:scale(1.1);}
+.feat-card h3{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:8px;}
+.feat-card p{font-size:0.88rem;color:var(--muted);line-height:1.65;}
+ 
+/* ── GALLERY ── */
+.gal-title{font-size:1.85rem;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.gal-title i{color:var(--wine);}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.gal-grid.g2{grid-template-columns:repeat(2,1fr);}
+.gal-grid.g4{grid-template-columns:repeat(4,1fr);}
+.gal-grid.g6{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.gal-grid,.gal-grid.g4,.gal-grid.g6{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.gal-grid,.gal-grid.g2,.gal-grid.g4,.gal-grid.g6{grid-template-columns:1fr;}}
+.gal-item{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:13px;cursor:pointer;box-shadow:0 3px 14px rgba(0,0,0,0.1);}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);}
+.gal-item:hover img{transform:scale(1.12);}
+.gal-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(140,16,7,0) 0%,rgba(140,16,7,0.82) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;transition:opacity 0.35s;}
+.gal-item:hover .gal-ov{opacity:1;}
+.gal-ov i{font-size:1.9rem;color:#fff;}
+.gal-ov span{background:rgba(255,255,255,0.95);color:var(--wine);padding:9px 22px;border-radius:26px;font-weight:700;font-size:0.85rem;box-shadow:0 3px 12px rgba(0,0,0,0.18);}
+ 
+/* ── ATHLETE CARDS ── */
+.athlete-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:48px;}
+.athlete-card{background:#fff;border-radius:16px;overflow:hidden;border:2px solid var(--border);box-shadow:0 2px 12px rgba(140,16,7,0.06);transition:all 0.3s;}
+.athlete-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(140,16,7,0.14);}
+.athlete-img{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;}
+.athlete-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;}
+.athlete-card:hover .athlete-img img{transform:scale(1.07);}
+.athlete-body{padding:18px 16px;border-top:3px solid var(--wine);}
+.athlete-body h4{font-size:1rem;font-weight:800;color:var(--wine);margin-bottom:6px;}
+.athlete-body .medal{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,#8c1007,#b51610);color:#fff;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:8px;}
+.athlete-body .medal.gold{background:linear-gradient(135deg,#b8860b,#f4c430);color:#1a0a00;}
+.athlete-body .medal.silver{background:linear-gradient(135deg,#707070,#b0b0b0);color:#fff;}
+.athlete-body .medal.bronze{background:linear-gradient(135deg,#8B4513,#cd7f32);color:#fff;}
+.athlete-body p{font-size:0.82rem;color:var(--muted);line-height:1.55;}
+.athlete-body .year{font-size:0.78rem;color:#999;font-weight:600;}
+ 
+/* ── DATA TABLE ── */
+.dtable-wrap{overflow-x:auto;margin-bottom:40px;}
+.dtable{width:100%;border-collapse:collapse;font-size:0.9rem;}
+.dtable th{background:var(--wine);color:#fff;padding:13px 16px;text-align:left;font-weight:600;font-size:0.83rem;letter-spacing:0.5px;}
+.dtable th:first-child{border-radius:8px 0 0 0;}
+.dtable th:last-child{border-radius:0 8px 0 0;}
+.dtable td{padding:11px 16px;border-bottom:1px solid var(--border);color:#444;}
+.dtable tr:nth-child(even) td{background:#fef9f8;}
+.dtable tr:hover td{background:#fbe8ee;}
+.dtable td:first-child{font-weight:700;color:var(--wine);text-align:center;width:50px;}
+ 
+/* ── STATS SECTION ── */
+.stats-section{background:linear-gradient(135deg,#8c1007 0%,#b51610 100%);padding:76px 48px;border-radius:30px;margin:76px 0;}
+.stats-title{text-align:center;color:#fff;font-size:2.3rem;font-weight:800;margin-bottom:50px;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));gap:18px;}
+.stat-card{background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);padding:22px 14px;border-radius:18px;text-align:center;transition:all 0.3s;}
+.stat-card:hover{background:rgba(255,255,255,0.25);transform:translateY(-7px);}
+.stat-card i{color:#fff;opacity:0.9;font-size:2rem;margin-bottom:10px;display:block;}
+.stat-value{font-weight:800;color:#fff;font-size:1.9rem;margin-bottom:5px;}
+.stat-name{color:rgba(255,255,255,0.84);font-weight:600;font-size:0.8rem;line-height:1.3;}
+ 
+/* ── FOOTER ── */
+.site-footer{background:#1a0204;padding:46px 60px;text-align:center;}
+.footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin-bottom:20px;}
+.footer-nav a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;padding:4px 10px;border-right:1px solid rgba(255,255,255,0.12);transition:color 0.2s;}
+.footer-nav a:last-child{border-right:none;}
+.footer-nav a:hover{color:var(--gold);}
+.footer-copy{color:rgba(255,255,255,0.28);font-size:0.76rem;}
+ 
+@media(max-width:768px){
+  .top-nav{padding:0 14px;}.nav-links a{padding:18px 10px;font-size:0.76rem;}
+  .hero{padding:80px 16px 60px;min-height:460px;}.hero h1{font-size:2.1rem;}
+  .stats-bar{flex-direction:column;gap:14px;padding:22px;}.sdiv{width:100%;height:1px;}
+  .container{padding:56px 16px;}.fac-header{flex-direction:column;align-items:flex-start;gap:12px;}
+  .fac-header h2{font-size:1.85rem;}.stats-section{padding:44px 20px;border-radius:20px;}
+  .site-footer{padding:36px 16px;}
+}
+</style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav class="top-nav">
+  <a href="index.html" class="nav-brand"><i class="fas fa-university"></i> S.G.G.S. Khalsa College</a>
+  <div class="nav-links">
+    <a href="index.html"><i class="fas fa-home"></i> Overview</a>
+    <a href="library.html"><i class="fas fa-book-open"></i> Library</a>
+    <a href="laboratories.html"><i class="fas fa-flask"></i> Laboratories</a>
+    <a href="hostels.html"><i class="fas fa-bed"></i> Hostels</a>
+    <a href="gymnasium.html"><i class="fas fa-dumbbell"></i> Gymnasium</a>
+    <a href="source-of-inspiration.html"><i class="fas fa-place-of-worship"></i> Inspiration</a>
+    <a href="naac.html"><i class="fas fa-award"></i> NAAC</a>
+    <a href="ncc-nss-college-clubs.html"><i class="fas fa-flag"></i> NCC & NSS</a>
+    <a href="sports-activities.html" class="active"><i class="fas fa-trophy"></i> Sports</a>
+  </div>
+</nav>
+ 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ov"></div><div class="hero-pt"></div>
+  <div class="hero-content">
+    <div class="badge"><i class="fas fa-trophy"></i></div>
+    <h1 class="fade-in">Sports <span>Activities</span></h1>
+    <p class="fade-in-delay">Football Nursery of Asia &nbsp;•&nbsp; PU Champions &nbsp;•&nbsp; Gymnastics &nbsp;•&nbsp; Boxing &nbsp;•&nbsp; Athletics</p>
+    <div class="stats-bar fade-in-delay-2">
+      <div class="si"><div class="sn">20+</div><div class="sl">PU Football Titles</div></div>
+      <div class="sdiv"></div>
+      <div class="si"><div class="sn">18</div><div class="sl">Gymnastics Medals</div></div>
+      <div class="sdiv"></div>
+      <div class="si"><div class="sn">6</div><div class="sl">Boxing Inter-Varsity</div></div>
+      <div class="sdiv"></div>
+      <div class="si"><div class="sn">2nd</div><div class="sl">PU Overall 2016-17</div></div>
+    </div>
+  </div>
+</section>
+ 
+<main class="container">
+ 
+  <!-- ══════ SECTION 1: SPORTS OVERVIEW ══════ -->
+  <section class="fac-section" id="overview">
+    <div class="sec-tag" data-aos="fade-up">Sports Activities in College</div>
+    <div class="fac-header" data-aos="fade-right">
+      <div class="icon-box"><i class="fas fa-futbol"></i></div>
+      <div>
+        <h2>Sports Activities in College</h2>
+        <p class="fac-sub">Football Nursery of Asia &nbsp;•&nbsp; Arjuna Awardees &nbsp;•&nbsp; PU Champions</p>
+      </div>
+    </div>
+    <p class="fac-desc" data-aos="fade-up">
+      The College has occupied a noteworthy place in the sports history of India and is popularly known as a <strong>'FOOTBALL NURSERY OF ASIA'</strong>. Footballer <strong>Jarnail Singh (Arjuna Awardee)</strong> and <strong>Gurdev Singh Gill (Arjuna Awardee)</strong> are the glorious production of S.G.G.S. Khalsa College Mahilpur. The College possesses well-maintained sports grounds and facilities for games such as <strong>football, hockey, cricket, basketball, volleyball, athletics</strong> and various indoor games. The College also has an <strong>ultra-modern gymnasium</strong> and a hall for indoor games. It is one of the very few colleges in India to possess its own fabric. It is a matter of great honour that the <strong>Football team (Men) won the Panjab University A Division Football Championship for the last 20 years regularly</strong> and the <strong>Women team also won the Football Championship of the Panjab University</strong>.
+    </p>
+ 
+    <div class="feat-grid" data-aos="fade-up">
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-futbol"></i></div>
+        <h3>Football — Nursery of Asia</h3>
+        <p>Popularly known as the 'Football Nursery of Asia', the college produced legendary Arjuna Awardees Jarnail Singh and Gurdev Singh Gill. Men's team won PU A Division Championship 20+ years consecutively.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-female"></i></div>
+        <h3>Women Football Champions</h3>
+        <p>The Women Football team also won the Panjab University Football Championship, reflecting the college's dominance in football at both men's and women's levels.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Ultra-Modern Gymnasium</h3>
+        <p>The college has an ultra-modern gymnasium and a dedicated indoor games hall, providing students with professional-grade fitness and sports training facilities year-round.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-running"></i></div>
+        <h3>Athletics & Track</h3>
+        <p>Well-maintained athletics tracks and grounds support cross-country running, intramural athletics meets, and inter-college competitions for both boys and girls.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-volleyball-ball"></i></div>
+        <h3>Multi-Sport Grounds</h3>
+        <p>Dedicated grounds for hockey, cricket, basketball, volleyball, kabaddi, and other games — ensuring every student has access to diverse sports opportunities throughout the year.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-medal"></i></div>
+        <h3>PU Championships</h3>
+        <p>S.G.G.S. Khalsa College regularly stands among the top colleges in Panjab University sports. The college stood <strong>2nd overall in PU Championship 2016-17</strong> and consistently wins medals across disciplines.</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+ 
+  <!-- ══════ SECTION 2: GYMNASTICS ══════ -->
+  <section class="fac-section" id="gymnastics">
+    <div class="sec-tag" data-aos="fade-up">Panjab University Gymnastics 2016-17</div>
+    <div class="fac-header" data-aos="fade-right">
+      <div class="icon-box"><i class="fas fa-star"></i></div>
+      <div>
+        <h2>PU Gymnastics Inter-College Tournament 2016-17</h2>
+        <p class="fac-sub">18 Medals Total &nbsp;•&nbsp; Gold-3, Silver-10, Bronze-5 &nbsp;•&nbsp; 2nd Overall &nbsp;•&nbsp; Best Gymnast: Gagan</p>
+      </div>
+    </div>
+ 
+    <div class="highlight-box" data-aos="fade-up">
+      <p><strong>S.G.G.S. Khalsa College Mahilpur won total 18 medals (Gold-3, Silver-10, and Bronze-5) in Panjab University Gymnastics Inter College Tournament 2016-2017.</strong> Our college student <strong>Gagan</strong> was declared <strong>Best Gymnast of the Tournament</strong>. Overall <strong>S.G.G.S. Khalsa College Mahilpur stood Second in Panjab University Championship 2016-2017</strong>.</p>
+    </div>
+ 
+    <div class="feat-grid" data-aos="fade-up">
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(244,196,48,0.15);color:#b8860b;"><i class="fas fa-medal"></i></div>
+        <h3>3 Gold Medals</h3>
+        <p>S.G.G.S. Khalsa College won 3 prestigious Gold medals in the Panjab University Gymnastics Inter-College Tournament 2016-17, demonstrating elite-level performance.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(176,176,176,0.15);color:#707070;"><i class="fas fa-medal"></i></div>
+        <h3>10 Silver Medals</h3>
+        <p>10 Silver medals were secured across various gymnastics events, reflecting the consistent and competitive performance of our gymnastics team throughout the tournament.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(205,127,50,0.15);color:#8B4513;"><i class="fas fa-medal"></i></div>
+        <h3>5 Bronze Medals</h3>
+        <p>5 Bronze medals completed the college's remarkable total of 18 medals — one of the strongest performances by any single institution in the Panjab University gymnastics championship.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>Best Gymnast — Gagan</h3>
+        <p>Student <strong>Gagan</strong> of S.G.G.S. Khalsa College Mahilpur was declared the <strong>Best Gymnast of the Tournament</strong> — a remarkable individual achievement at the university level championship.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-trophy"></i></div>
+        <h3>2nd Overall — PU Championship</h3>
+        <p>S.G.G.S. Khalsa College Mahilpur stood <strong>Second Overall in the Panjab University Championship 2016-17</strong>, a remarkable collective achievement for the entire institution.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-award"></i></div>
+        <h3>PU Prize Distribution — 30 March 2016</h3>
+        <p>Panjab University Annual Prize Distribution Function held on 30-03-2016 by Directorate of Sports PU Chandigarh. Football team awarded <strong>Trophy for 1st position</strong>. Six players honoured ₹21,000/- each for representing PU in All India Inter University Football Championship (1st Position).</p>
+      </div>
+    </div>
+ 
+    <h3 class="gal-title" data-aos="fade-right"><i class="fas fa-images"></i> Gymnastics Tournament Gallery</h3>
+    <div class="gal-grid" data-aos="fade-up">
+      <div class="gal-item">
+        <img src="./images/Gymnastic-PU-Tournament-600x365.jpg" alt="PU Gymnastics Tournament" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>PU Gymnastics Tournament</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Gymnastic-PU-Tournament1-600x365.jpeg" alt="Gymnastics Tournament 2" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Gymnastics — Performance</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Gymnastic-PU-Tournament2-600x365.jpeg" alt="Gymnastics Tournament 3" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Gymnastics — Medal Ceremony</span></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+ 
+  <!-- ══════ SECTION 3: BOXING ══════ -->
+  <section class="fac-section" id="boxing">
+    <div class="sec-tag" data-aos="fade-up">Boxing Achievements</div>
+    <div class="fac-header" data-aos="fade-right">
+      <div class="icon-box"><i class="fas fa-fist-raised"></i></div>
+      <div>
+        <h2>PU Inter-College Boxing Tournament 2016-17</h2>
+        <p class="fac-sub">6 Students Selected for All India Boxing Inter-Varsity Camp 2016-17</p>
+      </div>
+    </div>
+    <p class="fac-desc" data-aos="fade-up">
+      S.G.G.S. Khalsa College Mahilpur had an outstanding performance at the <strong>Panjab University Inter-College Boxing Tournament 2016-17</strong>. Multiple students won Silver and Bronze medals, and <strong>six students were selected for the All India Boxing Inter-Varsity Camp 2016-17</strong>. Notably, <strong>Sandeep Duggal</strong> has a distinguished national boxing record including a National Gold Medal in 2009.
+    </p>
+ 
+    <!-- ATHLETE CARDS -->
+    <div class="athlete-grid" data-aos="fade-up">
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/2-1.jpg" alt="Amit — Silver Medal Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Amit</h4>
+          <span class="medal silver"><i class="fas fa-medal"></i> Silver Medal</span>
+          <p>Class: D.P.Ed. — 1st Year</p>
+          <p class="year">PU Boxing Tournament 2016</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/Mandeep-Singh.jpg" alt="Mandeep Singh — Bronze Medal Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Mandeep Singh</h4>
+          <span class="medal bronze"><i class="fas fa-medal"></i> Bronze Medal</span>
+          <p>Class: BCA — IIIrd Year</p>
+          <p class="year">PU Boxing Tournament 2016</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/1-1.jpg" alt="Sandeep Duggal — National Medalist Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Sandeep Duggal</h4>
+          <span class="medal gold"><i class="fas fa-medal"></i> National Gold — 2009</span>
+          <p>Class: D.P.Ed. — 1st Year</p>
+          <p>2016 — IIIrd Position &nbsp;|&nbsp; 2009 — National Gold Medal &nbsp;|&nbsp; 2008 — Nationals Bronze Medal &nbsp;|&nbsp; 2012 — Junior State Gold</p>
+          <p class="year">Multiple National Achievements</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/Vinod.jpg" alt="Vinod Kumar — Bronze Medal Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Vinod Kumar</h4>
+          <span class="medal bronze"><i class="fas fa-medal"></i> Bronze Medal</span>
+          <p>Class: D.P.Ed. — IInd Year</p>
+          <p class="year">PU Boxing Tournament 2016</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/simranpreet1.jpg" alt="Simranpreet Singh — Bronze Medal Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Simranpreet Singh</h4>
+          <span class="medal bronze"><i class="fas fa-medal"></i> Bronze Medal</span>
+          <p>Class: B.A. — IIIrd Year</p>
+          <p class="year">PU Boxing Tournament 2016</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img">
+          <img src="./images/meena.jpg" alt="Meena Kumari — Silver Medal Boxing" loading="lazy">
+        </div>
+        <div class="athlete-body">
+          <h4>Meena Kumari</h4>
+          <span class="medal silver"><i class="fas fa-medal"></i> Silver Medal</span>
+          <p>Class: D.P.Ed. — IInd Year</p>
+          <p class="year">PU Boxing Tournament 2016</p>
+        </div>
+      </div>
+      <div class="athlete-card">
+        <div class="athlete-img" style="background:#fef9f8;display:flex;align-items:center;justify-content:center;">
+          <i class="fas fa-user-circle" style="font-size:5rem;color:#8c1007;opacity:0.3;"></i>
+        </div>
+        <div class="athlete-body">
+          <h4>Neetu</h4>
+          <span class="medal silver"><i class="fas fa-medal"></i> Silver Medal</span>
+          <p>Class: B.P.Ed.</p>
+          <p>Silver Medal in <strong>Punjab Senior State Boxing Championship</strong></p>
+          <p class="year">2016</p>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- BOXING TABLE -->
+    <div class="sec-tag" data-aos="fade-up" style="margin-bottom:16px;">Six Students Selected for All India Boxing Inter-Varsity Camp 2016-17</div>
+    <div class="dtable-wrap" data-aos="fade-up">
+      <table class="dtable">
+        <thead>
+          <tr><th>Sr. No.</th><th>Name</th><th>Class</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Amit Kumar</td><td>D.P.Ed. — 1st Year</td></tr>
+          <tr><td>2</td><td>Sandeep Duggal</td><td>D.P.Ed. — 1st Year</td></tr>
+          <tr><td>3</td><td>Vinod Kumar</td><td>D.P.Ed. — IInd Year</td></tr>
+          <tr><td>4</td><td>Simranpreet Singh</td><td>B.A. — IIIrd Year</td></tr>
+          <tr><td>5</td><td>Mandeep Singh</td><td>BCA — IIIrd Year</td></tr>
+          <tr><td>6</td><td>Harpreet Singh</td><td>M.A. 1st Year</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="divider"></div>
+  </section>
+ 
+  <!-- ══════ SECTION 4: FOOTBALL & MULTI-SPORT GALLERY ══════ -->
+  <section class="fac-section" id="football">
+    <div class="sec-tag" data-aos="fade-up">Football & Campus Sports</div>
+    <div class="fac-header" data-aos="fade-right">
+      <div class="icon-box"><i class="fas fa-futbol"></i></div>
+      <div>
+        <h2>Football Tournament &amp; Campus Sports Activities</h2>
+        <p class="fac-sub">Extramural &amp; Intramural Tournaments &nbsp;•&nbsp; Cross Country &nbsp;•&nbsp; Volleyball &nbsp;•&nbsp; Kabaddi &nbsp;•&nbsp; Basketball</p>
+      </div>
+    </div>
+    <p class="fac-desc" data-aos="fade-up">
+      Football has been at the heart of S.G.G.S. Khalsa College since its inception. The college organizes <strong>extramural and intramural football tournaments</strong> every year. Alongside football, the campus hosts regular intramural competitions in <strong>cross-country running, volleyball, kabaddi, basketball, athletics</strong> and many more sports. The college grounds are meticulously maintained for all sporting events, and students also observe moments of respect for national martyrs as part of their sportsmanship values.
+    </p>
+ 
+    <h3 class="gal-title" data-aos="fade-right"><i class="fas fa-images"></i> Football &amp; Sports Gallery</h3>
+    <div class="gal-grid g4" data-aos="fade-up">
+      <div class="gal-item">
+        <img src="./images/Extramural-Football-Tournament3-600x400.jpg" alt="Extramural Football Tournament" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Extramural Football Tournament</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Best-Player-Girl-of-Intramural-Football-600x400.jpg" alt="Best Player Girl Intramural Football" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Best Player — Girl Intramural Football</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Cross-Country-Intramural-2016-starting-position-600x400.jpg" alt="Cross Country 2016" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Cross Country Intramural 2016 — Start</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Cross-Country-600x400.jpg" alt="Cross Country Race" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Cross Country Race</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/maintain-the-track-600x400.jpg" alt="Maintaining the Track" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Maintaining the Athletics Track</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="images/IMG_20161026_102552353-600x400.jpg" alt="Sports Activity 2016" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Sports Activity — October 2016</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Basket-ball-court-600x400.jpg" alt="Basketball Court" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Basketball Court</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Kabaddi-Ground-Marking-Team-600x400.jpg" alt="Kabaddi Ground Marking" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Kabaddi Ground Marking Team</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Maintain-the-Kabaddi-Ground-1-600x400.jpg" alt="Maintaining Kabaddi Ground" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Maintaining the Kabaddi Ground</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Volleyball-Intramural-1-600x400.jpg" alt="Volleyball Intramural" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Volleyball Intramural Tournament</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Discuss-Sector-Marking-Team-600x400.jpg" alt="Discuss Sector Marking" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Discuss Sector Marking Team</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/Maun-for-URI-Shaheed-600x400.jpg" alt="Maun for URI Shaheed" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Maun for URI Shaheed</span></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </section>
+ 
+  <!-- ══════ SECTION 5: ATHLETIC MEET 2025 ══════ -->
+  <section class="fac-section" id="athletic-meet">
+    <div class="sec-tag" data-aos="fade-up">Athletic Meet 2025</div>
+    <div class="fac-header" data-aos="fade-right">
+      <div class="icon-box"><i class="fas fa-running"></i></div>
+      <div>
+        <h2>Athletic Meet 2025</h2>
+        <p class="fac-sub">Annual Athletics Championship &nbsp;•&nbsp; Track &amp; Field Events &nbsp;•&nbsp; All Disciplines</p>
+      </div>
+    </div>
+    <p class="fac-desc" data-aos="fade-up">
+      The annual <strong>Athletic Meet 2025</strong> of S.G.G.S. Khalsa College Mahilpur brought together students from all departments to compete in track and field events. The meet showcased the athletic talent, discipline, and competitive spirit of the students, with events covering sprints, long distance, jumping, and throwing disciplines in a festive sporting atmosphere.
+    </p>
+ 
+    <h3 class="gal-title" data-aos="fade-right"><i class="fas fa-images"></i> Athletic Meet 2025 Gallery</h3>
+    <div class="gal-grid" data-aos="fade-up">
+      <div class="gal-item">
+        <img src="./images/DSC_0674-scaled-600x400.jpg" alt="Athletic Meet 2025 — Event" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Athletic Meet 2025</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/athelatic-meet1-600x400.jpg" alt="Athletic Meet Opening" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Athletic Meet — Opening</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/am2024-600x400.jpg" alt="Athletic Meet 2024 Race" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Athletic Meet — Race</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/am224-600x400.jpg" alt="Athletic Meet Track Events" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Track Events</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/am124-600x400.jpg" alt="Athletic Meet Field Events" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Field Events</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="./images/am24-600x400.jpg" alt="Athletic Meet Prize Distribution" loading="lazy">
+        <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Prize Distribution</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- STATS -->
+  <section class="stats-section" data-aos="zoom-in-up">
+    <h2 class="stats-title">Sports at a Glance</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><i class="fas fa-futbol"></i><div class="stat-value">20+</div><div class="stat-name">PU Football Titles (Men)</div></div>
+      <div class="stat-card"><i class="fas fa-trophy"></i><div class="stat-value">18</div><div class="stat-name">Gymnastics Medals 2016-17</div></div>
+      <div class="stat-card"><i class="fas fa-medal" style="color:#f4c430;"></i><div class="stat-value">3</div><div class="stat-name">Gold Medals — Gymnastics</div></div>
+      <div class="stat-card"><i class="fas fa-medal"></i><div class="stat-value">10</div><div class="stat-name">Silver Medals — Gymnastics</div></div>
+      <div class="stat-card"><i class="fas fa-medal"></i><div class="stat-value">5</div><div class="stat-name">Bronze Medals — Gymnastics</div></div>
+      <div class="stat-card"><i class="fas fa-fist-raised"></i><div class="stat-value">6</div><div class="stat-name">All India Boxing Camp Selections</div></div>
+      <div class="stat-card"><i class="fas fa-star"></i><div class="stat-value">2nd</div><div class="stat-name">PU Overall Championship 2016-17</div></div>
+      <div class="stat-card"><i class="fas fa-award"></i><div class="stat-value">2</div><div class="stat-name">Arjuna Awardees (Football)</div></div>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer class="site-footer">
+  <div class="footer-nav">
+    <a href="index.html">Overview</a>
+    <a href="library.html">Library</a>
+    <a href="laboratories.html">Laboratories</a>
+    <a href="hostels.html">Hostels</a>
+    <a href="gymnasium.html">Gymnasium</a>
+    <a href="source-of-inspiration.html">Inspiration</a>
+    <a href="naac.html">NAAC</a>
+    <a href="ncc-nss-college-clubs.html">NCC &amp; NSS</a>
+    <a href="sports-activities.html">Sports</a>
+  </div>
+  <div class="footer-copy">S.G.G.S. Khalsa College Mahilpur &nbsp;|&nbsp; Distt. Hoshiarpur, Punjab 146105 &nbsp;|&nbsp; Affiliated to Panjab University Chandigarh &nbsp;|&nbsp; Est. 1946</div>
+</footer>
+ 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:800,easing:'ease-in-out',offset:100,mirror:false});</script>
+</body>
+</html>
