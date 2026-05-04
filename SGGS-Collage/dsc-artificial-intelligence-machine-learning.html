@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="DSC Artificial Intelligence & Machine Learning at S.G.G.S. Khalsa College Mahilpur — NEP-2020 based 3/4 year undergraduate programme in AI, ML, Deep Learning, NLP, Computer Vision and Data Science.">
+  <meta name="keywords"
+    content="DSC AI ML, Artificial Intelligence Machine Learning Punjab, DSC AI Machine Learning College, S.G.G.S. Khalsa College Mahilpur, NEP 2020 AI ML Programme">
+  <meta name="author" content="S.G.G.S. Khalsa College">
+  <meta property="og:title" content="DSC Artificial Intelligence & Machine Learning | S.G.G.S. Khalsa College Mahilpur">
+  <meta property="og:description"
+    content="Join DSC AI & ML at S.G.G.S. Khalsa College Mahilpur — a future-ready NEP-2020 based programme in Artificial Intelligence, Machine Learning, Deep Learning and Data Science.">
+  <title>DSC Artificial Intelligence & Machine Learning | S.G.G.S. Khalsa College Mahilpur</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <style>
+    :root {
+      --wine: #8C1007;
+      --wine2: #7b1e3a;
+      --wine3: #b51610;
+      --gold: #f4c430;
+      --wine100: #f8e9ef;
+      --white: #fff;
+      --bg: #fdf8f9;
+      --text: #1a1a1a;
+      --muted: #666;
+      --border: #f0f0f0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      overflow-x: hidden !important;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #8c1007, #a81510);
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #6b0d05, #8c1007);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .fade-in-delay {
+      animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .fade-in-delay-2 {
+      animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      padding: 120px 24px 100px;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 100px 100px, 150px 150px, 200px 200px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .college-badge {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+      color: white;
+      animation: float 3s ease-in-out infinite;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.375rem;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: 0 auto 48px;
+      font-weight: 500;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      padding: 32px 48px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* ===== CONTAINER ===== */
+    .container-main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    /* Section Tag */
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== COURSE SECTIONS ===== */
+    .course-section {
+      margin-bottom: 100px;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .icon-box {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(140, 16, 7, 0.3);
+    }
+
+    .section-header h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin-bottom: 48px;
+    }
+
+    .section-description strong {
+      color: var(--wine);
+    }
+
+    /* ===== FEATURES GRID ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007, #b51610);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-card:hover {
+      border-color: rgba(140, 16, 7, 0.3);
+      box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(140, 16, 7, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--wine);
+      font-size: 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .feature-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== INFO GRID ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .info-block {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--wine);
+    }
+
+    .info-block.gold-border {
+      border-left-color: var(--gold);
+    }
+
+    .info-block h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--wine);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .info-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-block ul li {
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .info-block ul li:last-child {
+      border-bottom: none;
+    }
+
+    .info-block ul li i {
+      color: var(--wine);
+      flex-shrink: 0;
+      margin-top: 3px;
+      font-size: 0.85rem;
+    }
+
+    /* ===== CHECK LIST ===== */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 28px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+
+    .check-list li:last-child {
+      border-bottom: none;
+    }
+
+    .check-list li i {
+      color: var(--wine);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ===== ADMIT BOX ===== */
+    .admit-box {
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      border-radius: 16px;
+      padding: 24px 28px;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .admit-box p {
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .admit-box strong {
+      color: var(--gold);
+    }
+
+    /* ===== WHY WRAP ===== */
+    .why-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .why-img {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(140, 16, 7, 0.15);
+      position: relative;
+    }
+
+    .why-img img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .why-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--wine);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .why-img-badge i {
+      color: var(--gold);
+    }
+
+    /* ===== DE CARDS ===== */
+    .de-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .de-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      border: 2px solid var(--border);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .de-card:hover {
+      border-color: rgba(140, 16, 7, 0.3);
+      box-shadow: 0 8px 28px rgba(140, 16, 7, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .de-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.7rem;
+      color: white;
+    }
+
+    .de-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .de-card p {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--wine);
+    }
+
+    /* ===== PROGRAMME OUTCOMES ===== */
+    .po-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .po-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 26px;
+      border: 2px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s;
+    }
+
+    .po-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007, #b51610);
+      transform: scaleX(0);
+      transition: transform 0.35s;
+    }
+
+    .po-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .po-card:hover {
+      border-color: rgba(140, 16, 7, 0.25);
+      box-shadow: 0 8px 28px rgba(140, 16, 7, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .po-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: rgba(140, 16, 7, 0.12);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .po-card p {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* ===== CAREER GRID ===== */
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .career-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 18px;
+      border: 2px solid var(--border);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .career-card:hover {
+      border-color: rgba(140, 16, 7, 0.3);
+      box-shadow: 0 8px 24px rgba(140, 16, 7, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .career-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(140, 16, 7, 0.09);
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      color: var(--wine);
+      font-size: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .career-card:hover .career-icon {
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      color: white;
+    }
+
+    .career-card h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ===== HIGHER STUDIES ===== */
+    .higher-box {
+      background: linear-gradient(135deg, #fff8e7, #fff3d0);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+
+    .higher-box h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--wine);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .higher-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .h-tag {
+      background: #fff;
+      border: 1px solid var(--gold);
+      color: #7a5000;
+      padding: 7px 16px;
+      border-radius: 22px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* ===== TOOLS SHOWCASE ===== */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .tool-card:hover {
+      border-color: rgba(140, 16, 7, 0.3);
+      box-shadow: 0 6px 20px rgba(140, 16, 7, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .tool-emoji {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .tool-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .tool-type {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-section {
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      padding: 80px 48px;
+      border-radius: 32px;
+      margin: 60px 0 80px;
+    }
+
+    .stats-title {
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 56px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      padding: 0 8px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 24px 16px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-8px);
+    }
+
+    .stat-card i {
+      color: white;
+      opacity: 0.9;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .stat-value {
+      font-weight: 800;
+      color: white;
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .stat-name {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #8c1007, #b51610);
+      padding: 72px 24px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary-cta {
+      background: var(--gold);
+      color: #1a0a00;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+
+    .btn-primary-cta:hover {
+      background: #e8b820;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-outline-cta {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+
+    .btn-outline-cta:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-2px);
+    }
+
+    /* Divider */
+    .divider {
+      margin-top: 80px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .why-wrap {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 100px 20px 70px;
+        min-height: 550px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .stats-bar {
+        flex-direction: column;
+        padding: 28px 20px;
+        gap: 20px;
+      }
+
+      .stat-divider {
+        display: none;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .de-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-section {
+        padding: 48px 24px;
+      }
+
+      .stats-title {
+        font-size: 2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 90px 16px 60px;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .college-badge {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+      }
+
+      .container-main {
+        padding: 60px 16px;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        gap: 16px;
+      }
+    }
+
+    #footer {
+      color: white !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (shared component) -->
+  <div id="navbar"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <div class="college-badge fade-in">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h1 class="fade-in">DSC <span>Artificial Intelligence</span><br>&amp; <span>Machine Learning</span></h1>
+      <p class="fade-in-delay">3/4 Years &nbsp;|&nbsp; 6/8 Semesters &nbsp;|&nbsp; NEP-2020 Based Curriculum</p>
+      <div class="stats-bar fade-in-delay-2">
+        <div class="stat-item">
+          <div class="stat-number">3/4</div>
+          <div class="stat-label">Years Duration</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">6/8</div>
+          <div class="stat-label">Semesters</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">NEP</div>
+          <div class="stat-label">2020 Curriculum</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">+ ML Focused</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Industry Relevant</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container-main">
+
+    <!-- WHY CHOOSE -->
+    <section class="course-section" id="why-choose">
+      <div class="section-tag" data-aos="fade-up">Top Programme in Punjab</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-brain"></i></div>
+        <div>
+          <h2>Why Choose DSC AI &amp; Machine Learning?</h2>
+          <p class="section-subtitle">S.G.G.S. Khalsa College Mahilpur &nbsp;•&nbsp; NEP-2020 Based</p>
+        </div>
+      </div>
+      <div class="why-wrap" data-aos="fade-up">
+        <div>
+          <p class="section-description">
+            <strong>DSC Artificial Intelligence &amp; Machine Learning at S.G.G.S. Khalsa College Mahilpur</strong> is
+            one of the most forward-looking and career-critical programmes in Punjab, designed for the <strong>AI &amp;
+              data-driven future</strong>. This <strong>3/4 year undergraduate program</strong> is built on the
+            <strong>NEP-2020 curriculum</strong> and covers <strong>Machine Learning, Deep Learning, Neural Networks,
+              Natural Language Processing, Computer Vision, Data Science</strong>, and real-world AI application
+            development. Designed for students passionate about <strong>intelligent systems, automation, robotics and
+              data-driven decision making</strong>, this course builds a solid foundation for careers in top global tech
+            companies, research institutions and government sectors.
+          </p>
+          <ul class="check-list">
+            <li><i class="fas fa-check-circle"></i> Top AI &amp; ML Programme in Punjab</li>
+            <li><i class="fas fa-check-circle"></i> Modern Computer Labs with AI/ML Frameworks &amp; Tools</li>
+            <li><i class="fas fa-check-circle"></i> Hands-on Projects in Machine Learning &amp; Deep Learning</li>
+            <li><i class="fas fa-check-circle"></i> Python, TensorFlow, PyTorch, Keras, Scikit-learn &amp; More</li>
+            <li><i class="fas fa-check-circle"></i> Highly Qualified &amp; Industry-Experienced Faculty</li>
+            <li><i class="fas fa-check-circle"></i> Strong Career Placement &amp; Higher Study Opportunities</li>
+            <li><i class="fas fa-check-circle"></i> Kaggle Competitions, Hackathons &amp; Research Projects</li>
+          </ul>
+          <div class="admit-box">
+            <p><strong>Admissions Open!</strong> Eligible students (10+2 with PCM/CS, min 35% marks) can apply online or
+              offline. Secure your seat in the most sought-after AI &amp; ML programme and start your journey into the
+              future of intelligent technology.</p>
+          </div>
+        </div>
+        <div>
+          <div class="why-img">
+            <img src="https://sggskcm.org/wp-content/uploads/2020/06/IMG_20170303_132334201-600x400.jpg"
+              alt="DSC AI ML Lab S.G.G.S. Khalsa College" loading="lazy">
+            <div class="why-img-badge"><i class="fas fa-robot"></i> AI &amp; Machine Learning Lab</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="course-section" id="overview">
+      <div class="section-tag" data-aos="fade-up">Course Overview</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-info-circle"></i></div>
+        <div>
+          <h2>DSC AI &amp; Machine Learning — Overview</h2>
+          <p class="section-subtitle">Building Intelligent Systems &amp; Data-Driven Solutions</p>
+        </div>
+      </div>
+      <p class="section-description" data-aos="fade-up">
+        <strong>DSC Artificial Intelligence &amp; Machine Learning</strong> is a 3/4 year undergraduate program (6/8
+        semesters) designed for students passionate about building <strong>intelligent systems, predictive models,
+          automation pipelines</strong> and cutting-edge <strong>AI &amp; ML technologies</strong>. The course bridges
+        the gap between theoretical AI and practical industry deployment across sectors like healthcare, finance,
+        robotics, and government.
+      </p>
+      <div class="info-grid" data-aos="fade-up">
+        <div class="info-block">
+          <h3><i class="fas fa-brain"></i> Why Choose DSC AI &amp; ML?</h3>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> Hands-on experience with <strong>Python, TensorFlow, PyTorch,
+                Keras</strong> and complete ML pipelines.</li>
+            <li><i class="fas fa-angle-right"></i> Learn <strong>Machine Learning, Deep Learning, Computer Vision,
+                NLP</strong> from industry experts.</li>
+            <li><i class="fas fa-angle-right"></i> Prepares for <strong>higher studies</strong> — M.Sc. AI, M.Tech. ML,
+              MCA, Ph.D. and MS abroad.</li>
+            <li><i class="fas fa-angle-right"></i> Develops <strong>algorithmic thinking, model building</strong> and
+              data analysis skills for modern AI-driven industries.</li>
+            <li><i class="fas fa-angle-right"></i> Exposure to <strong>Kaggle, open-source AI projects</strong> and
+              real-world industry datasets.</li>
+          </ul>
+        </div>
+        <div class="info-block gold-border">
+          <h3><i class="fas fa-briefcase"></i> Career Opportunities</h3>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> AI Engineer / Machine Learning Engineer</li>
+            <li><i class="fas fa-angle-right"></i> Data Scientist / Data Analyst</li>
+            <li><i class="fas fa-angle-right"></i> NLP Engineer / Conversational AI Developer</li>
+            <li><i class="fas fa-angle-right"></i> Computer Vision Engineer</li>
+            <li><i class="fas fa-angle-right"></i> Robotics &amp; Automation Engineer</li>
+            <li><i class="fas fa-angle-right"></i> AI Research Scientist / Government AI Roles</li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- DURATION & ELIGIBILITY -->
+    <section class="course-section" id="admission">
+      <div class="section-tag" data-aos="fade-up">Admission Details</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+        <div>
+          <h2>Course Duration &amp; Eligibility</h2>
+          <p class="section-subtitle">Who Can Apply &amp; How Long</p>
+        </div>
+      </div>
+      <p class="section-description" data-aos="fade-up">
+        The <strong>DSC AI &amp; Machine Learning</strong> program is a <strong>3/4-year undergraduate course</strong>
+        divided into <strong>6/8 semesters</strong>. It provides a strong foundation in <strong>Artificial Intelligence,
+          Machine Learning, Statistics, Data Science and Programming</strong> — equipping graduates for India's
+        fastest-growing technology sector.
+      </p>
+      <div class="de-grid" data-aos="fade-up">
+        <div class="de-card">
+          <div class="de-icon"><i class="fas fa-clock"></i></div>
+          <h3>Duration</h3>
+          <p>3/4 Years (6/8 Semesters)</p>
+        </div>
+        <div class="de-card">
+          <div class="de-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Eligibility</h3>
+          <p>10+2 with PCM / Computer Science — Minimum 35% Marks</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- PROGRAMME OUTCOMES -->
+    <section class="course-section" id="outcomes">
+      <div class="section-tag" data-aos="fade-up">Programme Outcomes</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-award"></i></div>
+        <div>
+          <h2>What You Will Achieve</h2>
+          <p class="section-subtitle">Skills &amp; Competencies You'll Graduate With</p>
+        </div>
+      </div>
+      <div class="po-grid" data-aos="fade-up">
+        <div class="po-card">
+          <div class="po-num">01</div>
+          <p>Develop strong <strong>mathematical, statistical and programming foundations</strong> for building AI and
+            Machine Learning models from scratch.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">02</div>
+          <p>Gain <strong>hands-on ML skills</strong> — supervised, unsupervised and reinforcement learning using
+            Python, Scikit-learn, TensorFlow and PyTorch.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">03</div>
+          <p>Build, train and deploy <strong>Deep Learning models</strong> — CNNs, RNNs, LSTMs, Transformers and GANs
+            for real-world classification and generation tasks.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">04</div>
+          <p>Apply <strong>Natural Language Processing (NLP)</strong> techniques — text classification, sentiment
+            analysis, chatbots and large language model (LLM) integration.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">05</div>
+          <p>Implement <strong>Computer Vision</strong> solutions — image recognition, object detection, video analysis
+            using OpenCV, YOLO and CNNs.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">06</div>
+          <p>Work with <strong>real-world datasets, data pipelines</strong> and cloud AI platforms — AWS SageMaker,
+            Google Colab, Azure ML and Hugging Face.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">07</div>
+          <p>Participate in <strong>Kaggle competitions, AI hackathons</strong> and open-source ML projects to build a
+            strong portfolio and industry experience.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-num">08</div>
+          <p>Understand <strong>AI ethics, bias, fairness and responsible AI frameworks</strong> — GDPR, NIST AI RMF and
+            the societal impact of intelligent systems.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- CURRICULUM HIGHLIGHTS -->
+    <section class="course-section" id="curriculum">
+      <div class="section-tag" data-aos="fade-up">Curriculum Highlights</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-book-open"></i></div>
+        <div>
+          <h2>Core Areas of Learning</h2>
+          <p class="section-subtitle">Practical, Industry-Aligned AI &amp; ML Curriculum</p>
+        </div>
+      </div>
+      <div class="features-grid" data-aos="fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Machine Learning</h3>
+          <p>Regression, classification, clustering, SVMs, decision trees, ensemble methods and model evaluation with
+            Scikit-learn.</p>
+          <div class="feature-badge">Core Subject</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Deep Learning &amp; Neural Networks</h3>
+          <p>CNNs, RNNs, LSTMs, GANs, Transformer architectures and transfer learning with TensorFlow and PyTorch.</p>
+          <div class="feature-badge">Core Subject</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>Natural Language Processing</h3>
+          <p>Text preprocessing, word embeddings, BERT, GPT-style models, sentiment analysis and chatbot development.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-eye"></i></div>
+          <h3>Computer Vision</h3>
+          <p>Image classification, object detection (YOLO), semantic segmentation, OpenCV and real-time vision systems.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-database"></i></div>
+          <h3>Data Science &amp; Analytics</h3>
+          <p>Pandas, NumPy, data wrangling, exploratory data analysis (EDA), statistical modeling and Matplotlib/Seaborn
+            visualizations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-robot"></i></div>
+          <h3>Reinforcement Learning</h3>
+          <p>Markov Decision Processes, Q-learning, Deep Q-Networks (DQN), policy gradients and OpenAI Gym environments.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud AI &amp; MLOps</h3>
+          <p>Model deployment on AWS, GCP, Azure, Docker containers, CI/CD pipelines for ML and Hugging Face
+            integration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>AI Ethics &amp; Governance</h3>
+          <p>Responsible AI, bias detection, fairness toolkits, GDPR compliance, transparency and societal impact of AI
+            systems.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- TOOLS & TECHNOLOGIES -->
+    <section class="course-section" id="tools">
+      <div class="section-tag" data-aos="fade-up">Tools &amp; Technologies</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-tools"></i></div>
+        <div>
+          <h2>Industry Tools You Will Master</h2>
+          <p class="section-subtitle">Hands-On with Real-World AI &amp; ML Stack</p>
+        </div>
+      </div>
+      <div class="tools-grid" data-aos="fade-up">
+        <div class="tool-card"><span class="tool-emoji">🐍</span>
+          <div class="tool-name">Python</div>
+          <div class="tool-type">Programming</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🔥</span>
+          <div class="tool-name">PyTorch</div>
+          <div class="tool-type">Deep Learning</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🧠</span>
+          <div class="tool-name">TensorFlow</div>
+          <div class="tool-type">Deep Learning</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">⚙️</span>
+          <div class="tool-name">Scikit-learn</div>
+          <div class="tool-type">Machine Learning</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🐼</span>
+          <div class="tool-name">Pandas</div>
+          <div class="tool-type">Data Analysis</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">📊</span>
+          <div class="tool-name">Matplotlib</div>
+          <div class="tool-type">Visualization</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">👁️</span>
+          <div class="tool-name">OpenCV</div>
+          <div class="tool-type">Computer Vision</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🤗</span>
+          <div class="tool-name">Hugging Face</div>
+          <div class="tool-type">NLP / LLMs</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">☁️</span>
+          <div class="tool-name">Google Colab</div>
+          <div class="tool-type">Cloud AI</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🏆</span>
+          <div class="tool-name">Kaggle</div>
+          <div class="tool-type">Competitions</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🐳</span>
+          <div class="tool-name">Docker</div>
+          <div class="tool-type">MLOps</div>
+        </div>
+        <div class="tool-card"><span class="tool-emoji">🔣</span>
+          <div class="tool-name">R Language</div>
+          <div class="tool-type">Statistics</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- CAREER OPPORTUNITIES -->
+    <section class="course-section" id="careers">
+      <div class="section-tag" data-aos="fade-up">Career Opportunities</div>
+      <div class="section-header" data-aos="fade-right">
+        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+        <div>
+          <h2>High-Growth AI &amp; ML Careers</h2>
+          <p class="section-subtitle">India &amp; Global Opportunities</p>
+        </div>
+      </div>
+      <p class="section-description" data-aos="fade-up">
+        DSC AI &amp; Machine Learning opens doors to <strong>high-growth, high-paying career paths</strong> across
+        technology, research, finance, healthcare and government — in India and abroad.
+      </p>
+      <div class="career-grid" data-aos="fade-up">
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-robot"></i></div>
+          <h4>AI / ML Engineer</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-chart-bar"></i></div>
+          <h4>Data Scientist</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-eye"></i></div>
+          <h4>Computer Vision Engineer</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-comment-dots"></i></div>
+          <h4>NLP / LLM Engineer</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-cogs"></i></div>
+          <h4>Robotics &amp; Automation</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-flask"></i></div>
+          <h4>AI Research Scientist</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-university"></i></div>
+          <h4>Government AI Roles</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-heartbeat"></i></div>
+          <h4>Healthcare AI Specialist</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-coins"></i></div>
+          <h4>FinTech AI Analyst</h4>
+        </div>
+        <div class="career-card">
+          <div class="career-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h4>Lecturer / Educator</h4>
+        </div>
+      </div>
+
+      <!-- Higher Studies -->
+      <div class="higher-box" data-aos="fade-up">
+        <h4><i class="fas fa-arrow-up"></i> Higher Studies Options</h4>
+        <div class="higher-tags">
+          <span class="h-tag">M.Sc. Artificial Intelligence</span>
+          <span class="h-tag">M.Sc. Machine Learning</span>
+          <span class="h-tag">M.Sc. Data Science</span>
+          <span class="h-tag">M.Tech. AI / ML</span>
+          <span class="h-tag">MCA</span>
+          <span class="h-tag">MBA (Tech / Analytics)</span>
+          <span class="h-tag">MS Abroad (USA / UK / Canada)</span>
+          <span class="h-tag">Ph.D. in AI / Computing</span>
+          <span class="h-tag">PG Diploma in Data Science</span>
+          <span class="h-tag">Google AI / DeepMind Research</span>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- STATS -->
+    <!-- <section class="stats-section" data-aos="zoom-in-up">
+      <h2 class="stats-title">DSC AI &amp; Machine Learning at a Glance</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="stat-value">3/4</span>
+          <span class="stat-name">Years Duration</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-layer-group"></i>
+          <span class="stat-value">6/8</span>
+          <span class="stat-name">Semesters</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-laptop-code"></i>
+          <span class="stat-value">6+</span>
+          <span class="stat-name">AI / ML Labs</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-tools"></i>
+          <span class="stat-value">12+</span>
+          <span class="stat-name">Industry Tools</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-project-diagram"></i>
+          <span class="stat-value">Live</span>
+          <span class="stat-name">Projects</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-briefcase"></i>
+          <span class="stat-value">100%</span>
+          <span class="stat-name">Industry Relevant</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-trophy"></i>
+          <span class="stat-value">Kaggle</span>
+          <span class="stat-name">Competitions</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-globe"></i>
+          <span class="stat-value">Global</span>
+          <span class="stat-name">Career Scope</span>
+        </div>
+      </div>
+    </section> -->
+
+  </main>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <h2 data-aos="fade-up">Ready to Build the Future with AI &amp; ML?</h2>
+    <p data-aos="fade-up">Take the first step toward a future-ready career in Artificial Intelligence &amp; Machine
+      Learning. Apply now at S.G.G.S. Khalsa College Mahilpur.</p>
+    <div class="cta-btns" data-aos="fade-up">
+      <a href="Addimision-page.html" class="btn-primary-cta" target="_blank"><i class="fas fa-user-plus"></i> Apply
+        Now</a>
+      <a href="https://puchd.ac.in/nep-syllabus.php" class="btn-outline-cta" target="_blank"><i
+          class="fas fa-file-alt"></i> View Syllabus</a>
+    </div>
+  </section>
+
+  <!-- Footer (shared component) -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    fetch('./component/footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer').innerHTML = d);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      offset: 100,
+      delay: 0,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
