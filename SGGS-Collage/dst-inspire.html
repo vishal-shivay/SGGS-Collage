@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DST's INSPIRE Science Camp 2016 | S.G.G.S. Khalsa College Mahilpur</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/shared-styles.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+ 
+    <style>
+        :root {
+            --wine: #8C1007;
+            --wine2: #7b1e3a;
+            --wine3: #b51610;
+            --gold: #f4c430;
+            --wine100: #f8e9ef;
+            --white: #fff;
+            --bg: #fdf8f9;
+            --text: #1a1a1a;
+            --muted: #666;
+            --border: #f0f0f0;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #8c1007, #a81510);
+            border-radius: 6px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        /* ── NAV ── */
+        .top-nav {
+            background: var(--wine);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-brand {
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 16px 0;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .nav-links a {
+            color: rgba(255, 248, 251, 0.8);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 20px 13px;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+            background: rgba(244, 196, 48, 0.12);
+        }
+
+        .nav-links a.active {
+            color: var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        /* ── INSPIRE QUICK NAV ── */
+        .inspire-nav {
+            background: #1a0204;
+            border-bottom: 3px solid var(--gold);
+            overflow-x: auto;
+        }
+
+        .inspire-nav-inner {
+            display: flex;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .inspire-nav a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 14px 18px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .inspire-nav a:hover {
+            color: var(--gold);
+            background: rgba(244, 196, 48, 0.07);
+        }
+
+        .inspire-nav a i {
+            font-size: 0.8rem;
+            color: var(--gold);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            padding: 100px 24px 80px;
+            overflow: hidden;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+        }
+
+        .hero-ov {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.13), transparent 42%), radial-gradient(circle at 80% 70%, rgba(244, 196, 48, 0.07), transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-pt {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.09) 1px, transparent 1px), radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+            font-size: 2.5rem;
+            color: #fff;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.28);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(244, 196, 48, 0.18);
+            border: 1px solid rgba(244, 196, 48, 0.45);
+            color: var(--gold);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 30px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 760px;
+            margin: 0 auto 44px;
+            font-weight: 500;
+        }
+
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.13);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .si {
+            flex: 1;
+            min-width: 130px;
+            padding: 22px 18px;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .si:last-child {
+            border-right: none;
+        }
+
+        .sn {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .sl {
+            font-size: 0.76rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* ── LAYOUT ── */
+        .section {
+            padding: 76px 0;
+        }
+
+        .section-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .sec-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+            padding: 7px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sec-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .sec-desc {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.85;
+            max-width: 980px;
+            margin-bottom: 32px;
+        }
+
+        .sec-desc strong {
+            color: var(--wine);
+        }
+
+        .bg-white {
+            background: #fff;
+        }
+
+        .bg-wine100 {
+            background: var(--wine100);
+        }
+
+        .divider {
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* ── FEATURE CARDS ── */
+        .feat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 22px;
+            margin-bottom: 48px;
+        }
+
+        .feat-card {
+            background: #fff;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8c1007, #b51610);
+            transform: scaleX(0);
+            transition: transform 0.35s;
+        }
+
+        .feat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feat-card:hover {
+            border-color: rgba(140, 16, 7, 0.28);
+            box-shadow: 0 10px 36px rgba(140, 16, 7, 0.13);
+            transform: translateY(-4px);
+        }
+
+        .feat-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(140, 16, 7, 0.09);
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--wine);
+            font-size: 1.6rem;
+            transition: all 0.3s;
+        }
+
+        .feat-card:hover .feat-icon {
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .feat-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .feat-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* ── INSPIRE COMPONENTS BOX ── */
+        .inspire-parts {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .inspire-part {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            border: 1px solid var(--border);
+            border-left: 6px solid var(--wine);
+            box-shadow: 0 2px 12px rgba(140, 16, 7, 0.04);
+        }
+
+        .inspire-part:nth-child(2) {
+            border-left-color: var(--gold);
+        }
+
+        .inspire-part:nth-child(3) {
+            border-left-color: #b51610;
+        }
+
+        .inspire-part h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--wine);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .inspire-part p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* ── MENTOR CARDS ── */
+        .mentor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-bottom: 48px;
+        }
+
+        .mentor-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            box-shadow: 0 2px 12px rgba(140, 16, 7, 0.05);
+            transition: all 0.3s;
+        }
+
+        .mentor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(140, 16, 7, 0.13);
+            border-color: rgba(140, 16, 7, 0.25);
+        }
+
+        .mentor-top {
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            padding: 28px 22px;
+            text-align: center;
+        }
+
+        .mentor-avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .mentor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .mentor-top h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .mentor-top .org {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .mentor-body {
+            padding: 18px 20px;
+        }
+
+        .topic-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .topic-text {
+            font-size: 0.92rem;
+            color: var(--text);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .topic-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+
+        /* ── TALK CARDS ── */
+        .talk-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 48px;
+        }
+
+        .talk-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: flex-start;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(140, 16, 7, 0.04);
+        }
+
+        .talk-card:hover {
+            border-color: rgba(140, 16, 7, 0.25);
+            box-shadow: 0 6px 24px rgba(140, 16, 7, 0.1);
+            transform: translateX(4px);
+        }
+
+        .talk-num {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .talk-info .speaker {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--wine);
+            margin-bottom: 3px;
+        }
+
+        .talk-info .affil {
+            font-size: 0.83rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .talk-info .topic {
+            font-size: 0.93rem;
+            color: var(--text);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .talk-info .tdesc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-top: 5px;
+        }
+
+        .topic-badge {
+            display: inline-block;
+            background: var(--wine100);
+            color: var(--wine);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 6px;
+        }
+
+        /* ── STUDENT DOWNLOAD CARDS ── */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .dl-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 22px;
+            text-align: center;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dl-card:hover {
+            border-color: rgba(140, 16, 7, 0.3);
+            box-shadow: 0 8px 28px rgba(140, 16, 7, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .dl-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: rgba(140, 16, 7, 0.09);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 2rem;
+            color: var(--wine);
+            transition: all 0.3s;
+        }
+
+        .dl-card:hover .dl-icon {
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+        }
+
+        .dl-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .dl-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .dl-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #8c1007, #b51610);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 22px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* ── GALLERY ── */
+        .gal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        @media(max-width:900px) {
+            .gal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:560px) {
+            .gal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .gal-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 13px;
+            cursor: pointer;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gal-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gal-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .gal-ov {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(140, 16, 7, 0) 0%, rgba(140, 16, 7, 0.82) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+
+        .gal-item:hover .gal-ov {
+            opacity: 1;
+        }
+
+        .gal-ov i {
+            font-size: 1.9rem;
+            color: #fff;
+        }
+
+        .gal-ov span {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--wine);
+            padding: 8px 20px;
+            border-radius: 26px;
+            font-weight: 700;
+            font-size: 0.83rem;
+        }
+
+        /* ── LIGHTBOX ── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.96);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            backdrop-filter: blur(8px);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .lb-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .lb-prev,
+        .lb-next {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .lb-prev {
+            left: 24px;
+        }
+
+        .lb-next {
+            right: 24px;
+        }
+
+        .lb-prev:hover,
+        .lb-next:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: scale(1.1);
+        }
+
+        .lb-img-wrap {
+            max-width: 1200px;
+            max-height: 88vh;
+            width: 100%;
+            text-align: center;
+        }
+
+        .lb-img-wrap img {
+            max-width: 100%;
+            max-height: 82vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .lb-counter {
+            text-align: center;
+            color: #fff;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 22px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        /* ── ABOUT SGGS TWO COL ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        @media(max-width:900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-img-box {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(140, 16, 7, 0.15);
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            display: block;
+        }
+
+        .about-img-label {
+            background: var(--wine);
+            color: #fff;
+            padding: 12px 18px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .about-text p {
+            font-size: 0.97rem;
+            color: #444;
+            line-height: 1.85;
+            margin-bottom: 16px;
+        }
+
+        .about-text strong {
+            color: var(--wine);
+        }
+
+        /* ── STUDIES CENTRES ── */
+        .centres-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 28px;
+        }
+
+        @media(max-width:800px) {
+            .centres-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .centre-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--wine);
+        }
+
+        .centre-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--wine);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .centre-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* ── CONTACT BOX ── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        @media(max-width:768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-block {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--wine);
+        }
+
+        .contact-block h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--wine);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .c-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            margin-bottom: 10px;
+            font-size: 0.91rem;
+            color: #444;
+        }
+
+        .c-row i {
+            color: var(--wine);
+            flex-shrink: 0;
+            margin-top: 3px;
+            width: 16px;
+        }
+
+        .c-row a {
+            color: var(--wine);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .c-row a:hover {
+            text-decoration: underline;
+        }
+
+        .updates-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .updates-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .updates-list li:last-child {
+            border-bottom: none;
+        }
+
+        .u-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--wine);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .u-title a {
+            color: var(--wine);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        .u-title a:hover {
+            text-decoration: underline;
+        }
+
+        .u-date {
+            font-size: 0.78rem;
+            color: #999;
+            margin-top: 2px;
+        }
+
+        .qlinks {
+            list-style: none;
+            padding: 0;
+        }
+
+        .qlinks li {
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .qlinks li:last-child {
+            border-bottom: none;
+        }
+
+        .qlinks a {
+            color: var(--wine);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.2s;
+        }
+
+        .qlinks a:hover {
+            gap: 14px;
+        }
+
+        .qlinks a i {
+            font-size: 0.72rem;
+        }
+
+        /* ── STATS SECTION ── */
+        .stats-section {
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            padding: 72px 48px;
+            border-radius: 28px;
+            margin: 72px 0;
+        }
+
+        .stats-title {
+            text-align: center;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 48px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 22px 14px;
+            border-radius: 18px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.24);
+            transform: translateY(-7px);
+        }
+
+        .stat-card i {
+            color: #fff;
+            opacity: 0.9;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-value {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-name {
+            color: rgba(255, 255, 255, 0.82);
+            font-weight: 600;
+            font-size: 0.79rem;
+            line-height: 1.3;
+        }
+
+        /* ── BANNER IMAGE ── */
+        .banner-img {
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(140, 16, 7, 0.15);
+            margin-bottom: 48px;
+        }
+
+        .banner-img img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: #1a0204;
+            padding: 46px 60px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-right: 1px solid rgba(255, 255, 255, 0.12);
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:last-child {
+            border-right: none;
+        }
+
+        .footer-nav a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copy {
+            color: rgba(255, 255, 255, 0.28);
+            font-size: 0.76rem;
+        }
+
+        @media(max-width:768px) {
+            .top-nav {
+                padding: 0 14px;
+            }
+
+            .nav-links a {
+                padding: 18px 10px;
+                font-size: 0.76rem;
+            }
+
+            .hero {
+                padding: 80px 16px 60px;
+                min-height: 460px;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            .si {
+                min-width: 100px;
+                padding: 18px 12px;
+            }
+
+            .sn {
+                font-size: 1.6rem;
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .sec-title {
+                font-size: 1.85rem;
+            }
+
+            .talk-card {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .stats-section {
+                padding: 44px 20px;
+                border-radius: 20px;
+            }
+
+            .stats-title {
+                font-size: 1.8rem;
+            }
+
+            .site-footer {
+                padding: 36px 16px;
+            }
+
+            .inspire-nav-inner {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <!-- INSPIRE QUICK NAV -->
+    <div class="inspire-nav">
+        <div class="inspire-nav-inner">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about-sggs"><i class="fas fa-university"></i> About SGGS</a>
+            <a href="#about-dst"><i class="fas fa-flask"></i> About DST</a>
+            <a href="#inspire"><i class="fas fa-star"></i> INSPIRE Programme</a>
+            <a href="#mentor-talks"><i class="fas fa-chalkboard-teacher"></i> Mentor's Topic Talk</a>
+            <a href="#mentors"><i class="fas fa-users"></i> Mentors</a>
+            <a href="#students"><i class="fas fa-user-graduate"></i> Students</a>
+            <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-ov"></div>
+        <div class="hero-pt"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-microscope"></i></div>
+            <div class="hero-tag fade-in">Department of Science & Technology, Govt. of India</div>
+            <h1 class="fade-in">DST's <span>INSPIRE</span> Science Camp <span>2016</span></h1>
+            <p class="hero-sub fade-in-delay">Innovation in Science Pursuit for Inspired Research &nbsp;•&nbsp; S.G.G.S.
+                Khalsa College Mahilpur &nbsp;•&nbsp; Hoshiarpur, Punjab</p>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="si"><span class="sn">13</span><span class="sl">Expert Mentors</span></div>
+                <div class="si"><span class="sn">45</span><span class="sl">Gallery Photos</span></div>
+                <div class="si"><span class="sn">₹1979</span><span class="sl">Cr. 11th Plan Budget</span></div>
+                <div class="si"><span class="sn">2008</span><span class="sl">Programme Launched</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <div class="section bg-white" id="banner-section" style="padding:40px 0 0;">
+        <div class="section-inner">
+            <div class="banner-img" data-aos="zoom-in">
+                <img src="./images/3_Banner-1.png"
+                    alt="DST's INSPIRE Science Camp 2016 — S.G.G.S. Khalsa College Mahilpur">
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SGGS -->
+    <section class="section bg-white" id="about-sggs">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">About the Host Institution</div>
+            <h2 class="sec-title" data-aos="fade-up">Sri Guru Gobind Singh Khalsa College, Mahilpur</h2>
+            <p class="sec-desc" data-aos="fade-up">Distt. Hoshiarpur (Punjab), India — A Premier Institution of the
+                Rural Area Since <strong>1946</strong></p>
+            <div class="about-grid" data-aos="fade-up">
+                <div>
+                    <div class="about-img-box">
+                        <img src="./images/founder.png"
+                            alt="Sant Baba Hari Singh Ji Kaharpuri — Founder President">
+                        <div class="about-img-label">Sant Baba Hari Singh Ji Kaharpuri — Founder President</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Sri Guru Gobind Singh Khalsa College, Mahilpur, Distt. Hoshiarpur (Punjab), India, a <strong>Post
+                            Graduate, Multi Faculty, Co-Educational college</strong> is a premier Institution of the
+                        Rural Area in District Hoshiarpur (Punjab), which was established in <strong>1946 before the
+                            partition of India</strong> by <strong>HIS HOLINESS 'SANT BABA HARI SINGH JI
+                            KAHARPURI'</strong>, the Founder President of Sikh Educational Council, with a missionary
+                        zeal of providing Higher Education to the boys and girls in general and particularly belonging
+                        to the <strong>Rural, Backward and Kandi areas</strong>, who were not able to go to other cities
+                        for Higher Education.</p>
+                    <p>It is the <strong>oldest educational institute of higher learning in rural & pre-partitioned
+                            India</strong> and one of the oldest amongst premier Institutions of Higher Education in the
+                        north of India. The college is situated on <strong>Hoshiarpur Chandigarh Road at a distance of
+                            22 kilometres from Hoshiarpur</strong>, 37 Kilometres from Phagwara, 35 Kilometres from
+                        Nangal Dam and 45 Kilometres from Una (Himachal Pradesh) in the foot hills of Shivalik Range of
+                        Hills.</p>
+                    <p>The college is spread over <strong>200 Kanals of land</strong> with imposing buildings in lush
+                        green, pollution free environment, away from the hustle and bustle of the city life. At the time
+                        of its establishment, only two faculties (Science and Arts) were introduced but after that
+                        Commerce and Computer Sciences were started to meet the challenges of 21st Century.
+                        <strong>Excellence in academics, sports and cultural activities</strong> has been a way of life
+                        of our students year after year. From the very beginning, this Institution has turned out
+                        innumerable Doctors, Engineers, Educationists, Defence Generals etc.</p>
+                    <p>It is a matter of great honour for this institution that its <strong>Football Team (Men) won the
+                            Panjab University 'A' Division Football Championship for 20 years regularly</strong> and
+                        Women team also won the Football Championship of the Panjab University. In the field of NCC, our
+                        Cadet <strong>Rohit Kumar led the Punjab, Haryana, Himachal Pradesh and UT Chandigarh
+                            Directorate in the Republic Day Parade 2006</strong> in New Delhi.</p>
+                    <p>This institution feels pride of having held <strong>Panjab University Zonal Youth Festivals
+                            Hoshiarpur Zone-A</strong>, proud of hosting three times during the sessions
+                        <strong>2004-05, 2005-06 and 2009-10</strong>. This college has a well stocked Library with a
+                        volume of <strong>more than 50 thousands books</strong> and two well furnished and well-equipped
+                        Computer Labs.</p>
+                    <p>It is also important to mention that since its establishment the institution fulfilled the
+                        requirement of the Illaqa upto graduate level classes but as per the need of the people from
+                        <strong>1991 started Post Graduate level Degree in Punjabi</strong>. Further, it was the
+                        <strong>first ever college in the state of Punjab to introduce Computer Science as an elective
+                            subject in B.A./B.Sc. level classes from 1993</strong>. After successful experience, the
+                        college added Post Graduate Degrees in History, M.Sc. Chemistry, M.Com and M.A. (Economics) from
+                        <strong>2005-06</strong>, followed by M.Sc. Physics, M.A. Political Science and B.Ed. from
+                        <strong>2006-07</strong>. New courses of PGDCA and B.P.Ed. were started from
+                        <strong>2007-08</strong>. M.Sc. Instrumentation, M.P.Ed. and BCA were introduced from
+                        <strong>2008-09</strong>. C.P.Ed. was introduced from <strong>2009-10</strong> and M.Sc.
+                        Industrial Chemistry was also launched in <strong>2009-10</strong>. In <strong>2011</strong>,
+                        B.Sc. Fashion Designing was introduced for the first time in the Doaba Region of Punjab. From
+                        <strong>2012-13</strong>, B.Sc. Agriculture and M.Sc. Information Technology were added. From
+                        <strong>2013-14</strong> the college started M.Sc. Mathematics, M.A. English, M.A. Hindi, B.Sc.
+                        Medical and Sociology, NCC, Music as elective subjects in B.A.</p>
+                    <div class="centres-grid">
+                        <div class="centre-card">
+                            <h4><i class="fas fa-landmark"></i> Gandhian Studies Centre</h4>
+                            <p>Sponsored by the University Grants Commission under the scheme of Epoch-Making Social
+                                Thinkers of India during the XI Plan. Acquaints teachers and students with the thoughts,
+                                actions and works of outstanding social icons.</p>
+                        </div>
+                        <div class="centre-card">
+                            <h4><i class="fas fa-landmark"></i> Dr. Ambedkar Studies Centre</h4>
+                            <p>Sponsored by UGC under the scheme of Epoch-Making Social Thinkers of India. Pursues
+                                studies, research and fieldwork-based extension programmes related to Dr. Ambedkar's
+                                vision.</p>
+                        </div>
+                        <div class="centre-card">
+                            <h4><i class="fas fa-female"></i> Women's Studies Centre</h4>
+                            <p>Running successfully — sponsored by UGC. Focuses on amelioration of women's conditions in
+                                India, particularly in rural-backward regions, enhancing accessibility to education,
+                                employment, health and law.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT DST -->
+    <section class="section bg-wine100" id="about-dst">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Department of Science & Technology</div>
+            <h2 class="sec-title" data-aos="fade-up">About DST — Department of Science &amp; Technology</h2>
+            <p class="sec-desc" data-aos="fade-up">India is one of the <strong>top-ranking countries in the field of
+                    basic research</strong>. Indian Science has come to be regarded as one of the most powerful
+                instruments of growth and development, especially in the emerging scenario and competitive economy. In
+                the wake of the recent developments and the new demands that are being placed on the S&T system, it is
+                necessary for us to embark on some major science projects which have relevance to national needs and
+                which will also be relevant for tomorrow's technology.</p>
+            <div class="feat-grid" data-aos="fade-up">
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-atom"></i></div>
+                    <h3>Basic Research Promotion</h3>
+                    <p>The Department plays a pivotal role in promotion of science & technology in the country,
+                        promoting high-end basic research and development of cutting-edge technologies to serve the
+                        nation's growth.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Technology Development</h3>
+                    <p>Wide-ranging activities from promoting high-end basic research on one hand to servicing the
+                        technological requirements of the common man through development of appropriate skills and
+                        technologies on the other.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-users"></i></div>
+                    <h3>Human Resource Development</h3>
+                    <p>Generation and nurturing of a human talent pool capable of utilizing and developing first
+                        principles in science — both a pre-condition and integral part of India's innovation
+                        infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSPIRE PROGRAMME -->
+    <section class="section bg-white" id="inspire">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">INSPIRE Programme</div>
+            <h2 class="sec-title" data-aos="fade-up">Innovation in Science Pursuit for Inspired Research (INSPIRE)</h2>
+            <p class="sec-desc" data-aos="fade-up">Department of Science & Technology (DST) has developed an innovative
+                programme named <strong>Innovation in Science Pursuit for Inspired Research (INSPIRE)</strong> to
+                attract talent to the excitement and study of science at an early age, and to help the country build the
+                required critical resource pool for strengthening and expanding the S&T system and R&D base with a
+                long-term foresight. <strong>Government of India approved the INSPIRE Scheme in November 2008</strong>
+                at a total cost of about <strong>Rs. 1979.25 crores in the 11th Plan Period</strong> and the Honourable
+                Prime Minister launched the programme on <strong>13th December 2008</strong>. The programme is
+                continuing in the <strong>12th Plan period at a budgetary allocation of Rs. 2200 crores</strong>.</p>
+
+            <div class="sec-tag" data-aos="fade-up" style="margin-bottom:18px;">INSPIRE has Three Components</div>
+            <div class="inspire-parts" data-aos="fade-up">
+                <div class="inspire-part">
+                    <h3><i class="fas fa-seedling"></i> (i) Scheme for Early Attraction of Talent (SEATS)</h3>
+                    <p>Aims to attract talented youth to study science by providing <strong>INSPIRE Award of Rs. 5000 to
+                            one million young learners</strong> of the age group <strong>10-15 years</strong>, ranging
+                        from Class VI to Class X standards, and also by arranging <strong>summer camps for about 50,000
+                            science students of Class XI</strong> with global leaders in science to experience the joy
+                        of innovations on an annual basis through INSPIRE Internship.</p>
+                </div>
+                <div class="inspire-part">
+                    <h3><i class="fas fa-graduation-cap"></i> (ii) Scholarship for Higher Education (SHE)</h3>
+                    <p>Aims to enhance rates of attachment of talented youth to undertake higher education in science
+                        intensive programmes, by providing scholarships and mentorship. The scheme offers <strong>10,000
+                            Scholarships every year at Rs. 0.80 lakh per year</strong> for the talented youth in the
+                        <strong>age group 17-22 years</strong>, for undertaking Bachelor and Masters level education in
+                        natural sciences. The main feature of the scheme is the <strong>mentorship support</strong>
+                        provided to every scholar.</p>
+                </div>
+                <div class="inspire-part">
+                    <h3><i class="fas fa-flask"></i> (iii) Assured Opportunity for Research Careers (AORC)</h3>
+                    <p>Aims to attract, attach, retain and nourish talented young scientific human resource for
+                        strengthening the R&D foundation and base. It has two sub-components:<br><br>
+                        <strong>INSPIRE Fellowship</strong> (age group 22-27 years): Offers <strong>1000 fellowships
+                            every year</strong> for carrying out doctoral degrees in both basic and applied sciences
+                        including engineering and medicine.<br><br>
+                        <strong>INSPIRE Faculty Scheme</strong>: Offers assured opportunity every year for <strong>1000
+                            post-doctoral researchers</strong> in the age group <strong>27-32 years</strong>, through
+                        contractual and tenure track positions for 5 years in both basic and applied sciences.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:12px;" data-aos="fade-up">
+                <a href="http://www.inspire-dst.gov.in/INSPIRE_Brochure.pdf" target="_blank"
+                    style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#8c1007,#b51610);color:#fff;padding:13px 30px;border-radius:12px;font-weight:700;text-decoration:none;font-size:0.95rem;box-shadow:0 4px 16px rgba(140,16,7,0.28);transition:transform 0.2s;"
+                    onmouseover="this.style.transform='translateY(-2px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-file-pdf"></i> Download INSPIRE Brochure (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTOR TALKS -->
+    <section class="section bg-wine100" id="mentor-talks">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Activities</div>
+            <h2 class="sec-title" data-aos="fade-up">Mentor's Topic Talk</h2>
+            <p class="sec-desc" data-aos="fade-up">Eminent scientists, professors, and researchers from leading
+                institutions across India delivered expert talks on cutting-edge topics in science, mathematics, and
+                technology during the DST INSPIRE Science Camp 2016 at S.G.G.S. Khalsa College Mahilpur.</p>
+
+            <div class="talk-list" data-aos="fade-up">
+
+                <div class="talk-card">
+                    <div class="talk-num">01</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Jayanti Dutta</div>
+                        <div class="affil">Deputy Director, HRDC — Panjab University Chandigarh</div>
+                        <span class="topic-badge">Science Education</span>
+                        <div class="topic">Why is Science Fun? And What is Science</div>
+                        <div class="tdesc">The Method of obtaining knowledge through observation and experimentation —
+                            asking questions and answering them in a way that is testable, observing, and
+                            evidence-based. How do you do science? Observing, inferring, measuring, communicating, and
+                            classifying.</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">02</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Lal Krishan</div>
+                        <div class="affil">Director, National Physical Laboratory (NPL), New Delhi</div>
+                        <span class="topic-badge">Materials Science</span>
+                        <div class="topic">Carbon: An Omnipresent Wonder Material with Numerous Applications</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">03</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. Atul Khanna</div>
+                        <div class="affil">Department of Physics, Guru Nanak Dev University, Amritsar</div>
+                        <span class="topic-badge">Science & Technology</span>
+                        <div class="topic">Accomplishments of India in Space, Nuclear and Defence Technologies</div>
+                        <div class="tdesc">Also spoke about the current state of science and technology in India,
+                            highlighting the nation's achievements in space exploration, nuclear science, and defence
+                            research.</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">04</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Parvinder Singh</div>
+                        <div class="affil">Principal, S.G.G.S. Khalsa College Mahilpur, Hoshiarpur</div>
+                        <span class="topic-badge">Psychology & Education</span>
+                        <div class="topic">Brain Hemispheric Dominance or Style of Learning and Thinking (SOLAT)</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">05</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Amrik Singh Ahluwalia</div>
+                        <div class="affil">Professor, Department of Botany, Panjab University Chandigarh</div>
+                        <span class="topic-badge">Environmental Science</span>
+                        <div class="topic">Global Warming &amp; Climate Change</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">06</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. Virender Kumar &amp; Prof. Vikrant Singh Rana</div>
+                        <div class="affil">S.G.G.S. Khalsa College Mahilpur</div>
+                        <span class="topic-badge">Practical Science</span>
+                        <div class="topic">Lab Experiments in Physics and Chemistry</div>
+                        <div class="tdesc">Hands-on practical laboratory experiments demonstrating key concepts in
+                            Physics and Chemistry for the INSPIRE Science Camp participants.</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">07</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. Arvind</div>
+                        <div class="affil">IISER (Indian Institute of Science Education and Research), Mohali,
+                            Chandigarh</div>
+                        <span class="topic-badge">Quantum Science</span>
+                        <div class="topic">Development of Science and Quantum Physics</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">08</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Kirti Vardhan</div>
+                        <div class="affil">Department of Mathematics, Panjab University Chandigarh</div>
+                        <span class="topic-badge">Mathematics</span>
+                        <div class="topic">Archimedes' Sphere-Cylinder Theorem</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">09</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. Jaswinder Singh</div>
+                        <div class="affil">Siksha Rattan Awardee — Multiple National Awards from Government of India
+                        </div>
+                        <span class="topic-badge">Experimental Science</span>
+                        <div class="topic">Scientific Experiments & Demonstration</div>
+                        <div class="tdesc">Resource person started the session with self-introduction and making all the
+                            children introduce themselves. After that he performed scientific experiments before the
+                            audience — a highly interactive and engaging session.</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">10</div>
+                    <div class="talk-info">
+                        <div class="speaker">Daizy Batish</div>
+                        <div class="affil">Department of Botany, Panjab University Chandigarh</div>
+                        <span class="topic-badge">Ecology</span>
+                        <div class="topic">Biodiversity: Present Status, Major Threats and Conservation</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">11</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. D.B. Rishi</div>
+                        <div class="affil">Department of Mathematics, Panjab University Chandigarh</div>
+                        <span class="topic-badge">Mathematics</span>
+                        <div class="topic">Basics of Mathematics</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">12</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. (Mrs.) Parveen Rishi</div>
+                        <div class="affil">Department of Microbiology, Panjab University Chandigarh</div>
+                        <span class="topic-badge">Microbiology</span>
+                        <div class="topic">Microbiology — A Fascinating Field</div>
+                        <div class="tdesc">Dr. Parveen told the students about the Microbial World and explained: "We
+                            can't see them. We can't hear them or feel them, but they are with us." — A captivating
+                            introduction to the invisible world of microorganisms.</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">13</div>
+                    <div class="talk-info">
+                        <div class="speaker">Prof. K.K. Bhasin</div>
+                        <div class="affil">CSIR Emeritus Scientist, Department of Chemistry, Panjab University
+                            Chandigarh</div>
+                        <span class="topic-badge">Chemistry</span>
+                        <div class="topic">Fascinating Aspects of Chemistry</div>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="talk-num">14</div>
+                    <div class="talk-info">
+                        <div class="speaker">Dr. Tokeer Ahmad</div>
+                        <div class="affil">Department of Chemistry, Jamia Millia Islamia, New Delhi</div>
+                        <span class="topic-badge">Nanotechnology</span>
+                        <div class="topic">Nan: An Interdisciplinary Science</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section class="section bg-white" id="mentors">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Expert Faculty</div>
+            <h2 class="sec-title" data-aos="fade-up">Mentors — DST INSPIRE Camp 2016</h2>
+            <p class="sec-desc" data-aos="fade-up">Distinguished scientists, professors, and researchers from premier
+                institutions across India who mentored students at the DST INSPIRE Science Camp 2016 hosted by S.G.G.S.
+                Khalsa College Mahilpur.</p>
+            <div class="mentor-grid" data-aos="fade-up">
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Dr. Lal Krishan</h3>
+                        <div class="org">National Physical Laboratory (NPL), New Delhi</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Carbon: An Omnipresent Wonder Material with Numerous Applications</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Prof. K.K. Bhasin</h3>
+                        <div class="org">CSIR Emeritus Scientist, Chemistry Dept., Panjab University Chandigarh</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Fascinating Aspects of Chemistry</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Prof. Arvind</h3>
+                        <div class="org">Physics & Co-ordinator, IISER, S.A.S. Nagar, Mohali</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Development of Science and Quantum Physics</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Prof. Atul Khanna</h3>
+                        <div class="org">Dept. of Physics, Guru Nanak Dev University, Amritsar</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Accomplishments of India in Space, Nuclear and Defence Technologies
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Prof. A.S. Ahluwalia</h3>
+                        <div class="org">Dept. of Botany, Panjab University Chandigarh</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Global Warming & Climate Change</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Dr. Tokeer Ahmad</h3>
+                        <div class="org">Dept. of Chemistry, Jamia Millia Islamia, New Delhi</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Nan: An Interdisciplinary Science</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Dr. Jayanti Dutta</h3>
+                        <div class="org">Deputy Director, H.R.D.C., Panjab University Chandigarh</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Why is Science Fun? And What is Science</div>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-top">
+                        <div class="mentor-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3>Dr. Parvinder Singh</h3>
+                        <div class="org">Principal, S.G.G.S. Khalsa College Mahilpur, Hoshiarpur</div>
+                    </div>
+                    <div class="mentor-body">
+                        <div class="topic-label">Topic</div>
+                        <div class="topic-text">Brain Hemispheric Dominance / SOLAT — Style of Learning and Thinking
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENTS -->
+    <section class="section bg-wine100" id="students">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Student Resources</div>
+            <h2 class="sec-title" data-aos="fade-up">Students — Downloads &amp; Information</h2>
+            <p class="sec-desc" data-aos="fade-up">Candidates can download complete information about the INSPIRE
+                Programme, Brochure, Registration Form and List of Selected Candidates for the DST INSPIRE Science Camp
+                2016. For any other query or information, contact us through the Contact page on this website.</p>
+            <div class="download-grid" data-aos="fade-up">
+
+                <a href="./images/Information.pdf" target="_blank" class="dl-card">
+                    <div class="dl-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Complete Information</h4>
+                    <p>Download complete information about the INSPIRE Programme — eligibility, schedule, and guidelines
+                    </p>
+                    <span class="dl-btn"><i class="fas fa-download"></i> Download PDF</span>
+                </a>
+
+                <a href="./images/Registration-Form.pdf" target="_blank" class="dl-card">
+                    <div class="dl-icon"><i class="fas fa-file-signature"></i></div>
+                    <h4>Registration Form</h4>
+                    <p>Official Registration Form for the DST INSPIRE Science Camp 2016 — fill and submit as directed
+                    </p>
+                    <span class="dl-btn"><i class="fas fa-download"></i> Download PDF</span>
+                </a>
+
+                <a href="./images/Brochure-Inspire.pdf" target="_blank" class="dl-card">
+                    <div class="dl-icon"><i class="fas fa-book-open"></i></div>
+                    <h4>Brochure — INSPIRE Camp</h4>
+                    <p>Official brochure of the DST INSPIRE Science Camp 2016 with full programme details and schedule
+                    </p>
+                    <span class="dl-btn"><i class="fas fa-download"></i> Download PDF</span>
+                </a>
+
+                <a href="./images/List-of-Selected-Candidates.pdf" target="_blank"
+                    class="dl-card">
+                    <div class="dl-icon"><i class="fas fa-list-ol"></i></div>
+                    <h4>List of Selected Candidates</h4>
+                    <p>Complete list of students selected to participate in the DST INSPIRE Science Camp 2016</p>
+                    <span class="dl-btn"><i class="fas fa-download"></i> Download PDF</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section bg-white" id="gallery">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Photo Gallery</div>
+            <h2 class="sec-title" data-aos="fade-up">Gallery — DST INSPIRE Science Camp 2016</h2>
+            <p class="sec-desc" data-aos="fade-up">Visual highlights from the DST's INSPIRE Science Camp 2016 hosted at
+                S.G.G.S. Khalsa College Mahilpur — registration, expert lectures, lab activities, student interactions,
+                and closing ceremony.</p>
+            <div class="gal-grid" data-aos="fade-up" id="galleryGrid">
+                <div class="gal-item" onclick="openLb(0)"><img src="./images/sc-banner.jpg"
+                        alt="INSPIRE Camp Banner" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Camp Banner</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(1)"><img
+                        src="http://sggskcm.org/wp-content/uploads/registration.jpg" alt="Registration" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Registration</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(2)"><img src="./images/DSC_0298.jpg"
+                        alt="DSC_0298" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(3)"><img src="./images/DSC_0301.jpg"
+                        alt="DSC_0301" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(4)"><img src="./images/DSC_0302.jpg"
+                        alt="DSC_0302" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(5)"><img src="./images/DSC_0306.jpg"
+                        alt="DSC_0306" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(6)"><img src="./images/DSC_0313.jpg"
+                        alt="DSC_0313" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(7)"><img src="./images/DSC_0398.jpg"
+                        alt="DSC_0398" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(8)"><img src="./images/DSC_0339.jpg"
+                        alt="DSC_0339" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(9)"><img src="./images/DSC_0405.jpg"
+                        alt="DSC_0405" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(10)"><img src="./images/DSC_0425.jpg"
+                        alt="DSC_0425" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(11)"><img src="./images/DSC_0433.jpg"
+                        alt="DSC_0433" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(12)"><img src="./images/DSC_0022.jpg"
+                        alt="DSC_0022" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(13)"><img
+                        src="./images/DSC_0453-1.jpg" alt="DSC_0453" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(14)"><img
+                        src="./images/DSC_0494-1.jpg" alt="DSC_0494" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(15)"><img src="./images/DSC_0501.jpg"
+                        alt="DSC_0501" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(16)"><img
+                        src="./images/DSC_0533-1.jpg" alt="DSC_0533" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(17)"><img src="./images/DSC_0548.jpg"
+                        alt="DSC_0548" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(18)"><img src="./images/DSC_0565.jpg"
+                        alt="DSC_0565" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(19)"><img
+                        src="./images/DSC_0581-1.jpg" alt="DSC_0581" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(20)"><img src="./images/DSC_0586.jpg"
+                        alt="DSC_0586" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(21)"><img src="./images/DSC_0601.jpg"
+                        alt="DSC_0601" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(22)"><img src="./images/DSC_0625.jpg"
+                        alt="DSC_0625" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(23)"><img src="./images/DSC_0068.jpg"
+                        alt="DSC_0068" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(24)"><img
+                        src="./images/DSC_0080-1.jpg" alt="DSC_0080" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(25)"><img src="./images/DSC_0088.jpg"
+                        alt="DSC_0088" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(26)"><img src="./images/DSC_0114.jpg"
+                        alt="DSC_0114" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(27)"><img src="./images/DSC_0135.jpg"
+                        alt="DSC_0135" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(28)"><img src="./images/DSC_0136.jpg"
+                        alt="DSC_0136" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(29)"><img src="./images/DSC_0224.jpg"
+                        alt="DSC_0224" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(30)"><img src="./images/DSC_0226.jpg"
+                        alt="DSC_0226" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(31)"><img
+                        src="./images/DSC_0283-1.jpg" alt="DSC_0283" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(32)"><img src="./images/DSC_0326.jpg"
+                        alt="DSC_0326" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(33)"><img src="./images/DSC_0355.jpg"
+                        alt="DSC_0355" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(34)"><img src="./images/DSC_0360.jpg"
+                        alt="DSC_0360" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(35)"><img src="./images/DSC_0464.jpg"
+                        alt="DSC_0464" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(36)"><img src="./images/DSC_0606.jpg"
+                        alt="DSC_0606" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(37)"><img src="./images/DSC_0639.jpg"
+                        alt="DSC_0639" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(38)"><img src="./images/DSC_0646.jpg"
+                        alt="DSC_0646" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(39)"><img src="./images/DSC_0664.jpg"
+                        alt="DSC_0664" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(40)"><img src="./images/DSC_0668.jpg"
+                        alt="DSC_0668" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(41)"><img src="./images/DSC_0680.jpg"
+                        alt="DSC_0680" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(42)"><img src="./images/DSC_0689.jpg"
+                        alt="DSC_0689" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(43)"><img src="./images/DSC_0730.jpg"
+                        alt="DSC_0730" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+                <div class="gal-item" onclick="openLb(44)"><img src="./images/DSC_0733.jpg"
+                        alt="DSC_0733" loading="lazy">
+                    <div class="gal-ov"><i class="fas fa-search-plus"></i><span>Science Camp</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="section-inner">
+        <div class="stats-section" data-aos="zoom-in-up">
+            <h2 class="stats-title">DST INSPIRE Camp 2016 — At a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><i class="fas fa-chalkboard-teacher"></i>
+                    <div class="stat-value">14</div>
+                    <div class="stat-name">Expert Mentor Talks</div>
+                </div>
+                <div class="stat-card"><i class="fas fa-users"></i>
+                    <div class="stat-value">8</div>
+                    <div class="stat-name">Mentors Listed</div>
+                </div>
+                <div class="stat-card"><i class="fas fa-images"></i>
+                    <div class="stat-value">45</div>
+                    <div class="stat-name">Gallery Photos</div>
+                </div>
+                <div class="stat-card"><i class="fas fa-file-pdf"></i>
+                    <div class="stat-value">4</div>
+                    <div class="stat-name">Downloadable Resources</div>
+                </div>
+                <div class="stat-card"><i class="fas fa-rupee-sign"></i>
+                    <div class="stat-value">₹2200</div>
+                    <div class="stat-name">Cr. 12th Plan Budget</div>
+                </div>
+                <div class="stat-card"><i class="fas fa-calendar"></i>
+                    <div class="stat-value">2008</div>
+                    <div class="stat-name">INSPIRE Launched</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="section bg-white" id="contact">
+        <div class="section-inner">
+            <div class="sec-tag" data-aos="fade-up">Contact Us</div>
+            <h2 class="sec-title" data-aos="fade-up">Contact &amp; Quick Links</h2>
+            <div class="contact-grid" data-aos="fade-up">
+                <div>
+                    <div class="contact-block">
+                        <h3><i class="fas fa-university"></i> S.G.G.S. Khalsa College Mahilpur</h3>
+                        <div class="c-row"><i class="fas fa-map-marker-alt"></i><span><strong>Postal Address:</strong>
+                                S.G.G.S. Khalsa College Mahilpur, Distt Hoshiarpur, Punjab 146105, India</span></div>
+                        <div class="c-row"><i class="fas fa-phone"></i><span><strong>Admissions:</strong> <a
+                                    href="tel:01884292142">01884-292142</a></span></div>
+                        <div class="c-row"><i class="fas fa-phone"></i><span><strong>Admin Office:</strong> <a
+                                    href="tel:01884245236">01884-245236</a></span></div>
+                        <div class="c-row"><i class="fas fa-phone"></i><span><strong>Phone:</strong> <a
+                                    href="tel:01884292036">1884-292036</a></span></div>
+                        <div class="c-row"><i class="fas fa-envelope"></i><span><strong>Email:</strong> <a
+                                    href="mailto:info@sggskcm.org">info@sggskcm.org</a></span></div>
+                        <div class="c-row"><i class="fas fa-envelope"></i><span><strong>Email:</strong> <a
+                                    href="mailto:sggskcm@live.com">sggskcm@live.com</a></span></div>
+                    </div>
+                    <div style="margin-top:18px;">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1-daG8tT_RBHJif4wcx-lnSfufk6KD3bny5-H-JFtAPl0Vw/viewform?usp=send_form"
+                            target="_blank"
+                            style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#8c1007,#b51610);color:#fff;padding:13px 26px;border-radius:12px;font-weight:700;text-decoration:none;font-size:0.92rem;">
+                            <i class="fas fa-file-alt"></i> Online Registration Form 2023-24
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <!-- <div class="contact-block" style="margin-bottom:20px;">
+                        <h3><i class="fas fa-bell"></i> Recent Updates</h3>
+                        <ul class="updates-list">
+                            <li>
+                                <div class="u-dot"></div>
+                                <div>
+                                    <div class="u-title"><a
+                                            href="https://sggskcm.org/2024/08/16/recruitment-on-regular-post-in-computer-science-physical-education-and-commerce/"
+                                            target="_blank">Recruitment on Regular Post in Computer Science, Physical
+                                            Education and Commerce</a></div>
+                                    <div class="u-date">August 16, 2024</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="u-dot"></div>
+                                <div>
+                                    <div class="u-title"><a
+                                            href="https://sggskcm.org/2024/04/01/alumni-meet-20-march-2024/"
+                                            target="_blank">Alumni Meet 2024</a></div>
+                                    <div class="u-date">April 1, 2024</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="u-dot"></div>
+                                <div>
+                                    <div class="u-title"><a
+                                            href="https://sggskcm.org/2024/03/30/national-science-day-2024/"
+                                            target="_blank">National Science Day 2024</a></div>
+                                    <div class="u-date">March 30, 2024</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="u-dot"></div>
+                                <div>
+                                    <div class="u-title"><a
+                                            href="https://sggskcm.org/2022/09/14/regular-posts-for-assistant-professor3-in-physical-education/"
+                                            target="_blank">Regular Posts for Assistant Professor (3) in Department of
+                                            Physical Education</a></div>
+                                    <div class="u-date">September 14, 2022</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <div class="contact-block">
+                        <h3><i class="fas fa-external-link-alt"></i> Quick Links</h3>
+                        <ul class="qlinks">
+                            <li><a href="http://www.puchd.ac.in" target="_blank"><i class="fas fa-chevron-right"></i>
+                                    Panjab University Chandigarh</a></li>
+                            <li><a href="http://exams.puchd.ac.in/datesheet.php" target="_blank"><i
+                                        class="fas fa-chevron-right"></i> PU Date Sheet and Roll Number</a></li>
+                            <li><a href="http://results.puchd.ac.in/" target="_blank"><i
+                                        class="fas fa-chevron-right"></i> PU Results</a></li>
+                            <li><a href="http://puchd.ac.in/syllabus.php" target="_blank"><i
+                                        class="fas fa-chevron-right"></i> PU Syllabus</a></li>
+                            <li><a href="https://www.ugc.ac.in/" target="_blank"><i class="fas fa-chevron-right"></i>
+                                    University Grants Commission (UGC)</a></li>
+                            <li><a href="https://ncte.gov.in/Website/Hindi/Index.aspx" target="_blank"><i
+                                        class="fas fa-chevron-right"></i> National Council of Teacher Education
+                                    (NCTE)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" onclick="closeLb()"><i class="fas fa-times"></i></button>
+        <button class="lb-prev" onclick="changeLb(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="lb-next" onclick="changeLb(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="lb-img-wrap">
+            <img id="lbImg" src="" alt="Gallery Image">
+            <div class="lb-counter" id="lbCounter"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-nav">
+            <a href="index.html">Overview</a>
+            <a href="library.html">Library</a>
+            <a href="naac.html">NAAC</a>
+            <a href="sports-activities.html">Sports</a>
+            <a href="ncc-nss-college-clubs.html">NCC & NSS</a>
+            <a href="dsts-inspire-science-camp-2016.html">DST INSPIRE Camp</a>
+        </div>
+        <div class="footer-copy">© S.G.G.S. Khalsa College Mahilpur &nbsp;|&nbsp; Distt. Hoshiarpur, Punjab 146105
+            &nbsp;|&nbsp; Affiliated to Panjab University Chandigarh &nbsp;|&nbsp; Website Designed & Maintained by
+            Department of Computer Science</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', offset: 80, mirror: false });
+
+        // Gather all image sources for lightbox
+        const imgs = Array.from(document.querySelectorAll('#galleryGrid .gal-item img')).map(i => i.src);
+        let cur = 0;
+
+        function openLb(i) {
+            cur = i;
+            document.getElementById('lbImg').src = imgs[cur];
+            document.getElementById('lbCounter').textContent = (cur + 1) + ' / ' + imgs.length;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLb() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function changeLb(d) {
+            cur = (cur + d + imgs.length) % imgs.length;
+            document.getElementById('lbImg').src = imgs[cur];
+            document.getElementById('lbCounter').textContent = (cur + 1) + ' / ' + imgs.length;
+        }
+        document.getElementById('lightbox').addEventListener('click', function (e) { if (e.target === this) closeLb(); });
+        document.addEventListener('keydown', function (e) {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') changeLb(-1);
+            if (e.key === 'ArrowRight') changeLb(1);
+            if (e.key === 'Escape') closeLb();
+        });
+    </script>
+      <div id="footer"></div>
+  <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    fetch('./component/footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer').innerHTML = d);
+  </script>
+</body>
+
+</html>
