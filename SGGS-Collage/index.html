@@ -1880,389 +1880,863 @@
 
 
 
-  /* === PRINCIPAL SECTION === */
-  .pm-section {
-    padding: 90px 24px;
-    background: #fff;
-    position: relative;
-    overflow: hidden;
-  }
- 
-  /* Decorative background pattern */
-  .pm-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(circle at 8% 20%, rgba(140,16,7,0.04) 1px, transparent 1px),
-      radial-gradient(circle at 92% 80%, rgba(140,16,7,0.04) 1px, transparent 1px);
-    background-size: 60px 60px, 80px 80px;
-    pointer-events: none;
-  }
- 
-  /* Large decorative quote behind text */
-  .pm-section::after {
-    content: '\201C';
-    position: absolute;
-    top: -20px;
-    right: 5%;
-    font-size: 28rem;
-    font-family: Georgia, serif;
-    color: rgba(140,16,7,0.04);
-    line-height: 1;
-    pointer-events: none;
-    z-index: 0;
-  }
- 
-  .pm-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 72px;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-  }
- 
-  /* === LEFT COLUMN === */
-  .pm-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 100px;
-  }
- 
-  /* Animated ring around image */
-  .pm-ring {
-    position: relative;
-    width: 260px;
-    height: 260px;
-    margin-bottom: 0;
-  }
- 
-  .pm-ring::before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, #8c1007, #c41a1a, #e84848, #8c1007);
-    animation: pm-spin 6s linear infinite;
-    z-index: 0;
-  }
- 
-  .pm-ring::after {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 50%;
-    background: #fff;
-    z-index: 1;
-  }
- 
-  @keyframes pm-spin {
-    to { transform: rotate(360deg); }
-  }
- 
-  .pm-photo {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-  }
- 
-  /* Placeholder if no photo */
-  .pm-photo-placeholder {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #8c1007, #c41a1a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
- 
-  .pm-photo-placeholder i {
-    font-size: 5rem;
-    color: rgba(255,255,255,0.5);
-  }
- 
-  /* Name badge */
-  .pm-badge {
-    margin-top: 28px;
-    background: linear-gradient(135deg, #8c1007, #c41a1a);
-    color: #fff;
-    border-radius: 16px;
-    padding: 20px 28px;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 12px 40px rgba(140,16,7,0.22);
-    position: relative;
-    overflow: hidden;
-  }
- 
-  .pm-badge::before {
-    content: '';
-    position: absolute;
-    top: -30px; right: -30px;
-    width: 100px; height: 100px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-  }
- 
-  .pm-badge::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; left: -20px;
-    width: 70px; height: 70px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.06);
-  }
- 
-  .pm-badge-name {
-    font-size: 1.15rem;
-    font-weight: 800;
-    letter-spacing: 0.3px;
-    margin-bottom: 6px;
-  }
- 
-  .pm-badge-title {
-    font-size: 0.78rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-  }
- 
-  /* Stats row under badge */
-  .pm-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    margin-top: 14px;
-  }
- 
-  .pm-stat {
-    background: #fff5f5;
-    border: 1px solid rgba(140,16,7,0.12);
-    border-radius: 12px;
-    padding: 14px 10px;
-    text-align: center;
-  }
- 
-  .pm-stat-num {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #8c1007;
-    display: block;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
- 
-  .pm-stat-label {
-    font-size: 0.72rem;
-    color: #777;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
- 
-  /* === RIGHT COLUMN === */
-  .pm-right { padding-top: 8px; }
- 
-  .pm-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #fff0f0;
-    border: 1.5px solid rgba(140,16,7,0.15);
-    color: #8c1007;
-    padding: 7px 18px;
-    border-radius: 50px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-  }
- 
-  .pm-eyebrow i { font-size: 0.85rem; }
- 
-  .pm-heading {
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.15;
-    margin-bottom: 32px;
-  }
- 
-  .pm-heading span { color: #8c1007; }
- 
-  /* Animated underline */
-  .pm-heading-underline {
-    display: inline-block;
-    position: relative;
-  }
- 
-  .pm-heading-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -4px; left: 0;
-    width: 0%; height: 3px;
-    background: linear-gradient(90deg, #8c1007, #e84848);
-    border-radius: 2px;
-    transition: width 1.2s ease 0.5s;
-  }
- 
-  .pm-heading-underline.animated::after { width: 100%; }
- 
-  /* Quote block */
-  .pm-quote-block {
-    position: relative;
-    background: linear-gradient(135deg, #fff5f5, #fff0f0);
-    border-left: 5px solid #8c1007;
-    border-radius: 0 16px 16px 0;
-    padding: 28px 28px 28px 32px;
-    margin-bottom: 24px;
-    box-shadow: 4px 0 0 0 rgba(140,16,7,0.06), 0 8px 30px rgba(140,16,7,0.06);
-  }
- 
-  .pm-quote-icon {
-    position: absolute;
-    top: -14px; left: 20px;
-    width: 36px; height: 36px;
-    background: #8c1007;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    color: #fff;
-    font-family: Georgia, serif;
-    line-height: 1;
-  }
- 
-  .pm-message {
-    font-size: 1.01rem;
-    line-height: 1.95;
-    color: #444;
-    margin: 0;
-  }
- 
-  .pm-message p { margin-bottom: 16px; }
-  .pm-message p:last-child { margin-bottom: 0; }
- 
-  /* Read more toggle */
-  .pm-readmore-btn {
-    background: none;
-    border: 1.5px solid rgba(140,16,7,0.3);
-    color: #8c1007;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 8px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 12px;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
- 
-  .pm-readmore-btn:hover {
-    background: #8c1007;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(140,16,7,0.25);
-  }
- 
-  .pm-extra { display: none; }
-  .pm-extra.open { display: block; }
- 
-  /* Signature */
-  .pm-signature-wrap {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px dashed rgba(140,16,7,0.2);
-  }
- 
-  .pm-signature-icon {
-    width: 52px; height: 52px;
-    background: linear-gradient(135deg, #8c1007, #c41a1a);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(140,16,7,0.25);
-  }
- 
-  .pm-signature-name {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #8c1007;
-    display: block;
-    margin-bottom: 3px;
-  }
- 
-  .pm-signature-role {
-    font-size: 0.82rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
- 
-  .pm-signature-line {
-    flex: 1;
-    height: 1.5px;
-    background: linear-gradient(90deg, rgba(140,16,7,0.3), transparent);
-    border-radius: 2px;
-  }
- 
-  /* === AOS custom fade-up from left/right === */
-  /* AOS handles this via data attributes already */
- 
-  /* === RESPONSIVE === */
-  @media (max-width: 1024px) {
-    .pm-inner { grid-template-columns: 270px 1fr; gap: 48px; }
-    .pm-ring { width: 220px; height: 220px; }
-  }
- 
-  @media (max-width: 900px) {
-    .pm-inner { grid-template-columns: 1fr; gap: 40px; }
-    .pm-left { position: static; flex-direction: row; align-items: flex-start; gap: 24px; flex-wrap: wrap; justify-content: center; }
-    .pm-ring { width: 180px; height: 180px; }
-    .pm-badge { max-width: 300px; }
-    .pm-stats { max-width: 300px; }
-  }
- 
-  @media (max-width: 576px) {
-    .pm-section { padding: 60px 16px; }
-    .pm-section::after { font-size: 16rem; top: 0; right: -2%; }
-    .pm-left { flex-direction: column; align-items: center; }
-    .pm-badge { width: 100%; max-width: 100%; }
-    .pm-stats { width: 100%; max-width: 100%; }
-    .pm-quote-block { padding: 24px 18px 24px 24px; }
-  }
+    /* === PRINCIPAL SECTION === */
+    .pm-section {
+        padding: 90px 24px;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decorative background pattern */
+    .pm-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 8% 20%, rgba(140, 16, 7, 0.04) 1px, transparent 1px),
+            radial-gradient(circle at 92% 80%, rgba(140, 16, 7, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px, 80px 80px;
+        pointer-events: none;
+    }
+
+    /* Large decorative quote behind text */
+    .pm-section::after {
+        content: '\201C';
+        position: absolute;
+        top: -20px;
+        right: 5%;
+        font-size: 28rem;
+        font-family: Georgia, serif;
+        color: rgba(140, 16, 7, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .pm-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 72px;
+        align-items: start;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* === LEFT COLUMN === */
+    .pm-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: sticky;
+        top: 100px;
+    }
+
+    /* Animated ring around image */
+    .pm-ring {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        margin-bottom: 0;
+    }
+
+    .pm-ring::before {
+        content: '';
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, #8c1007, #c41a1a, #e84848, #8c1007);
+        animation: pm-spin 6s linear infinite;
+        z-index: 0;
+    }
+
+    .pm-ring::after {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        background: #fff;
+        z-index: 1;
+    }
+
+    @keyframes pm-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .pm-photo {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+    }
+
+    /* Placeholder if no photo */
+    .pm-photo-placeholder {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #8c1007, #c41a1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pm-photo-placeholder i {
+        font-size: 5rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Name badge */
+    .pm-badge {
+        margin-top: 28px;
+        background: linear-gradient(135deg, #8c1007, #c41a1a);
+        color: #fff;
+        border-radius: 16px;
+        padding: 20px 28px;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 12px 40px rgba(140, 16, 7, 0.22);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pm-badge::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .pm-badge::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .pm-badge-name {
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        margin-bottom: 6px;
+    }
+
+    .pm-badge-title {
+        font-size: 0.78rem;
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+    }
+
+    /* Stats row under badge */
+    .pm-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .pm-stat {
+        background: #fff5f5;
+        border: 1px solid rgba(140, 16, 7, 0.12);
+        border-radius: 12px;
+        padding: 14px 10px;
+        text-align: center;
+    }
+
+    .pm-stat-num {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #8c1007;
+        display: block;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+
+    .pm-stat-label {
+        font-size: 0.72rem;
+        color: #777;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* === RIGHT COLUMN === */
+    .pm-right {
+        padding-top: 8px;
+    }
+
+    .pm-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff0f0;
+        border: 1.5px solid rgba(140, 16, 7, 0.15);
+        color: #8c1007;
+        padding: 7px 18px;
+        border-radius: 50px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+
+    .pm-eyebrow i {
+        font-size: 0.85rem;
+    }
+
+    .pm-heading {
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        color: #1a1a1a;
+        line-height: 1.15;
+        margin-bottom: 32px;
+    }
+
+    .pm-heading span {
+        color: #8c1007;
+    }
+
+    /* Animated underline */
+    .pm-heading-underline {
+        display: inline-block;
+        position: relative;
+    }
+
+    .pm-heading-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #8c1007, #e84848);
+        border-radius: 2px;
+        transition: width 1.2s ease 0.5s;
+    }
+
+    .pm-heading-underline.animated::after {
+        width: 100%;
+    }
+
+    /* Quote block */
+    .pm-quote-block {
+        position: relative;
+        background: linear-gradient(135deg, #fff5f5, #fff0f0);
+        border-left: 5px solid #8c1007;
+        border-radius: 0 16px 16px 0;
+        padding: 28px 28px 28px 32px;
+        margin-bottom: 24px;
+        box-shadow: 4px 0 0 0 rgba(140, 16, 7, 0.06), 0 8px 30px rgba(140, 16, 7, 0.06);
+    }
+
+    .pm-quote-icon {
+        position: absolute;
+        top: -14px;
+        left: 20px;
+        width: 36px;
+        height: 36px;
+        background: #8c1007;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: #fff;
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+
+    .pm-message {
+        font-size: 1.01rem;
+        line-height: 1.95;
+        color: #444;
+        margin: 0;
+    }
+
+    .pm-message p {
+        margin-bottom: 16px;
+    }
+
+    .pm-message p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Read more toggle */
+    .pm-readmore-btn {
+        background: none;
+        border: 1.5px solid rgba(140, 16, 7, 0.3);
+        color: #8c1007;
+        font-size: 0.85rem;
+        font-weight: 700;
+        padding: 8px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 12px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .pm-readmore-btn:hover {
+        background: #8c1007;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(140, 16, 7, 0.25);
+    }
+
+    .pm-extra {
+        display: none;
+    }
+
+    .pm-extra.open {
+        display: block;
+    }
+
+    /* Signature */
+    .pm-signature-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px dashed rgba(140, 16, 7, 0.2);
+    }
+
+    .pm-signature-icon {
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, #8c1007, #c41a1a);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        box-shadow: 0 8px 20px rgba(140, 16, 7, 0.25);
+    }
+
+    .pm-signature-name {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #8c1007;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    .pm-signature-role {
+        font-size: 0.82rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .pm-signature-line {
+        flex: 1;
+        height: 1.5px;
+        background: linear-gradient(90deg, rgba(140, 16, 7, 0.3), transparent);
+        border-radius: 2px;
+    }
+
+    /* === AOS custom fade-up from left/right === */
+    /* AOS handles this via data attributes already */
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1024px) {
+        .pm-inner {
+            grid-template-columns: 270px 1fr;
+            gap: 48px;
+        }
+
+        .pm-ring {
+            width: 220px;
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .pm-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .pm-left {
+            position: static;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pm-ring {
+            width: 180px;
+            height: 180px;
+        }
+
+        .pm-badge {
+            max-width: 300px;
+        }
+
+        .pm-stats {
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .pm-section {
+            padding: 60px 16px;
+        }
+
+        .pm-section::after {
+            font-size: 16rem;
+            top: 0;
+            right: -2%;
+        }
+
+        .pm-left {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pm-badge {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .pm-stats {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .pm-quote-block {
+            padding: 24px 18px 24px 24px;
+        }
+    }
 
 
 
 
 
 
+    /* ======================================================= */
+    /* STUDENT ACHIEVEMENTS SECTION STYLES                     */
+    /* ======================================================= */
 
+    .student-achievements-section {
+        padding: 80px 20px;
+        background: #ffffff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Subtle decorative background dots */
+    .student-achievements-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(140, 16, 7, 0.05) 1px, transparent 1px);
+        background-size: 30px 30px;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .sa-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Section heading — matches your existing .section-title style */
+    .sa-heading {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .sa-heading h2 {
+        color: #8C1007;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .sa-heading h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: #8C1007;
+        margin: 12px auto 0;
+        border-radius: 2px;
+    }
+
+    .sa-heading p {
+        color: #6c757d;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+
+    /* Stats strip above cards */
+    .sa-stats-strip {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg, #8C1007, #c41a1a);
+        border-radius: 12px;
+        padding: 28px 20px;
+        margin-bottom: 50px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sa-stats-strip::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 18px 18px;
+        pointer-events: none;
+    }
+
+    .sa-stat-item {
+        flex: 1;
+        min-width: 140px;
+        text-align: center;
+        padding: 10px 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .sa-stat-item+.sa-stat-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 20%;
+        height: 60%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .sa-stat-num {
+        display: block;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.1;
+    }
+
+    .sa-stat-label {
+        display: block;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.78);
+        margin-top: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    /* Cards grid */
+    .sa-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .sa-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(140, 16, 7, 0.08);
+        border: 1px solid rgba(140, 16, 7, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .sa-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(140, 16, 7, 0.18);
+    }
+
+    /* Image wrapper */
+    .sa-card-img-wrap {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        background: #f5f5f5;
+    }
+
+    .sa-card-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        transition: transform 0.45s ease;
+    }
+
+    .sa-card:hover .sa-card-img-wrap img {
+        transform: scale(1.06);
+    }
+
+    /* Red gradient overlay on hover */
+    .sa-card-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(140, 16, 7, 0.72), transparent 55%);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .sa-card:hover .sa-card-img-overlay {
+        opacity: 1;
+    }
+
+    /* Rank badge — top-right corner */
+    .sa-rank-badge {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #8C1007;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .sa-rank-badge.gold {
+        background: linear-gradient(135deg, #b8860b, #d4a017);
+        color: #fff;
+    }
+
+    .sa-rank-badge.silver {
+        background: linear-gradient(135deg, #7a7a7a, #aaaaaa);
+        color: #fff;
+    }
+
+    /* Score pill — bottom of image on hover */
+    .sa-score-pill {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%) translateY(8px);
+        background: rgba(255, 255, 255, 0.95);
+        color: #8C1007;
+        font-size: 1.4rem;
+        font-weight: 900;
+        padding: 6px 18px;
+        border-radius: 50px;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        white-space: nowrap;
+        z-index: 3;
+    }
+
+    .sa-card:hover .sa-score-pill {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Card body */
+    .sa-card-body {
+        padding: 18px 16px 20px;
+        border-top: 3px solid #8C1007;
+        position: relative;
+    }
+
+    .sa-card-body::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #8C1007, #c41a1a);
+        transition: width 0.45s ease;
+    }
+
+    .sa-card:hover .sa-card-body::before {
+        width: 100%;
+    }
+
+    .sa-student-name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0 0 4px;
+        line-height: 1.3;
+    }
+
+    .sa-program-tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #8C1007;
+        background: rgba(140, 16, 7, 0.08);
+        border: 1px solid rgba(140, 16, 7, 0.15);
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+    }
+
+    .sa-achievement-text {
+        font-size: 0.82rem;
+        color: #555;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    .sa-achievement-text strong {
+        color: #8C1007;
+    }
+
+    /* Session year pill */
+    .sa-year {
+        display: inline-block;
+        font-size: 0.7rem;
+        color: #8C1007;
+        background: transparent;
+        border: 1px solid rgba(140, 16, 7, 0.25);
+        padding: 2px 9px;
+        border-radius: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    /* CTA button below cards */
+    .sa-cta-wrap {
+        text-align: center;
+        margin-top: 44px;
+    }
+
+    .sa-cta-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #8C1007, #c41a1a);
+        color: #fff;
+        padding: 13px 36px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(140, 16, 7, 0.25);
+    }
+
+    .sa-cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px rgba(140, 16, 7, 0.35);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* ======================================================= */
+    /* RESPONSIVE BREAKPOINTS                                  */
+    /* ======================================================= */
+
+    @media (max-width: 1100px) {
+        .sa-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .student-achievements-section {
+            padding: 60px 16px;
+        }
+
+        .sa-heading h2 {
+            font-size: 2rem;
+        }
+
+        .sa-stats-strip {
+            gap: 0;
+            padding: 20px 10px;
+        }
+
+        .sa-stat-item {
+            min-width: 120px;
+            padding: 8px 12px;
+        }
+
+        .sa-stat-num {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .sa-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .sa-card-img-wrap {
+            height: 240px;
+        }
+
+        .sa-stats-strip {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .sa-stat-item {
+            flex-basis: 50%;
+        }
+
+        .sa-stat-item+.sa-stat-item::before {
+            display: none;
+        }
+
+        .sa-stat-item:nth-child(2)::before {
+            display: none;
+        }
+
+        .sa-stat-item:nth-child(3) {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 14px;
+            margin-top: 6px;
+        }
+
+        .sa-stat-item:nth-child(4) {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 14px;
+            margin-top: 6px;
+        }
+    }
 
 
     /* ======================================================= */
@@ -2457,7 +2931,7 @@
                             <li><a class="dropdown-item" href="https://web.ncte.gov.in/">National Council for Teachers
                                     Education</a></li>
                             <li><a class="dropdown-item" href="recognition-letters.html">Recognition Letters</a></li>
-                             <li><a class="dropdown-item" href="ncte-documents.html">NCTE Documents</a></li>
+                            <li><a class="dropdown-item" href="ncte-documents.html">NCTE Documents</a></li>
 
 
                         </ul>
@@ -2470,7 +2944,7 @@
                     <li class="nav-item "><a class="nav-link classy-link"
                             href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?saralID=-969760717"
                             target="_blank" rel="noopener noreferrer">
-                            Online Fee 
+                            Online Fee
                         </a></li>
 
                     <!-- Apply Now Button -->
@@ -2763,149 +3237,164 @@
 
 
 
-<section class="pm-section">
-  <div class="pm-inner">
- 
-    <!-- LEFT: Photo + Badge -->
-    <div class="pm-left" data-aos="fade-right" data-aos-duration="900">
- 
-      <div class="pm-ring">
-        <!-- Replace src with actual principal photo -->
-        <img
-          src="./images/principal.jpg"
-          alt="Dr. Parvinder Singh, Principal S.G.G.S. Khalsa College Mahilpur"
-          class="pm-photo"
-          onerror="this.style.display='none'; document.getElementById('pm-placeholder').style.display='flex';"
-        >
-        <div class="pm-photo-placeholder" id="pm-placeholder" style="display:none;">
-          <i class="fas fa-user-tie"></i>
-        </div>
-      </div>
- 
-      <div class="pm-badge" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
-        <div class="pm-badge-name">Dr. Parvinder Singh</div>
-        <div class="pm-badge-title">Principal</div>
-      </div>
- 
-      <div class="pm-stats" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
-        <div class="pm-stat">
-          <span class="pm-stat-num">78+</span>
-          <span class="pm-stat-label">Years of Legacy</span>
-        </div>
-        <div class="pm-stat">
-          <span class="pm-stat-num">NEP</span>
-          <span class="pm-stat-label">2020 Adopted</span>
-        </div>
-        <div class="pm-stat">
-          <span class="pm-stat-num">25+</span>
-          <span class="pm-stat-label">Programs</span>
-        </div>
-        <div class="pm-stat">
-          <span class="pm-stat-num">5k+</span>
-          <span class="pm-stat-label">Alumni</span>
-        </div>
-      </div>
- 
-    </div>
- 
-    <!-- RIGHT: Message -->
-    <div class="pm-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
- 
-      <div class="pm-eyebrow">
-        <i class="fas fa-feather-alt"></i>
-        Principal's Message
-      </div>
- 
-      <h2 class="pm-heading">
-        A Warm Welcome from<br>
-        <span>
-          <span class="pm-heading-underline" id="pmUnderline">the Principal's Desk</span>
-        </span>
-      </h2>
- 
-      <div class="pm-quote-block">
-        <div class="pm-quote-icon">"</div>
-        <div class="pm-message">
-          <p>
-            As we stand on the threshold of a new academic session, I extend a hearty and warm welcome to all my students, staff and parents. Being at the spearhead of this prestigious pre-independence institution is a most honorable and, at the same time, a highly daunting task. I take this opportunity to thank the Management, Sikh Educational Council for giving me the chance to serve the community here.
-          </p>
-          <p>
-            Each academic year is a new height scaled, another dream realized with new targets set for the future. Each and every member of this Institution is devoted to turning dreams &amp; aspirations into reality through sincerity and perseverance.
-          </p>
- 
-          <!-- Extra content (hidden by default) -->
-          <div class="pm-extra" id="pmExtra">
-            <p>
-              From the current session, the NEP-2020 has come into play opening up not only new vistas, opportunities and courses but challenges also. There is a huge diversification in education from formal to professional and vocational courses which shall help our youth realize their potential and dreams.
-            </p>
-            <p>
-              We have braced ourselves both to realize the dreams and vision of the policy-makers and, more importantly, to equip our students with the needed skill-set for their bright and successful future. With a view to unfold hidden potential and develop multifaceted personality that help the aspirants in the world of work, the College lays special emphasis on sports, extra-curricular activities, seminars and workshops.
-            </p>
-            <p>
-              It is indeed very satisfying that with the whole-hearted support and visionary guidance of the College Management led by our worthy President Sant Sadhu Singh Ji Kaharpuri and tireless efforts of the faculty members, the college is scaling new heights every year. Looking forward to your continued help, support and active co-operation and wishing you all good luck.
-            </p>
-          </div>
-        </div>
- 
-        <button class="pm-readmore-btn" id="pmReadBtn" onclick="togglePmMessage()">
-          <i class="fas fa-chevron-down" id="pmBtnIcon"></i>
-          Read Full Message
-        </button>
-      </div>
- 
-      <!-- Signature -->
-      <div class="pm-signature-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-        <div class="pm-signature-icon">
-          <i class="fas fa-pen-fancy"></i>
-        </div>
-        <div>
-          <span class="pm-signature-name">Dr. Parvinder Singh</span>
-          <span class="pm-signature-role">Principal, S.G.G.S. Khalsa College Mahilpur</span>
-        </div>
-        <div class="pm-signature-line"></div>
-      </div>
- 
-    </div>
-  </div>
-</section>
- 
-<script>
-  function togglePmMessage() {
-    var extra = document.getElementById('pmExtra');
-    var btn = document.getElementById('pmReadBtn');
-    var icon = document.getElementById('pmBtnIcon');
-    var isOpen = extra.classList.contains('open');
-    if (isOpen) {
-      extra.classList.remove('open');
-      btn.innerHTML = '<i class="fas fa-chevron-down" id="pmBtnIcon"></i> Read Full Message';
-    } else {
-      extra.classList.add('open');
-      btn.innerHTML = '<i class="fas fa-chevron-up" id="pmBtnIcon"></i> Show Less';
-    }
-  }
- 
-  // Trigger underline animation when section enters viewport
-  var pmObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        document.getElementById('pmUnderline').classList.add('animated');
-        pmObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
- 
-  var pmTarget = document.querySelector('.pm-section');
-  if (pmTarget) pmObserver.observe(pmTarget);
- 
-  // Spinning ring pause on hover
-  var pmRing = document.querySelector('.pm-ring');
-  if (pmRing) {
-    pmRing.addEventListener('mouseenter', function() {
-      pmRing.style.setProperty('--pm-pause', 'paused');
-      pmRing.querySelector('.pm-ring::before') && (pmRing.style.animationPlayState = 'paused');
-    });
-  }
-</script>
+        <section class="pm-section">
+            <div class="pm-inner">
+
+                <!-- LEFT: Photo + Badge -->
+                <div class="pm-left" data-aos="fade-right" data-aos-duration="900">
+
+                    <div class="pm-ring">
+                        <!-- Replace src with actual principal photo -->
+                        <img src="./images/principle-main.png"
+                            alt="Dr. Parvinder Singh, Principal S.G.G.S. Khalsa College Mahilpur" class="pm-photo"
+                            onerror="this.style.display='none'; document.getElementById('pm-placeholder').style.display='flex';">
+                        <div class="pm-photo-placeholder" id="pm-placeholder" style="display:none;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+
+                    <div class="pm-badge" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+                        <div class="pm-badge-name">Dr. Parvinder Singh</div>
+                        <div class="pm-badge-title">Principal</div>
+                    </div>
+
+                    <div class="pm-stats" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
+                        <div class="pm-stat">
+                            <span class="pm-stat-num">78+</span>
+                            <span class="pm-stat-label">Years of Legacy</span>
+                        </div>
+                        <div class="pm-stat">
+                            <span class="pm-stat-num">NEP</span>
+                            <span class="pm-stat-label">2020 Adopted</span>
+                        </div>
+                        <div class="pm-stat">
+                            <span class="pm-stat-num">25+</span>
+                            <span class="pm-stat-label">Programs</span>
+                        </div>
+                        <div class="pm-stat">
+                            <span class="pm-stat-num">5k+</span>
+                            <span class="pm-stat-label">Alumni</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: Message -->
+                <div class="pm-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+
+                    <div class="pm-eyebrow">
+                        <i class="fas fa-feather-alt"></i>
+                        Principal's Message
+                    </div>
+
+                    <h2 class="pm-heading">
+                        A Warm Welcome from<br>
+                        <span>
+                            <span class="pm-heading-underline" id="pmUnderline">the Principal's Desk</span>
+                        </span>
+                    </h2>
+
+                    <div class="pm-quote-block">
+                        <div class="pm-quote-icon">"</div>
+                        <div class="pm-message">
+                            <p>
+                                As we stand on the threshold of a new academic session, I extend a hearty and warm
+                                welcome to all my students, staff and parents. Being at the spearhead of this
+                                prestigious pre-independence institution is a most honorable and, at the same time, a
+                                highly daunting task. I take this opportunity to thank the Management, Sikh Educational
+                                Council for giving me the chance to serve the community here.
+                            </p>
+                            <p>
+                                Each academic year is a new height scaled, another dream realized with new targets set
+                                for the future. Each and every member of this Institution is devoted to turning dreams
+                                &amp; aspirations into reality through sincerity and perseverance.
+                            </p>
+
+                            <!-- Extra content (hidden by default) -->
+                            <div class="pm-extra" id="pmExtra">
+                                <p>
+                                    From the current session, the NEP-2020 has come into play opening up not only new
+                                    vistas, opportunities and courses but challenges also. There is a huge
+                                    diversification in education from formal to professional and vocational courses
+                                    which shall help our youth realize their potential and dreams.
+                                </p>
+                                <p>
+                                    We have braced ourselves both to realize the dreams and vision of the policy-makers
+                                    and, more importantly, to equip our students with the needed skill-set for their
+                                    bright and successful future. With a view to unfold hidden potential and develop
+                                    multifaceted personality that help the aspirants in the world of work, the College
+                                    lays special emphasis on sports, extra-curricular activities, seminars and
+                                    workshops.
+                                </p>
+                                <p>
+                                    It is indeed very satisfying that with the whole-hearted support and visionary
+                                    guidance of the College Management led by our worthy President Sant Sadhu Singh Ji
+                                    Kaharpuri and tireless efforts of the faculty members, the college is scaling new
+                                    heights every year. Looking forward to your continued help, support and active
+                                    co-operation and wishing you all good luck.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="pm-readmore-btn" id="pmReadBtn" onclick="togglePmMessage()">
+                            <i class="fas fa-chevron-down" id="pmBtnIcon"></i>
+                            Read Full Message
+                        </button>
+                    </div>
+
+                    <!-- Signature -->
+                    <div class="pm-signature-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+                        <div class="pm-signature-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <div>
+                            <span class="pm-signature-name">Dr. Parvinder Singh</span>
+                            <span class="pm-signature-role">Principal, S.G.G.S. Khalsa College Mahilpur</span>
+                        </div>
+                        <div class="pm-signature-line"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function togglePmMessage() {
+                var extra = document.getElementById('pmExtra');
+                var btn = document.getElementById('pmReadBtn');
+                var icon = document.getElementById('pmBtnIcon');
+                var isOpen = extra.classList.contains('open');
+                if (isOpen) {
+                    extra.classList.remove('open');
+                    btn.innerHTML = '<i class="fas fa-chevron-down" id="pmBtnIcon"></i> Read Full Message';
+                } else {
+                    extra.classList.add('open');
+                    btn.innerHTML = '<i class="fas fa-chevron-up" id="pmBtnIcon"></i> Show Less';
+                }
+            }
+
+            // Trigger underline animation when section enters viewport
+            var pmObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        document.getElementById('pmUnderline').classList.add('animated');
+                        pmObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            var pmTarget = document.querySelector('.pm-section');
+            if (pmTarget) pmObserver.observe(pmTarget);
+
+            // Spinning ring pause on hover
+            var pmRing = document.querySelector('.pm-ring');
+            if (pmRing) {
+                pmRing.addEventListener('mouseenter', function () {
+                    pmRing.style.setProperty('--pm-pause', 'paused');
+                    pmRing.querySelector('.pm-ring::before') && (pmRing.style.animationPlayState = 'paused');
+                });
+            }
+        </script>
 
 
 
@@ -2919,7 +3408,7 @@
 
 
 
-        
+
 
         <!-- Programs -->
         <section class="py-5 bg-light" id="programs">
@@ -3407,6 +3896,185 @@
         <img class="lightbox-content" id="lightbox-img" src="" alt="">
         <div id="lightbox-caption" class="caption"></div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="student-achievements-section">
+        <div class="sa-container">
+
+            <!-- Heading -->
+            <div class="sa-heading" data-aos="fade-up" data-aos-duration="700">
+                <h2>Student Achievements</h2>
+                <p>Celebrating the brilliance, dedication and hard work of our outstanding students</p>
+            </div>
+
+            <!-- Stats strip -->
+            <!-- <div class="sa-stats-strip" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+      <div class="sa-stat-item">
+        <span class="sa-stat-num">120+</span>
+        <span class="sa-stat-label">University Merit Holders</span>
+      </div>
+      <div class="sa-stat-item">
+        <span class="sa-stat-num">90%+</span>
+        <span class="sa-stat-label">Overall Pass Rate</span>
+      </div>
+      <div class="sa-stat-item">
+        <span class="sa-stat-num">75%+</span>
+        <span class="sa-stat-label">First Division Students</span>
+      </div>
+      <div class="sa-stat-item">
+        <span class="sa-stat-num">100%</span>
+        <span class="sa-stat-label">Core Course Results</span>
+      </div>
+    </div> -->
+
+            <!-- 4 Achievement Cards -->
+            <div class="sa-cards-grid">
+
+                <!-- Card 1 -->
+                <div class="sa-card" data-aos="fade-up" data-aos-duration="650" data-aos-delay="0">
+                    <div class="sa-card-img-wrap">
+                        <!--
+            REPLACE THIS IMAGE:
+            Recommended: portrait/headshot photo of the student
+            Size: minimum 400x500px for best quality
+          -->
+                        <img src="./images/picture3.jpg" alt="Amandeep Singh – University Topper M.Sc I.T"
+                            onerror="this.style.background='linear-gradient(135deg,#8C1007,#c41a1a)'; this.style.display='flex'; this.alt='';">
+                        <div class="sa-card-img-overlay"></div>
+                        <span class="sa-rank-badge gold">1st in University</span>
+                        <!-- <div class="sa-score-pill">94.7%</div> -->
+                    </div>
+                    <div class="sa-card-body">
+                        <h3 class="sa-student-name">Amandeep Singh</h3>
+                        <span class="sa-program-tag">M.Sc. I.T.</span>
+                        <p class="sa-achievement-text">
+                            <strong>Mr. Amandeep Singh</strong> , a distinguished student of M.Sc.
+                            IT Batch of 2019-2021, has received the prestigious University Medal from <strong>Vice Chancellor
+                            Prof. Renu Vig</strong>  of Panjab University, Chandigarh, in recognition of his exceptional
+                            achievements. Mr. Amandeep Singh secured first position in M.Sc. IT examinations conducted
+                            by Panjab University, Chandigarh.
+                        </p>
+                        <!-- <span class="sa-year">Session 2021</span> -->
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="sa-card" data-aos="fade-up" data-aos-duration="650" data-aos-delay="100">
+                    <div class="sa-card-img-wrap">
+                        <!--
+            REPLACE THIS IMAGE:
+            Recommended: portrait/headshot photo of the student
+          -->
+                        <img src="./images/picture1.jpg" alt="Amanpreet Kaur – 6th in University PGDCA"
+                            onerror="this.style.background='linear-gradient(135deg,#5b0000,#8C1007)'; this.style.display='flex'; this.alt='';">
+                        <div class="sa-card-img-overlay"></div>
+                        <span class="sa-rank-badge silver">Theatrical team</span>
+                        <!-- <div class="sa-score-pill">94%</div> -->
+                    </div>
+                    <div class="sa-card-body">
+                        <h3 class="sa-student-name">Amanpreet Kaur</h3>
+                        <span class="sa-program-tag">Theatrical team</span>
+                        <p class="sa-achievement-text">
+                            The students of <strong> college theatrical team</strong> were
+                            honoured by the Role of Honour and University Colour by the Youth welfare <strong>Department of
+                            Panjab University</strong>, Chandigarh.
+                        </p>
+                        <!-- <span class="sa-year">Session 2022</span> -->
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="sa-card" data-aos="fade-up" data-aos-duration="650" data-aos-delay="200">
+                    <div class="sa-card-img-wrap">
+                        <!--
+            REPLACE THIS IMAGE:
+            Recommended: portrait/headshot photo of the student
+          -->
+                        <img src="./images/Picture2.jpg" alt="Simran – M.Sc Fashion Designing Achiever"
+                            onerror="this.style.background='linear-gradient(135deg,#8C1007,#c41a1a)'; this.style.display='flex'; this.alt='';">
+                        <div class="sa-card-img-overlay"></div>
+                        <span class="sa-rank-badge">1st in University</span>
+                        <!-- <div class="sa-score-pill">93.8%</div> -->
+                    </div>
+                    <div class="sa-card-body">
+                        <h3 class="sa-student-name">Ms. Priya Pathak</h3>
+                        <span class="sa-program-tag">M.Sc. Physics</span>
+                        <p class="sa-achievement-text">
+                            <strong>Ms. Priya Pathak</strong> , a distinguished student of M.Sc. Physics
+                            Batch of 2018-2020, has received the prestigious University Medal from <strong>Vice Chancellor Prof.
+                            Renu Vig</strong> of Panjab University, Chandigarh, in recognition of her exceptional achievements.
+                            Ms. Priya Pathak secured first position in M.Sc. Physics examinations conducted by Panjab
+                            University, Chandigarh.
+                            <!-- <span class="sa-year">Session 2022</span> -->
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <!-- 
+        ⬇ REPLACE: 
+           1. The image src with your 4th student's photo path
+           2. The student name, program, achievement text, rank badge, score, year
+        Example paths: ./images/your-student-name.jpg
+      -->
+                <div class="sa-card" data-aos="fade-up" data-aos-duration="650" data-aos-delay="300">
+                    <div class="sa-card-img-wrap">
+                        <img src="./images/picture4.jpg" alt="Student Name – Achievement"
+                            onerror="this.style.background='linear-gradient(135deg,#5b0000,#8C1007)'; this.style.display='flex'; this.alt='';">
+                        <div class="sa-card-img-overlay"></div>
+                        <span class="sa-rank-badge gold">performance</span>
+                        <!-- <div class="sa-score-pill">95%+</div> -->
+                    </div>
+                    <div class="sa-card-body">
+                        <h3 class="sa-student-name">Ms. Manjot Saini, </h3>
+                        <span class="sa-program-tag">M.Sc. IT</span>
+                        <p class="sa-achievement-text">
+                           <strong> Ms. Manjot Saini</strong>, a student of M.Sc. IT Sem-II was honoured by College Principal Dr.
+                            Parvinder Singh, <strong>Department Head Prof. Gurpreet Kaur</strong> and other staff members.
+                        </p>
+                        <span class="sa-year">Session 2023</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- / sa-cards-grid -->
+
+            <!-- CTA -->
+            <!-- <div class="sa-cta-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+      <a href="academic-gems.html" class="sa-cta-btn">
+        View All Achievers &nbsp;→
+      </a>
+    </div> -->
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Gallery -->
