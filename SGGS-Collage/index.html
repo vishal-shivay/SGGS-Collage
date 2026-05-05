@@ -26,7 +26,7 @@
 
     <!-- AOS - Animate On Scroll -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="icon" type="image/png" href="./images/fav-icon.jpg">
 
 </head>
@@ -892,24 +892,26 @@
         font-size: 1.2rem;
     }
 
-/* Force carousel to fixed height */
-#myCustomCarousel,
-#myCustomCarousel .carousel-inner,
-#myCustomCarousel .carousel-item {
-    height: 600px;        /* Change to your preferred height */
-    max-height: 1000px;
-    overflow: hidden;
-}
+    /* Force carousel to fixed height */
+    #myCustomCarousel,
+    #myCustomCarousel .carousel-inner,
+    #myCustomCarousel .carousel-item {
+        height: 600px;
+        /* Change to your preferred height */
+        max-height: 1000px;
+        overflow: hidden;
+    }
 
-#myCustomCarousel .carousel-item img {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-}
+    #myCustomCarousel .carousel-item img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+
     .close-btn {
         position: absolute;
         top: 20px;
@@ -1921,30 +1923,30 @@
 
 
     <!-- navbar start -->
-   <nav class="navbar navbar-expand-lg classy-navbar sticky-top">
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg classy-navbar sticky-top">
+        <div class="container-fluid">
 
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <img src="./images/SGGS-Logo-Updated.png" alt="SGGS College Logo" class="nav-logo">
-        </a>
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="./images/SGGS-Logo-Updated.png" alt="SGGS College Logo" class="nav-logo">
+            </a>
 
-        <!-- Toggle Button -->
-        <button class="navbar-toggler classy-toggler ms-auto" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler classy-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Collapsible Menu -->
-        <div class="collapse navbar-collapse" id="navbarsExample">
-            <ul class="navbar-nav ms-auto align-items-lg-center classy-nav gap-lg-2">
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarsExample">
+                <ul class="navbar-nav ms-auto align-items-lg-center classy-nav gap-lg-2">
 
-                <!-- Home -->
-                <li class="nav-item"><a class="nav-link classy-link" href="about.html">About</a></li>
+                    <!-- Home -->
+                    <li class="nav-item"><a class="nav-link classy-link" href="about.html">About</a></li>
 
-                <!-- About Dropdown -->
-                <!-- <li class="nav-item dropdown">
+                    <!-- About Dropdown -->
+                    <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">About</a>
                     <ul class="dropdown-menu classy-dropdown">
                         <li><a class="dropdown-item" href="about.html">College Overview</a></li>
@@ -1954,192 +1956,218 @@
                     </ul>
                 </li> -->
 
-                <!-- Programs Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">Programs</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
-                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
-                        <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
-                        <!-- <li><a class="dropdown-item" href="Course-Programmes.html#phd">PhD Programs</a></li> -->
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item fw-semibold" href="Course-Programmes.html">All Programs →</a></li>
-                    </ul>
-                </li>
+                    <!-- Programs Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
+                            data-bs-toggle="dropdown">Programs</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+                            <!-- <li><a class="dropdown-item" href="Course-Programmes.html#phd">PhD Programs</a></li> -->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item fw-semibold" href="Course-Programmes.html">All Programs →</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <!-- Departments Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">Departments</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="department-arts.html">Arts</a></li>
-                        <li><a class="dropdown-item" href="department-science.html">Science</a></li>
-                        <li><a class="dropdown-item" href="department-commerce.html">Commerce</a></li>
-                        <li><a class="dropdown-item" href="department-cs-it.html"> Computer Science & IT </a></li>
-                        <li><a class="dropdown-item" href="department-physical-education.html">Physical Education</a></li>
-                        <li><a class="dropdown-item" href="department-bvoc-horticulture.html">B.Voc</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item fw-semibold" href="Departments-of-SGGS-Collage.html">All Departments →</a></li>
-                    </ul>
-                </li>
-
-             
-
-                <!-- Student Corner Dropdown (NEW) -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">Academics</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="academic-gems.html">Academic-gems</a></li>
-                        <li><a class="dropdown-item" href="admission-procedure.html">Admission-procedure</a></li>
-                        <li><a class="dropdown-item" href="anti-ragging-cell.html">Anti-ragging-cell</a></li>
-                        <li><a class="dropdown-item" href="career-guidance-cell.html">Career-guidence-cell</a></li>
-                        <li><a class="dropdown-item" href="entrepreneurship-centre.html">Entrepreneurship-center</a></li>
-                        <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
-                        <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
-                            <li><a class="dropdown-item" href="workshops-and-seminars.html">Workshops and Seminars</a></li>
-                        <!-- <li><a class="dropdown-item" href="career-guidance-cell.html">Career Guidance</a></li> -->
-
-
-                    </ul>
-                </li>
-
-                <!-- Resources Dropdown (NEW) -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">Infrastructure</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="library.html">Library</a></li>
-                        <li><a class="dropdown-item" href="laboratories.html">Laboratories</a></li>
-                        <li><a class="dropdown-item" href="hostels.html">Hostels</a></li>
-                        <li><a class="dropdown-item" href="Facility-in SGGS-Collage.html">Facilities</a></li>
-                        <li><a class="dropdown-item" href="gymnasium.html">Gymnasium & multipurpose indoor stadium</a></li>
-                        <li><a class="dropdown-item" href="source-of-inspiration.html">Source of Inspiration </a></li>
-                    </ul>
-                </li>
+                    <!-- Departments Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
+                            data-bs-toggle="dropdown">Departments</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="department-arts.html">Arts</a></li>
+                            <li><a class="dropdown-item" href="department-science.html">Science</a></li>
+                            <li><a class="dropdown-item" href="department-commerce.html">Commerce</a></li>
+                            <li><a class="dropdown-item" href="department-cs-it.html"> Computer Science & IT </a></li>
+                            <li><a class="dropdown-item" href="department-physical-education.html">Physical
+                                    Education</a></li>
+                            <li><a class="dropdown-item" href="department-bvoc-horticulture.html">B.Voc</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item fw-semibold" href="Departments-of-SGGS-Collage.html">All
+                                    Departments →</a></li>
+                        </ul>
+                    </li>
 
 
 
+                    <!-- Student Corner Dropdown (NEW) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
+                            data-bs-toggle="dropdown">Academics</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="academic-gems.html">Academic-gems</a></li>
+                            <li><a class="dropdown-item" href="admission-procedure.html">Admission-procedure</a></li>
+                            <li><a class="dropdown-item" href="anti-ragging-cell.html">Anti-ragging-cell</a></li>
+                            <li><a class="dropdown-item" href="career-guidance-cell.html">Career-guidence-cell</a></li>
+                            <li><a class="dropdown-item" href="entrepreneurship-centre.html">Entrepreneurship-center</a>
+                            </li>
+                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
+                            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+                            <li><a class="dropdown-item" href="workshops-and-seminars.html">Workshops and Seminars</a>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="career-guidance-cell.html">Career Guidance</a></li> -->
 
-                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">Download</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="Prospect-2025.pdf">Prospectus</a></li>
-                        <li><a class="dropdown-item" href="">College Magazine</a></li>
-                        <li><a class="dropdown-item" href="Application-Form.pdf">Application Forms for Teachers</a></li>
-                        <li><a class="dropdown-item" href="Alumni-Body-Form.pdf">Alumni Registration Form</a></li>
-                        <li><a class="dropdown-item" href="complaint-Form.pdf">Technical Complaint Form</a></li>
-             
-                    </ul>
-                </li>
 
-                  
+                        </ul>
+                    </li>
 
-                <!-- Career Guidance -->
-                <!-- <li class="nav-item"><a class="nav-link classy-link" href="CarrerGuidance.html">Career Guidance</a></li> -->
-                 <!-- IQAC -->
-                <li class="nav-item"><a class="nav-link classy-link" href="iqac.html">IQAC</a></li>
+                    <!-- Resources Dropdown (NEW) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
+                            data-bs-toggle="dropdown">Infrastructure</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            <li><a class="dropdown-item" href="laboratories.html">Laboratories</a></li>
+                            <li><a class="dropdown-item" href="hostels.html">Hostels</a></li>
+                            <li><a class="dropdown-item" href="Facility-in SGGS-Collage.html">Facilities</a></li>
+                            <li><a class="dropdown-item" href="gymnasium.html">Gymnasium & multipurpose indoor
+                                    stadium</a></li>
+                            <li><a class="dropdown-item" href="source-of-inspiration.html">Source of Inspiration </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <!-- NAAC -->
-                <li class="nav-item"><a class="nav-link classy-link" href="nacc.html">NAAC</a></li>
-                   <li class="nav-item"><a class="nav-link classy-link" href="NIRF-Data-2025.pdf">NIRF</a></li>
 
-                   
-                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="" role="button" data-bs-toggle="dropdown">NCTE</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="https://web.ncte.gov.in/">National Council for Teachers Education</a></li>
-                        <li><a class="dropdown-item" href="">Recognition Letters</a></li>
-                      
-             
-                    </ul>
-                </li>
 
-                <!-- Contact -->
-                <li class="nav-item"><a class="nav-link classy-link" href="contactus.html">Contact</a></li>
 
-                <!-- Apply Now Button -->
-                <li class="nav-item ms-lg-2">
-                    <a href="contactus.html" class="classy-apply-btn">
-                        <i class="fas fa-graduation-cap"></i> Apply Now
-                    </a>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
+                            data-bs-toggle="dropdown">Download</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="Prospect-2025.pdf">Prospectus</a></li>
+                            <li><a class="dropdown-item" href="">College Magazine</a></li>
+                            <li><a class="dropdown-item" href="Application-Form.pdf">Application Forms for Teachers</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Alumni-Body-Form.pdf">Alumni Registration Form</a></li>
+                            <li><a class="dropdown-item" href="complaint-Form.pdf">Technical Complaint Form</a></li>
 
-            </ul>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Career Guidance -->
+                    <!-- <li class="nav-item"><a class="nav-link classy-link" href="CarrerGuidance.html">Career Guidance</a></li> -->
+                    <!-- IQAC -->
+                    <li class="nav-item"><a class="nav-link classy-link" href="iqac.html">IQAC</a></li>
+
+                    <!-- NAAC -->
+                    <li class="nav-item"><a class="nav-link classy-link" href="nacc.html">NAAC</a></li>
+                    <li class="nav-item"><a class="nav-link classy-link" href="NIRF-Data-2025.pdf">NIRF</a></li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle classy-link" href="" role="button"
+                            data-bs-toggle="dropdown">NCTE</a>
+                        <ul class="dropdown-menu classy-dropdown">
+                            <li><a class="dropdown-item" href="https://web.ncte.gov.in/">National Council for Teachers
+                                    Education</a></li>
+                            <li><a class="dropdown-item" href="">Recognition Letters</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item"><a class="nav-link classy-link" href="contactus.html">Contact</a></li>
+
+
+                    <li class="nav-item "><a class="nav-link classy-link"
+                            href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?saralID=-969760717"
+                            target="_blank" rel="noopener noreferrer">
+                            Online Fee Payment
+                        </a></li>
+
+                    <!-- Apply Now Button -->
+                    <li class="nav-item ms-lg-2">
+                        <a href="contactus.html" class="classy-apply-btn">
+                            <i class="fas fa-graduation-cap"></i> Apply Now
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
-
-    </div>
-</nav>
+    </nav>
 
     <!-- Bootstrap Carousel -->
     <div id="myCustomCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner custom-carousel-inner">
+        <div class="carousel-inner custom-carousel-inner">
 
-        <div class="carousel-item custom-carousel-item active">
-            <img src="./images/new-banner-1.jpeg" class="carousel-img" alt="...">
-            <div class="carousel-caption custom-carousel-caption"></div>
-        </div>
+            <div class="carousel-item custom-carousel-item active">
+                <img src="./images/new-banner-1.jpeg" class="carousel-img" alt="...">
+                <div class="carousel-caption custom-carousel-caption"></div>
+            </div>
 
-        <div class="carousel-item custom-carousel-item">
-            <img src="./images/new-banner-2.jpeg" class="carousel-img" alt="...">
-        </div>
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/new-banner-2.jpeg" class="carousel-img" alt="...">
+            </div>
 
-        <div class="carousel-item custom-carousel-item">
-            <img src="./images/new-banner-3.jpeg" class="carousel-img" alt="...">
-        </div>
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/lastbanner.jpeg" class="carousel-img" alt="...">
+            </div>
 
-        <div class="carousel-item custom-carousel-item">
-            <img src="./images/final-banner.jpeg" class="carousel-img" alt="...">
-        </div>
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/final-banner.jpeg" class="carousel-img" alt="...">
+            </div>
 
-        <div class="carousel-item custom-carousel-item">
-            <img src="./images/khalsa.jpg" class="carousel-img" alt="...">
-        </div>
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/khalsa.jpg" class="carousel-img" alt="...">
+            </div>
 
-        <div class="carousel-item custom-carousel-item">
-            <img src="./images/banner2.jpg" class="carousel-img" alt="...">
-        </div>
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/banner2.jpg" class="carousel-img" alt="...">
+            </div>
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add1.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>College Events</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add2.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>College Events</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add3.jpeg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>College Hall</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add4.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>College Annual Convocation</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add5.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>Graduation Ceremony</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add6.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5>Graduation Day</h5></div>
         </div> -->
 
-        <!-- <div class="carousel-item custom-carousel-item">
+            <!-- <div class="carousel-item custom-carousel-item">
             <img src="./images/add7.jpg" class="carousel-img" alt="...">
             <div class="carousel-caption custom-carousel-caption"><h5></h5></div>
         </div> -->
 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
 
 
     <!-- Hero -->
@@ -2549,41 +2577,46 @@
 
 
 
-<!-- cyber -->
- <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="260">
-    <div class="p-4 rounded-4 program-card h-100">
-        <div class="d-flex justify-content-between align-items-start">
-            <h5 class="mb-1">B.Sc. Cyber Security</h5>
-            <span class="badge pill">Undergraduate</span>
-        </div>
-        <br>
-        <p class="text-muted small">
-            An undergraduate program designed to protect systems, networks, and data from cyber threats.
-            It covers ethical hacking, digital security, and modern cybersecurity practices.
-        </p>
-        <a href="bsc-cyber-security.html" class="btn btn-sm btn-outline-dark pro-btn know-btn">Know More</a>
-    </div>
-</div>
+                    <!-- cyber -->
+                    <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="260">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">B.Sc. Cyber Security</h5>
+                                <span class="badge pill">Undergraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">
+                                An undergraduate program designed to protect systems, networks, and data from cyber
+                                threats.
+                                It covers ethical hacking, digital security, and modern cybersecurity practices.
+                            </p>
+                            <a href="bsc-cyber-security.html" class="btn btn-sm btn-outline-dark pro-btn know-btn">Know
+                                More</a>
+                        </div>
+                    </div>
 
 
 
 
 
 
-<div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="160">
-    <div class="p-4 rounded-4 program-card h-100">
-        <div class="d-flex justify-content-between align-items-start">
-            <h5 class="mb-1">B.Sc. Artificial Intelligence & Machine Learning</h5>
-            <span class="badge pill">Undergraduate</span>
-        </div>
-        <br>
-        <p class="text-muted small">
-            An undergraduate program focused on artificial intelligence, machine learning, and data science.
-            Students develop strong analytical and technical skills to build intelligent systems and solve complex problems.
-        </p>
-        <a href="bsc-artificial-intelligence-machine-learning.html" class="btn btn-sm btn-outline-dark pro-btn know-btn">Know More</a>
-    </div>
-</div>
+                    <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="160">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">B.Sc. Artificial Intelligence & Machine Learning</h5>
+                                <span class="badge pill">Undergraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">
+                                An undergraduate program focused on artificial intelligence, machine learning, and data
+                                science.
+                                Students develop strong analytical and technical skills to build intelligent systems and
+                                solve complex problems.
+                            </p>
+                            <a href="bsc-artificial-intelligence-machine-learning.html"
+                                class="btn btn-sm btn-outline-dark pro-btn know-btn">Know More</a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -2625,7 +2658,7 @@
                 </div>
 
 
-<!-- <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="160">
+                <!-- <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="160">
     <div class="p-4 rounded-4 program-card h-100">
         <div class="d-flex justify-content-between align-items-start">
             <h5 class="mb-1">DSC Artificial Intelligence & Machine Learning</h5>
@@ -2966,7 +2999,7 @@
 
 
 
-    
+
 
     <!-- Why SGGS -->
     <section class="why-sggs">
@@ -3231,120 +3264,131 @@
     </section>
 
 
-   <footer class="sggs-footer">
-    <div class="footer-container">
+    <footer class="sggs-footer">
+        <div class="footer-container">
 
-        <!-- CONTACT -->
-        <div class="footer-col contact">
-            <h4><i class="bi bi-geo-alt"></i> Contact</h4>
-            <ul>
-                <li>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    S.G.G.S. Khalsa College Mahilpur,<br>
-                    Distt. Hoshiarpur, Punjab – 146105, India
-                </li>
-                <li><i class="bi bi-telephone"></i> Admission: 01884-292142</li>
-                <li><i class="bi bi-telephone"></i> Office: 01884-245236, 01884-292036</li>
-                <li><i class="bi bi-envelope"></i> info@sggskcm.org</li>
-                <li><i class="bi bi-envelope"></i> sggskcm@live.com</li>
-            </ul>
+            <!-- CONTACT -->
+            <div class="footer-col contact">
+                <h4><i class="bi bi-geo-alt"></i> Contact</h4>
+                <ul>
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        S.G.G.S. Khalsa College Mahilpur,<br>
+                        Distt. Hoshiarpur, Punjab – 146105, India
+                    </li>
+                    <li><i class="bi bi-telephone"></i> Admission: 01884-292142</li>
+                    <li><i class="bi bi-telephone"></i> Office: 01884-245236, 01884-292036</li>
+                    <li><i class="bi bi-envelope"></i> info@sggskcm.org</li>
+                    <li><i class="bi bi-envelope"></i> sggskcm@live.com</li>
+                </ul>
 
-            <div class="footer-social icons-color">
-                <a href="https://www.facebook.com/sggskcm.org/"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/sggskhalsacollege?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
-                <a href="https://youtube.com/@sggskhalsacollegemahilpur?si=5pHRp06v8OtGB656"><i class="bi bi-youtube"></i></a>
+                <div class="footer-social icons-color">
+                    <a href="https://www.facebook.com/sggskcm.org/"><i class="bi bi-facebook"></i></a>
+                    <a
+                        href="https://www.instagram.com/sggskhalsacollege?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com/@sggskhalsacollegemahilpur?si=5pHRp06v8OtGB656"><i
+                            class="bi bi-youtube"></i></a>
+                </div>
             </div>
+
+            <!-- ACADEMICS -->
+            <div class="footer-col">
+                <h4><i class="bi bi-mortarboard"></i> Academics</h4>
+                <ul>
+                    <li><a href="Course-Programmes.html"><i class="bi bi-book"></i> Courses Offered</a></li>
+                    <li><a href="Departments-of-SGGS-Collage.html"><i class="bi bi-layers"></i> Departments</a></li>
+                    <li><a href="Departments-of-SGGS-Collage.html"><i class="bi bi-person-workspace"></i> Faculty
+                            Directory</a></li>
+                    <li><a href="https://puchd.ac.in/"><i class="bi bi-calendar3"></i> Academic Calendar</a></li>
+                    <li><a href="https://results.puexam.in/"><i class="bi bi-pencil-square"></i> Examination &
+                            Results</a></li>
+                    <li><a href="library.html"><i class="bi bi-journal-bookmark"></i> Library & e-Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- ADMISSIONS & STUDENTS -->
+            <div class="footer-col">
+                <h4><i class="bi bi-person-badge"></i> Admissions & Students</h4>
+                <ul>
+                    <li><a href="Addimision-page.html"><i class="bi bi-door-open"></i> Admission Process</a></li>
+                    <li><a href="Prospect-2025.pdf"><i class="bi bi-file-earmark-text"></i> Prospectus</a></li>
+                    <li><a href="scholarships.html"><i class="bi bi-award"></i> Scholarships</a></li>
+                    <li><a href="contactus copy.html"><i class="bi bi-headset"></i> Student Support</a></li>
+                    <li><a href="alumni.html"><i class="bi bi-award"></i> Alumni</a></li>
+                    <li><a href="https://results.puexam.in/"><i class="bi bi-award"></i> Result</a></li>
+                    <li><a href="https://puchd.ac.in/"><i class="bi bi-award"></i> Examination</a></li>
+
+                </ul>
+            </div>
+
+            <!-- QUALITY & GOVERNANCE -->
+            <div class="footer-col">
+                <h4><i class="bi bi-shield-check"></i> Quality & Governance</h4>
+                <ul>
+                    <li><a href="iqac.html"><i class="bi bi-check2-circle"></i> IQAC</a></li>
+                    <li><a href="nacc.html"><i class="bi bi-star"></i> NAAC</a></li>
+                    <li><a href="NIRF-Data-2025.pdf"><i class="bi bi-bar-chart"></i> NIRF</a></li>
+                    <li><a href="constitutional-cells.html"><i class="bi bi-people"></i> Constitutional Cells</a></li>
+                    <li><a href="endowment-fund.html"><i class="bi bi-file-earmark-lock"></i> Endowment Fund</a></li>
+                </ul>
+            </div>
+
+            <!-- QUICK LINKS (CUSTOMIZED) -->
+            <div class="footer-col">
+                <h4><i class="bi bi-link-45deg"></i> Quick Links</h4>
+                <ul>
+                    <!-- College Events & Activities -->
+                    <li><a href="Events&activities.html"><i class="bi bi-calendar-event"></i> College Events &
+                            Activities</a></li>
+
+                    <!-- Alumni Body -->
+                    <li><a href="alumni.html"><i class="bi bi-people-fill"></i> Alumni Body</a></li>
+
+                    <!-- Sports - DROPDOWN -->
+                    <li class="footer-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-trigger">
+                            <i class="bi bi-trophy"></i> Sports <i class="bi bi-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="footer-submenu">
+                            <li><a href="nss-ncc.html"><i class="bi bi-flag"></i> NCC, NSS & College Clubs</a></li>
+                            <li><a href="sports-activity.html"><i class="bi bi-binoculars"></i> Sports Activities</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- NAD -->
+                    <li><a href="https://nad.gov.in/"><i class="bi bi-credit-card"></i> NAD (Academic Bank of
+                            Credits)</a></li>
+
+                    <!-- DST Inspire -->
+                    <li><a href="dst-inspire.html"><i class="bi bi-stars"></i> DST Inspire</a></li>
+
+                    <!-- NCTE - DROPDOWN -->
+                    <li class="footer-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-trigger">
+                            <i class="bi bi-building"></i> NCTE <i class="bi bi-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="footer-submenu">
+                            <li><a href="https://web.ncte.gov.in/"><i class="bi bi-book-half"></i> National Council for
+                                    Teachers Education</a></li>
+                            <li><a href=""><i class="bi bi-file-earmark-text"></i> Recognition Letters</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- External Links -->
+                    <li><a href="https://puchd.ac.in" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Panjab
+                            University</a></li>
+                    <li><a href="https://www.ugc.gov.in" target="_blank"><i class="bi bi-box-arrow-up-right"></i>
+                            UGC</a></li>
+                </ul>
+            </div>
+
         </div>
-
-        <!-- ACADEMICS -->
-        <div class="footer-col">
-            <h4><i class="bi bi-mortarboard"></i> Academics</h4>
-            <ul>
-                <li><a href="Course-Programmes.html"><i class="bi bi-book"></i> Courses Offered</a></li>
-                <li><a href="Departments-of-SGGS-Collage.html"><i class="bi bi-layers"></i> Departments</a></li>
-                <li><a href="Departments-of-SGGS-Collage.html"><i class="bi bi-person-workspace"></i> Faculty Directory</a></li>
-                <li><a href="https://puchd.ac.in/"><i class="bi bi-calendar3"></i> Academic Calendar</a></li>
-                <li><a href="https://results.puexam.in/"><i class="bi bi-pencil-square"></i> Examination & Results</a></li>
-                <li><a href="library.html"><i class="bi bi-journal-bookmark"></i> Library & e-Resources</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>© 2025 SGGS College | Designed & Maintained by SGGS Web Team</p>
         </div>
-
-        <!-- ADMISSIONS & STUDENTS -->
-        <div class="footer-col">
-            <h4><i class="bi bi-person-badge"></i> Admissions & Students</h4>
-            <ul>
-                <li><a href="Addimision-page.html"><i class="bi bi-door-open"></i> Admission Process</a></li>
-                <li><a href="Prospect-2025.pdf"><i class="bi bi-file-earmark-text"></i> Prospectus</a></li>
-                <li><a href="scholarships.html"><i class="bi bi-award"></i> Scholarships</a></li>
-                <li><a href="contactus copy.html"><i class="bi bi-headset"></i> Student Support</a></li>
-                <li><a href="alumni.html"><i class="bi bi-award"></i> Alumni</a></li>
-                <li><a href="https://results.puexam.in/"><i class="bi bi-award"></i> Result</a></li>
-                <li><a href="https://puchd.ac.in/"><i class="bi bi-award"></i> Examination</a></li>
-
-            </ul>
-        </div>
-
-        <!-- QUALITY & GOVERNANCE -->
-        <div class="footer-col">
-            <h4><i class="bi bi-shield-check"></i> Quality & Governance</h4>
-            <ul>
-                <li><a href="iqac.html"><i class="bi bi-check2-circle"></i> IQAC</a></li>
-                <li><a href="nacc.html"><i class="bi bi-star"></i> NAAC</a></li>
-                <li><a href="NIRF-Data-2025.pdf"><i class="bi bi-bar-chart"></i> NIRF</a></li>
-                <li><a href="constitutional-cells.html"><i class="bi bi-people"></i> Constitutional Cells</a></li>
-                <li><a href="endowment-fund.html"><i class="bi bi-file-earmark-lock"></i> Endowment Fund</a></li>
-            </ul>
-        </div>
-
-        <!-- QUICK LINKS (CUSTOMIZED) -->
-        <div class="footer-col">
-            <h4><i class="bi bi-link-45deg"></i> Quick Links</h4>
-            <ul>
-                <!-- College Events & Activities -->
-                <li><a href="Events&activities.html"><i class="bi bi-calendar-event"></i> College Events & Activities</a></li>
-                
-                <!-- Alumni Body -->
-                <li><a href="alumni.html"><i class="bi bi-people-fill"></i> Alumni Body</a></li>
-                
-                <!-- Sports - DROPDOWN -->
-                <li class="footer-dropdown">
-                    <a href="javascript:void(0)" class="dropdown-trigger">
-                        <i class="bi bi-trophy"></i> Sports <i class="bi bi-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <ul class="footer-submenu">
-                        <li><a href="nss-ncc.html"><i class="bi bi-flag"></i> NCC, NSS & College Clubs</a></li>
-                        <li><a href="sports-activity.html"><i class="bi bi-binoculars"></i> Sports Activities</a></li>
-                    </ul>
-                </li>
-                
-                <!-- NAD -->
-                <li><a href="https://nad.gov.in/"><i class="bi bi-credit-card"></i> NAD (Academic Bank of Credits)</a></li>
-                
-                <!-- DST Inspire -->
-                <li><a href="dst-inspire.html"><i class="bi bi-stars"></i> DST Inspire</a></li>
-                
-                <!-- NCTE - DROPDOWN -->
-                <li class="footer-dropdown">
-                    <a href="javascript:void(0)" class="dropdown-trigger">
-                        <i class="bi bi-building"></i> NCTE <i class="bi bi-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <ul class="footer-submenu">
-                        <li><a href="https://web.ncte.gov.in/"><i class="bi bi-book-half"></i> National Council for Teachers Education</a></li>
-                        <li><a href=""><i class="bi bi-file-earmark-text"></i> Recognition Letters</a></li>
-                    </ul>
-                </li>
-                
-                <!-- External Links -->
-                <li><a href="https://puchd.ac.in" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Panjab University</a></li>
-                <li><a href="https://www.ugc.gov.in" target="_blank"><i class="bi bi-box-arrow-up-right"></i> UGC</a></li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 SGGS College | Designed & Maintained by SGGS Web Team</p>
-    </div>
-</footer>
+    </footer>
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -3356,37 +3400,37 @@
 
 
 
-<script>
-    // Dropdown toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.footer-dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const trigger = dropdown.querySelector('.dropdown-trigger');
-        
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Close other dropdowns
-            dropdowns.forEach(other => {
-                if (other !== dropdown && other.classList.contains('active')) {
-                    other.classList.remove('active');
+    <script>
+        // Dropdown toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.footer-dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const trigger = dropdown.querySelector('.dropdown-trigger');
+
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Close other dropdowns
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown && other.classList.contains('active')) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.footer-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
                 }
             });
-            // Toggle current dropdown
-            dropdown.classList.toggle('active');
         });
-    });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.footer-dropdown')) {
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
-});
-</script>
+    </script>
 
 
 
@@ -3580,37 +3624,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<script>
-    // Dropdown toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.footer-dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const trigger = dropdown.querySelector('.dropdown-trigger');
-        
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Close other dropdowns
-            dropdowns.forEach(other => {
-                if (other !== dropdown && other.classList.contains('active')) {
-                    other.classList.remove('active');
+    <script>
+        // Dropdown toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.footer-dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const trigger = dropdown.querySelector('.dropdown-trigger');
+
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Close other dropdowns
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown && other.classList.contains('active')) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.footer-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
                 }
             });
-            // Toggle current dropdown
-            dropdown.classList.toggle('active');
         });
-    });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.footer-dropdown')) {
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
-});
-</script>
+    </script>
 
 
 </body>
