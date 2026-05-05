@@ -1876,6 +1876,395 @@
         color: #8a0000;
     }
 
+
+
+
+
+  /* === PRINCIPAL SECTION === */
+  .pm-section {
+    padding: 90px 24px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  /* Decorative background pattern */
+  .pm-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 8% 20%, rgba(140,16,7,0.04) 1px, transparent 1px),
+      radial-gradient(circle at 92% 80%, rgba(140,16,7,0.04) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px;
+    pointer-events: none;
+  }
+ 
+  /* Large decorative quote behind text */
+  .pm-section::after {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    right: 5%;
+    font-size: 28rem;
+    font-family: Georgia, serif;
+    color: rgba(140,16,7,0.04);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+  }
+ 
+  .pm-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 72px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  /* === LEFT COLUMN === */
+  .pm-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+  }
+ 
+  /* Animated ring around image */
+  .pm-ring {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin-bottom: 0;
+  }
+ 
+  .pm-ring::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #8c1007, #c41a1a, #e84848, #8c1007);
+    animation: pm-spin 6s linear infinite;
+    z-index: 0;
+  }
+ 
+  .pm-ring::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+  }
+ 
+  @keyframes pm-spin {
+    to { transform: rotate(360deg); }
+  }
+ 
+  .pm-photo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+ 
+  /* Placeholder if no photo */
+  .pm-photo-placeholder {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8c1007, #c41a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .pm-photo-placeholder i {
+    font-size: 5rem;
+    color: rgba(255,255,255,0.5);
+  }
+ 
+  /* Name badge */
+  .pm-badge {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #8c1007, #c41a1a);
+    color: #fff;
+    border-radius: 16px;
+    padding: 20px 28px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 12px 40px rgba(140,16,7,0.22);
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .pm-badge::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+ 
+  .pm-badge::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: -20px;
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+ 
+  .pm-badge-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+  }
+ 
+  .pm-badge-title {
+    font-size: 0.78rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+ 
+  /* Stats row under badge */
+  .pm-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 14px;
+  }
+ 
+  .pm-stat {
+    background: #fff5f5;
+    border: 1px solid rgba(140,16,7,0.12);
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+ 
+  .pm-stat-num {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #8c1007;
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+ 
+  .pm-stat-label {
+    font-size: 0.72rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+ 
+  /* === RIGHT COLUMN === */
+  .pm-right { padding-top: 8px; }
+ 
+  .pm-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff0f0;
+    border: 1.5px solid rgba(140,16,7,0.15);
+    color: #8c1007;
+    padding: 7px 18px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+ 
+  .pm-eyebrow i { font-size: 0.85rem; }
+ 
+  .pm-heading {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin-bottom: 32px;
+  }
+ 
+  .pm-heading span { color: #8c1007; }
+ 
+  /* Animated underline */
+  .pm-heading-underline {
+    display: inline-block;
+    position: relative;
+  }
+ 
+  .pm-heading-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0%; height: 3px;
+    background: linear-gradient(90deg, #8c1007, #e84848);
+    border-radius: 2px;
+    transition: width 1.2s ease 0.5s;
+  }
+ 
+  .pm-heading-underline.animated::after { width: 100%; }
+ 
+  /* Quote block */
+  .pm-quote-block {
+    position: relative;
+    background: linear-gradient(135deg, #fff5f5, #fff0f0);
+    border-left: 5px solid #8c1007;
+    border-radius: 0 16px 16px 0;
+    padding: 28px 28px 28px 32px;
+    margin-bottom: 24px;
+    box-shadow: 4px 0 0 0 rgba(140,16,7,0.06), 0 8px 30px rgba(140,16,7,0.06);
+  }
+ 
+  .pm-quote-icon {
+    position: absolute;
+    top: -14px; left: 20px;
+    width: 36px; height: 36px;
+    background: #8c1007;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #fff;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+ 
+  .pm-message {
+    font-size: 1.01rem;
+    line-height: 1.95;
+    color: #444;
+    margin: 0;
+  }
+ 
+  .pm-message p { margin-bottom: 16px; }
+  .pm-message p:last-child { margin-bottom: 0; }
+ 
+  /* Read more toggle */
+  .pm-readmore-btn {
+    background: none;
+    border: 1.5px solid rgba(140,16,7,0.3);
+    color: #8c1007;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+ 
+  .pm-readmore-btn:hover {
+    background: #8c1007;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(140,16,7,0.25);
+  }
+ 
+  .pm-extra { display: none; }
+  .pm-extra.open { display: block; }
+ 
+  /* Signature */
+  .pm-signature-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px dashed rgba(140,16,7,0.2);
+  }
+ 
+  .pm-signature-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #8c1007, #c41a1a);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(140,16,7,0.25);
+  }
+ 
+  .pm-signature-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #8c1007;
+    display: block;
+    margin-bottom: 3px;
+  }
+ 
+  .pm-signature-role {
+    font-size: 0.82rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+ 
+  .pm-signature-line {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(140,16,7,0.3), transparent);
+    border-radius: 2px;
+  }
+ 
+  /* === AOS custom fade-up from left/right === */
+  /* AOS handles this via data attributes already */
+ 
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .pm-inner { grid-template-columns: 270px 1fr; gap: 48px; }
+    .pm-ring { width: 220px; height: 220px; }
+  }
+ 
+  @media (max-width: 900px) {
+    .pm-inner { grid-template-columns: 1fr; gap: 40px; }
+    .pm-left { position: static; flex-direction: row; align-items: flex-start; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .pm-ring { width: 180px; height: 180px; }
+    .pm-badge { max-width: 300px; }
+    .pm-stats { max-width: 300px; }
+  }
+ 
+  @media (max-width: 576px) {
+    .pm-section { padding: 60px 16px; }
+    .pm-section::after { font-size: 16rem; top: 0; right: -2%; }
+    .pm-left { flex-direction: column; align-items: center; }
+    .pm-badge { width: 100%; max-width: 100%; }
+    .pm-stats { width: 100%; max-width: 100%; }
+    .pm-quote-block { padding: 24px 18px 24px 24px; }
+  }
+
+
+
+
+
+
+
+
+
     /* ======================================================= */
     /* AOS CUSTOM OVERRIDES - smooth integration */
     /* ======================================================= */
@@ -1982,7 +2371,7 @@
                             <li><a class="dropdown-item" href="department-science.html">Science</a></li>
                             <li><a class="dropdown-item" href="department-commerce.html">Commerce</a></li>
                             <li><a class="dropdown-item" href="department-cs-it.html"> Computer Science & IT </a></li>
-                            <li><a class="dropdown-item" href="department-physical-education.html">Physical
+                            <li><a class="dropdown-item" href="department-physical-education.html.html">Physical
                                     Education</a></li>
                             <li><a class="dropdown-item" href="department-bvoc-horticulture.html">B.Voc</a></li>
                             <li>
@@ -2068,6 +2457,7 @@
                             <li><a class="dropdown-item" href="https://web.ncte.gov.in/">National Council for Teachers
                                     Education</a></li>
                             <li><a class="dropdown-item" href="recognition-letters.html">Recognition Letters</a></li>
+                             <li><a class="dropdown-item" href="ncte-documents.html">NCTE Documents</a></li>
 
 
                         </ul>
@@ -2361,6 +2751,175 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="pm-section">
+  <div class="pm-inner">
+ 
+    <!-- LEFT: Photo + Badge -->
+    <div class="pm-left" data-aos="fade-right" data-aos-duration="900">
+ 
+      <div class="pm-ring">
+        <!-- Replace src with actual principal photo -->
+        <img
+          src="./images/principal.jpg"
+          alt="Dr. Parvinder Singh, Principal S.G.G.S. Khalsa College Mahilpur"
+          class="pm-photo"
+          onerror="this.style.display='none'; document.getElementById('pm-placeholder').style.display='flex';"
+        >
+        <div class="pm-photo-placeholder" id="pm-placeholder" style="display:none;">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+ 
+      <div class="pm-badge" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+        <div class="pm-badge-name">Dr. Parvinder Singh</div>
+        <div class="pm-badge-title">Principal</div>
+      </div>
+ 
+      <div class="pm-stats" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
+        <div class="pm-stat">
+          <span class="pm-stat-num">78+</span>
+          <span class="pm-stat-label">Years of Legacy</span>
+        </div>
+        <div class="pm-stat">
+          <span class="pm-stat-num">NEP</span>
+          <span class="pm-stat-label">2020 Adopted</span>
+        </div>
+        <div class="pm-stat">
+          <span class="pm-stat-num">25+</span>
+          <span class="pm-stat-label">Programs</span>
+        </div>
+        <div class="pm-stat">
+          <span class="pm-stat-num">5k+</span>
+          <span class="pm-stat-label">Alumni</span>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- RIGHT: Message -->
+    <div class="pm-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+ 
+      <div class="pm-eyebrow">
+        <i class="fas fa-feather-alt"></i>
+        Principal's Message
+      </div>
+ 
+      <h2 class="pm-heading">
+        A Warm Welcome from<br>
+        <span>
+          <span class="pm-heading-underline" id="pmUnderline">the Principal's Desk</span>
+        </span>
+      </h2>
+ 
+      <div class="pm-quote-block">
+        <div class="pm-quote-icon">"</div>
+        <div class="pm-message">
+          <p>
+            As we stand on the threshold of a new academic session, I extend a hearty and warm welcome to all my students, staff and parents. Being at the spearhead of this prestigious pre-independence institution is a most honorable and, at the same time, a highly daunting task. I take this opportunity to thank the Management, Sikh Educational Council for giving me the chance to serve the community here.
+          </p>
+          <p>
+            Each academic year is a new height scaled, another dream realized with new targets set for the future. Each and every member of this Institution is devoted to turning dreams &amp; aspirations into reality through sincerity and perseverance.
+          </p>
+ 
+          <!-- Extra content (hidden by default) -->
+          <div class="pm-extra" id="pmExtra">
+            <p>
+              From the current session, the NEP-2020 has come into play opening up not only new vistas, opportunities and courses but challenges also. There is a huge diversification in education from formal to professional and vocational courses which shall help our youth realize their potential and dreams.
+            </p>
+            <p>
+              We have braced ourselves both to realize the dreams and vision of the policy-makers and, more importantly, to equip our students with the needed skill-set for their bright and successful future. With a view to unfold hidden potential and develop multifaceted personality that help the aspirants in the world of work, the College lays special emphasis on sports, extra-curricular activities, seminars and workshops.
+            </p>
+            <p>
+              It is indeed very satisfying that with the whole-hearted support and visionary guidance of the College Management led by our worthy President Sant Sadhu Singh Ji Kaharpuri and tireless efforts of the faculty members, the college is scaling new heights every year. Looking forward to your continued help, support and active co-operation and wishing you all good luck.
+            </p>
+          </div>
+        </div>
+ 
+        <button class="pm-readmore-btn" id="pmReadBtn" onclick="togglePmMessage()">
+          <i class="fas fa-chevron-down" id="pmBtnIcon"></i>
+          Read Full Message
+        </button>
+      </div>
+ 
+      <!-- Signature -->
+      <div class="pm-signature-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+        <div class="pm-signature-icon">
+          <i class="fas fa-pen-fancy"></i>
+        </div>
+        <div>
+          <span class="pm-signature-name">Dr. Parvinder Singh</span>
+          <span class="pm-signature-role">Principal, S.G.G.S. Khalsa College Mahilpur</span>
+        </div>
+        <div class="pm-signature-line"></div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<script>
+  function togglePmMessage() {
+    var extra = document.getElementById('pmExtra');
+    var btn = document.getElementById('pmReadBtn');
+    var icon = document.getElementById('pmBtnIcon');
+    var isOpen = extra.classList.contains('open');
+    if (isOpen) {
+      extra.classList.remove('open');
+      btn.innerHTML = '<i class="fas fa-chevron-down" id="pmBtnIcon"></i> Read Full Message';
+    } else {
+      extra.classList.add('open');
+      btn.innerHTML = '<i class="fas fa-chevron-up" id="pmBtnIcon"></i> Show Less';
+    }
+  }
+ 
+  // Trigger underline animation when section enters viewport
+  var pmObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        document.getElementById('pmUnderline').classList.add('animated');
+        pmObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+ 
+  var pmTarget = document.querySelector('.pm-section');
+  if (pmTarget) pmObserver.observe(pmTarget);
+ 
+  // Spinning ring pause on hover
+  var pmRing = document.querySelector('.pm-ring');
+  if (pmRing) {
+    pmRing.addEventListener('mouseenter', function() {
+      pmRing.style.setProperty('--pm-pause', 'paused');
+      pmRing.querySelector('.pm-ring::before') && (pmRing.style.animationPlayState = 'paused');
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         <!-- Programs -->
         <section class="py-5 bg-light" id="programs">
