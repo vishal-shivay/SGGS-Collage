@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" /> -->
+<style>
+  /* ── STATS ROW ── */
+  .ef-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .ef-stat-box {
+    background: linear-gradient(135deg, #fdf2f2, #fff0f0);
+    border: 1px solid #f5c6c6;
+    border-radius: 14px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .ef-stat-box .esb-num {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #8c1007;
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .ef-stat-box .esb-lbl {
+    font-size: 0.72rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+ 
+  /* ── SEARCH / FILTER BAR ── */
+  .ef-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .ef-controls input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .ef-controls input[type="text"]:focus { border-color: #8c1007; }
+  .ef-controls select {
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.87rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .ef-controls select:focus { border-color: #8c1007; }
+  .ef-count-lbl {
+    font-size: 0.82rem;
+    color: #888;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+ 
+  /* ── TABLE ── */
+  .ef-table-wrap {
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+  }
+  table.ef-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  table.ef-table thead tr {
+    background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+  }
+  table.ef-table thead th {
+    padding: 13px 16px;
+    text-align: left;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+  table.ef-table tbody tr { transition: background 0.15s; }
+  table.ef-table tbody tr:nth-child(even) td { background: #fdf8f8; }
+  table.ef-table tbody tr:hover td { background: #fdf2f2; }
+  table.ef-table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+  table.ef-table tbody tr:last-child td { border-bottom: none; }
+ 
+  /* Sr. No cell */
+  .ef-table .td-sr {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #8c1007, #b51610) !important;
+    width: 48px;
+    font-size: 0.82rem;
+  }
+  .ef-table .td-date {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: #555;
+    width: 130px;
+  }
+  .ef-table .td-name { font-weight: 600; color: #1a1a1a; }
+  .ef-table .td-amt {
+    font-weight: 800;
+    color: #8c1007;
+    white-space: nowrap;
+    width: 130px;
+    font-size: 1rem;
+  }
+ 
+  /* ── PAGINATION ── */
+  .ef-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+  .ef-pagination button {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .ef-pagination button:hover { border-color: #8c1007; color: #8c1007; }
+  .ef-pagination button.active {
+    background: linear-gradient(135deg, #8c1007, #b51610);
+    color: #fff;
+    border-color: #8c1007;
+  }
+  .ef-pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+ 
+  /* ── EMPTY STATE ── */
+  .ef-empty {
+    text-align: center;
+    padding: 48px 20px;
+    color: #888;
+  }
+  .ef-empty i { font-size: 2.5rem; display: block; margin-bottom: 10px; opacity: 0.4; }
+ 
+  /* ── TOTAL ROW ── */
+  .ef-total-row {
+    background: linear-gradient(135deg, #8c1007, #b51610) !important;
+  }
+  .ef-total-row td {
+    color: #fff !important;
+    font-weight: 800 !important;
+    padding: 13px 16px !important;
+    border-bottom: none !important;
+    font-size: 0.95rem !important;
+  }
+ 
+  @media (max-width: 600px) {
+    .ef-controls { flex-direction: column; }
+    .ef-count-lbl { margin-left: 0; }
+    table.ef-table { font-size: 0.82rem; }
+    table.ef-table thead th, table.ef-table tbody td { padding: 10px 10px; }
+    .ef-stats-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+ <body>
+
+  <div id="navbar"></div>
+
+<!-- Contributors Section HTML -->
+<div class="section-card" data-aos="fade-up">
+  <div class="card-title">List of Contributors — S.G.G.S. KCM Endowment Fund</div>
+ 
+  <!-- Stats -->
+  <div class="ef-stats-row">
+    <div class="ef-stat-box">
+      <span class="esb-num" id="ef-stat-total">22</span>
+      <span class="esb-lbl">Total Donors</span>
+    </div>
+    <div class="ef-stat-box">
+      <span class="esb-num" id="ef-stat-corpus">₹30,19,000</span>
+      <span class="esb-lbl">Corpus Raised</span>
+    </div>
+    <div class="ef-stat-box">
+      <span class="esb-num" id="ef-stat-year">2017</span>
+      <span class="esb-lbl">Since Year</span>
+    </div>
+    <div class="ef-stat-box">
+      <span class="esb-num" id="ef-stat-latest">2025</span>
+      <span class="esb-lbl">Latest Contribution</span>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <div class="ef-controls">
+    <input type="text" id="ef-search" placeholder="🔍  Search by name..." oninput="efRender()" />
+    <select id="ef-sort" onchange="efRender()">
+      <option value="date-asc">Date: Oldest First</option>
+      <option value="date-desc">Date: Newest First</option>
+      <option value="amt-desc">Amount: High to Low</option>
+      <option value="amt-asc">Amount: Low to High</option>
+      <option value="name-asc">Name: A–Z</option>
+    </select>
+    <span class="ef-count-lbl" id="ef-count-lbl">Showing 22 of 22</span>
+  </div>
+ 
+  <!-- Table -->
+  <div class="ef-table-wrap">
+    <table class="ef-table">
+      <thead>
+        <tr>
+          <th style="width:50px;text-align:center">S.No</th>
+          <th style="width:130px">Date</th>
+          <th>Name</th>
+          <th style="width:140px">Amount (INR)</th>
+        </tr>
+      </thead>
+      <tbody id="ef-tbody"></tbody>
+    </table>
+  </div>
+ 
+  <!-- Pagination -->
+  <div class="ef-pagination" id="ef-pagination"></div>
+ 
+  <!-- Note -->
+  
+</div>
+ 
+<div id="footer"></div>
+  <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    fetch('./component/footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer').innerHTML = d);
+  </script>
+<script>
+(function() {
+  // ── REAL DATA from actual records ──
+  const EF_DATA_KEY = 'kcm_ef_contributors_v2';
+ 
+  const DEFAULT_CONTRIBUTORS = [
+    { id: 1,  date: '31/07/2017', name: 'Dr. Raghubir Singh Bassi',                   amount: 125000 },
+    { id: 2,  date: '16/09/2017', name: 'Wg. Cdr. S. Hardev Singh Dhillon (Retd.)',   amount: 100000 },
+    { id: 3,  date: '07/12/2017', name: 'S. Daljit Singh',                             amount: 50000  },
+    { id: 4,  date: '31/03/2018', name: 'S. Harbhajan Singh Chera',                    amount: 25000  },
+    { id: 5,  date: '10/04/2018', name: 'Mrs. Gurmeet Kaur Dhami',                     amount: 25000  },
+    { id: 6,  date: '10/05/2018', name: 'Sant Sadhu Singh Ji Kaharpuri',               amount: 100000 },
+    { id: 7,  date: '27/09/2018', name: 'S.G.G.S. Khalsa College, Mahilpur',           amount: 800000 },
+    { id: 8,  date: '12/03/2019', name: 'S. Anup Singh Loodu (Canada)',                amount: 100000 },
+    { id: 9,  date: '19/03/2019', name: 'S. Kundan Singh Sajjan (Canada)',              amount: 100000 },
+    { id: 10, date: '19/03/2019', name: 'S. Santokh Singh Saini (U.S.A)',              amount: 50000  },
+    { id: 11, date: '19/03/2019', name: 'Prof. Sarwan Singh (Retd.)',                   amount: 31000  },
+    { id: 12, date: '19/03/2019', name: 'S. Kulwant Singh Sangha (U.K)',               amount: 200000 },
+    { id: 13, date: '08/05/2019', name: 'Prof. Gurjit Singh Sidhu (Retd.)',             amount: 50000  },
+    { id: 14, date: '08/05/2019', name: 'Prof. Ranjodh Kaur Sidhu (Retd.)',            amount: 50000  },
+    { id: 15, date: '04/12/2021', name: 'S. Gurdev Singh',                             amount: 500000 },
+    { id: 16, date: '31/07/2023', name: 'Ms. Sawinder Kaur (Retd. Librarian)',         amount: 113000 },
+    { id: 17, date: '06/12/2023', name: 'S. Mukhinderpal Singh (Calgary, Canada)',     amount: 200000 },
+    { id: 18, date: '22/03/2024', name: 'S. Jagmohan Singh (Baddon)',                  amount: 300000 },
+    { id: 19, date: '21/06/2024', name: 'S. Avtar Singh (Toronto, Canada)',            amount: 200000 },
+    { id: 20, date: '05/08/2024', name: 'S. Jasvir Singh (Retd. S.L.A.)',              amount: 50000  },
+    { id: 21, date: '21/03/2025', name: 'S. Satpal Singh Bains (Canada)',              amount: 100000 },
+    { id: 22, date: '31/05/2025', name: 'S. Ranjit Singh Rana',                        amount: 50000  },
+  ];
+ 
+  function loadData() {
+    const raw = localStorage.getItem(EF_DATA_KEY);
+    return raw ? JSON.parse(raw) : [...DEFAULT_CONTRIBUTORS];
+  }
+ 
+  // date string DD/MM/YYYY → sortable number
+  function dateVal(str) {
+    if (!str) return 0;
+    const p = str.split('/');
+    return parseInt(p[2]+p[1]+p[0], 10);
+  }
+ 
+  function fmtAmt(n) {
+    return '₹' + Number(n).toLocaleString('en-IN');
+  }
+ 
+  let efPage = 1;
+  const PER_PAGE = 10;
+ 
+  window.efRender = function() {
+    efPage = 1;
+    efRenderPage();
+  };
+ 
+  window.efGoPage = function(p) {
+    efPage = p;
+    efRenderPage();
+  };
+ 
+  function efRenderPage() {
+    const data = loadData();
+    const q = (document.getElementById('ef-search').value || '').toLowerCase();
+    const sort = document.getElementById('ef-sort').value;
+ 
+    let filtered = data.filter(r => !q || r.name.toLowerCase().includes(q));
+ 
+    filtered.sort((a, b) => {
+      if (sort === 'date-asc')  return dateVal(a.date) - dateVal(b.date);
+      if (sort === 'date-desc') return dateVal(b.date) - dateVal(a.date);
+      if (sort === 'amt-desc')  return b.amount - a.amount;
+      if (sort === 'amt-asc')   return a.amount - b.amount;
+      if (sort === 'name-asc')  return a.name.localeCompare(b.name);
+      return 0;
+    });
+ 
+    const total = filtered.length;
+    const start = (efPage - 1) * PER_PAGE;
+    const slice = filtered.slice(start, start + PER_PAGE);
+ 
+    // Count label
+    document.getElementById('ef-count-lbl').textContent =
+      total === data.length
+        ? `Showing ${total} contributors`
+        : `Showing ${total} of ${data.length} contributors`;
+ 
+    // Update stats
+    const allData = data;
+    const corpus = allData.reduce((s, r) => s + Number(r.amount), 0);
+    document.getElementById('ef-stat-total').textContent  = allData.length;
+    document.getElementById('ef-stat-corpus').textContent = fmtAmt(corpus);
+ 
+    const tbody = document.getElementById('ef-tbody');
+    if (!slice.length) {
+      tbody.innerHTML = `<tr><td colspan="4"><div class="ef-empty"><i class="fas fa-search"></i>No contributors match your search.</div></td></tr>`;
+      document.getElementById('ef-pagination').innerHTML = '';
+      return;
+    }
+ 
+    // Rows
+    const grandTotal = filtered.reduce((s, r) => s + Number(r.amount), 0);
+    const showTotal = !q; // show total row only when no filter
+ 
+    tbody.innerHTML = slice.map((r, i) => `
+      <tr>
+        <td class="td-sr">${start + i + 1}.</td>
+        <td class="td-date">${r.date}</td>
+        <td class="td-name">${r.name}</td>
+        <td class="td-amt">${fmtAmt(r.amount)}</td>
+      </tr>
+    `).join('') + (showTotal && start + PER_PAGE >= total ? `
+      <tr class="ef-total-row">
+        <td colspan="3" style="text-align:right;padding-right:20px">Grand Total</td>
+        <td>${fmtAmt(grandTotal)}</td>
+      </tr>
+    ` : '');
+ 
+    // Pagination
+    const pages = Math.ceil(total / PER_PAGE);
+    const pgEl = document.getElementById('ef-pagination');
+    if (pages <= 1) { pgEl.innerHTML = ''; return; }
+ 
+    let btns = `<button onclick="efGoPage(${efPage-1})" ${efPage===1?'disabled':''}>&#8592; Prev</button>`;
+    for (let p = 1; p <= pages; p++) {
+      btns += `<button onclick="efGoPage(${p})" class="${p===efPage?'active':''}">${p}</button>`;
+    }
+    btns += `<button onclick="efGoPage(${efPage+1})" ${efPage===pages?'disabled':''}>Next &#8594;</button>`;
+    pgEl.innerHTML = btns;
+  }
+ 
+  // init on DOM ready
+  document.addEventListener('DOMContentLoaded', efRenderPage);
+  if (document.readyState !== 'loading') efRenderPage();
+})();
+</script>
+    
+</body>
+</html>
