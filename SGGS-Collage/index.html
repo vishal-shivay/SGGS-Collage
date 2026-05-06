@@ -28,9 +28,12 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="icon" type="image/png" href="./images/fav-icon.jpg">
+    <link rel="stylesheet" href="./css/navbar.css">
 
 </head>
 <style>
+       *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { overflow-x: hidden !important; }
     /* ======================================================= */
     /* 1. ROOT VARIABLES & BASE STYLES */
     /* ======================================================= */
@@ -81,221 +84,6 @@
     }
 
 
-    /* ======================================================= */
-    /* 2. LAYOUT: HEADER & NAVIGATION */
-    /* ======================================================= */
-
-    .header {
-        background-color: var(--wine-color);
-        color: white;
-        padding: 8px 18px;
-        display: flex;
-        align-items: center;
-        font-size: 0.85rem;
-    }
-
-    .header .icons a {
-        width: 32px;
-        height: 32px;
-        background: white;
-        color: var(--wine-color) !important;
-        border-radius: 4px;
-        font-size: 16px;
-        transition: 0.3s ease;
-        text-decoration: none;
-    }
-
-    .header .icons a:hover {
-        background-color: #e31f1a;
-        color: white !important;
-    }
-
-    .classy-navbar {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-        padding: 14px 0;
-    }
-
-    /* ---- NAV LOGO FIX: correct size & positioning ---- */
-    .nav-logo {
-        height: 68px;
-        width: 100%;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-    }
-
-    .nav-logo:hover {
-        transform: scale(1.02);
-    }
-
-    /* Fix brand alignment so logo isn't clipped */
-    .navbar-brand {
-        overflow: visible;
-        padding: 0;
-    }
-
-    .classy-nav {
-        gap: 6px;
-    }
-
-    .classy-link {
-        color: #5b0b06 !important;
-        font-weight: 799;
-        font-size: 13px;
-        padding: 10px 14px !important;
-        border-radius: 4px;
-        transition: all 0.25s ease;
-        letter-spacing: 0.2px;
-    }
-
-    .classy-link:hover {
-        background: rgba(140, 16, 7, 0.08);
-        color: #8C1007 !important;
-    }
-
-    .classy-link.active {
-        background: rgba(140, 16, 7, 0.12);
-        color: #8C1007 !important;
-    }
-
-    .classy-dropdown {
-        border: 0;
-        border-radius: 8px;
-        padding: 10px;
-        margin-top: 12px;
-        min-width: 260px;
-        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
-        animation: classyDrop 0.25s ease;
-    }
-
-    @keyframes classyDrop {
-        from {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .classy-dropdown .dropdown-item {
-        border-radius: 4px;
-        padding: 10px 12px;
-        font-weight: 500;
-        color: #7a120b;
-        transition: all 0.25s ease;
-    }
-
-    .classy-dropdown .dropdown-item:hover {
-        background: linear-gradient(135deg, #8C1007, #c41a1a);
-        color: #fff;
-        transform: translateX(4px);
-    }
-
-    .classy-dropdown .dropdown-divider {
-        margin: 8px 0;
-        opacity: 0.12;
-    }
-
-    .classy-apply-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 10px 18px;
-        border-radius: 4px;
-        background: linear-gradient(135deg, #8C1007, #c41a1a);
-        color: #fff !important;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 15px;
-        box-shadow: 0 14px 30px rgba(140, 16, 7, 0.25);
-        transition: all 0.3s ease;
-    }
-
-    .classy-apply-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 18px 38px rgba(140, 16, 7, 0.35);
-    }
-
-    .classy-toggler {
-        border-radius: 4px;
-        padding: 6px 10px;
-        border: 1px solid rgba(140, 16, 7, 0.35);
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%238C1007' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-
-    @media (max-width: 991.98px) {
-        .navbar-collapse {
-            margin-top: 14px;
-            padding: 14px;
-            border-radius: 18px;
-            background: #fff;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .navbar-nav {
-            gap: 10px;
-        }
-
-        .navbar-nav .nav-item {
-            width: 100%;
-        }
-
-        .classy-link {
-            width: 100%;
-            padding: 12px 14px !important;
-        }
-
-        .dropdown-menu {
-            position: static !important;
-            width: 100%;
-            min-width: 100%;
-            box-shadow: none;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            margin-top: 8px;
-        }
-
-        .classy-apply-btn {
-            width: 100%;
-        }
-
-        /* Mobile logo fix */
-        .nav-logo {
-            margin-left: 0;
-            height: 52px;
-        }
-    }
-
-    .pro-btn {
-        background-color: #8C1007 !important;
-        color: white !important;
-    }
-
-    .pro-btn:hover {
-        background-color: white !important;
-        color: #8C1007 !important;
-        border-color: #8C1007 !important;
-    }
-
-    .cta-btn {
-        background-color: var(--wine-color);
-        color: white;
-        transition: all 0.3s ease;
-    }
-
-    .cta-btn:hover {
-        background-color: var(--wine-color-hover);
-        color: white;
-    }
 
 
     /* ======================================================= */
@@ -1359,44 +1147,9 @@
     }
 
     @media (max-width: 991.98px) {
-        .navbar-nav {
-            padding-top: 10px;
-        }
+      
 
-        .nav-item {
-            padding-left: 0;
-            text-align: left;
-        }
 
-        .nav-link {
-            padding-left: 15px;
-        }
-
-        .apply-btn {
-            margin: 10px 15px 15px 15px;
-            display: block;
-            text-align: center;
-        }
-
-        .dropdown-menu {
-            width: 100%;
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            margin-left: 15px;
-            background-color: #f8f9fa;
-        }
-
-        .dropdown-item {
-            padding-left: 15px;
-            font-weight: normal;
-            color: #555;
-        }
-
-        .dropdown-item:hover {
-            background-color: #e9ecef !important;
-            color: #8C1007;
-        }
 
         .news-grid {
             grid-template-columns: 1fr 1fr;
@@ -1455,40 +1208,11 @@
             grid-column: span 2;
         }
 
-        .header {
-            padding: 6px 4%;
-            font-size: 0.75rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px 0;
-        }
-
-        .header>*:first-child,
-        .header .icons {
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-        }
-
-        .header .icons a {
-            width: 28px;
-            height: 28px;
-            font-size: 14px;
-        }
+        
     }
 
     @media (max-width: 576px) {
-        .header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
-            padding-bottom: 12px;
-        }
-
-        .header .icons {
-            margin-top: 5px;
-        }
-
+       
         .news-grid {
             grid-template-columns: 1fr;
             grid-auto-rows: 250px;
@@ -2762,203 +2486,777 @@
     [data-aos][data-aos][data-aos-duration="1000"] {
         transition-duration: 1000ms;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── 1. HERO SECTION ─────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 32px 0 !important;
+  }
+ 
+  .hero .display-5 {
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+  }
+ 
+  .hero .lead {
+    font-size: 0.95rem;
+  }
+ 
+  .hero .d-flex.gap-3.mt-4 {
+    flex-wrap: wrap;
+    gap: 10px !important;
+  }
+ 
+  .hero .d-flex.gap-3.mt-4 a.btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+ 
+/* ── 2. CAROUSEL HEIGHT ───────────────────────────────────── */
+@media (max-width: 768px) {
+  #myCustomCarousel,
+  #myCustomCarousel .carousel-inner,
+  #myCustomCarousel .carousel-item {
+    height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+ 
+@media (max-width: 480px) {
+  #myCustomCarousel,
+  #myCustomCarousel .carousel-inner,
+  #myCustomCarousel .carousel-item {
+    height: 180px !important;
+    max-height: 180px !important;
+  }
+}
+ 
+/* ── 3. ABOUT / PHOTO CARD ───────────────────────────────── */
+@media (max-width: 991.98px) {
+  .photo-card2 {
+    height: 260px;
+    margin-top: 24px;
+  }
+ 
+  .photo-card2 .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+ 
+/* ── 4. PRINCIPAL MESSAGE SECTION ────────────────────────── */
+@media (max-width: 900px) {
+  .pm-section {
+    padding: 50px 16px !important;
+  }
+ 
+  .pm-section::after {
+    font-size: 10rem;
+  }
+ 
+  .pm-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+ 
+  .pm-left {
+    position: static !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+ 
+  .pm-ring {
+    width: 160px !important;
+    height: 160px !important;
+  }
+ 
+  .pm-badge {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+ 
+  .pm-stats {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+ 
+  .pm-heading {
+    font-size: 1.6rem !important;
+  }
+ 
+  .pm-quote-block {
+    padding: 22px 16px 22px 22px !important;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .pm-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+ 
+  .pm-section::after {
+    font-size: 6rem;
+    top: 0;
+  }
+}
+ 
+/* ── 5. PROGRAMS SECTION ─────────────────────────────────── */
+@media (max-width: 767px) {
+  .program-card {
+    padding: 20px 16px !important;
+  }
+ 
+  .program-card h5 {
+    font-size: 1rem;
+  }
+}
+ 
+/* ── 6. STATS BAR ────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .stats .display-6 {
+    font-size: 2rem !important;
+  }
+/*  
+  .stats .row {
+    gap: 12px;
+  } */
+}
+ 
+/* ── 7. ACHIEVEMENTS GRID ────────────────────────────────── */
+@media (max-width: 768px) {
+  .achievements-premium {
+    padding: 0 16px !important;
+  }
+ 
+  .ach-card {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 220px;
+  }
+ 
+  .span-3x1,
+  .span-6x1 {
+    grid-column: span 1 !important;
+  }
+}
+ 
+/* ── 8. EXCELLENCE / ACHIEVERS SECTION ───────────────────── */
+@media (max-width: 991.98px) {
+  .excellence-container {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 28px 16px !important;
+  }
+ 
+  .excellence-carousel {
+    height: 360px !important;
+  }
+ 
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .sggs-excellence {
+    padding: 50px 12px !important;
+    margin: 4% 0 !important;
+  }
+ 
+  .sggs-excellence > h2 {
+    font-size: 1.7rem !important;
+    margin-bottom: 30px !important;
+  }
+ 
+  .excellence-carousel {
+    height: 280px !important;
+  }
+ 
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+ 
+  .stat-box {
+    padding: 16px !important;
+  }
+ 
+  .stat-box h3 {
+    font-size: 1.7rem !important;
+  }
+}
+ 
+/* ── 9. STUDENT ACHIEVEMENTS CARDS ──────────────────────── */
+@media (max-width: 1100px) {
+  .sa-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .sa-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+ 
+  .student-achievements-section {
+    padding: 50px 14px !important;
+  }
+ 
+  .sa-heading h2 {
+    font-size: 1.75rem !important;
+  }
+ 
+  .sa-card-img-wrap {
+    height: 200px !important;
+  }
+}
+ 
+/* ── 10. GALLERY GRID ────────────────────────────────────── */
+@media (max-width: 900px) {
+  .clean-professional-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+ 
+@media (max-width: 650px) {
+  .clean-professional-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+ 
+  .grid-item-wrapper {
+    height: 160px !important;
+  }
+ 
+  .gallery-title {
+    font-size: 2rem !important;
+    margin-bottom: 30px !important;
+  }
+}
+ 
+@media (max-width: 400px) {
+  .clean-professional-grid {
+    grid-template-columns: 1fr !important;
+  }
+ 
+  .grid-item-wrapper {
+    height: 200px !important;
+  }
+}
+ 
+/* ── 11. NEWS SECTION ────────────────────────────────────── */
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 260px !important;
+    gap: 14px !important;
+    padding: 0 16px !important;
+  }
+ 
+  .big-card {
+    grid-column: span 2 !important;
+    grid-row: span 1 !important;
+    height: 300px;
+  }
+ 
+  .big-card h3 {
+    font-size: 1.1rem !important;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .news-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 220px !important;
+    padding: 0 12px !important;
+  }
+ 
+  .big-card {
+    grid-column: span 1 !important;
+    height: 220px;
+  }
+ 
+  .news-heading {
+    font-size: 1.8rem !important;
+    padding: 24px 0 !important;
+  }
+}
+ 
+/* ── 12. WHY SGGS SECTION ────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .why-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    gap: 36px !important;
+  }
+ 
+  .why-left {
+    text-align: center;
+  }
+ 
+  .why-right {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+ 
+@media (max-width: 650px) {
+  .why-right {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+ 
+@media (max-width: 420px) {
+  .why-right {
+    grid-template-columns: 1fr !important;
+  }
+}
+ 
+/* ── 13. COURSES GRID ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .courses-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 30px !important;
+  }
+ 
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+ 
+  .course-btn {
+    padding: 12px 10px !important;
+    font-size: 0.85rem !important;
+  }
+}
+ 
+@media (max-width: 420px) {
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+ 
+/* ── 14. PLACEMENT MARQUEE ───────────────────────────────── */
+@media (max-width: 576px) {
+  .placement-marquee h2 {
+    font-size: 1.4rem !important;
+    padding: 0 12px;
+  }
+ 
+  .company {
+    width: 18% !important;
+    padding: 0 8px !important;
+    height: 50px !important;
+  }
+}
+ 
+/* ── 15. MAP SECTION ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .map-title {
+    font-size: 1.8rem !important;
+  }
+ 
+  .map-box iframe {
+    height: 240px !important;
+  }
+ 
+  .sggs-map {
+    padding: 40px 12px !important;
+  }
+}
+ 
+/* ── 16. TESTIMONIALS ────────────────────────────────────── */
+@media (max-width: 576px) {
+  .testimonial-card .card-body {
+    padding: 20px 16px !important;
+  }
+ 
+  .testimonial-card .lead {
+    font-size: 0.95rem !important;
+  }
+ 
+  .quote-mark {
+    font-size: 2.5rem !important;
+  }
+}
+ 
+/* ── 17. ACTION PANEL ────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .action-panel-container {
+    top: auto !important;
+    bottom: 10px !important;
+    right: 0 !important;
+    transform: translateX(95px) !important;
+  }
+ 
+  .action-panel-container.open {
+    transform: translateX(0) !important;
+  }
+ 
+  .action-toggle {
+    display: flex !important;
+  }
+}
+ 
+/* ── 18. FOOTER ──────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px !important;
+    padding: 44px 20px 32px !important;
+  }
+ 
+  .footer-col:first-child {
+    grid-column: span 2 !important;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 32px 16px 24px !important;
+  }
+ 
+  .footer-col:first-child {
+    grid-column: span 1 !important;
+  }
+ 
+  .footer-col h3 {
+    font-size: 1.5rem !important;
+  }
+}
+ 
+
+
+ 
+/* ── 20. SECTION TITLES (global) ─────────────────────────── */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.7rem !important;
+  }
+ 
+  h2.section-title {
+    font-size: 1.7rem !important;
+  }
+}
+ 
+/* ── 21. DIPLOMA CARDS (container fix) ───────────────────── */
+@media (max-width: 767px) {
+  .container .row.gy-4 {
+    margin-top: 0 !important;
+  }
+}
+ 
+/* ── 22. ABOUT SECTION CARDS ─────────────────────────────── */
+@media (max-width: 576px) {
+  #about .col-md-6 > div {
+    padding: 12px !important;
+  }
+}
+ 
+/* ── 23. NAV LOGO ────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .nav-logo {
+    height: 44px !important;
+  }
+}
+ 
+/* ── 24. PREVENT HORIZONTAL OVERFLOW (global safety) ────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+ 
+@media (max-width: 768px) {
+  .container-fluid,
+  .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+    
+
+  /* ===============================
+   HEADER RESPONSIVE — high specificity fix
+================================ */
+/* ===============================
+   HEADER BAR — FINAL FIX
+================================ */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        padding: 6px 10px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* contact div — wrap phone numbers */
+    .header > .contact {
+        padding: 0 !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px 4px !important;
+        width: 100% !important;
+    }
+
+    /* hide the comma separators on very small screens */
+    .header > .contact br {
+        display: none !important;
+    }
+
+    /* shrink the phone icon */
+    .phoneIcon {
+        padding: 4px 6px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* social icons row */
+    .header > .icons {
+        display: flex !important;
+        gap: 6px !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header > .icons a {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 11px !important;
+        border-radius: 4px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 8px !important;
+        font-size: 0.73rem !important;
+    }
+
+    .header > .contact a {
+        font-size: 0.73rem !important;
+    }
+
+    .header > .icons a {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 10px !important;
+    }
+}
+
+
+
+/* ===== CUSTOM SELECT ===== */
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.real-select {
+    display: none;
+}
+
+.fake-select {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    padding: 15px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.fake-select:hover {
+    border-color: #c40000;
+}
+
+.fake-select.open {
+    border-color: #c40000;
+    box-shadow: 0 0 0 4px rgba(196, 0, 0, 0.08);
+}
+
+/* Selected Text */
+.fake-select .selected {
+    display: block;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 30px;
+}
+
+/* Arrow */
+.fake-select::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.fake-select.open::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+
+/* Dropdown Menu */
+.fake-select .options {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    max-height: 300px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+/* Open Dropdown */
+.fake-select.open .options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Options */
+.fake-select .options li {
+    padding: 12px 18px;
+    font-size: 15px;
+    color: #333;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+/* Hover */
+.fake-select .options li:hover {
+    background: #c40000;
+    color: #fff;
+    padding-left: 24px;
+}
+
+/* Scrollbar */
+.fake-select .options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.fake-select .options::-webkit-scrollbar-thumb {
+    background: #c40000;
+    border-radius: 20px;
+}
+
+.fake-select .options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .fake-select {
+        padding: 13px 15px;
+    }
+
+    .fake-select .selected {
+        font-size: 14px;
+    }
+
+    .fake-select .options li {
+        font-size: 14px;
+        padding: 11px 15px;
+    }
+}.feature-card{
+    overflow: visible !important;
+}.select-wrapper{
+    z-index: 9999;
+}
+
+.fake-select .options {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    top: auto;
+
+    width: 100%;
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: all 0.3s ease;
+    z-index: 999999;
+}
 </style>
 
 <body>
 
-    <!-- Header -->
-    <header class="header fw-bold" data-aos="fade-down" data-aos-duration="600">
-        <div class="contact" style="padding: 10px;">
-            <i class="fas fa-phone phoneIcon"></i> Contact:
-            <a href="tel:+911884292036" style="text-decoration: none; color: white;">1884-292036</a>,
-            <a href="tel:+911884245236" style="text-decoration: none; color: white;">+91 1884 245236</a>
-        </div>
-
-        <div class="icons">
-            <a href="https://www.facebook.com/sggskcm.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/channel/UCQxBQ7mNFo62R3t8Va7x54w" target="_blank"><i
-                    class="fab fa-youtube"></i></a>
-            <a
-                href="https://www.instagram.com/sggskhalsacollege?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
-                    class="fab fa-instagram"></i></a>
-        </div>
-    </header>
+   
 
 
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg classy-navbar sticky-top">
-        <div class="container-fluid">
-
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="./images/SGGS-Logo-Updated.png" alt="SGGS College Logo" class="nav-logo">
-            </a>
-
-            <!-- Toggle Button -->
-            <button class="navbar-toggler classy-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Collapsible Menu -->
-            <div class="collapse navbar-collapse" id="navbarsExample">
-                <ul class="navbar-nav ms-auto align-items-lg-center classy-nav gap-lg-2">
-
-                    <!-- Home -->
-                    <li class="nav-item"><a class="nav-link classy-link" href="about.html">About</a></li>
-
-                    <!-- About Dropdown -->
-                    <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle classy-link" href="#" role="button" data-bs-toggle="dropdown">About</a>
-                    <ul class="dropdown-menu classy-dropdown">
-                        <li><a class="dropdown-item" href="about.html">College Overview</a></li>
-                        <li><a class="dropdown-item" href="vision-mission.html">Vision & Mission</a></li>
-                        <li><a class="dropdown-item" href="history.html">History</a></li>
-                        <li><a class="dropdown-item" href="principal-desk.html">Principal's Desk</a></li>
-                    </ul>
-                </li> -->
-
-                    <!-- Programs Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
-                            data-bs-toggle="dropdown">Programs</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
-                            <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
-                            <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
-                            <!-- <li><a class="dropdown-item" href="Course-Programmes.html#phd">PhD Programs</a></li> -->
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item fw-semibold" href="Course-Programmes.html">All Programs →</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!-- Departments Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
-                            data-bs-toggle="dropdown">Departments</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="department-arts.html">Arts</a></li>
-                            <li><a class="dropdown-item" href="department-science.html">Science</a></li>
-                            <li><a class="dropdown-item" href="department-commerce.html">Commerce</a></li>
-                            <li><a class="dropdown-item" href="department-cs-it.html"> Computer Science & IT </a></li>
-                            <li><a class="dropdown-item" href="department-physical-education.html.html">Physical
-                                    Education</a></li>
-                            <li><a class="dropdown-item" href="department-bvoc-horticulture.html">B.Voc</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item fw-semibold" href="Departments-of-SGGS-Collage.html">All
-                                    Departments →</a></li>
-                        </ul>
-                    </li>
-
-
-
-                    <!-- Student Corner Dropdown (NEW) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
-                            data-bs-toggle="dropdown">Academics</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="academic-gems.html">Academic-gems</a></li>
-                            <li><a class="dropdown-item" href="admission-procedure.html">Admission-procedure</a></li>
-                            <li><a class="dropdown-item" href="anti-ragging-cell.html">Anti-ragging-cell</a></li>
-                            <li><a class="dropdown-item" href="career-guidance-cell.html">Career-guidence-cell</a></li>
-                            <li><a class="dropdown-item" href="entrepreneurship-centre.html">Entrepreneurship-center</a>
-                            </li>
-                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
-                            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
-                            <li><a class="dropdown-item" href="workshops-and-seminars.html">Workshops and Seminars</a>
-                            </li>
-                            <!-- <li><a class="dropdown-item" href="career-guidance-cell.html">Career Guidance</a></li> -->
-
-
-                        </ul>
-                    </li>
-
-                    <!-- Resources Dropdown (NEW) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
-                            data-bs-toggle="dropdown">Infrastructure</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="library.html">Library</a></li>
-                            <li><a class="dropdown-item" href="laboratories.html">Laboratories</a></li>
-                            <li><a class="dropdown-item" href="hostels.html">Hostels</a></li>
-                            <li><a class="dropdown-item" href="Facility-in SGGS-Collage.html">Facilities</a></li>
-                            <li><a class="dropdown-item" href="gymnasium.html">Gymnasium & multipurpose indoor
-                                    stadium</a></li>
-                            <li><a class="dropdown-item" href="source-of-inspiration.html">Source of Inspiration </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="#" role="button"
-                            data-bs-toggle="dropdown">Download</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="Prospect-2025.pdf">Prospectus</a></li>
-                            <li><a class="dropdown-item" href="">College Magazine</a></li>
-                            <li><a class="dropdown-item" href="Application-Form.pdf">Application Forms for Teachers</a>
-                            </li>
-                            <li><a class="dropdown-item" href="Alumni-Body-Form.pdf">Alumni Registration Form</a></li>
-                            <li><a class="dropdown-item" href="complaint-Form.pdf">Technical Complaint Form</a></li>
-
-                        </ul>
-                    </li>
-
-
-
-                    <!-- Career Guidance -->
-                    <!-- <li class="nav-item"><a class="nav-link classy-link" href="CarrerGuidance.html">Career Guidance</a></li> -->
-                    <!-- IQAC -->
-                    <li class="nav-item"><a class="nav-link classy-link" href="iqac.html">IQAC</a></li>
-
-                    <!-- NAAC -->
-                    <li class="nav-item"><a class="nav-link classy-link" href="nacc.html">NAAC</a></li>
-                    <li class="nav-item"><a class="nav-link classy-link" href="NIRF-Data-2025.pdf">NIRF</a></li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle classy-link" href="" role="button"
-                            data-bs-toggle="dropdown">NCTE</a>
-                        <ul class="dropdown-menu classy-dropdown">
-                            <li><a class="dropdown-item" href="https://web.ncte.gov.in/">National Council for Teachers
-                                    Education</a></li>
-                            <li><a class="dropdown-item" href="recognition-letters.html">Recognition Letters</a></li>
-                            <li><a class="dropdown-item" href="ncte-documents.html">NCTE Documents</a></li>
-
-
-                        </ul>
-                    </li>
-
-                    <!-- Contact -->
-                    <li class="nav-item"><a class="nav-link classy-link" href="contactus copy.html">Contact</a></li>
-
-
-                    <li class="nav-item "><a class="nav-link classy-link"
-                            href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?saralID=-969760717"
-                            target="_blank" rel="noopener noreferrer">
-                            Online Fee
-                        </a></li>
-
-                    <!-- Apply Now Button -->
-                    <li class="nav-item ms-lg-2">
-                        <a href="Addimision-page.html" class="classy-apply-btn">
-                            <i class="fas fa-graduation-cap"></i> Apply Now
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <!-- Bootstrap Carousel -->
     <div id="myCustomCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -3057,6 +3355,8 @@
                         <span>NAAC‑style quality presentation · Responsive · Fast</span>
                     </div>
                 </div>
+
+
                 <div class="col-lg-5" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
                     <div class="card feature-card p-3 p-md-4 rounded-4">
                         <div class="d-flex align-items-start gap-3">
@@ -3087,22 +3387,61 @@
                                     <label class="form-label small">Program Interest</label>
                                     <div class="select-wrapper">
                                         <select class="real-select" id="program" name="program">
-                                            <option value="bsc">B.Sc. (CS/IT)</option>
-                                            <option value="bca">BCA</option>
-                                            <option value="bcom">B.Com</option>
-                                            <option value="ba">BA</option>
-                                            <option value="pg">PG Programs</option>
-                                        </select>
-                                        <div class="fake-select">
-                                            <span class="selected"> Select </span>
-                                            <ul class="options">
-                                                <li data-value="bsc">B.Sc. (CS/IT)</li>
-                                                <li data-value="bca">BCA</li>
-                                                <li data-value="bcom">B.Com</li>
-                                                <li data-value="ba">BA</li>
-                                                <li data-value="pg">PG Programs</li>
-                                            </ul>
-                                        </div>
+    <option value="">Select Program</option>
+
+    <!-- UG Courses -->
+    <option value="bsc-medical">B.Sc. (Medical & Non-Medical)</option>
+    <option value="bsc-fashion">B.Sc. (Fashion Designing)</option>
+    <option value="bcom">B.Com</option>
+    <option value="bba">B.B.A. (Banking Financial Services & Insurance)</option>
+    <option value="bba-hons">B.B.A. (Honours)</option>
+    <option value="bvoc">B.Voc. (Horticulture Science)</option>
+    <option value="bca">B.C.A.</option>
+    <option value="ba">B.A. (Various Subjects)</option>
+    <option value="bped">B.P.Ed.</option>
+    <option value="dped">D.P.Ed.</option>
+    <option value="bpes">B.P.E.S (Bachelor of Physical Education & Sports)</option>
+    <option value="bmls">B.M.L.S.</option>
+
+    <!-- PG Courses -->
+    <option value="msc">M.Sc. (Chemistry, Physics, Mathematics, Fashion Designing, IT)</option>
+    <option value="ma">M.A. (Punjabi, Hindi, English, Economics, Political Science, Music)</option>
+    <option value="mcom">M.Com</option>
+    <option value="pgdca">P.G.D.C.A.</option>
+    <option value="mped">M.P.Ed.</option>
+
+    <!-- AI Courses -->
+    <option value="cyber-security">B.Sc. (Cyber Security)</option>
+    <option value="aiml">B.Sc. (Artificial Intelligence & Machine Learning)</option>
+</select>
+
+<div class="fake-select">
+    <span class="selected">Select Program</span>
+
+    <ul class="options">
+        <li data-value="bsc-medical">B.Sc. (Medical & Non-Medical)</li>
+        <li data-value="bsc-fashion">B.Sc. (Fashion Designing)</li>
+        <li data-value="bcom">B.Com</li>
+        <li data-value="bba">B.B.A. (Banking Financial Services & Insurance)</li>
+        <li data-value="bba-hons">B.B.A. (Honours)</li>
+        <li data-value="bvoc">B.Voc. (Horticulture Science)</li>
+        <li data-value="bca">B.C.A.</li>
+        <li data-value="ba">B.A. (Various Subjects)</li>
+        <li data-value="bped">B.P.Ed.</li>
+        <li data-value="dped">D.P.Ed.</li>
+        <li data-value="bpes">B.P.E.S (Bachelor of Physical Education & Sports)</li>
+        <li data-value="bmls">B.M.L.S.</li>
+
+        <li data-value="msc">M.Sc. (Chemistry, Physics, Mathematics, Fashion Designing, IT)</li>
+        <li data-value="ma">M.A. (Punjabi, Hindi, English, Economics, Political Science, Music)</li>
+        <li data-value="mcom">M.Com</li>
+        <li data-value="pgdca">P.G.D.C.A.</li>
+        <li data-value="mped">M.P.Ed.</li>
+
+        <li data-value="cyber-security">B.Sc. (Cyber Security)</li>
+        <li data-value="aiml">B.Sc. (Artificial Intelligence & Machine Learning)</li>
+    </ul>
+</div>
                                     </div>
                                     <script>
                                         const fake = document.querySelector('.fake-select');
@@ -3155,12 +3494,12 @@
                 <h4>Admissions Closing Soon!</h4>
                 <p>Time Left: <span id="countdown"></span></p>
             </div>
-            <a href="https://wa.me/9876543210" target="_blank" class="panel-btn whatsapp-bg" title="Chat on WhatsApp">
+            <a href="https://wa.me/8699708857" target="_blank" class="panel-btn whatsapp-bg" title="Chat on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <a href="tel:+911884240275" class="panel-btn red-bg" title="Call SGGS College">
-                <i class="fas fa-phone-alt"></i>
+            <a href="tel:+918699708857" class="panel-btn red-bg" title="Call SGGS College">
+                <i class="fas fa-phone"></i>
                 <span>Call Now</span>
             </a>
             <div class="panel-btn red-bg" id="panelTopBtn" title="Scroll to Top">
@@ -4085,7 +4424,7 @@
 
         <div class="clean-professional-grid">
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-                <a href="./images/fareimg.jpg" data-caption="Students enjoying the farewell party"
+                <a href="./images/fareimg.jpg" 
                     class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/fareimg.jpg" alt="Students enjoying the farewell party"
@@ -4095,7 +4434,7 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="60">
-                <a href="./images/fareimg1.jpg" data-caption="Group photo of students at an event"
+                <a href="./images/fareimg1.jpg" 
                     class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/fareimg1.jpg" alt="Group photo of students at an event"
@@ -4106,7 +4445,7 @@
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="120">
                 <a href="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg"
-                    data-caption="Academic achievement ceremony" class="lightbox-trigger">
+                  class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg"
                             alt="Academic achievement ceremony" class="grid-item-img">
@@ -4115,7 +4454,7 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="180">
-                <a href="./images/image2.jpg" data-caption="Campus view during sunset" class="lightbox-trigger">
+                <a href="./images/image2.jpg"  class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/image2.jpg" alt="Campus view during sunset" class="grid-item-img">
                         <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
@@ -4123,7 +4462,7 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-                <a href="./images/image3.jpg" data-caption="Laboratory session in progress" class="lightbox-trigger">
+                <a href="./images/image3.jpg"  class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/image3.jpg" alt="Laboratory session in progress" class="grid-item-img">
                         <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
@@ -4131,7 +4470,7 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="60">
-                <a href="./images/image4.jpg" data-caption="Library interior and study area" class="lightbox-trigger">
+                <a href="./images/image4.jpg" class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/image4.jpg" alt="Library interior and study area" class="grid-item-img">
                         <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
@@ -4140,7 +4479,7 @@
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="120">
                 <a href="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg"
-                    data-caption="Convocation ceremony moment" class="lightbox-trigger">
+                   class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-1-600x400.jpeg"
                             alt="Convocation ceremony moment" class="grid-item-img">
@@ -4149,17 +4488,17 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="180">
-                <a href="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-2-600x400.jpeg"
-                    data-caption="Student presentation at a seminar" class="lightbox-trigger">
+                <a href="./images/convocation_address.jpg"
+                   class="lightbox-trigger">
                     <div class="card-inner">
-                        <img src="./images/WhatsApp-Image-2023-04-30-at-5.15.26-PM-2-600x400.jpeg"
+                        <img src="./images/convocation_address.jpg"
                             alt="Student presentation at a seminar" class="grid-item-img">
                         <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                     </div>
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-                <a href="./images/image5.jpg" data-caption="Sporting event on the college field"
+                <a href="./images/image5.jpg"
                     class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/image5.jpg" alt="Sporting event on the college field" class="grid-item-img">
@@ -4169,7 +4508,7 @@
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="60">
                 <a href="./images/WhatsApp-Image-2023-05-04-at-8.30.59-AM-600x400.jpeg"
-                    data-caption="Student project exhibition" class="lightbox-trigger">
+                    class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/WhatsApp-Image-2023-05-04-at-8.30.59-AM-600x400.jpeg"
                             alt="Student project exhibition" class="grid-item-img">
@@ -4178,7 +4517,7 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="120">
-                <a href="./images/Exhibition1-Phy.1-600x400.jpg" data-caption="Physics department exhibition setup"
+                <a href="./images/Exhibition1-Phy.1-600x400.jpg" 
                     class="lightbox-trigger">
                     <div class="card-inner">
                         <img src="./images/Exhibition1-Phy.1-600x400.jpg" alt="Physics department exhibition setup"
@@ -4188,10 +4527,10 @@
                 </a>
             </div>
             <div class="grid-item-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="180">
-                <a href="./images/WhatsApp-Image-2023-05-04-at-8.30.59-AM-2-600x400.jpeg"
-                    data-caption="Inter-college cultural event" class="lightbox-trigger">
+                <a href="./images/nsd4.jpg"
+                    class="lightbox-trigger">
                     <div class="card-inner">
-                        <img src="./images/WhatsApp-Image-2023-05-04-at-8.30.59-AM-2-600x400.jpeg"
+                        <img src="./images/nsd4.jpg"
                             alt="Inter-college cultural event" class="grid-item-img">
                         <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                     </div>
@@ -4326,24 +4665,114 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10">
-                                <div class="card shadow-sm border-0 rounded-4 testimonial-card">
-                                    <div class="card-body p-4 p-md-5">
-                                        <div class="d-flex align-items-start gap-3 mb-3">
-                                            <div class="quote-mark" aria-hidden="true">"</div>
-                                            <p class="lead mb-0 text-secondary">My teaching journey started here in
-                                                2009. I see many ups and down here but still I am here. Its my luck I am
-                                                part of this College. Now I will move (may be) but I will always salute
-                                                to such a college</p>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
+                   
+
+
+
+
+<div class="carousel-item">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 testimonial-card">
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <div class="quote-mark" aria-hidden="true">"</div>
+
+                        <p class="lead mb-0 text-secondary">
+                            The overall experience at this college has been amazing. The teachers are highly experienced and always motivate students to perform better in academics and other activities. The college provides a great learning atmosphere with modern facilities, supportive staff, and opportunities for personal growth. I especially liked the discipline and positive environment on campus. It’s a great place for students who want both quality education and confidence-building opportunities.
+                        </p>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-4">
+
+                        <img src="./images/user.jpg"
+                            alt="Student"
+                            class="rounded-circle me-3"
+                            width="56"
+                            height="56" />
+
+                        <div>
+                            <strong>Rahul Sharma</strong>
+
+                            <div class="small text-muted">
+                                B.Com Student
+                            </div>
+
+                            <div class="stars" aria-label="Rated 5 out of 5">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
                             </div>
                         </div>
+
                     </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="carousel-item">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 testimonial-card">
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <div class="quote-mark" aria-hidden="true">"</div>
+
+                        <p class="lead mb-0 text-secondary">
+                            This college has provided me with a wonderful educational journey. The faculty is very supportive and always encourages students to participate in academics, sports, and cultural events. The campus environment is friendly and motivating, which helps students grow both personally and professionally. The infrastructure, library, and classroom facilities are also very impressive. I would definitely recommend this college to anyone looking for quality education and a positive atmosphere.
+                        </p>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-4">
+
+                        <img src="./images/user.jpg"
+                            alt="Student"
+                            class="rounded-circle me-3"
+                            width="56"
+                            height="56" />
+
+                        <div>
+                            <strong>Simran Kaur</strong>
+
+                            <div class="small text-muted">
+                                MBA Student
+                            </div>
+
+                            <div class="stars" aria-label="Rated 5 out of 5">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                    
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
@@ -4871,7 +5300,12 @@
         });
     </script>
 
-
+  <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    
+  </script>
 </body>
 
 </html>

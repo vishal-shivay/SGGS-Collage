@@ -1028,7 +1028,21 @@
         font-size: 2.2rem !important; 
     }
 }
+@media (max-width: 576px) {
 
+    div[style*="text-align: center"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    div[style*="text-align: center"] .apply-btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+}
 
 
 </style>

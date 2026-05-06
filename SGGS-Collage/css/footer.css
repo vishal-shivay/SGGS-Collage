@@ -430,3 +430,157 @@
 }
 
 #footer{color: white !important;}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* laptops / tablets — NO CHANGE */
+@media (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .footer-col:first-child {
+        grid-column: span 3;
+    }
+}
+
+/* tablets & mobiles */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 50px 20px 36px;
+        gap: 26px;
+    }
+
+    /* reset the 3-col span — not needed in single-column layout */
+    .footer-col:first-child {
+        grid-column: span 1;
+    }
+
+    .footer-col h4 {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .footer-col ul li {
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-col h4::after {
+        width: 40px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .footer-social a i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.84rem;
+        padding: 14px 16px;
+    }
+
+    /* ── DROPDOWN: force inline on mobile, no absolute flyout ── */
+    .footer-submenu {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        min-width: 0 !important;
+        width: 100%;
+        box-shadow: none !important;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: none;
+        border-radius: 8px;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .footer-submenu li a {
+        padding: 8px 14px 8px 24px;
+        font-size: 0.86rem;
+    }
+
+    /* disable hover-open on touch devices */
+    .footer-dropdown:hover .footer-submenu {
+        max-height: 0;
+        opacity: 0;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .footer-dropdown:hover .dropdown-arrow {
+        transform: none;
+    }
+
+    /* only active class opens it on mobile */
+    .footer-dropdown.active .footer-submenu {
+        max-height: 300px;
+        opacity: 1;
+        padding: 8px 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 38px 14px 28px;
+        gap: 20px;
+    }
+
+    .footer-col ul li {
+        font-size: 0.88rem;
+    }
+
+    .footer-col h4::after {
+        width: 34px;
+        height: 2px;
+    }
+
+    .footer-social {
+        gap: 8px;
+    }
+
+    .footer-social a i {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+}
+
+/* extra small */
+@media (max-width: 360px) {
+    .footer-container {
+        padding: 30px 12px 24px;
+    }
+
+    .footer-col h4 {
+        font-size: 0.95rem;
+    }
+
+    .footer-col ul li {
+        font-size: 0.84rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.78rem;
+    }
+}

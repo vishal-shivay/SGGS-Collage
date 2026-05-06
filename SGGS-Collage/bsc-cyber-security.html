@@ -451,6 +451,23 @@
       .section-header h2 { font-size: 1.9rem; }
       .stats-grid { gap: 16px; }
     }
+
+
+    @media (max-width: 576px) {
+
+    div[style*="text-align: center"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    div[style*="text-align: center"] .apply-btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+}
   </style>
 </head>
 <body>

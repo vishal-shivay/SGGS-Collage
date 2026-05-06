@@ -130,3 +130,67 @@
 }
 
 /* Sticky Navbar */
+/* ===============================
+   HEADER RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        text-align: center;
+        font-size: 0.82rem;
+    }
+
+    .header .contact {
+        padding: 0 !important;
+        line-height: 1.6;
+    }
+
+    .header .icons {
+        gap: 8px;
+    }
+
+    .header .icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 0.78rem;
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .header .contact {
+        /* stack the two phone numbers on separate lines */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 6px;
+    }
+
+    .header .icons a {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        font-size: 0.74rem;
+    }
+
+    .header .icons a {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+}

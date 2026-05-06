@@ -1026,6 +1026,22 @@
     #footer {
       color: white !important;
     }
+
+    @media (max-width: 576px) {
+
+    div[style*="text-align: center"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    div[style*="text-align: center"] .apply-btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+}
   </style>
 </head>
 
@@ -1115,7 +1131,7 @@
         </div>
         <div>
           <div class="why-img">
-            <img src="https://sggskcm.org/wp-content/uploads/2020/06/IMG_20170303_132334201-600x400.jpg"
+            <img src="./images/Computer-Lab-1.jpg"
               alt="DSC AI ML Lab S.G.G.S. Khalsa College" loading="lazy">
             <div class="why-img-badge"><i class="fas fa-robot"></i> AI &amp; Machine Learning Lab</div>
           </div>
