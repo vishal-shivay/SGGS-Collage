@@ -55,9 +55,9 @@
 
 .classy-link {
     color: #5b0b06 !important;
-    font-weight: 799;
-    font-size: 12.5px;
-    padding: 10px 14px !important;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 10px 10px !important;
     border-radius: 4px;
     transition: all 0.25s ease;
 }
@@ -192,5 +192,27 @@
         width: 24px;
         height: 24px;
         font-size: 11px;
+    }
+}
+
+
+
+/* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100%;
     }
 }

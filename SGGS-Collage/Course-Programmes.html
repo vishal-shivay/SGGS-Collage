@@ -500,6 +500,256 @@
                 line-height: 1.6;
             }
         }
+
+
+
+
+        @media (max-width: 991.98px) {
+  .hero {
+    padding: 80px 16px 70px !important;
+    min-height: auto !important;
+  }
+ 
+  .hero h1 {
+    font-size: 2.2rem !important;
+    letter-spacing: -0.01em !important;
+  }
+ 
+  .hero p {
+    font-size: 1rem !important;
+    margin-bottom: 32px !important;
+  }
+ 
+  .college-badge {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 16px !important;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 12px 50px !important;
+  }
+ 
+  .hero h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+ 
+  .hero p {
+    font-size: 0.9rem !important;
+  }
+}
+ 
+/* ── 2. STATS BAR ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stats-bar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px 8px !important;
+    padding: 20px 16px !important;
+    max-width: 95% !important;
+  }
+ 
+  .stat-divider {
+    display: none !important;
+  }
+ 
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
+ 
+  .stat-label {
+    font-size: 0.72rem !important;
+  }
+ 
+  /* Add a soft vertical separator between columns */
+  .stat-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    padding-right: 12px;
+  }
+}
+ 
+@media (max-width: 400px) {
+  .stats-bar {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+ 
+  .stat-item:nth-child(odd) {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 12px;
+  }
+}
+ 
+/* ── 3. BROWSE PROGRAMS FILTER BAR ──────────────────────── */
+@media (max-width: 767px) {
+  .bg-soft-wine .container > div {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+ 
+  .d-flex.flex-wrap.gap-2 {
+    justify-content: flex-start !important;
+  }
+ 
+  .pill-filter {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+  }
+}
+ 
+/* ── 4. SECTION HEADINGS ─────────────────────────────────── */
+@media (max-width: 576px) {
+  .section-heading {
+    font-size: 1.5rem !important;
+  }
+ 
+  .section-subtitle {
+    font-size: 0.88rem !important;
+  }
+}
+ 
+/* ── 5. PROGRAM CARDS (info-card) ────────────────────────── */
+@media (max-width: 767px) {
+  /* Make all cards single column */
+  .col-md-4 {
+    width: 100% !important;
+  }
+ 
+  .info-card {
+    padding: 18px 16px !important;
+  }
+ 
+  .info-card h5 {
+    font-size: 1rem !important;
+    margin-bottom: 6px !important;
+  }
+ 
+  /* Badge + duration row — stack on very small screens */
+  .info-card .d-flex.justify-content-between.align-items-center.mb-2 {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+ 
+  .badge-stream {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+ 
+  .check-list {
+    font-size: 0.82rem !important;
+    padding-left: 16px !important;
+  }
+ 
+  /* Bottom row: code + button */
+  .info-card .d-flex.justify-content-between.align-items-center:last-child {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+ 
+  .btn-outline-wine,
+  .btn-sm.btn-outline-wine {
+    font-size: 0.78rem !important;
+    padding: 5px 10px !important;
+    white-space: nowrap;
+  }
+}
+ 
+/* ── 6. TWO-COLUMN ON TABLETS ────────────────────────────── */
+@media (min-width: 576px) and (max-width: 767px) {
+  .row.gy-4 > .col-md-4 {
+    width: 50% !important;
+  }
+}
+ 
+/* ── 7. CARD MODAL (POPUP) ───────────────────────────────── */
+@media (max-width: 600px) {
+  .card-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 9999 !important;
+    padding: 16px !important;
+  }
+ 
+  .card-modal-content {
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
+    position: relative;
+  }
+ 
+  .close-popup {
+    position: absolute !important;
+    top: 12px !important;
+    right: 14px !important;
+    font-size: 1.4rem !important;
+    cursor: pointer !important;
+    color: #8C1007 !important;
+    font-weight: 700 !important;
+    line-height: 1;
+  }
+}
+ 
+/* ── 8. SECTION PADDING ──────────────────────────────────── */
+@media (max-width: 767px) {
+  section {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+ 
+  section .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+ 
+/* ── 9. ROW GAPS ─────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .row.gy-4 {
+    --bs-gutter-y: 14px !important;
+  }
+ 
+  .row.gy-4 > * {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+ 
+/* ── 10. APPLY BUTTON ────────────────────────────────────── */
+@media (max-width: 576px) {
+  .apply-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
+ 
+/* ── 11. GLOBAL OVERFLOW SAFETY ──────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+ 
     </style>
 </head>
 
@@ -1216,35 +1466,24 @@
 
     </script>
     <div id="footer"></div>
-<script>
-    fetch('./component/navbar.html').then(r => r.text()).then(d => {
-        document.getElementById('navbar').innerHTML = d;
-
-        // Close navbar on mobile when any nav link is clicked
-        document.getElementById('navbar').addEventListener('click', function (e) {
-            const navbarCollapse = document.querySelector('#navbarsExample');
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                const clickedLink = e.target.closest('a, button:not(.navbar-toggler)');
-                if (clickedLink) {
-                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
-                        || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-                    bsCollapse.hide();
-                }
-            }
-        });
-    });
-    fetch('./component/footer.html').then(r => r.text()).then(d => document.getElementById('footer').innerHTML = d);
-</script>
+ <script>
+    fetch('./component/navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar').innerHTML = d);
+    fetch('./component/footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer').innerHTML = d);
+  </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800,          // animation duration in ms
-            easing: 'ease-in-out',  // easing function
-            offset: 100,            // offset (in px) from the original trigger point
-            delay: 0,               // default delay
-            mirror: false,          // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+            duration: 800,         
+            easing: 'ease-in-out', 
+            offset: 100,          
+            delay: 0,               
+            mirror: false,         
+            anchorPlacement: 'top-bottom', 
         });
     </script>
 

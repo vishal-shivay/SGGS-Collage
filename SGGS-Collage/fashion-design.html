@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Department of Fashion Design | S.G.G.S. Mahilpur College</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        :root {
+            --brand: #8c1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08)
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #222;
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 100px
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%)
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%)
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px), radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px;
+            opacity: 0.5
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3)
+        }
+
+        .hero1 {
+            display: flex;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .eyebrow {
+            background: rgba(255, 255, 255, 0.15);
+            padding: .4rem .9rem;
+            border-radius: 50px;
+            font-size: .9rem;
+            display: inline-block;
+            color: white
+        }
+
+        .hero h1 {
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            font-size: clamp(28px, 6vw, 72px);
+            margin-top: 20px
+        }
+
+        .hero p.lead {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 65ch
+        }
+
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 2rem auto 0
+        }
+
+        .stat-item {
+            text-align: center
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px
+        }
+
+        .stat-label {
+            font-size: .875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3)
+        }
+
+        /* TABS */
+        .prog-tabs-wrap {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(140, 16, 7, 0.10)
+        }
+
+        .prog-tabs {
+            display: flex;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto
+        }
+
+        .prog-tab {
+            flex: 1;
+            padding: 1.1rem 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            background: var(--white);
+            color: var(--muted);
+            border-bottom: 4px solid transparent;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem
+        }
+
+        .prog-tab.active {
+            color: var(--brand);
+            border-bottom: 4px solid var(--brand);
+            background: var(--light)
+        }
+
+        .prog-tab:hover:not(.active) {
+            background: #fdf9f8;
+            color: var(--brand-light)
+        }
+
+        .prog-section {
+            display: none
+        }
+
+        .prog-section.active {
+            display: block
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 4rem 0
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--brand)
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--muted);
+            font-size: 1.1rem
+        }
+
+        .prog-divider {
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand), var(--brand-light), var(--brand));
+            border-radius: 4px;
+            max-width: 120px;
+            margin: 0 auto 1rem
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0e6e6;
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.12)
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0
+        }
+
+        .icon-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            color: white;
+            transition: .4s
+        }
+
+        .icon-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: .9
+        }
+
+        .icon-card h4 {
+            font-size: 1.4rem;
+            margin: 1rem 0 .6rem;
+            font-weight: 700
+        }
+
+        .icon-card:hover {
+            transform: translateY(-10px)
+        }
+
+        .career-card {
+            background: var(--white);
+            border: 3px solid var(--brand);
+            color: var(--brand);
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius)
+        }
+
+        .career-card i {
+            color: var(--brand);
+            font-size: 2.2rem;
+            margin-bottom: .8rem;
+            display: block
+        }
+
+        .career-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: .4rem
+        }
+
+        /* MSC SPECIALIZATION CARDS */
+        .msc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0
+        }
+
+        .msc-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 2px solid #f0e6e6;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: .35s;
+            position: relative
+        }
+
+        .msc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--brand), var(--brand-light))
+        }
+
+        .msc-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.15);
+            border-color: rgba(140, 16, 7, 0.3)
+        }
+
+        .msc-card-header {
+            background: linear-gradient(135deg, var(--brand), var(--brand-light));
+            color: white;
+            padding: 1.5rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .msc-card-header i {
+            font-size: 2.2rem;
+            opacity: .9;
+            flex-shrink: 0
+        }
+
+        .msc-card-header h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0
+        }
+
+        .msc-card-header span {
+            font-size: .82rem;
+            opacity: .85;
+            display: block;
+            margin-top: 2px;
+            font-weight: 500
+        }
+
+        .msc-card-body {
+            padding: 1.5rem 1.8rem
+        }
+
+        .msc-card-body p {
+            color: var(--muted);
+            font-size: .97rem;
+            margin-bottom: 1rem
+        }
+
+        .msc-topics {
+            list-style: none;
+            padding: 0
+        }
+
+        .msc-topics li {
+            padding: .35rem 0;
+            color: #333;
+            font-size: .92rem;
+            border-bottom: 1px solid #f5e8e8
+        }
+
+        .msc-topics li:last-child {
+            border-bottom: none
+        }
+
+        .msc-topics li::before {
+            content: '▸ ';
+            color: var(--brand);
+            font-size: .8rem
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .faq-q {
+            background: var(--brand);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600
+        }
+
+        .faq-a {
+            padding: 1.5rem;
+            background: var(--light);
+            display: none
+        }
+
+        .faq-a.show {
+            display: block
+        }
+
+        /* GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin: 2rem 0
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            border: 2px solid #f0e6e6;
+            background: #fdf9f8;
+            transition: .35s
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.18)
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06)
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(140, 16, 7, 0.75) 0%, transparent 55%);
+            opacity: 0;
+            transition: .35s;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.2rem
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1
+        }
+
+        .gallery-overlay span {
+            color: white;
+            font-weight: 700;
+            font-size: .95rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4)
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .8rem;
+            color: #c9a09e;
+            border: 2.5px dashed #e8d0ce;
+            border-radius: calc(var(--radius) - 2px);
+            background: #fdf9f8;
+            font-size: .88rem;
+            font-weight: 600;
+            min-height: 180px;
+            padding: 1rem;
+            text-align: center
+        }
+
+        .gallery-placeholder i {
+            font-size: 2.5rem;
+            color: var(--brand);
+            opacity: .35
+        }
+
+        .gallery-placeholder small {
+            font-size: .75rem;
+            color: #bbb;
+            font-weight: 400
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center
+        }
+
+        .lightbox.open {
+            display: flex
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6)
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.8rem;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+            opacity: .85;
+            transition: .2s
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
+            transform: scale(1.1)
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 1.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            background: rgba(140, 16, 7, 0.7);
+            padding: .5rem 1.2rem;
+            border-radius: 50px;
+            white-space: nowrap
+        }
+
+        /* SEMESTER TABLE */
+        .semester-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .semester-table th {
+            background: var(--brand);
+            color: white;
+            padding: .9rem 1.2rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: .95rem
+        }
+
+        .semester-table td {
+            padding: .8rem 1.2rem;
+            border-bottom: 1px solid #f0e6e6;
+            font-size: .92rem;
+            color: #333
+        }
+
+        .semester-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .semester-table tr:nth-child(even) td {
+            background: var(--light)
+        }
+
+        .semester-table tr:hover td {
+            background: #fdf0ef
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn .8s ease-out
+        }
+
+        .fade-in-delay {
+            animation: fadeIn .8s ease-out .2s both
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn .8s ease-out .4s both
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .stats-bar {
+                padding: 24px 20px;
+                gap: 20px
+            }
+
+            .stat-number {
+                font-size: 1.8rem
+            }
+
+            .msc-grid {
+                grid-template-columns: 1fr
+            }
+
+            .prog-tab {
+                font-size: .88rem;
+                padding: 1rem .8rem
+            }
+        }
+
+        @media(max-width:576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px 15px;
+                margin: 1rem 10px 0
+            }
+
+            .stat-divider {
+                display: none
+            }
+
+            .stat-item {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+            }
+
+            .stat-item:last-child {
+                border-bottom: none
+            }
+
+            .prog-tab i {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="college-badge" data-aos="zoom-in"><i class="fas fa-tshirt"></i></div>
+            <div class="container hero1">
+                <div>
+                    <span class="eyebrow" data-aos="fade-right">Undergraduate &amp; Postgraduate • Full-Time</span>
+                    <h1 data-aos="fade-up" data-aos-delay="200">Department of Fashion Design</h1>
+                </div>
+            </div>
+            <div class="stats-bar fade-in-delay-2" data-aos="flip-up" data-aos-delay="600">
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Programs<br>Offered</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Years<br>B.Sc. Duration</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Years<br>M.Sc. Duration</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Practical<br>Focus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="prog-tabs-wrap">
+        <div class="prog-tabs">
+            <button class="prog-tab active" onclick="switchTab('ug',this)"><i class="fas fa-user-graduate"></i>
+                Undergraduate (B.Sc.)</button>
+            <button class="prog-tab" onclick="switchTab('pg',this)"><i class="fas fa-graduation-cap"></i> Postgraduate
+                (M.Sc.)</button>
+        </div>
+    </div>
+
+    <!-- ==================== BSC TAB ==================== -->
+    <div id="tab-ug" class="prog-section active">
+        <main class="container">
+
+            <section style="background:var(--light);padding:5rem 0">
+                <h2 data-aos="fade-down">Why Choose B.Sc. Fashion Design at S.G.G.S. Mahilpur</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up">A creative and career-focused program blending design
+                    theory, textile knowledge and hands-on studio practice</p>
+                <div class="icon-grid">
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h4>Design Studio</h4>
+                        <p>Dedicated studio space with sewing machines, mannequins and design tools.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <i class="fas fa-palette"></i>
+                        <h4>Creative Curriculum</h4>
+                        <p>Balanced blend of art, design theory and technical garment skills.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Expert Faculty</h4>
+                        <p>Experienced designers and educators guiding every student's creative journey.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaborative Projects</h4>
+                        <p>Group fashion shows, design exhibitions and industry-linked assignments.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Industry Exposure</h4>
+                        <p>Internships, industry visits and professional portfolio development.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in"
+                        data-aos-delay="500">
+                        <i class="fas fa-cut"></i>
+                        <h4>Technical Training</h4>
+                        <p>Pattern making, draping, garment construction and finishing techniques.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-down">Core Subjects &amp; Topics</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up">A comprehensive three-year program covering creative,
+                    technical and business aspects of fashion</p>
+                <div class="icon-grid">
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="flip-left" data-aos-delay="0">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Fashion Illustration</h4>
+                        <p>Sketching, rendering and design communication techniques.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="flip-left"
+                        data-aos-delay="100">
+                        <i class="fas fa-scroll"></i>
+                        <h4>Textile Science</h4>
+                        <p>Fabrics, fibers, dyeing, printing and material properties.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="flip-left"
+                        data-aos-delay="200">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h4>Pattern Making</h4>
+                        <p>Drafting patterns, grading and technical garment specifications.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="flip-left"
+                        data-aos-delay="300">
+                        <i class="fas fa-cut"></i>
+                        <h4>Garment Construction</h4>
+                        <p>Stitching, tailoring, draping and finishing skills.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="flip-left"
+                        data-aos-delay="400">
+                        <i class="fas fa-history"></i>
+                        <h4>History of Fashion</h4>
+                        <p>Global fashion evolution, Indian textiles and cultural context.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="flip-left"
+                        data-aos-delay="500">
+                        <i class="fas fa-store"></i>
+                        <h4>Fashion Merchandising</h4>
+                        <p>Retail, buying, branding and fashion business fundamentals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Semester Breakdown -->
+            <section style="background:var(--light);padding:5rem 0">
+                <h2 data-aos="fade-down">Program Structure</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up">B.Sc. Fashion Design — 3 Years • 6 Semesters •
+                    Full-Time</p>
+                <div data-aos="fade-up" data-aos-delay="100" style="overflow-x:auto">
+                    <table class="semester-table">
+                        <thead>
+                            <tr>
+                                <th>Semester</th>
+                                <th>Key Subjects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Semester I</strong></td>
+                                <td>Elements &amp; Principles of Design, Fabric Science, Basic Illustration, English
+                                    Communication</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Semester II</strong></td>
+                                <td>Colour Theory, Introduction to Pattern Making, Indian Textile Heritage, Computer
+                                    Applications</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Semester III</strong></td>
+                                <td>Fashion Illustration Advanced, Garment Construction I, History of Fashion,
+                                    Embroidery &amp; Surface Ornamentation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Semester IV</strong></td>
+                                <td>Draping Techniques, Garment Construction II, Fashion Accessories, Textile Printing
+                                    &amp; Dyeing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Semester V</strong></td>
+                                <td>Advanced Pattern Making, Fashion Forecasting, Costume Design, Internship / Field
+                                    Work</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Semester VI</strong></td>
+                                <td>Fashion Merchandising &amp; Retail, Portfolio Development, Final Collection
+                                    Project, Viva Voce</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-down">Career Opportunities</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up">B.Sc. Fashion Design graduates are sought after across
+                    the fashion and textile industry</p>
+                <div class="icon-grid">
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="0">
+                        <i class="fas fa-tshirt"></i>
+                        <h4>Fashion Designer</h4>
+                        <p>Design clothing lines for boutiques, brands and retail</p>
+                    </div>
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="100">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>Higher Studies</h4>
+                        <p>M.Sc. Fashion Design, MBA Fashion, NID / NIFT programs</p>
+                    </div>
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="200">
+                        <i class="fas fa-store"></i>
+                        <h4>Fashion Merchandiser</h4>
+                        <p>Retail buying, product sourcing and brand management</p>
+                    </div>
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="300">
+                        <i class="fas fa-camera"></i>
+                        <h4>Costume Designer</h4>
+                        <p>Film, television, theatre and event production</p>
+                    </div>
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="400">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Fashion Educator</h4>
+                        <p>Teaching in design schools and vocational institutes</p>
+                    </div>
+                    <div class="career-card card" data-aos="flip-right" data-aos-delay="500">
+                        <i class="fas fa-industry"></i>
+                        <h4>Textile Industry</h4>
+                        <p>Fabric development, quality control and production roles</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-up">Department Gallery</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Studio sessions, fashion shows and
+                    design exhibitions</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                        <img src="./images/fashion1.JPG" alt="Studio Session"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 1</strong><small>fashion-bsc-1.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Studio Session</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                        <img src="./images/fashion2.JPG" alt="Pattern Making"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 2</strong><small>fashion-bsc-2.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Pattern Making</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                        <img src="./images/fashion3.JPG" alt="Fashion Show"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 3</strong><small>fashion-bsc-3.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Fashion Show</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                        <img src="./images/fashion4.JPG" alt="Design Exhibition"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 4</strong><small>fashion-bsc-4.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Design Exhibition</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                        <img src="./images/bsc-fashion-design.webp" alt="Textile Workshop"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 5</strong><small>fashion-bsc-5.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Textile Workshop</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                        <img src="./images/msc fashion.jpg" alt="Portfolio Review"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 6</strong><small>fashion-bsc-6.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Portfolio Review</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-down">Frequently Asked Questions</h2>
+                <div class="faq">
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-q">Who is eligible for B.Sc. Fashion Design? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Students who have passed 10+2 in any stream are eligible. Arts and Home
+                            Science backgrounds are advantageous but not mandatory. Aptitude for design and creativity
+                            is valued.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-q">Is sewing or stitching knowledge required to join? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">No prior stitching experience is required. All technical skills including
+                            pattern making, draping and garment construction are taught from the basics during the
+                            program.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-q">Are fashion shows or exhibitions part of the course? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — students participate in annual fashion shows, design exhibitions and
+                            portfolio presentations as part of their practical assessment and professional
+                            development.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-q">Can I start my own fashion label after B.Sc.? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Absolutely. The curriculum includes entrepreneurship, fashion business and
+                            brand development modules that equip students to launch their own design label or studio.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==================== MSC TAB ==================== -->
+    <div id="tab-pg" class="prog-section">
+        <main class="container">
+
+            <section style="background:var(--light);padding:5rem 0">
+                <h2 data-aos="fade-up">Why Choose M.Sc. Fashion Design at S.G.G.S. Mahilpur</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Advanced design thinking, research
+                    methodology and industry-ready specialization for the next level of your creative career</p>
+                <div class="icon-grid">
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Advanced Design Skills</h4>
+                        <p>Master complex design concepts, advanced draping and collection development.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Research-Oriented</h4>
+                        <p>Strong emphasis on design research, innovation and original thesis work.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Industry Workshops</h4>
+                        <p>Regular sessions with industry professionals, designers and brand experts.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <i class="fas fa-laptop"></i>
+                        <h4>CAD &amp; Technology</h4>
+                        <p>Fashion CAD software, digital illustration and modern design technologies.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Career Guidance</h4>
+                        <p>Mentorship for entrepreneurship, industry roles and higher research.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <i class="fas fa-university"></i>
+                        <h4>Modern Facilities</h4>
+                        <p>Advanced studio, digital library, CAD lab and professional sewing equipment.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-up">M.Sc. Fashion Design Program</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A 2-year, 4-semester postgraduate
+                    program offering advanced design specialization and original research</p>
+                <div class="msc-grid">
+
+                    <!-- Semester 1 -->
+                    <div class="msc-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="msc-card-header">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <div>
+                                <h3>Semester I</h3>
+                                <span>Advanced Design Foundations</span>
+                            </div>
+                        </div>
+                        <div class="msc-card-body">
+                            <p>Building on undergraduate knowledge with advanced theoretical and applied design
+                                concepts.</p>
+                            <ul class="msc-topics">
+                                <li>Advanced Fashion Illustration &amp; CAD</li>
+                                <li>Design Research Methodology</li>
+                                <li>Advanced Textile Technology</li>
+                                <li>Contemporary Fashion Theory</li>
+                                <li>Studio Practice I</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Semester 2 -->
+                    <div class="msc-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="msc-card-header">
+                            <i class="fas fa-cut"></i>
+                            <div>
+                                <h3>Semester II</h3>
+                                <span>Construction &amp; Specialization</span>
+                            </div>
+                        </div>
+                        <div class="msc-card-body">
+                            <p>Intensive focus on advanced garment construction, specialization and collection
+                                planning.</p>
+                            <ul class="msc-topics">
+                                <li>Advanced Draping &amp; Pattern Engineering</li>
+                                <li>Sustainable Fashion &amp; Textiles</li>
+                                <li>Fashion Brand Management</li>
+                                <li>Costume &amp; Theatrical Design</li>
+                                <li>Studio Practice II</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Semester 3 -->
+                    <div class="msc-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="msc-card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h3>Semester III</h3>
+                                <span>Industry &amp; Entrepreneurship</span>
+                            </div>
+                        </div>
+                        <div class="msc-card-body">
+                            <p>Industry engagement, entrepreneurship skills and beginning the research dissertation.</p>
+                            <ul class="msc-topics">
+                                <li>Fashion Forecasting &amp; Trend Analysis</li>
+                                <li>Fashion Entrepreneurship</li>
+                                <li>Export &amp; Retail Management</li>
+                                <li>Dissertation – Phase I (Proposal)</li>
+                                <li>Industry Internship</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Semester 4 -->
+                    <div class="msc-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="msc-card-header">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h3>Semester IV</h3>
+                                <span>Research, Collection &amp; Viva</span>
+                            </div>
+                        </div>
+                        <div class="msc-card-body">
+                            <p>Final collection development, dissertation submission and professional presentation.</p>
+                            <ul class="msc-topics">
+                                <li>Final Collection Design &amp; Production</li>
+                                <li>Dissertation – Phase II (Submission)</li>
+                                <li>Portfolio &amp; Professional Practice</li>
+                                <li>Grand Fashion Show / Exhibition</li>
+                                <li>Viva Voce</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section style="background:var(--light);padding:4rem 0">
+                <h2 data-aos="fade-up">Career Opportunities</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">M.Sc. Fashion Design graduates are
+                    equipped for leadership roles in the global fashion and textile industry</p>
+                <div class="icon-grid">
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="0">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Fashion Educator</h4>
+                        <p>Teaching at design colleges, universities and fashion institutes</p>
+                    </div>
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-tshirt"></i>
+                        <h4>Senior Designer</h4>
+                        <p>Lead designer roles at fashion houses and apparel brands</p>
+                    </div>
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-store"></i>
+                        <h4>Fashion Entrepreneur</h4>
+                        <p>Launch your own label, boutique or design studio</p>
+                    </div>
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Textile Researcher</h4>
+                        <p>Research institutions, textile councils and innovation labs</p>
+                    </div>
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>PhD / Doctoral Research</h4>
+                        <p>Pursue research in design, textiles or fashion studies</p>
+                    </div>
+                    <div class="career-card card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-globe"></i>
+                        <h4>Styling &amp; Consulting</h4>
+                        <p>Fashion styling, image consulting and trend advisory roles</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-up">Department Gallery</h2>
+                <div class="prog-divider"></div>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Research presentations, designer
+                    workshops and postgraduate fashion life</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                        <img src="./images/fashion1.JPG" alt="Advanced Studio"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 1</strong><small>fashion-msc-1.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Advanced Studio</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                        <img src="./images/fashion2.JPG" alt="Guest Designer Talk"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 2</strong><small>fashion-msc-2.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Guest Designer Talk</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                        <img src="./images/fashion3.JPG" alt="CAD Lab"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 3</strong><small>fashion-msc-3.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>CAD Lab</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                        <img src="./images/fashion4.JPG" alt="Final Collection"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 4</strong><small>fashion-msc-4.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Final Collection</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                        <img src="./images/bsc-fashion-design.webp" alt="Fashion Show"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 5</strong><small>fashion-msc-5.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Fashion Show</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                        <img src="./images/msc fashion.jpg" alt="Dissertation Presentation"
+                            onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Slot 6</strong><small>fashion-msc-6.jpg</small></div>'">
+                        <div class="gallery-overlay"><span>Dissertation Presentation</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+                <div class="faq">
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-q">What is the eligibility for M.Sc. Fashion Design? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">A B.Sc. in Fashion Design or a related field (Home Science, Textile Design,
+                            Applied Arts) with minimum 45% marks. Candidates with a BFA may also be considered. Check
+                            with the admissions office for current criteria.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-q">Is a dissertation/thesis compulsory? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — all M.Sc. Fashion Design students complete an original research
+                            dissertation and a final collection project presented at a grand fashion show in Semester
+                            IV.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-q">Will I learn CAD and digital design tools? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — the program includes dedicated modules on Fashion CAD software,
+                            digital illustration and computer-aided pattern making to prepare students for the modern
+                            industry.</div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-q">Are scholarships available for M.Sc. students? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — merit and need-based scholarships are available under government and
+                            college-level schemes. Contact the admissions office for details on eligibility and
+                            application process.</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('./component/navbar.html').then(r => r.text()).then(d => document.getElementById('navbar').innerHTML = d);
+        fetch('./component/footer.html').then(r => r.text()).then(d => document.getElementById('footer').innerHTML = d);
+    </script>
+    <script>
+        function switchTab(tab, btn) {
+            document.querySelectorAll('.prog-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.prog-tab').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            btn.classList.add('active');
+            document.querySelector('.prog-tabs-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => AOS.refresh(), 150);
+        }
+
+        document.addEventListener('click', function (e) {
+            const q = e.target.closest('.faq-q');
+            if (!q) return;
+            const a = q.nextElementSibling;
+            const i = q.querySelector('i');
+            a.classList.toggle('show');
+            i.classList.toggle('fa-chevron-down');
+            i.classList.toggle('fa-chevron-up');
+        });
+
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            if (!img) return;
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-caption').textContent = img.alt;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function closeLightboxOutside(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ duration: 700, easing: 'ease-out-cubic', offset: 80, once: false, mirror: true });</script>
+</body>
+
+</html>

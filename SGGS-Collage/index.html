@@ -2536,8 +2536,7 @@
     text-align: center;
   }
 }
- 
-/* ── 2. CAROUSEL HEIGHT ───────────────────────────────────── */
+/* ── CAROUSEL IMAGE FIX ───────────────────────────────────── */
 @media (max-width: 768px) {
   #myCustomCarousel,
   #myCustomCarousel .carousel-inner,
@@ -2545,14 +2544,28 @@
     height: 220px !important;
     max-height: 220px !important;
   }
+
+  #myCustomCarousel .carousel-item img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;       /* fills the box, crops top/bottom not sides */
+    object-position: center center !important;
+  }
 }
- 
+
 @media (max-width: 480px) {
   #myCustomCarousel,
   #myCustomCarousel .carousel-inner,
   #myCustomCarousel .carousel-item {
     height: 180px !important;
     max-height: 180px !important;
+  }
+
+  #myCustomCarousel .carousel-item img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: fill !important;
+    object-position: center center !important;
   }
 }
  
@@ -3599,7 +3612,7 @@ html, body {
 
                     <div class="pm-stats" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
                         <div class="pm-stat">
-                            <span class="pm-stat-num">78+</span>
+                            <span class="pm-stat-num">80</span>
                             <span class="pm-stat-label">Years of Legacy</span>
                         </div>
                         <div class="pm-stat">
@@ -3619,81 +3632,84 @@ html, body {
                 </div>
 
                 <!-- RIGHT: Message -->
-                <div class="pm-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+              <div class="pm-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
 
-                    <div class="pm-eyebrow">
-                        <i class="fas fa-feather-alt"></i>
-                        Principal's Message
-                    </div>
+    <div class="pm-eyebrow">
+        <i class="fas fa-feather-alt"></i>
+        Principal's Message
+    </div>
 
-                    <h2 class="pm-heading">
-                        A Warm Welcome from<br>
-                        <span>
-                            <span class="pm-heading-underline" id="pmUnderline">the Principal's Desk</span>
-                        </span>
-                    </h2>
+    <h2 class="pm-heading">
+        A Warm Welcome from<br>
+        <span>
+            <span class="pm-heading-underline" id="pmUnderline">the Principal's Desk</span>
+        </span>
+    </h2>
 
-                    <div class="pm-quote-block">
-                        <div class="pm-quote-icon">"</div>
-                        <div class="pm-message">
-                            <p>
-                                As we stand on the threshold of a new academic session, I extend a hearty and warm
-                                welcome to all my students, staff and parents. Being at the spearhead of this
-                                prestigious pre-independence institution is a most honorable and, at the same time, a
-                                highly daunting task. I take this opportunity to thank the Management, Sikh Educational
-                                Council for giving me the chance to serve the community here.
-                            </p>
-                            <p>
-                                Each academic year is a new height scaled, another dream realized with new targets set
-                                for the future. Each and every member of this Institution is devoted to turning dreams
-                                &amp; aspirations into reality through sincerity and perseverance.
-                            </p>
+    <div class="pm-quote-block">
+        <div class="pm-quote-icon">"</div>
+        <div class="pm-message">
+            <p>
+                <em>"Education is not the learning of facts, but the training of the mind to think."</em> – Albert Einstein
+            </p>
+            <p>
+                As we stand on the threshold of the new academic session 2026-27, it brings me immense joy and pride
+                to welcome you all to SGGS Khalsa College, Mahilpur. Whether you are returning to continue your
+                scholarly journey or stepping into this vibrant campus for the first time, you are entering a space
+                dedicated to excellence, innovation, and holistic development.
+            </p>
 
-                            <!-- Extra content (hidden by default) -->
-                            <div class="pm-extra" id="pmExtra">
-                                <p>
-                                    From the current session, the NEP-2020 has come into play opening up not only new
-                                    vistas, opportunities and courses but challenges also. There is a huge
-                                    diversification in education from formal to professional and vocational courses
-                                    which shall help our youth realize their potential and dreams.
-                                </p>
-                                <p>
-                                    We have braced ourselves both to realize the dreams and vision of the policy-makers
-                                    and, more importantly, to equip our students with the needed skill-set for their
-                                    bright and successful future. With a view to unfold hidden potential and develop
-                                    multifaceted personality that help the aspirants in the world of work, the College
-                                    lays special emphasis on sports, extra-curricular activities, seminars and
-                                    workshops.
-                                </p>
-                                <p>
-                                    It is indeed very satisfying that with the whole-hearted support and visionary
-                                    guidance of the College Management led by our worthy President Sant Sadhu Singh Ji
-                                    Kaharpuri and tireless efforts of the faculty members, the college is scaling new
-                                    heights every year. Looking forward to your continued help, support and active
-                                    co-operation and wishing you all good luck.
-                                </p>
-                            </div>
-                        </div>
+            <!-- Extra content (hidden by default) -->
+            <div class="pm-extra" id="pmExtra">
+                <p>
+                    At SGGS Khalsa College, we believe in nurturing not just academically proficient individuals,
+                    but also responsible, empathetic, and forward-thinking citizens. Our commitment goes beyond
+                    traditional classroom teaching; we aim to foster curiosity, critical thinking, and the
+                    resilience needed to thrive in a dynamic global environment.
+                </p>
+                <p>
+                    We strive tirelessly for strengthening our commitment to quality education by integrating
+                    updated technology into our pedagogy and expanding our extracurricular avenues. Our dedicated
+                    faculty members are mentors ready to ignite the flames of curiosity and guide you in
+                    discovering your latent talents.
+                </p>
+                <p>
+                    I urge students to look beyond academic achievements and actively participate in sports,
+                    cultural activities, and community service. True education prepares you for life—instilling
+                    core values of integrity, discipline, and compassion. Remember, the choices you make when
+                    no one is watching define your character.
+                </p>
+                <p>
+                    To the parents, thank you for trusting us with the future of your wards. We value your
+                    partnership and invite you to work together with us in shaping their journey.
+                </p>
+                <p>
+                    I warmly welcome the new batch of 2026 and wish all my students a rewarding, productive,
+                    and memorable academic year. Believe in yourselves, aim high, and let us make this year
+                    a resounding success.
+                </p>
+            </div>
+        </div>
 
-                        <button class="pm-readmore-btn" id="pmReadBtn" onclick="togglePmMessage()">
-                            <i class="fas fa-chevron-down" id="pmBtnIcon"></i>
-                            Read Full Message
-                        </button>
-                    </div>
+        <button class="pm-readmore-btn" id="pmReadBtn" onclick="togglePmMessage()">
+            <i class="fas fa-chevron-down" id="pmBtnIcon"></i>
+            Read Full Message
+        </button>
+    </div>
 
-                    <!-- Signature -->
-                    <div class="pm-signature-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-                        <div class="pm-signature-icon">
-                            <i class="fas fa-pen-fancy"></i>
-                        </div>
-                        <div>
-                            <span class="pm-signature-name">Dr. Parvinder Singh</span>
-                            <span class="pm-signature-role">Principal, S.G.G.S. Khalsa College Mahilpur</span>
-                        </div>
-                        <div class="pm-signature-line"></div>
-                    </div>
+    <!-- Signature -->
+    <div class="pm-signature-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+        <div class="pm-signature-icon">
+            <i class="fas fa-pen-fancy"></i>
+        </div>
+        <div>
+            <span class="pm-signature-name">Dr. Parvinder Singh</span>
+            <span class="pm-signature-role">Principal, S.G.G.S. Khalsa College Mahilpur</span>
+        </div>
+        <div class="pm-signature-line"></div>
+    </div>
 
-                </div>
+</div>
             </div>
         </section>
 
