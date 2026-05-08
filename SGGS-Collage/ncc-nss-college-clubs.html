@@ -444,6 +444,27 @@
             .photo-grid.seven-col { grid-template-columns: 1fr; }
         }
         button:focus, .gallery-item:focus { outline: 3px solid #8c1007; outline-offset: 3px; }
+
+
+        /* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+    }
+}
     </style>
 </head>
 <body>

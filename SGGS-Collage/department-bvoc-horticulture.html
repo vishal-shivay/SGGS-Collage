@@ -213,6 +213,27 @@
             .stat-item { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
             .stat-item:last-child { border-bottom: none; }
         }
+
+
+        /* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+    }
+}
     </style>
 </head>
 <body>

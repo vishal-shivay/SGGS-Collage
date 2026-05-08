@@ -321,6 +321,26 @@
       .aqar-table thead th, .aqar-table tbody td { padding: 10px 12px; font-size: .82rem; }
       .naac-banner { flex-direction: column; }
     }
+
+    /* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+    }
+}
   </style>
 </head>
 

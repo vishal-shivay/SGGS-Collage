@@ -363,6 +363,25 @@
             color: white; padding: 12px 32px; border-radius: 50px; font-weight: 700; transition: all .3s;
         }
         .student-card:hover .pill { transform: scale(1.07); box-shadow: 0 8px 25px rgba(140,16,7,0.35); }
+        /* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+    }
+}
     </style>
 </head>
 

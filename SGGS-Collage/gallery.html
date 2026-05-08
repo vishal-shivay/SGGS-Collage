@@ -309,6 +309,26 @@
       .gallery-masonry{ column-count:1; }
       .dept-photo-grid{ grid-template-columns:1fr; }
     }
+
+    /* Mobile Logo Fix */
+@media (max-width: 576px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+    .navbar-brand img,
+    .logo img {
+        width: 100% !important;
+    }
+}
   </style>
 </head>
 <body>
