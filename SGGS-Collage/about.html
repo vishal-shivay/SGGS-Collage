@@ -902,6 +902,257 @@
         width: 100% !important;
     }
 }
+
+
+
+
+
+
+/* ── MOBILE TEXT ALIGNMENT FIXES ── */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* History heading */
+  .history h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* About / Campus section */
+  .about-wine .col-lg-6 {
+    text-align: center;
+  }
+
+  .about-wine h2,
+  .about-wine p {
+    text-align: center;
+  }
+
+  .about-wine .d-flex {
+    justify-content: center;
+  }
+
+  /* Guru Gobind Singh section */
+  .gurugobind-container {
+    text-align: center;
+  }
+
+  .gurugobind-container p {
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .gurugobind-container h1,
+  .gurugobind-container h3 {
+    text-align: center;
+  }
+
+  /* Inspiration cards */
+  .inspiration-card {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .inspiration-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .legacy-content h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* Principal section */
+  .principal h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Mission & Vision */
+  .mission h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .mv-section h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .mv-section > p {
+    text-align: center;
+  }
+
+  .mv-card {
+    text-align: center;
+  }
+
+  /* Goals section */
+  .goals-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .goals-section .facility-description {
+    text-align: center;
+  }
+
+  .goal-card p {
+    text-align: left;
+  }
+
+  /* Facility & Sports headers */
+  .facility-header h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .facility-header .icon-box {
+    margin: 0 auto;
+  }
+
+  .facility-description {
+    text-align: center;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .feature-card .feature-icon {
+    margin: 0 auto 16px;
+  }
+
+  /* Council section */
+  .council-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .council-section > .container > p {
+    text-align: center;
+  }
+
+  /* Alumni section */
+  .alumni-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .alumni-section .facility-description {
+    text-align: center;
+  }
+
+  .alumni-list li .aname,
+  .alumni-list li .arole {
+    text-align: left;
+  }
+
+  /* Ex-Faculty section */
+  .exfaculty-section h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .exfaculty-section > .container > p {
+    text-align: center;
+  }
+
+  .faculty-pill {
+    text-align: center;
+  }
+
+  /* RTI section */
+  .rti-box h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .rti-box p {
+    text-align: left;
+  }
+
+  /* Section tags & icon-box alignment */
+  .section-tag {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 16px;
+  }
+
+  .d-flex.align-items-center.gap-3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .facility-subtitle {
+    text-align: center;
+  }
+}
+
+/* ── EXTRA SMALL (< 480px) ── */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .legacy-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .mv-section h1,
+  .goals-section h2,
+  .facility-header h2,
+  .council-section h2,
+  .alumni-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .rti-box {
+    padding: 24px 16px !important;
+  }
+
+  .rti-box h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Guru Gobind Singh heading & text block */
+  .gurugobind-container .col-12.col-md-8 {
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .gurugobind-container .col-12.col-md-8 h1,
+  .gurugobind-container .col-12.col-md-8 h3 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .gurugobind-container .col-12.col-md-8 h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .gurugobind-container .col-12.col-md-8 p {
+    text-align: left;      /* body text stays left for readability */
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
   </style>
 </head>
 
@@ -960,8 +1211,8 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
           <div class="position-relative rounded-4 overflow-hidden shadow-sm">
-            <img src="./images/history-building.jpg" alt="S.G.G.S. College Campus" class="img-fluid rounded-4" width="100%"
-              style=object-fit:cover;">
+            <img src="./images/history-building.jpg" alt="S.G.G.S. College Campus" class="img-fluid rounded-4" width="100%"style="height:75vh;"
+              style="object-fit:cover;">
             <div
               class="about-badge position-absolute top-0 start-0 bg-gold text-dark fw-semibold px-3 py-1 m-3 rounded-pill shadow">
               Since 1946</div>
@@ -1126,7 +1377,7 @@
         <div class="legacy-content" data-aos="fade-up" data-aos-duration="800">
           <div class="inspiration-card">
             <div class="inspiration-text">
-              <h2>PRINCIPAL HARBHAJAN SINGH<span class="decor-line"></span></h2>
+              <h2>PRINCIPAL HARBHAJAN SINGH JI<span class="decor-line"></span></h2>
               <p>
                 Principal Harbhajan Singh, the founding leader of Sri Guru Gobind Singh Khalsa College Mahilpur, was a
                 great visionary, educationist, philanthropist and thinker, who contributed his whole life and lifelong
@@ -1226,7 +1477,7 @@
             </tr>
             <tr>
               <td>7</td>
-              <td>S. Gurmail Singh Gill</td>
+              <td>S. Jaspreet Singh Gill</td>
               <td>Assistant Manager</td>
             </tr>
             <tr>
@@ -1246,7 +1497,7 @@
             </tr>
             <tr>
               <td>11</td>
-              <td>S. Sohan Singh Lally</td>
+              <td>S. Mangaljit Singh Lally</td>
               <td>Assistant Treasurer</td>
             </tr>
             <tr>
