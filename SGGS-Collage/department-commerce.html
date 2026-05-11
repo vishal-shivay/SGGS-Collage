@@ -98,7 +98,7 @@
         .stat-label { font-size: .875rem; color: rgba(255,255,255,0.9); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
         .stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.3); }
 
-        /* ── PROGRAM TABS (3 tabs) ── */
+        /* ── PROGRAM TABS (4 tabs) ── */
         .prog-tabs-wrap {
             position: sticky; top: 0; z-index: 100;
             background: var(--white);
@@ -106,7 +106,7 @@
         }
         .prog-tabs {
             display: flex; justify-content: center;
-            max-width: 800px; margin: 0 auto;
+            max-width: 1000px; margin: 0 auto;
         }
         .prog-tab {
             flex: 1; padding: 1.1rem 1.2rem;
@@ -236,32 +236,26 @@
             .stat-divider { display: none; }
             .stat-item { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
             .stat-item:last-child { border-bottom: none; }
-            .prog-tab { font-size: .78rem; padding: .8rem .4rem; gap: .2rem; }
+            .prog-tab { font-size: .72rem; padding: .8rem .3rem; gap: .15rem; }
             .prog-tab i { display: none; }
         }
 
-
-
-
         /* Mobile Logo Fix */
-@media (max-width: 576px) {
-
-    .navbar-brand img,
-    .logo img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 380px) {
-
-    .navbar-brand img,
-    .logo img {
-        width: 100% !important;
-    }
-}
+        @media (max-width: 576px) {
+            .navbar-brand img,
+            .logo img {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+        }
+        /* Extra Small Devices */
+        @media (max-width: 380px) {
+            .navbar-brand img,
+            .logo img {
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -280,7 +274,6 @@
             <div>
                 <span class="eyebrow" data-aos="fade-down" data-aos-duration="700" data-aos-delay="100">Undergraduate &amp; Postgraduate • Full-Time</span>
                 <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Department of Commerce &amp; Management</h1>
-                <!-- <p class="lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="320">Developing finance, management and business leaders — from a strong B.Com / BBA foundation to advanced M.Com specialization.</p> -->
             </div>
         </div>
         <div class="stats-bar fade-in-delay-2" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
@@ -307,7 +300,7 @@
     </div>
 </section>
 
-<!-- ══════════ 3-TAB BAR ══════════ -->
+<!-- ══════════ 4-TAB BAR ══════════ -->
 <div class="prog-tabs-wrap">
     <div class="prog-tabs">
         <button class="prog-tab active" onclick="switchTab('bcom', this)">
@@ -316,8 +309,11 @@
         <button class="prog-tab" onclick="switchTab('mcom', this)">
             <i class="fas fa-chart-pie"></i> M.Com
         </button>
-        <button class="prog-tab" onclick="switchTab('bba', this)">
-            <i class="fas fa-briefcase"></i> BBA
+        <button class="prog-tab" onclick="switchTab('bba-bfsi', this)">
+            <i class="fas fa-university"></i> B.B.A. (BFSI)
+        </button>
+        <button class="prog-tab" onclick="switchTab('bba-hons', this)">
+            <i class="fas fa-briefcase"></i> B.B.A. (Hons.)
         </button>
     </div>
 </div>
@@ -371,41 +367,41 @@
         </div>
     </section>
 
-    <!-- ★ B.COM GALLERY ★ -->
+    <!-- B.COM GALLERY -->
     <section>
         <h2 data-aos="fade-up">Department Gallery</h2>
         <div class="prog-divider"></div>
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Commerce classes, seminars and campus activities</p>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-1.jpg" alt="Commerce Class"
+                <img src="./images/com.png" alt="Commerce Class"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/bcom-1.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Commerce Class</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-2.jpg" alt="Finance Lab"
+                <img src="./images/comtwo.png" alt="Finance Lab"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/bcom-2.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Finance Lab</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-3.jpg" alt="Seminar"
+                <img src="./images/comthree.jpg" alt="Seminar"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/bcom-3.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Seminar</span></div>
+                <div class="gallery-overlay"><span></span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-4.jpg" alt="Annual Function"
+                <img src="./images/comfour.jpg" alt="Annual Function"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/bcom-4.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Annual Function</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-5.jpg" alt="Guest Lecture"
+                <img src="./images/comfive.jpg" alt="Guest Lecture"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/bcom-5.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Guest Lecture</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
-                <img src="./images/gallery/bcom-6.jpg" alt="Campus Life"
+                <img src="./images/comsix.jpg" alt="Campus Life"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/bcom-6.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Campus Life</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
         </div>
     </section>
@@ -481,41 +477,41 @@
         </div>
     </section>
 
-    <!-- ★ M.COM GALLERY ★ -->
+    <!-- M.COM GALLERY -->
     <section>
         <h2 data-aos="fade-up">Department Gallery</h2>
         <div class="prog-divider"></div>
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Research, workshops and M.Com campus life</p>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-1.jpg" alt="Research Seminar"
+                <img src="./images/comtwo.png" alt="Research Seminar"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/mcom-1.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Research Seminar</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-2.jpg" alt="Finance Workshop"
+                <img src="./images/comfour.jpg" alt="Finance Workshop"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/mcom-2.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Finance Workshop</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-3.jpg" alt="Guest Lecture"
+                <img src="./images/comsix.jpg" alt="Guest Lecture"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/mcom-3.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Guest Lecture</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-4.jpg" alt="Project Presentation"
+                <img src="./images/com.png" alt="Project Presentation"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/mcom-4.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Project Presentation</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-5.jpg" alt="Industry Visit"
+                <img src="./images/comthree.jpg" alt="Industry Visit"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/mcom-5.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Industry Visit</span></div>
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
-                <img src="./images/gallery/mcom-6.jpg" alt="Convocation"
+                <img src="./images/comfive.jpg" alt="Convocation"
                      onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/mcom-6.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Convocation</span></div>
+                <div class="gallery-overlay"><span></span></div>
             </div>
         </div>
     </section>
@@ -542,111 +538,237 @@
 </main>
 </div><!-- /tab-mcom -->
 
-<!-- ══════════════════════════════════ -->
-<!--          BBA TAB                  -->
-<!-- ══════════════════════════════════ -->
-<div id="tab-bba" class="prog-section">
+<!-- ══════════════════════════════════════════════════ -->
+<!--   B.B.A. (Banking Financial Services & Insurance) -->
+<!-- ══════════════════════════════════════════════════ -->
+<div id="tab-bba-bfsi" class="prog-section">
 <main class="container">
 
-    <!-- WHY BBA -->
+    <!-- WHY BBA BFSI -->
     <section style="background:var(--light);padding:5rem 0">
-        <h2 data-aos="fade-up">Why Choose BBA at S.G.G.S. Mahilpur?</h2>
+        <h2 data-aos="fade-up">Why Choose B.B.A. (Banking Financial Services &amp; Insurance)?</h2>
         <div class="prog-divider"></div>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Strong foundation in management, leadership, and business skills</p>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A specialized program preparing students for the fast-growing BFSI sector</p>
         <div class="icon-grid">
-            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-briefcase"></i><h4>Business Knowledge</h4><p>Learn fundamentals of management, marketing, finance, and HR.</p></div>
-            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-chart-line"></i><h4>Analytical Skills</h4><p>Develop business analytics, problem-solving and decision-making skills.</p></div>
-            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-users"></i><h4>Leadership Training</h4><p>Prepare for managerial and team-leading roles.</p></div>
-            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-project-diagram"></i><h4>Project-Based Learning</h4><p>Practical exposure through live projects and case studies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-university"></i><h4>Banking Knowledge</h4><p>In-depth understanding of banking operations, products and regulations.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-shield-alt"></i><h4>Insurance Studies</h4><p>Principles of life, general and health insurance with hands-on case studies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-chart-line"></i><h4>Financial Services</h4><p>Mutual funds, stock markets, wealth management and financial planning.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-laptop-code"></i><h4>FinTech & Digital Banking</h4><p>Exposure to digital payment systems, UPI, net banking and emerging FinTech trends.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-user-tie"></i><h4>Industry-Ready Training</h4><p>Practical training aligned with BFSI sector requirements and certifications.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-handshake"></i><h4>Corporate Tie-Ups</h4><p>Internship and placement support with banks, NBFCs and insurance companies.</p></div>
         </div>
     </section>
 
-    <!-- BBA COURSE STRUCTURE -->
+    <!-- BBA BFSI COURSE STRUCTURE -->
     <section>
         <h2 data-aos="fade-up">Course Structure</h2>
         <div class="prog-divider"></div>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Comprehensive subjects for management and business skills</p>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Comprehensive curriculum covering the entire BFSI landscape</p>
         <div class="icon-grid">
-            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0"><i class="fas fa-chart-pie"></i><h4>Management Principles</h4><p>Planning, organizing, leading and controlling business operations.</p></div>
-            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-coins"></i><h4>Finance & Accounting</h4><p>Financial statements, budgeting and cost management.</p></div>
-            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-bullhorn"></i><h4>Marketing & HR</h4><p>Brand management, recruitment and workforce planning.</p></div>
-            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-project-diagram"></i><h4>Project Work</h4><p>Live industry projects, case studies and internship training.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0"><i class="fas fa-landmark"></i><h4>Banking Operations</h4><p>Retail banking, credit management, KYC norms and RBI guidelines.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-file-invoice-dollar"></i><h4>Financial Services</h4><p>Securities market, portfolio management and investment advisory.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-shield-alt"></i><h4>Insurance Management</h4><p>Underwriting, claims, actuarial basics and IRDAI regulations.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-balance-scale"></i><h4>Banking Laws & Compliance</h4><p>FEMA, PMLA, banking regulations and corporate governance.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-coins"></i><h4>Accounts & Taxation</h4><p>Financial accounting, GST, income tax and corporate finance basics.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-project-diagram"></i><h4>Project & Internship</h4><p>Live industry projects and internship in BFSI companies.</p></div>
         </div>
     </section>
 
-    <!-- BBA CAREERS -->
+    <!-- BBA BFSI CAREERS -->
     <section style="background:var(--light)">
         <h2 data-aos="fade-up">Career Opportunities</h2>
         <div class="prog-divider"></div>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Open doors to management, corporate, and entrepreneurship roles</p>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Wide career prospects across the Banking, Financial Services & Insurance sector</p>
         <div class="icon-grid">
-            <div class="career-card card" data-aos="fade-right" data-aos-delay="0"><i class="fas fa-briefcase fa-2x"></i><h4>Manager</h4></div>
-            <div class="career-card card" data-aos="fade-right" data-aos-delay="150"><i class="fas fa-coins fa-2x"></i><h4>Finance Executive</h4></div>
-            <div class="career-card card" data-aos="fade-left" data-aos-delay="150"><i class="fas fa-bullhorn fa-2x"></i><h4>Marketing Executive</h4></div>
-            <div class="career-card card" data-aos="fade-left" data-aos-delay="0"><i class="fas fa-users fa-2x"></i><h4>HR Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-university fa-2x"></i><h4>Bank Officer / PO</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-shield-alt fa-2x"></i><h4>Insurance Advisor / Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-chart-line fa-2x"></i><h4>Financial Analyst</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-coins fa-2x"></i><h4>Investment / Wealth Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-laptop-code fa-2x"></i><h4>FinTech Professional</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-file-invoice-dollar fa-2x"></i><h4>Loan & Credit Officer</h4></div>
         </div>
     </section>
 
-    <!-- ★ BBA GALLERY ★ -->
+    <!-- BBA BFSI GALLERY -->
     <section>
         <h2 data-aos="fade-up">Department Gallery</h2>
         <div class="prog-divider"></div>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Management classes, business events and campus activities</p>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Banking workshops, industry visits and campus activities</p>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-1.jpg" alt="Management Class"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/bba-1.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Management Class</span></div>
+                <img src="./images/comsix.jpg" alt="Banking Workshop"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/bba-bfsi-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-2.jpg" alt="Business Event"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/bba-2.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Business Event</span></div>
+                <img src="./images/comfive.jpg" alt="Finance Lab"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/bba-bfsi-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-3.jpg" alt="Case Study Session"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/bba-3.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Case Study Session</span></div>
+                <img src="./images/comfour.jpg" alt="Industry Visit"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/bba-bfsi-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-4.jpg" alt="Guest Speaker"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/bba-4.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Guest Speaker</span></div>
+                <img src="./images/comthree.jpg" alt="Guest Speaker"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/bba-bfsi-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-5.jpg" alt="Industry Visit"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/bba-5.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Industry Visit</span></div>
+                <img src="./images/comtwo.png" alt="Insurance Seminar"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/bba-bfsi-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
-                <img src="./images/gallery/bba-6.jpg" alt="Annual Function"
-                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/bba-6.jpg</small></div>'">
-                <div class="gallery-overlay"><span>Annual Function</span></div>
+                <img src="./images/com.png" alt="Annual Function"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/bba-bfsi-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
             </div>
         </div>
     </section>
 
-    <!-- BBA FAQ -->
+    <!-- BBA BFSI FAQ -->
     <section>
         <h2 data-aos="fade-up">Frequently Asked Questions</h2>
         <div class="faq">
             <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
-                <div class="faq-q">Eligibility for BBA? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-a">10+2 from any recognized board. AICTE approved program.</div>
+                <div class="faq-q">What is the eligibility for B.B.A. (BFSI)? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">10+2 from any recognized board. Students from any stream (Commerce, Science, Arts) are eligible to apply.</div>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="faq-q">Duration of program? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-q">What is the duration of the program? <i class="fas fa-chevron-down"></i></div>
                 <div class="faq-a">3 years (6 semesters) full-time.</div>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="faq-q">Are internships included? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-a">Yes — practical exposure and internship are included in semesters 5 and 6.</div>
+                <div class="faq-q">Are internships and certifications included? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — industry internships and BFSI-related certifications are an integral part of the program, especially in semesters 5 and 6.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="faq-q">What industries can I work in after this program? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Graduates can work in banks, insurance companies, NBFCs, mutual fund firms, stock broking companies, and FinTech startups.</div>
             </div>
         </div>
     </section>
 
 </main>
-</div><!-- /tab-bba -->
+</div><!-- /tab-bba-bfsi -->
+
+<!-- ══════════════════════════════════ -->
+<!--      B.B.A. (Honours) TAB         -->
+<!-- ══════════════════════════════════ -->
+<div id="tab-bba-hons" class="prog-section">
+<main class="container">
+
+    <!-- WHY BBA HONOURS -->
+    <section style="background:var(--light);padding:5rem 0">
+        <h2 data-aos="fade-up">Why Choose B.B.A. (Honours)?</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">An advanced, research-oriented business administration program for future leaders</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-trophy"></i><h4>Honours Distinction</h4><p>Earn a degree with Honours — recognized by top universities and employers for academic excellence.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-flask"></i><h4>Research-Oriented</h4><p>Rigorous dissertation and research projects develop advanced analytical and critical thinking skills.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-briefcase"></i><h4>Advanced Management</h4><p>Deep dive into strategic management, organizational behavior and business leadership.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-globe"></i><h4>Global Business Exposure</h4><p>International business, global economics and cross-cultural management studies.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-user-graduate"></i><h4>Higher Education Pathway</h4><p>Strong foundation for MBA, PhD and other postgraduate programs at premier institutes.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-users"></i><h4>Leadership Development</h4><p>Personality development, communication and entrepreneurship training.</p></div>
+        </div>
+    </section>
+
+    <!-- BBA HONOURS COURSE STRUCTURE -->
+    <section>
+        <h2 data-aos="fade-up">Course Structure</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A rigorous curriculum designed for business excellence and academic depth</p>
+        <div class="icon-grid">
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="0"><i class="fas fa-chess"></i><h4>Strategic Management</h4><p>Business strategy, corporate planning, competitive analysis and decision-making.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-coins"></i><h4>Financial Management</h4><p>Advanced financial accounting, corporate finance and investment management.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-bullhorn"></i><h4>Marketing Management</h4><p>Consumer behavior, brand strategy, digital marketing and sales management.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-users-cog"></i><h4>Human Resource Management</h4><p>Talent acquisition, performance management, training and development.</p></div>
+            <div class="icon-card card" style="background:var(--brand)" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-microscope"></i><h4>Business Research</h4><p>Research methodology, data analysis and dissertation/project work.</p></div>
+            <div class="icon-card card" style="background:var(--brand-light)" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-rocket"></i><h4>Entrepreneurship</h4><p>Startup management, business planning, venture capital and innovation.</p></div>
+        </div>
+    </section>
+
+    <!-- BBA HONOURS CAREERS -->
+    <section style="background:var(--light)">
+        <h2 data-aos="fade-up">Career Opportunities</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Open doors to leadership roles, higher studies and entrepreneurship</p>
+        <div class="icon-grid">
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-user-tie fa-2x"></i><h4>Business Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-chart-line fa-2x"></i><h4>Business Analyst</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-bullhorn fa-2x"></i><h4>Marketing Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-users fa-2x"></i><h4>HR Manager</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-rocket fa-2x"></i><h4>Entrepreneur</h4></div>
+            <div class="career-card card" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-user-graduate fa-2x"></i><h4>MBA / Higher Studies</h4></div>
+        </div>
+    </section>
+
+    <!-- BBA HONOURS GALLERY -->
+    <section>
+        <h2 data-aos="fade-up">Department Gallery</h2>
+        <div class="prog-divider"></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Management classes, leadership events and campus activities</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" onclick="openLightbox(this)">
+                <img src="./images/comthree.jpg" alt="Management Class"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 1</strong><small>Replace src: ./images/gallery/bba-hons-1.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="./images/comsix.jpg" alt="Leadership Workshop"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 2</strong><small>Replace src: ./images/gallery/bba-hons-2.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="./images/comtwo.png" alt="Research Presentation"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 3</strong><small>Replace src: ./images/gallery/bba-hons-3.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                <img src="./images/comfour.jpg" alt="Guest Speaker"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 4</strong><small>Replace src: ./images/gallery/bba-hons-4.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                <img src="./images/comfive.jpg" alt="Industry Visit"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 5</strong><small>Replace src: ./images/gallery/bba-hons-5.jpg</small></div>'">
+                <div class="gallery-overlay"><span> </span></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                <img src="./images/com.png" alt="Annual Function"
+                     onerror="this.closest('.gallery-item').innerHTML='<div class=\'gallery-placeholder\'><i class=\'fas fa-image\'></i><strong>Image Slot 6</strong><small>Replace src: ./images/gallery/bba-hons-6.jpg</small></div>'">
+                <div class="gallery-overlay"><span></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BBA HONOURS FAQ -->
+    <section>
+        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="faq-q">What is the eligibility for B.B.A. (Honours)? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">10+2 from any recognized board with a minimum percentage as per university norms. Students from Commerce, Science and Arts streams are eligible.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-q">How is B.B.A. (Honours) different from a regular BBA? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">B.B.A. (Honours) includes an additional research component, advanced specialization papers and a dissertation, making it more rigorous and better suited for students aiming for MBA, PhD or top corporate roles.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-q">What is the duration of the program? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">3 years (6 semesters) full-time, with an optional 4th year for Honours research under NEP 2020 guidelines.</div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="faq-q">Are internships included? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — internships with industry partners are mandatory and are included in semesters 5 and 6.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div><!-- /tab-bba-hons -->
 
 <!-- ══════════ LIGHTBOX ══════════ -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
